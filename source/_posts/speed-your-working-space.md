@@ -1,0 +1,34 @@
+title: 加速开发环境的搭建
+date: 2015-01-21 07:29:41
+tags:
+---
+# Linux 篇
+
+linux 下更改源：[http://mirrors.ustc.edu.cn/](http://mirrors.ustc.edu.cn/ "中科大源")，选择自己的Linux版本，然后选择对应的源配置，具体使用见[https://lug.ustc.edu.cn/wiki/mirrors/help](https://lug.ustc.edu.cn/wiki/mirrors/help "配置帮助")
+
+# HomeBrew 篇
+
+github 时不时的网络中断，brew update经常不成功，更改git地址为中科大git源的地址：
+
+```bash
+cd /usr/local
+git remote set-url origin http://mirrors.ustc.edu.cn/homebrew.git
+brew update`
+```
+
+# Node 篇
+
+## NVM
+更改nvm镜像地址，在.bashrc中添加
+```
+# nvm
+export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
+source ~/git/nvm/nvm.sh
+```
+
+## NPM
+
+通过`--registry`更改参数：
+`npm --registry=http://r.cnpmjs.org install koa`
+
+> 注意，由于更改的都是非官方源，随时存在着不能访问的可能。
