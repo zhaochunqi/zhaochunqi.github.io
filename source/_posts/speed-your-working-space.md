@@ -29,6 +29,6 @@ source ~/git/nvm/nvm.sh
 ## NPM
 
 通过`--registry`更改参数：
-`npm --registry=http://r.cnpmjs.org install koa`
+`$ npm --registry=https://registry.npm.taobao.org install koa`
 
 > 注意，由于更改的都是非官方源，随时存在着不能访问的可能。
