@@ -1,10 +1,10 @@
-title: 更改hexo中的google CND加快国内的访问速度
+title: 更改hexo中的google CDN加快国内的访问速度
 date: 2015-01-27 01:11:15
 tags: hexo
 
 ---
 
-> 因为一些国内的客观原因，google的访问速度一直很慢，通过firebug看了下google 相关的服务加载速度超过了1s种，而且经常加载不成功。
+因为一些国内的客观原因，google的访问速度一直很慢，通过firebug看了下google 相关的服务加载速度超过了1s种，而且经常加载不成功。
 
 更改方法：
 
