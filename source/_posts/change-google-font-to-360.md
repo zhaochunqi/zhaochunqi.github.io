@@ -1,4 +1,4 @@
-title: 更改hexo中的google CDN加快国内的访问速度
+title: Hexo 更改默认 Google 字体
 date: 2015-01-27 01:11:15
 tags: hexo
 
