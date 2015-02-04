@@ -44,6 +44,15 @@ plugins:
 - hexo-generator-feed
 - hexo-generator-sitemap
 
+#sitemap
+sitemap:
+  path: sitemap.xml
+#feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
