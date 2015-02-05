@@ -1,6 +1,6 @@
 title: 基于Shadowsocks透明代理的实现
 date: 2015-02-04 01:21:44
-tags: proxy linux
+tags: [proxy,linux]
 
 ---
 
