@@ -94,7 +94,28 @@ xpath 写为: `id('ProjectNews')/ul/li/a`
 
 #### 其实，xpath更多的用于批量下载图片，获取链接之类的，还是举个例子：
 
-#### 未完待续
+比如： 下载花瓣中这个画板的图片[http://huaban.com/boards/293742/](http://huaban.com/boards/293742/)
+
+图片如图：
+![花瓣美女](http://harchiko.qiniudn.com/how-to-use-xpath/huaban.png)
+
+要下载这里面每一个美女的图片，重复我们之前的步骤：
+
+为了找到图片的URL，打开firebug，找到图片对应的xpath路径，经过一番尝试：`//div/div/div/div/a/img[1][@width="236"]`可以顺利找到所有的图片。
+
+![xpath](http://harchiko.qiniudn.com/how-to-use-xpath/huaban_xpath_01.png)
+
+通过`//div/div/div/div/a/img[1][@width="236"]/@src`即可顺利找到所有图片的URL。
+
+![xpath](http://harchiko.qiniudn.com/how-to-use-xpath/huaban_xpath_02.png)
+
+这样所有的xpath都获取到了。
+
+
+这样就获取到了这些地址，但这些地址并不是原图大小的，对比原图与这个地址，发现后面236更改为658即可获取到大图地址。
+
+
+	
 
   [1]: http://www.oschina.net/ "开源中国"
   [2]: http://harchiko.qiniudn.com/how-to-use-xpath/oschina.png "开源中国"
