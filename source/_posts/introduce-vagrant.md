@@ -9,21 +9,21 @@ tags: [mac,vagrant,parallels]
 
 ## Vagrant 介绍
 
-Vagrant是一个基于Ruby的工具，用于创建和部署虚拟化开发环境。它 使用Oracle的开源VirtualBox虚拟化系统，使用 Chef创建自动化虚拟环境。
+Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。
 
-## 安装Vagrant
+## 安装 Vagrant
 
-从这里[http://www.vagrantup.com/downloads](http://www.vagrantup.com/downloads "vagrant 下载")下载对应版本的vagrant 安装。
+从这里 [http://www.vagrantup.com/downloads](http://www.vagrantup.com/downloads "vagrant 下载") 下载对应版本的 vagrant 安装。
 
-## 安装vagrant插件
+## 安装 Vagrant 插件
 
-打开Terminal，安装vagrant插件：
+打开 Terminal，安装 vagrant 插件：
     
 ```bash
 $ vagrant plugin install vagrant-parallels
 ```
 
-## 使用Vagrant
+## 使用 Vagrant
 
 ```bash
 $ mkdir new_vagrant_project
@@ -32,9 +32,9 @@ $ vagrant init parallels/centos-6.5
 $ vagrant up --provider=parallels
 ```
 
-这样就成功的安装了centos-6.5
-
-## 修改默认的Provider(可选)
+这样就成功的安装了 centos-6.5
+ 
+## 修改默认的 Provider (可选)
 ```bash
 $ export VAGRANT_DEFAULT_PROVIDER=parallels
 ```
@@ -42,7 +42,7 @@ $ export VAGRANT_DEFAULT_PROVIDER=parallels
 
 ## 使用SSH连接
 
-进入vagrant所在目录：
+进入 vagrant 所在目录：
 ```bash
 $ vagrant ssh
 ```
