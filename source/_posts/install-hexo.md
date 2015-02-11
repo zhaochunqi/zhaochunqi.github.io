@@ -1,10 +1,9 @@
-title: install hexo
+title: 如何在 Ubuntu 中安装 hexo
 date: 2014-12-22 02:18:16
 tags: linux
 ---
-# 如何在 `Ubuntu` 中安装 `hexo`
 
-### 安装 nvm
+## 安装 nvm
 
 cURL:
 
@@ -18,7 +17,7 @@ Wget:
 
 > 因为使用的是zsh，所以最好在.zshrc 文件中加入这句`source ~/.nvm/nvm.sh` 
 
-### 安装 NodeJS
+## 安装 NodeJS
 
 运行：
 

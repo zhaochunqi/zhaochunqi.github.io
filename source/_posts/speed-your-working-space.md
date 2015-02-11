@@ -13,7 +13,7 @@ github 时不时的网络中断，brew update经常不成功，更改git地址�
 ```bash
 cd /usr/local
 git remote set-url origin http://mirrors.ustc.edu.cn/homebrew.git
-brew update`
+brew update
 ```
 
 # Node 篇
@@ -31,4 +31,4 @@ source ~/git/nvm/nvm.sh
 通过`--registry`更改参数：
 `$ npm --registry=https://registry.npm.taobao.org install koa`
 
-> 注意，由于更改的都是非官方源，随时存在着不能访问的可能。
+> 注意，由于更改的都是非官方源，但由于选择的这些企业都是属于比较靠谱的，基本不存在突然不可用的可能，如果有问题，改回来即可。

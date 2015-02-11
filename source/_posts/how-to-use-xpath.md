@@ -1,13 +1,14 @@
 title: xpath 简明教程
 date: 2015-01-23 06:45:22
-tags:
----
+tags: xpath
+toc: true
 
-### 什么是xpath?
+---
+## 什么是xpath?
 
 > XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。
 
-### XPath 术语
+## XPath 术语
 
 |术语|描述|
 |-|-|
@@ -17,7 +18,7 @@ tags:
 |节点关系|父、子、同胞等|
 
 
-### XPath 用法
+## XPath 用法
 
 选取节点
 
@@ -61,7 +62,7 @@ tags:
 |bookstore//book |	选择属于 bookstore 元素的后代的所有 book 元素，而不管它们位于 bookstore 之下的什么位置。|
 |//@lang |	选取名为 lang 的所有属性。|
 
-### 谓语（Predicates）
+## 谓语
 
 谓语用来查找某个特定的节点或者包含某个指定的值的节点。
 谓语被嵌在方括号中。
@@ -77,22 +78,24 @@ tags:
 |/bookstore/book[price>35.00] |	选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。|
 |/bookstore/book[price>35.00]/title |	选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00。|
 
-### 实战
+## 实战
 
 以 [开源中国][1]为例，我们来试试XPath能做什么？
-#### 假设我们想要获取图示部分的内容：
+
+
+1. 假设我们想要获取图示部分的内容：
 ![开源中国][2]
 
-#### 打开Firebug，定位到这一部分：
+2. 打开Firebug，定位到这一部分：
 ![Firebug][3]
 xpath 写为: `id('ProjectNews')/ul/li/a`
 
-使用插件 xpath checker 查看到获取到的信息
+3. 使用插件 xpath checker 查看到获取到的信息
 ![xpath][4]
 
 获取到了。
 
-#### 其实，xpath更多的用于批量下载图片，获取链接之类的，还是举个例子：
+### 美女
 
 比如： 下载花瓣中这个画板的图片[http://huaban.com/boards/293742/](http://huaban.com/boards/293742/)
 
