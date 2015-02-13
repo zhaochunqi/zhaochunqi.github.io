@@ -7,4 +7,4 @@ tags: internet ipv4
 
 https://tools.ietf.org/html/rfc5735
 
-![](http://harchiko.qiniudn.com/difference-between-0-0-0-0-and-127-0-0-1/localhost.bmp)
+![](http://harchiko.qiniudn.com/difference-between-0-0-0-0-and-127-0-0-1/localhost.bmp-biubiubiu)

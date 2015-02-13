@@ -1,6 +1,7 @@
 ##### Menu
 menu:
   首页: /
+  软件: /categories/soft
   归档: /archives
   关于我: /About-Me
 ## you can create `tags` and `categories` folders in `../source`.
@@ -51,7 +52,7 @@ toc:
 ## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
 #### Fancybox
-fancybox: false 
+fancybox: true 
 ## if you use gallery post or want use fancybox please set the value to true.
 ## if you want use fancybox in ANY post please copy the file `fancybox.js`.
 ## in theme folder `/coney/scripts` to your hexo blog folder `../scritps`.
@@ -59,9 +60,9 @@ fancybox: false
 #### Author information
 author:
   google_plus:    ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
-  weibo:      ## e.g. 436062867 for http://weibo.com/436062867
+  weibo: 121189047     ## e.g. 436062867 for http://weibo.com/436062867
   twitter:    ## e.g. gengbiaosky for https://twitter.com/yangjiansky
-  github:     ## e.g. coneycode for https://github.com/coneycode
+  github: zhaochunqi   ## e.g. coneycode for https://github.com/coneycode
   facebook:   ## e.g. gengbiao for https://favebook.com/yangjian
   tsina:      ## e.g. 1664838973  Your weibo ID,It will be used in share button.
   zhihu:     # coneylife, now it is no icon, I have push an issue to Font Awesome.
@@ -84,7 +85,7 @@ baidu_analytics:
 
 ####Baidu Share
 baidu_share:
-  enable: true
+  enable: false
   color: 4
 
 theme_color:

@@ -8,6 +8,8 @@ toc: true
 
 > XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。
 
+<!--more-->
+
 ## XPath 术语
 
 |术语|描述|
@@ -32,6 +34,7 @@ toc: true
 |.| 	选取当前节点。|
 |.. 	|选取当前节点的父节点。|
 |@ |	选取属性。|
+**text() 选取节点内元素**
 
 下面以一段xml代码为例：
 
@@ -95,7 +98,7 @@ xpath 写为: `id('ProjectNews')/ul/li/a`
 
 获取到了。
 
-### 美女
+## 美女
 
 比如： 下载花瓣中这个画板的图片[http://huaban.com/boards/293742/](http://huaban.com/boards/293742/)
 
