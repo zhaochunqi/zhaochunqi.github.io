@@ -24,12 +24,20 @@ brew update
 # Node 篇
 
 ## NVM
+
+clone nvm到本地，假设目录位于 `～`
+```bash
+$ git clone https://github.com/creationix/nvm.git
+```
+
 更改nvm镜像地址，在.bashrc中添加
 ```
 # nvm
 export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
-source ~/git/nvm/nvm.sh
+source ~/nvm/nvm.sh
 ```
+
+`source .bashrc` 后运行 nvm
 
 ## NPM
 

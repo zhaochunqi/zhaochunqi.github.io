@@ -6,12 +6,14 @@ tags: linux
 ## 安装 nvm
 
 cURL:
+```bash
+	$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+```
 
-	`curl https://raw.github.com/creationix/nvm/master/install.sh | sh`
-	
 Wget:
-
-	`$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh`
+```bash
+	$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+```
 
 安装后重启 Terminal 。
 
@@ -21,9 +23,12 @@ Wget:
 
 运行：
 
-	`$ nvm install 0.10 && nvm use 0.10`
+```bash
+$ nvm install 0.10 && nvm use 0.10
+```
 	
 ### 安装 Hexo
-	`$ npm install -g hexo`
-	
+```bash
+	$ npm install -g hexo
+```
 > Hexo 的使用以及注意事项见[链接](http://hexo.io/docs/)
