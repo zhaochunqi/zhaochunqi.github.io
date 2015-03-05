@@ -1,5 +1,6 @@
 title: 开发 iOS 软件[草稿]
 date: 2015-02-27 08:19:15
+categories: dev
 tags: [swift,ios,mac]
 
 ---

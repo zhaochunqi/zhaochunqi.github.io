@@ -28,7 +28,7 @@ supervisor 可以使用配置文件来启动，指定参数 -c , 默认位置使
 [program:cow]
 command = nohup  /home/harchiko/cow/cow &
 autostart = true
-
+autorestart = true
 [supervisord]
 ```
 
@@ -46,5 +46,7 @@ supervisord -c supervisord.conf
 ```
 
 如是启动即可。
+
+注意，如果想要自动重启务必加上 `autorestart = true`
 
 另外，supervisor 还有交互式命令 supervisorcli , 输入 help 查看即可了解如何操作。

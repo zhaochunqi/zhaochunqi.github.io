@@ -2,6 +2,7 @@
 menu:
   首页: /
   软件: /categories/soft
+  开发: /categories/dev
   归档: /archives
   关于我: /About-Me
 ## you can create `tags` and `categories` folders in `../source`.
