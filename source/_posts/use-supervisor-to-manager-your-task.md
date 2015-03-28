@@ -4,7 +4,7 @@ tags: [linux,supervisor]
 
 ---
 
-## `supervisor`简介:
+## `supervisor`简介
 supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。
 
 <!--more-->
