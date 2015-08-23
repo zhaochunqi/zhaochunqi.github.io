@@ -2,7 +2,6 @@
 menu:
   Home: /
   Archives: /archives
-  AboutMe: /About-Me	
 rss: /atom.xml
 
 # Content
@@ -19,7 +18,7 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics: UA-42448552-1
+google_analytics:
 favicon: /favicon.png
 twitter:
 google_plus:
