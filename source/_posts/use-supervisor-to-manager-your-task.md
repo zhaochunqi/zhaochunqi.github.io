@@ -1,6 +1,6 @@
 title: 使用 supervisor 来管理 linux 程序
 date: 2015-03-04 05:45:39
-tags: [linux,supervisor]
+tags: [linux,supervisor,python]
 
 ---
 
