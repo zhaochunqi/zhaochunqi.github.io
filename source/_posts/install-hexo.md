@@ -10,6 +10,7 @@ cURL:
 	$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 ```
 
+<!--more-->
 Wget:
 ```bash
 	$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh

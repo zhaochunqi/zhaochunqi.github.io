@@ -12,6 +12,7 @@ tags: [mac,vagrant,parallels]
 
 Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。
 
+<!--more-->
 ## 安装 Vagrant
 
 从这里 [http://www.vagrantup.com/downloads](http://www.vagrantup.com/downloads "vagrant 下载") 下载对应版本的 vagrant 安装。
