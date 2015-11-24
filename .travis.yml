@@ -20,5 +20,6 @@ script:
 - git config --global user.email git@zhaochunqi.com
 - cd public
 - git add --all
-- git commit -m '$(echo `date "+Site updated %Y-%m-%d %H:%M:%S"`)'
+# - git commit -m `$(echo `date "+Site updated %Y-%m-%d %H:%M:%S"`)`
+- git commit -m '$(curl -s http://whatthecommit.com/index.txt)'
 - git push -f origin master
