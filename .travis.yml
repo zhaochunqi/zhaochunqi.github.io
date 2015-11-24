@@ -18,7 +18,7 @@ install:
 
 script:
 - hexo clean
-- git clone -b https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} public
+- git clone https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} public
 - hexo g
 env:
   global:
