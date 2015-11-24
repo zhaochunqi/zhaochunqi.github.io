@@ -9,9 +9,7 @@ after_success:
 - git config --global user.name "zhaochunqi"
 - git config --global user.email git@zhaochunqi.com
 - cd public
-- git init
 - git add --all
-- git remote set-url https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}
 - git commit -m "Site Update"
 - git push -f origin master
 install:
@@ -20,6 +18,7 @@ install:
 
 script:
 - hexo clean
+- git clone -b https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} public
 - hexo g
 env:
   global:
