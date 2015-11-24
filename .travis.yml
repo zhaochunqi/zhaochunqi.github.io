@@ -13,12 +13,6 @@ node_js:
 install:
 - npm install hexo-cli -g
 - npm install
-- git config --global user.name "zhaochunqi"
-- git config --global user.email git@zhaochunqi.com
-- cd public
-- git add --all
-- git commit -m "Site Update"
-- git push -f origin master
 script:
 - git clone -b master https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} public
 - hexo g
