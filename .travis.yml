@@ -6,12 +6,6 @@ sudo: false
 node_js:
 - '0.12'
 before_install:
-- openssl aes-256-cbc -K $encrypted_13d35555abe0_key -iv $encrypted_13d35555abe0_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp ssh_config ~/.ssh/config
 - git config --global user.name "zhaochunqi"
 - git config --global user.email git@zhaochunqi.com
 - git clone -b master git@github.com:zhaochunqi/zhaochunqi.github.io.git .deploy_git
@@ -25,3 +19,6 @@ script:
 - hexo clean
 - hexo g
 - hexo d
+env:
+  global:
+    secure: MP2VsXSOwwEQ/4JPcZr1N1JVyH8ijuFJiqmHZgxISfw/Tm0cNHm3nKJU6JKeYOqdkxCgGooGuC+QSS5c1YWDzWgWfYv5KL+tzbBvuQFLBkBLfa484xCkSByjwLP+lrbpNTqHkA/T+v55P+L4RZ6kzq5S5VigQ/qnz3woAm7eu10xlb9T6tgt4mkbzkSOywgGD5+OREgXxeuCD1a5dIWirKR05Epck3c4QxdQkqyQ+raLqZ+2SlBHtJii6M9IUZ5JxdhbChfo4QKODh7Er00+vzSKd77J0kdKEK/u8ooci6I7KFd1mA+3RuLYhCbMLXsD8O7ExAmyRPll2VwQbdV+3nsxGRoqFLGPzYkXWgVEoxqWN09XJ8h7Ue2NKDvJcydzFzy4MXfFkmm84eaKuK+VwWYtFJMeUa7AqclKqwaaxZyfzN/s0axypIIlyaktNocfC8nbp+JsXqsVVXTtPG8IgVn005vsY4BpFD4f6m5orLvNTrl17mVWj9X/1kLT/GIbsSqz1D7Cxwchqlv8uPiBR9ZvF824+fQ3WYba97CpeO+mfY0J+ymm4Mx/t7T3vlMROiGz5xeFDiPX0Cv8L8F1wnSRNRUc0v2rrW6UK9VGdq71aCY2+JMmT3Ev1UHV2GnKzYxXcerAInZJPpw4UK1aOCylQ2PNkRdyXkmAAYc5iKs=
