@@ -1,5 +1,6 @@
 title: 扩充Mac原生字典库
 date: 2015-11-25 1:46 AM
+categories: soft
 tags: [mac,soft]
 ---
 DictUnifer是一款在Mac下能够转换字典格式的软件。把第三方的词库转换成「Mac词典」支持的格式。
