@@ -20,5 +20,5 @@ script:
 - git config --global user.email git@zhaochunqi.com
 - cd public
 - git add --all
-- git commit -m '$(date "+Site updated %Y-%m-%d %H:%M:%S"))'
+- git commit -m '$(date "+Site updated %Y-%m-%d %H:%M:%S")'
 - git push -f origin master
