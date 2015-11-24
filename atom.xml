@@ -4,7 +4,7 @@
   <subtitle><![CDATA[你有没有想过，这辈子可能都是个普通人？]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.zhaochunqi.com/"/>
-  <updated>2015-11-24T02:40:26.540Z</updated>
+  <updated>2015-11-24T02:45:07.095Z</updated>
   <id>http://blog.zhaochunqi.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://blog.zhaochunqi.com/2015/08/24/faker-js/"/>
     <id>http://blog.zhaochunqi.com/2015/08/24/faker-js/</id>
     <published>2015-08-24T08:05:30.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p>Faker.js 能够生成名字、地址、电话号码等信息的库。<br><a id="more"></a></p>
 <p> 项目地址： <a href="https://github.com/Marak/faker.js" target="_blank" rel="external">https://github.com/Marak/faker.js</a></p>
 <p> 使用方法比较简单：</p>
@@ -46,7 +46,7 @@
     <link href="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/"/>
     <id>http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/</id>
     <published>2015-03-04T05:45:39.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<h2 id="supervisor 简介"><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
 <a id="more"></a>
 <h2 id="安装">安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p>
@@ -81,7 +81,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/26/most-useful-bash-commands/"/>
     <id>http://blog.zhaochunqi.com/2015/02/26/most-useful-bash-commands/</id>
     <published>2015-02-26T02:47:38.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p>介绍几个常用的 Linux 命令行技巧命令，以期提高工作效率。</p>
 <a id="more"></a>
 <ol>
@@ -139,7 +139,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/"/>
     <id>http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/</id>
     <published>2015-02-15T07:29:41.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p>在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。</p>
 <a id="more"></a>
 <h1 id="Linux_篇">Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
@@ -178,7 +178,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/"/>
     <id>http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/</id>
     <published>2015-02-11T03:00:55.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<h2 id="问题">问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p>
 <a id="more"></a>
 <h2 id="排查">排查</h2><ul>
@@ -210,7 +210,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/"/>
     <id>http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/</id>
     <published>2015-02-10T02:36:17.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<h2 id="关于">关于 </h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a> 中提到过，本文将重点讲解一下 shadowsocks 的使用方法。</p>
 <p>原文链接：<a href="http://blog.zhaochunqi.com/shadowsocks-user-manual/">http://blog.zhaochunqi.com/shadowsocks-user-manual/</a></p>
 <p>作者：<a href="http://blog.zhaochunqi.com" title="http://blog.zhaochunqi.com">zhaochunqi</a></p>
@@ -252,7 +252,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/"/>
     <id>http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/</id>
     <published>2015-02-05T01:59:07.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p>环境：OSX yosemite/Parallels Desktop 10</p>
 <h2 id="Vagrant_介绍">Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>
 <a id="more"></a>
@@ -290,7 +290,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="external">showrss</a>,</p>
 <h2 id="界面">界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png" alt="showrss"></p>
 <h3 id="使用 RSS 订阅">使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p>
@@ -320,7 +320,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p><strong> 本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p>
 <a id="more"></a>
 <p> 程序员们最在意的，可能就是网络跟设备配置了。</p>
@@ -358,7 +358,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/"/>
     <id>http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/</id>
     <published>2015-01-27T01:11:15.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p> 因为一些国内的客观原因，google 的访问速度一直很慢，通过 firebug 看了下 google 相关的服务加载速度超过了 1s 种，而且经常加载不成功。</p>
 <a id="more"></a>
 <p> 更改方法：</p>
@@ -382,7 +382,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/</id>
     <published>2015-01-23T06:45:22.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是 xpath?">什么是 xpath?</h2><blockquote>
 <p>XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。</p>
 </blockquote>
@@ -567,7 +567,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/</id>
     <published>2015-01-23T01:56:38.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<p>如何确定 python 脚本的位置？<br>python 脚本有个 <code>__file__</code> 属性，能够确定脚本所在的位置。但由于运行文件夹的不同，<code>__file__</code>的相对路径也不同。</p>
 <a id="more"></a>
 <h2 id="如何确定当前脚本的绝对路径">如何确定当前脚本的绝对路径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.realpath(__file__)</span><br></pre></td></tr></table></figure>
@@ -591,7 +591,7 @@
     <link href="http://blog.zhaochunqi.com/2014/12/22/install-hexo/"/>
     <id>http://blog.zhaochunqi.com/2014/12/22/install-hexo/</id>
     <published>2014-12-22T02:18:16.000Z</published>
-    <updated>2015-11-24T02:40:26.540Z</updated>
+    <updated>2015-11-24T02:45:07.095Z</updated>
     <content type="html"><![CDATA[<h2 id="安装_nvm">安装 nvm</h2><p>cURL:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>Wget:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
