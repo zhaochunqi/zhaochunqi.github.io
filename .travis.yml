@@ -20,6 +20,6 @@ script:
 - git config --global user.email git@zhaochunqi.com
 - cd public
 - git add --all
-- now=`date "+%Y-%m-%d %H:%M:%S"`
-- git commit -m "Site updated: $now"
+- now=`date "+Site updated %Y-%m-%d %H:%M:%S"`
+- git commit -m $now
 - git push -f origin master
