@@ -11,7 +11,7 @@ after_success:
 - cd public
 - git init
 - git add --all
-- git remote set-url origin https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}
+- git remote set-url https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}
 - git commit -m "Site Update"
 - git push -f origin master
 install:
