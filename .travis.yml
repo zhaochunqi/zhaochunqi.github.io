@@ -20,5 +20,5 @@ script:
 - git config --global user.email git@zhaochunqi.com
 - cd public
 - git add --all
-- git commit -m "Site Update"
+- git commit -m "site update at `date`"
 - git push -f origin master
