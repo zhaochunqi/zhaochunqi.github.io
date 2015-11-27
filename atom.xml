@@ -4,7 +4,7 @@
   <subtitle><![CDATA[你有没有想过，这辈子可能都是个普通人？]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.zhaochunqi.com/"/>
-  <updated>2015-11-25T21:11:35.797Z</updated>
+  <updated>2015-11-27T21:55:30.644Z</updated>
   <id>http://blog.zhaochunqi.com/</id>
   
   <author>
@@ -15,11 +15,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Steam 中 Dota2 进入国服的一些设定]]></title>
+    <link href="http://blog.zhaochunqi.com/2015/11/28/dota2-steam-settings/"/>
+    <id>http://blog.zhaochunqi.com/2015/11/28/dota2-steam-settings/</id>
+    <published>2015-11-28T04:09:00.000Z</published>
+    <updated>2015-11-27T21:55:30.644Z</updated>
+    <content type="html"><![CDATA[<p>Dota2 在完美代理后单独出了一个国服的客户端，但是需要同时注册 Steam 帐号和国服帐号，可见国服的 Dota2 也是绑定在 Steam 上的，既然如此，倒不如直接使用 steam 客户端省事。</p>
+<a id="more"></a>
+<p><img src="http://harchiko.qiniudn.com/dota-2-official.jpg" alt="image"></p>
+<p> 具体来说，使用 steam 登录国服添加的选项仅仅需要在启动项中添加 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-perfectworld</span><br></pre></td></tr></table></figure>
+<p> 即可。</p>
+<p> 处于特殊性，如果你的 steam 客户端是英文版，但你想使你的 dota2 为中文界面，使用如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-language schinese</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Dota2 在完美代理后单独出了一个国服的客户端，但是需要同时注册Steam帐号和国服帐号，可见国服的Dota2也是绑定在Steam上的，既然如此，倒不如直接使用steam客户端省事。</p>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[使用 Travis-CI 生成发布 Hexo 博客]]></title>
+    <link href="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/"/>
+    <id>http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/</id>
+    <published>2015-11-27T18:51:00.000Z</published>
+    <updated>2015-11-27T21:55:30.648Z</updated>
+    <content type="html"><![CDATA[<p>本篇文章将指导你如何使用 Travis-CI 自动部署 hexo 生成的静态博客到 github 上。</p>
+<a id="more"></a>
+<h2 id="背景介绍">背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
+<p>source 分支放置 hexo 的一些源文件，master 分支放置静态博客资源。</p>
+<p><strong>我们需要做的就是获取到 source 分支的改动，自动 deploy 到 master 分支</strong></p>
+<p>所以步骤就是： 获取改动 -&gt;deploy</p>
+<h2 id="travis-CI">travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
+<p>在 travis-CI 中对 <code>zhaochunqi.github.io</code> 开启自动构建，配置如下：<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png" alt="image"><br>（建议开启 Build only if .travis.yml is prezent.)</p>
+<h2 id="配置 -travis-yml">配置 <code>.travis.yml</code></h2><h2 id="获取 github 权限"> 获取 github 权限 </h2><p> 两种方法 </p>
+<pre><code><span class="number">1.</span> SSH
+<span class="number">2.</span> github token
+</code></pre><p>这里采用的是 github token 的方法，（SSH 配置较为复杂）</p>
+<p>点击头像 -&gt;settings-&gt; Personal access tokens 新建一个 token</p>
+<h2 id="将 token 配置到 travis-CI">将 token 配置到 travis-CI</h2><h3 id="安装 Travis-CI 命令行工具">安装 Travis-CI 命令行工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install travis</span><br></pre></td></tr></table></figure>
+<h3 id="登陆 Travis_CI">登陆 Travis CI</h3><p>需要输入 Github 账号和密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis login --auto</span><br></pre></td></tr></table></figure>
+<p>加密环境变量（token）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis encrypt GH_OWNER=super_secret</span><br></pre></td></tr></table></figure>
+<p>此命令会写入加密后的环境变量到.travis.yml 中.</p>
+<p>这样，使用 <code>https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}</code> 即可进行正常的 push 和 pull 了。</p>
+<p>最后贴一下我的配置 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env:&#10;  global:&#10;    - secure: MP2VsXSOwwEQ/4JPcZr1N1JVyH8ijuFJiqmHZgxISfw/Tm0cNHm3nKJU6JKeYOqdkxCgGooGuC+QSS5c1YWDzWgWfYv5KL+tzbBvuQFLBkBLfa484xCkSByjwLP+lrbpNTqHkA/T+v55P+L4RZ6kzq5S5VigQ/qnz3woAm7eu10xlb9T6tgt4mkbzkSOywgGD5+OREgXxeuCD1a5dIWirKR05Epck3c4QxdQkqyQ+raLqZ+2SlBHtJii6M9IUZ5JxdhbChfo4QKODh7Er00+vzSKd77J0kdKEK/u8ooci6I7KFd1mA+3RuLYhCbMLXsD8O7ExAmyRPll2VwQbdV+3nsxGRoqFLGPzYkXWgVEoxqWN09XJ8h7Ue2NKDvJcydzFzy4MXfFkmm84eaKuK+VwWYtFJMeUa7AqclKqwaaxZyfzN/s0axypIIlyaktNocfC8nbp+JsXqsVVXTtPG8IgVn005vsY4BpFD4f6m5orLvNTrl17mVWj9X/1kLT/GIbsSqz1D7Cxwchqlv8uPiBR9ZvF824+fQ3WYba97CpeO+mfY0J+ymm4Mx/t7T3vlMROiGz5xeFDiPX0Cv8L8F1wnSRNRUc0v2rrW6UK9VGdq71aCY2+JMmT3Ev1UHV2GnKzYxXcerAInZJPpw4UK1aOCylQ2PNkRdyXkmAAYc5iKs=&#10;    - GH_OWNER: zhaochunqi&#10;    - GH_PROJECT_NAME: zhaochunqi.github.io&#10;    &#10;branches:&#10;  only:&#10;    - source&#10;    &#10;language: node_js&#10;sudo: false&#10;node_js:&#10;  - &#39;0.12&#39;&#10;&#10;install:&#10;  - npm install hexo-cli -g&#10;  - npm install&#10;&#10;script:&#10;  - git clone -b master https://$&#123;GH_OAUTH_TOKEN&#125;@github.com/$&#123;GH_OWNER&#125;/$&#123;GH_PROJECT_NAME&#125; public&#10;  - hexo g&#10;  - git config --global user.name &#34;zhaochunqi&#34;&#10;  - git config --global user.email git@zhaochunqi.com&#10;  - cd public&#10;  - git add --all&#10;  # - git commit -m `$(echo `date &#34;+Site updated %Y-%m-%d %H:%M:%S&#34;`)`&#10;  # - git commit -m &#39;$(curl -s http://whatthecommit.com/index.txt)&#39;&#10;  - git commit -m &#34;$(curl -s http://whatthecommit.com/ | awk &#39;/&#60;p&#62;/ &#123;sub(&#34;&#60;p&#62;&#34;, &#34;&#34;); print &#125;&#39;)&#34;&#10;  - git push -f origin master</span><br></pre></td></tr></table></figure>
+<p>这里面除了 global 这里其他都不难懂，看一下 travis 的生命周期就全明白了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本篇文章将指导你如何使用Travis-CI自动部署hexo生成的静态博客到github上。</p>]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://blog.zhaochunqi.com/tags/git/"/>
+    
+      <category term="github" scheme="http://blog.zhaochunqi.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://blog.zhaochunqi.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[常用的终端命令]]></title>
     <link href="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/</id>
     <published>2015-11-26T04:20:00.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.648Z</updated>
     <content type="html"><![CDATA[<p> 介绍一些常用的 Linux 命令，这些命令能够在终端下极大的方便我们的操作。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/S27YSIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIHAlIPhe3WkMAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIlAcG39LatBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAhcCQi+V3caQ4AAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIBASUDwLb1tKwECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECVwKC79WdxhAgQ.png" alt="image"></p>
@@ -58,7 +122,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/yaml/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/yaml/</id>
     <published>2015-11-26T02:41:00.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.648Z</updated>
     <content type="html"><![CDATA[<p><code>YAML</code> <strong>[YAML Ain’t Markup Language]</strong></p>
 <p>和 GNU 一样，YAML 是一个递归着说“不”的名字。不同的是，GNU 对 UNIX 说不，YAML 说不的对象是 XML。</p>
 <a id="more"></a>
@@ -85,7 +149,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/random-git-commit/</id>
     <published>2015-11-26T02:30:00.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p><strong> 代码 </strong>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"<span class="variable">$(curl -s http://whatthecommit.com/ | awk'/&lt;p&gt;/ &#123;sub("&lt;p&gt;", "")</span>; print &#125;')"</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -111,7 +175,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/"/>
     <id>http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/</id>
     <published>2015-11-25T01:46:00.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p>DictUnifer 是一款在 Mac 下能够转换字典格式的软件。把第三方的词库转换成「Mac 词典」支持的格式。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-25%20at%201.39.29%20AM.png" alt=""></p>
@@ -137,7 +201,7 @@
     <link href="http://blog.zhaochunqi.com/2015/08/24/faker-js/"/>
     <id>http://blog.zhaochunqi.com/2015/08/24/faker-js/</id>
     <published>2015-08-24T08:05:30.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p>Faker.js 能够生成名字、地址、电话号码等信息的库。<br><a id="more"></a></p>
 <p> 项目地址： <a href="https://github.com/Marak/faker.js" target="_blank" rel="external">https://github.com/Marak/faker.js</a></p>
 <p> 使用方法比较简单：</p>
@@ -164,7 +228,7 @@
     <link href="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/"/>
     <id>http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/</id>
     <published>2015-03-04T05:45:39.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.648Z</updated>
     <content type="html"><![CDATA[<h2 id="supervisor 简介"><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
 <a id="more"></a>
 <h2 id="安装">安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p>
@@ -199,7 +263,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/26/most-useful-bash-commands/"/>
     <id>http://blog.zhaochunqi.com/2015/02/26/most-useful-bash-commands/</id>
     <published>2015-02-26T02:47:38.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p>介绍几个常用的 Linux 命令行技巧命令，以期提高工作效率。</p>
 <a id="more"></a>
 <ol>
@@ -257,7 +321,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/"/>
     <id>http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/</id>
     <published>2015-02-15T07:29:41.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.648Z</updated>
     <content type="html"><![CDATA[<p>在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。</p>
 <a id="more"></a>
 <h1 id="Linux_篇">Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
@@ -296,7 +360,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/"/>
     <id>http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/</id>
     <published>2015-02-11T03:00:55.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<h2 id="问题">问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p>
 <a id="more"></a>
 <h2 id="排查">排查</h2><ul>
@@ -328,7 +392,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/"/>
     <id>http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/</id>
     <published>2015-02-10T02:36:17.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<h2 id="关于">关于 </h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a> 中提到过，本文将重点讲解一下 shadowsocks 的使用方法。</p>
 <p>原文链接：<a href="http://blog.zhaochunqi.com/shadowsocks-user-manual/">http://blog.zhaochunqi.com/shadowsocks-user-manual/</a></p>
 <p>作者：<a href="http://blog.zhaochunqi.com" title="http://blog.zhaochunqi.com">zhaochunqi</a></p>
@@ -370,7 +434,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/"/>
     <id>http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/</id>
     <published>2015-02-05T01:59:07.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p>环境：OSX yosemite/Parallels Desktop 10</p>
 <h2 id="Vagrant_介绍">Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>
 <a id="more"></a>
@@ -408,7 +472,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.648Z</updated>
     <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="external">showrss</a>,</p>
 <a id="more"></a>
 <h2 id="界面">界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png" alt="showrss"></p>
@@ -439,7 +503,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p><strong> 本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p>
 <a id="more"></a>
 <p> 程序员们最在意的，可能就是网络跟设备配置了。</p>
@@ -477,7 +541,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/"/>
     <id>http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/</id>
     <published>2015-01-27T01:11:15.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p> 因为一些国内的客观原因，google 的访问速度一直很慢，通过 firebug 看了下 google 相关的服务加载速度超过了 1s 种，而且经常加载不成功。</p>
 <a id="more"></a>
 <p> 更改方法：</p>
@@ -501,7 +565,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/</id>
     <published>2015-01-23T06:45:22.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是 xpath?">什么是 xpath?</h2><blockquote>
 <p>XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。</p>
 </blockquote>
@@ -686,7 +750,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/</id>
     <published>2015-01-23T01:56:38.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<p>如何确定 python 脚本的位置？<br>python 脚本有个 <code>__file__</code> 属性，能够确定脚本所在的位置。但由于运行文件夹的不同，<code>__file__</code>的相对路径也不同。</p>
 <a id="more"></a>
 <h2 id="如何确定当前脚本的绝对路径">如何确定当前脚本的绝对路径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.realpath(__file__)</span><br></pre></td></tr></table></figure>
@@ -710,7 +774,7 @@
     <link href="http://blog.zhaochunqi.com/2014/12/22/install-hexo/"/>
     <id>http://blog.zhaochunqi.com/2014/12/22/install-hexo/</id>
     <published>2014-12-22T02:18:16.000Z</published>
-    <updated>2015-11-25T21:11:35.797Z</updated>
+    <updated>2015-11-27T21:55:30.644Z</updated>
     <content type="html"><![CDATA[<h2 id="安装_nvm">安装 nvm</h2><p>cURL:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>Wget:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>

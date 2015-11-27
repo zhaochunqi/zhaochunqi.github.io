@@ -3,22 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>美剧订阅神器 showrss | Alex Coding</title>
+  <title>使用 Travis-CI 生成发布 Hexo 博客 | Alex Coding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日同事推荐了个看美剧的神器的网站 showrss,">
+  <meta name="description" content="本篇文章将指导你如何使用Travis-CI自动部署hexo生成的静态博客到github上。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="美剧订阅神器 showrss">
-<meta property="og:url" content="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/index.html">
+<meta property="og:title" content="使用 Travis-CI 生成发布 Hexo 博客">
+<meta property="og:url" content="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description" content="今日同事推荐了个看美剧的神器的网站 showrss,">
-<meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png">
-<meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/pick_series.png">
-<meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/schedule.png">
-<meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/feeds.png">
+<meta property="og:description" content="本篇文章将指导你如何使用Travis-CI自动部署hexo生成的静态博客到github上。">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png">
 <meta property="og:updated_time" content="2015-11-27T21:55:30.648Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美剧订阅神器 showrss">
-<meta name="twitter:description" content="今日同事推荐了个看美剧的神器的网站 showrss,">
+<meta name="twitter:title" content="使用 Travis-CI 生成发布 Hexo 博客">
+<meta name="twitter:description" content="本篇文章将指导你如何使用Travis-CI自动部署hexo生成的静态博客到github上。">
   
     <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
   
@@ -68,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-tools-for-us-TV-series" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-travis-ci-deploy-hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/02/04/tools-for-us-TV-series/" class="article-date">
-  <time datetime="2015-02-04T01:21:44.000Z" itemprop="datePublished">2015-02-04</time>
+    <a href="/2015/11/27/travis-ci-deploy-hexo/" class="article-date">
+  <time datetime="2015-11-27T18:51:00.000Z" itemprop="datePublished">2015-11-27</time>
 </a>
     
   </div>
@@ -82,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      美剧订阅神器 showrss
+      使用 Travis-CI 生成发布 Hexo 博客
     </h1>
   
 
@@ -90,27 +87,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="external">showrss</a>,</p>
+        <p>本篇文章将指导你如何使用 Travis-CI 自动部署 hexo 生成的静态博客到 github 上。</p>
 <a id="more"></a>
-<h2 id="界面">界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png" alt="showrss"></p>
-<h3 id="使用 RSS 订阅">使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p>
-<h4 id="在界面中点击你喜欢的美剧名称即可订阅:">在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/pick_series.png" alt="pickseries"></p>
-<h4 id="如果你想知道下一集是什么的话，网站还提供计划表:">如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/schedule.png" alt="schedule"></p>
-<h4 id="你还可以使用 RSS 订阅 -1">你还可以使用 RSS 订阅</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/feeds.png" alt="rss"></p>
-<h4 id="在这里面，你可以进行：">在这里面，你可以进行：</h4><ul>
-<li>单集 RSS 订阅</li>
-<li>个人剧集订阅</li>
-<li>剧集时间表订阅(提供 rss 和 iCalendar 格式)</li>
-<li>网站信息订阅（这个不重要)</li>
-</ul>
+<h2 id="背景介绍">背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
+<p>source 分支放置 hexo 的一些源文件，master 分支放置静态博客资源。</p>
+<p><strong>我们需要做的就是获取到 source 分支的改动，自动 deploy 到 master 分支</strong></p>
+<p>所以步骤就是： 获取改动 -&gt;deploy</p>
+<h2 id="travis-CI">travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
+<p>在 travis-CI 中对 <code>zhaochunqi.github.io</code> 开启自动构建，配置如下：<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png" alt="image"><br>（建议开启 Build only if .travis.yml is prezent.)</p>
+<h2 id="配置 -travis-yml">配置 <code>.travis.yml</code></h2><h2 id="获取 github 权限"> 获取 github 权限 </h2><p> 两种方法 </p>
+<pre><code><span class="number">1.</span> SSH
+<span class="number">2.</span> github token
+</code></pre><p>这里采用的是 github token 的方法，（SSH 配置较为复杂）</p>
+<p>点击头像 -&gt;settings-&gt; Personal access tokens 新建一个 token</p>
+<h2 id="将 token 配置到 travis-CI">将 token 配置到 travis-CI</h2><h3 id="安装 Travis-CI 命令行工具">安装 Travis-CI 命令行工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install travis</span><br></pre></td></tr></table></figure>
+<h3 id="登陆 Travis_CI">登陆 Travis CI</h3><p>需要输入 Github 账号和密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis login --auto</span><br></pre></td></tr></table></figure>
+<p>加密环境变量（token）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis encrypt GH_OWNER=super_secret</span><br></pre></td></tr></table></figure>
+<p>此命令会写入加密后的环境变量到.travis.yml 中.</p>
+<p>这样，使用 <code>https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}</code> 即可进行正常的 push 和 pull 了。</p>
+<p>最后贴一下我的配置 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env:&#10;  global:&#10;    - secure: MP2VsXSOwwEQ/4JPcZr1N1JVyH8ijuFJiqmHZgxISfw/Tm0cNHm3nKJU6JKeYOqdkxCgGooGuC+QSS5c1YWDzWgWfYv5KL+tzbBvuQFLBkBLfa484xCkSByjwLP+lrbpNTqHkA/T+v55P+L4RZ6kzq5S5VigQ/qnz3woAm7eu10xlb9T6tgt4mkbzkSOywgGD5+OREgXxeuCD1a5dIWirKR05Epck3c4QxdQkqyQ+raLqZ+2SlBHtJii6M9IUZ5JxdhbChfo4QKODh7Er00+vzSKd77J0kdKEK/u8ooci6I7KFd1mA+3RuLYhCbMLXsD8O7ExAmyRPll2VwQbdV+3nsxGRoqFLGPzYkXWgVEoxqWN09XJ8h7Ue2NKDvJcydzFzy4MXfFkmm84eaKuK+VwWYtFJMeUa7AqclKqwaaxZyfzN/s0axypIIlyaktNocfC8nbp+JsXqsVVXTtPG8IgVn005vsY4BpFD4f6m5orLvNTrl17mVWj9X/1kLT/GIbsSqz1D7Cxwchqlv8uPiBR9ZvF824+fQ3WYba97CpeO+mfY0J+ymm4Mx/t7T3vlMROiGz5xeFDiPX0Cv8L8F1wnSRNRUc0v2rrW6UK9VGdq71aCY2+JMmT3Ev1UHV2GnKzYxXcerAInZJPpw4UK1aOCylQ2PNkRdyXkmAAYc5iKs=&#10;    - GH_OWNER: zhaochunqi&#10;    - GH_PROJECT_NAME: zhaochunqi.github.io&#10;    &#10;branches:&#10;  only:&#10;    - source&#10;    &#10;language: node_js&#10;sudo: false&#10;node_js:&#10;  - &#39;0.12&#39;&#10;&#10;install:&#10;  - npm install hexo-cli -g&#10;  - npm install&#10;&#10;script:&#10;  - git clone -b master https://$&#123;GH_OAUTH_TOKEN&#125;@github.com/$&#123;GH_OWNER&#125;/$&#123;GH_PROJECT_NAME&#125; public&#10;  - hexo g&#10;  - git config --global user.name &#34;zhaochunqi&#34;&#10;  - git config --global user.email git@zhaochunqi.com&#10;  - cd public&#10;  - git add --all&#10;  # - git commit -m `$(echo `date &#34;+Site updated %Y-%m-%d %H:%M:%S&#34;`)`&#10;  # - git commit -m &#39;$(curl -s http://whatthecommit.com/index.txt)&#39;&#10;  - git commit -m &#34;$(curl -s http://whatthecommit.com/ | awk &#39;/&#60;p&#62;/ &#123;sub(&#34;&#60;p&#62;&#34;, &#34;&#34;); print &#125;&#39;)&#34;&#10;  - git push -f origin master</span><br></pre></td></tr></table></figure>
+<p>这里面除了 global 这里其他都不难懂，看一下 travis 的生命周期就全明白了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/" data-id="cihi7kl4c000mn2gskhcfccl6" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cihi7kl49000fn2gs8yxldyvh" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/series/">series</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tv/">tv</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
     </footer>
   </div>
@@ -118,19 +125,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/02/05/introduce-vagrant/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/28/dota2-steam-settings/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Parallels 下 Vagrant 使用指南
+          Steam 中 Dota2 进入国服的一些设定
         
       </div>
     </a>
   
   
-    <a href="/2015/02/04/Auto-Proxy/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/11/26/useful-terminal-commands/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">基于 Shadowsocks 透明代理的实现</div>
+      <div class="article-nav-title">常用的终端命令</div>
     </a>
   
 </nav>
