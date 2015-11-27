@@ -38,11 +38,13 @@ travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具
 
 这里采用的是github token的方法，（SSH配置较为复杂）
 
-点击头像->settings-> Personal access tokens 新建一个token
-
+### 获取Token
+点击头像->settings-> Personal access tokens 新建一个token,**会获取到一串字符**，记录下下面需要用到。
+![image](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%206.48.06%20AM.png)
 ## 将token配置到travis-CI
 
 ### 安装Travis-CI命令行工具
+> 使用 Cloud9 在线环境比较方便（毕竟你只需要配置这一次即可)
 
 ```bash
 gem install travis
@@ -50,16 +52,17 @@ gem install travis
 
 ### 登陆Travis CI
 
-需要输入Github账号和密码
+1. 需要输入Github账号和密码
 
 ```bash
 travis login --auto
 ```
-加密环境变量（token）
+2. 加密环境变量（token）
 
 ```bash
-travis encrypt GH_OWNER=super_secret
+travis encrypt GH_OAUTH_TOKEN=super_secret
 ```
+>super_secret 修改为上一部你获取的Token
 此命令会写入加密后的环境变量到.travis.yml中.
 
 
