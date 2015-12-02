@@ -25,7 +25,7 @@ tags: [,]
 
 第三篇：
 
-网站还未更新，更新后将更新上来。
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTQwMTY1NzkyMA==" frameborder=0 allowfullscreen></iframe>
 
 
 记忆很深的一句话，有人问我，如果能够再来，你觉得你有什么需要改变的？ 我什么都不改变。
