@@ -13,7 +13,7 @@
 <meta property="og:description" content="本篇文章将指导你如何使用Travis-CI自动部署hexo生成的静态博客到github上。">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%206.48.06%20AM.png">
-<meta property="og:updated_time" content="2015-12-02T04:28:15.178Z">
+<meta property="og:updated_time" content="2015-12-13T13:10:56.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Travis-CI 生成发布 Hexo 博客">
 <meta name="twitter:description" content="本篇文章将指导你如何使用Travis-CI自动部署hexo生成的静态博客到github上。">
@@ -90,19 +90,19 @@
       
         <p>本篇文章将指导你如何使用 Travis-CI 自动部署 hexo 生成的静态博客到 github 上。</p>
 <a id="more"></a>
-<h2 id="背景介绍">背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
+<h2 id="u80CC_u666F_u4ECB_u7ECD"><a href="#u80CC_u666F_u4ECB_u7ECD" class="headerlink" title="背景介绍"></a>背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
 <p>source 分支放置 hexo 的一些源文件，master 分支放置静态博客资源。</p>
 <p><strong>我们需要做的就是获取到 source 分支的改动，自动 deploy 到 master 分支</strong></p>
 <p>所以步骤就是： 获取改动 -&gt;deploy</p>
-<h2 id="travis-CI">travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
+<h2 id="travis-CI"><a href="#travis-CI" class="headerlink" title="travis-CI"></a>travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
 <p>在 travis-CI 中对 <code>zhaochunqi.github.io</code> 开启自动构建，配置如下：<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png" alt=""><br>（建议开启 Build only if .travis.yml is prezent.)</p>
-<h2 id="配置 -travis-yml">配置 <code>.travis.yml</code></h2><h2 id="获取 github 权限"> 获取 github 权限 </h2><p> 两种方法 </p>
-<pre><code><span class="number">1.</span> SSH
-<span class="number">2.</span> github token
+<h2 id="u914D_u7F6E-travis-yml"><a href="#u914D_u7F6E-travis-yml" class="headerlink" title="配置 <code>.travis.yml</code>"></a> 配置 <code>.travis.yml</code></h2><h2 id="u83B7_u53D6github_u6743_u9650"><a href="#u83B7_u53D6github_u6743_u9650" class="headerlink" title="获取 github 权限"></a> 获取 github 权限 </h2><p> 两种方法 </p>
+<pre><code>1. SSH
+2. github token
 </code></pre><p>这里采用的是 github token 的方法，（SSH 配置较为复杂）</p>
 <p>点击头像 -&gt;settings-&gt; Personal access tokens 新建一个 token,<strong>会获取到一串字符</strong>，记录下下面需要用到。<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%206.48.06%20AM.png" alt=""></p>
-<h2 id="将 token 配置到 travis-CI">将 token 配置到 travis-CI</h2><h3 id="安装 Travis-CI 命令行工具">安装 Travis-CI 命令行工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install travis</span><br></pre></td></tr></table></figure>
-<h3 id="登陆 Travis_CI">登陆 Travis CI</h3><p>需要输入 Github 账号和密码</p>
+<h2 id="u5C06token_u914D_u7F6E_u5230travis-CI"><a href="#u5C06token_u914D_u7F6E_u5230travis-CI" class="headerlink" title="将 token 配置到 travis-CI"></a>将 token 配置到 travis-CI</h2><h3 id="u5B89_u88C5Travis-CI_u547D_u4EE4_u884C_u5DE5_u5177"><a href="#u5B89_u88C5Travis-CI_u547D_u4EE4_u884C_u5DE5_u5177" class="headerlink" title="安装 Travis-CI 命令行工具"></a>安装 Travis-CI 命令行工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install travis</span><br></pre></td></tr></table></figure>
+<h3 id="u767B_u9646Travis_CI"><a href="#u767B_u9646Travis_CI" class="headerlink" title="登陆 Travis CI"></a>登陆 Travis CI</h3><p>需要输入 Github 账号和密码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis login --auto</span><br></pre></td></tr></table></figure>
 <p>加密环境变量（token）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis encrypt GH_OWNER=super_secret</span><br></pre></td></tr></table></figure>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cihobdh0w000gngbprnonr8mi" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cii4jvp3s000gned058qt47ey" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -163,7 +163,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -172,7 +172,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/git/" style="font-size: 12.5px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 17.5px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
+      <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
     </div>
   </div>
 
@@ -181,7 +181,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -191,6 +191,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/13/aria2-auto-start/">Mac 下开机启动 Aria2</a>
+          </li>
         
           <li>
             <a href="/2015/12/01/vice-edc/">陈冠希纪录片</a>
@@ -206,10 +210,6 @@
         
           <li>
             <a href="/2015/11/26/useful-terminal-commands/">常用的终端命令</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/26/yaml/">YAML 简介</a>
           </li>
         
       </ul>

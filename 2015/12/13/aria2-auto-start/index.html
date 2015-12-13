@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mac 下开机启动 Aria2 | Alex Coding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前几天看了少数派的文章http://sspai.com/32167配置了Aria2，效果不错，决定将其开机启动。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 下开机启动 Aria2">
+<meta property="og:url" content="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/index.html">
+<meta property="og:site_name" content="Alex Coding">
+<meta property="og:description" content="前几天看了少数派的文章http://sspai.com/32167配置了Aria2，效果不错，决定将其开机启动。">
+<meta property="og:image" content="http://harchiko.qiniudn.com/54001369_p0.png">
+<meta property="og:updated_time" content="2015-12-13T13:10:56.085Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac 下开机启动 Aria2">
+<meta name="twitter:description" content="前几天看了少数派的文章http://sspai.com/32167配置了Aria2，效果不错，决定将其开机启动。">
+  
+    <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Alex Coding</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">你有没有想过，这辈子可能都是个普通人？</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhaochunqi.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-aria2-auto-start" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/13/aria2-auto-start/" class="article-date">
+  <time datetime="2015-12-13T20:51:00.000Z" itemprop="datePublished">2015-12-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mac 下开机启动 Aria2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前几天看了少数派的文章 <a href="http://sspai.com/32167" target="_blank" rel="external">http://sspai.com/32167</a> 配置了 Aria2，效果不错，决定将其开机启动。</p>
+<a id="more"></a>
+<p><img src="http://harchiko.qiniudn.com/54001369_p0.png" alt=""></p>
+<p>##Aria2 配置</p>
+<p>首先贴一下我的 config 文件:</p>
+<blockquote>
+<p>~/.aria2/aria2.conf</p>
+</blockquote>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">## '#' 开头为注释内容, 选项都有相应的注释说明, 根据需要修改 ##</span></span><br><span class="line"><span class="preprocessor">## 被注释的选项填写的是默认值, 建议在需要修改时再取消注释  ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 文件保存相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 文件的保存路径 (可使用绝对路径或相对路径), 默认: 当前启动位置</span></span><br><span class="line">dir=/Users/alex/Downloads</span><br><span class="line"><span class="preprocessor"># 启用磁盘缓存, 0 为禁用缓存, 需 1.16 以上版本, 默认:16M</span></span><br><span class="line"><span class="preprocessor">#disk-cache=32M</span></span><br><span class="line"><span class="preprocessor"># 文件预分配方式, 能有效降低磁盘碎片, 默认:prealloc</span></span><br><span class="line"><span class="preprocessor"># 预分配所需时间: none &lt; falloc ? trunc &lt; prealloc</span></span><br><span class="line"><span class="preprocessor"># falloc 和 trunc 则需要文件系统和内核支持</span></span><br><span class="line"><span class="preprocessor"># NTFS 建议使用 falloc, EXT3/4 建议 trunc, MAC 下需要注释此项</span></span><br><span class="line"><span class="preprocessor"># file-allocation=none</span></span><br><span class="line"><span class="preprocessor"># 断点续传</span></span><br><span class="line">continue=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 下载连接相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 最大同时下载任务数, 运行时可修改, 默认:5</span></span><br><span class="line">max-concurrent-downloads=<span class="number">5</span></span><br><span class="line"><span class="preprocessor"># 同一服务器连接数, 添加时可指定, 默认:1</span></span><br><span class="line">max-connection-per-server=<span class="number">5</span></span><br><span class="line"><span class="preprocessor"># 最小文件分片大小, 添加时可指定, 取值范围 1M -1024M, 默认:20M</span></span><br><span class="line"><span class="preprocessor"># 假定 size=10M, 文件为 20MiB 则使用两个来源下载; 文件为 15MiB 则使用一个来源下载</span></span><br><span class="line">min-split-size=<span class="number">10</span>M</span><br><span class="line"><span class="preprocessor"># 单个任务最大线程数, 添加时可指定, 默认:5</span></span><br><span class="line">split=<span class="number">5</span></span><br><span class="line"><span class="preprocessor"># 整体下载速度限制, 运行时可修改, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-overall-download-limit=0</span></span><br><span class="line"><span class="preprocessor"># 单个任务下载速度限制, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-download-limit=0</span></span><br><span class="line"><span class="preprocessor"># 整体上传速度限制, 运行时可修改, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-overall-upload-limit=0</span></span><br><span class="line"><span class="preprocessor"># 单个任务上传速度限制, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-upload-limit=0</span></span><br><span class="line"><span class="preprocessor"># 禁用 IPv6, 默认:false</span></span><br><span class="line">disable-ipv6=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 进度保存相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 从会话文件中读取下载任务</span></span><br><span class="line">input-file=/usr/local/Cellar/aria2/aria2.session</span><br><span class="line"><span class="preprocessor"># 在 Aria2 退出时保存 ` 错误 / 未完成 ` 的下载任务到会话文件</span></span><br><span class="line">save-session=/usr/local/Cellar/aria2/aria2.session</span><br><span class="line"><span class="preprocessor"># 定时保存会话, 0 为退出时才保存, 需 1.16.1 以上版本, 默认:0</span></span><br><span class="line"><span class="preprocessor">#save-session-interval=60</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## RPC 相关设置 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 启用 RPC, 默认:false</span></span><br><span class="line">enable-rpc=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 允许所有来源, 默认:false</span></span><br><span class="line">rpc-allow-origin-all=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 允许非外部访问, 默认:false</span></span><br><span class="line">rpc-listen-all=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 事件轮询方式, 取值:[epoll, kqueue, port, poll, select], 不同系统默认值不同</span></span><br><span class="line"><span class="preprocessor">#event-poll=select</span></span><br><span class="line"><span class="preprocessor"># RPC 监听端口, 端口被占用时可以修改, 默认:6800</span></span><br><span class="line"><span class="preprocessor">#rpc-listen-port=6800</span></span><br><span class="line"><span class="preprocessor"># 设置的 RPC 授权令牌, v1.18.4 新增功能, 取代 --rpc-user 和 --rpc-passwd 选项</span></span><br><span class="line"><span class="preprocessor">#rpc-secret=&lt;TOKEN&gt;</span></span><br><span class="line"><span class="preprocessor"># 设置的 RPC 访问用户名, 此选项新版已废弃, 建议改用 --rpc-secret 选项</span></span><br><span class="line"><span class="preprocessor">#rpc-user=&lt;USER&gt;</span></span><br><span class="line"><span class="preprocessor"># 设置的 RPC 访问密码, 此选项新版已废弃, 建议改用 --rpc-secret 选项</span></span><br><span class="line"><span class="preprocessor">#rpc-passwd=&lt;PASSWD&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## BT/PT 下载相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 当下载的是一个种子(以.torrent 结尾) 时, 自动开始 BT 任务, 默认:true</span></span><br><span class="line"><span class="preprocessor">#follow-torrent=true</span></span><br><span class="line"><span class="preprocessor"># BT 监听端口, 当端口被屏蔽时使用, 默认:6881-6999</span></span><br><span class="line">listen-port=<span class="number">51413</span></span><br><span class="line"><span class="preprocessor"># 单个种子最大连接数, 默认:55</span></span><br><span class="line"><span class="preprocessor">#bt-max-peers=55</span></span><br><span class="line"><span class="preprocessor"># 打开 DHT 功能, PT 需要禁用, 默认:true</span></span><br><span class="line">enable-dht=<span class="literal">false</span></span><br><span class="line"><span class="preprocessor"># 打开 IPv6 DHT 功能, PT 需要禁用</span></span><br><span class="line"><span class="preprocessor">#enable-dht6=false</span></span><br><span class="line"><span class="preprocessor"># DHT 网络监听端口, 默认:6881-6999</span></span><br><span class="line"><span class="preprocessor">#dht-listen-port=6881-6999</span></span><br><span class="line"><span class="preprocessor"># 本地节点查找, PT 需要禁用, 默认:false</span></span><br><span class="line"><span class="preprocessor">#bt-enable-lpd=false</span></span><br><span class="line"><span class="preprocessor"># 种子交换, PT 需要禁用, 默认:true</span></span><br><span class="line">enable-peer-exchange=<span class="literal">false</span></span><br><span class="line"><span class="preprocessor"># 每个种子限速, 对少种的 PT 很有用, 默认:50K</span></span><br><span class="line"><span class="preprocessor">#bt-request-peer-speed-limit=50K</span></span><br><span class="line"><span class="preprocessor"># 客户端伪装, PT 需要</span></span><br><span class="line">peer-id-prefix=-TR2770-</span><br><span class="line">user-agent=Transmission/<span class="number">2.77</span></span><br><span class="line"><span class="preprocessor"># 当种子的分享率达到这个数时, 自动停止做种, 0 为一直做种, 默认:1.0</span></span><br><span class="line">seed-ratio=<span class="number">0</span></span><br><span class="line"><span class="preprocessor"># 强制保存会话, 即使任务已经完成, 默认:false</span></span><br><span class="line"><span class="preprocessor"># 较新的版本开启后会在任务完成后依然保留.aria2 文件</span></span><br><span class="line"><span class="preprocessor">#force-save=false</span></span><br><span class="line"><span class="preprocessor"># BT 校验相关, 默认:true</span></span><br><span class="line"><span class="preprocessor">#bt-hash-check-seed=true</span></span><br><span class="line"><span class="preprocessor"># 继续之前的 BT 任务时, 无需再次校验, 默认:false</span></span><br><span class="line">bt-seed-unverified=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 保存磁力链接元数据为种子文件(.torrent 文件), 默认:false</span></span><br><span class="line">bt-save-metadata=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>主要是更改了下载文档路径 <code>dir=/Users/alex/Downloads</code> </p>
+<h2 id="u6DFB_u52A0_u5230_u542F_u52A8_u9879"><a href="#u6DFB_u52A0_u5230_u542F_u52A8_u9879" class="headerlink" title="添加到启动项"></a>添加到启动项 </h2><p> 创建文件 <code>aria2.plist</code></p>
+<p><strong>修改 array 中的 aria2 命令为你的 aria2 命令路径, 可使用 <code>which aria2c</code> 命令查看</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"</span><br><span class="line">"http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">plist</span> <span class="attribute">version</span>=<span class="value">"1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">dict</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>KeepAlive<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">true</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>RunAtLoad<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">true</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>Label<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">string</span>&gt;</span>aria2<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>ProgramArguments<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">string</span>&gt;</span>/usr/local/bin/aria2c<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>WorkingDirectory<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">string</span>&gt;</span>/Users/alex/Downloads<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">plist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以添加参数到 <code>&lt;array&gt;</code> 中, 添加到第一行命令之后。</p>
+</blockquote>
+<p>将文件复制到 <code>~/Library/LaunchAgents</code> 下</p>
+<p>进入文件夹，并 <strong> 修改文件权限为 644</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod <span class="number">644</span> aria2.plist</span><br></pre></td></tr></table></figure>
+<p>执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">launchctl load aria2.plist</span><br><span class="line">launchctl start aria2</span><br></pre></td></tr></table></figure>
+<p>大功告成</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cii4jvp590027ned0zqpl3yre" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/01/vice-edc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">陈冠希纪录片</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/snippets/">snippets</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/soft/">soft</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/12/13/aria2-auto-start/">Mac 下开机启动 Aria2</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/01/vice-edc/">陈冠希纪录片</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/28/dota2-steam-settings/">Steam 中 Dota2 进入国服的一些设定</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/27/travis-ci-deploy-hexo/">使用 Travis-CI 生成发布 Hexo 博客</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/26/useful-terminal-commands/">常用的终端命令</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Alex Zhao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
