@@ -4,7 +4,7 @@
   <subtitle><![CDATA[你有没有想过，这辈子可能都是个普通人？]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.zhaochunqi.com/"/>
-  <updated>2015-12-13T13:10:56.085Z</updated>
+  <updated>2015-12-18T14:08:40.765Z</updated>
   <id>http://blog.zhaochunqi.com/</id>
   
   <author>
@@ -15,11 +15,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[.bash_profile vs .bashrc]]></title>
+    <link href="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/"/>
+    <id>http://blog.zhaochunqi.com/2015/12/18/bash-config-files/</id>
+    <published>2015-12-18T17:32:00.000Z</published>
+    <updated>2015-12-18T14:08:40.765Z</updated>
+    <content type="html"><![CDATA[<p>Bash 的配置文件位置包括 <code>.bash_profile</code> 和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p>
+<a id="more"></a>
+<p><img src="http://harchiko.qiniudn.com/54002458_p0.jpg" alt=""></p>
+<p>根据 <a href="http://linux.die.net/man/1/bash" target="_blank" rel="external">http://linux.die.net/man/1/bash</a> 的描述，<code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
+<h2 id="u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F"><a href="#u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F" class="headerlink" title="什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
+<p>但是，当你 <strong> 已经登录进机器 </strong>，不管是通过 Gnome 还是 KDE 的 xterm，那么<code>.bashrc</code> 在窗口弹出之前执行。而且，<code>.bashrc</code>在使用 <code>/bin/bash</code> 在 Terminal 调用时同样会执行。</p>
+<h2 id="u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F"><a href="#u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F" class="headerlink" title="为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
+<h2 id="Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916"><a href="#Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916" class="headerlink" title="Mac OS X – 一个例外"></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
+<h2 id="u5EFA_u8BAE"><a href="#u5EFA_u8BAE" class="headerlink" title="建议"></a>建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
+<p>添加如下命令到 <code>.bash_profile</code> 中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="operator">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>这样当你登录到 console 时，<code>.bashrc</code>会被调用。</p>
+<h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Bash的配置文件位置包括<code>.bash_profile</code>和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p>]]>
+    
+    </summary>
+    
+      <category term="bash" scheme="http://blog.zhaochunqi.com/tags/bash/"/>
+    
+      <category term="linux" scheme="http://blog.zhaochunqi.com/tags/linux/"/>
+    
+      <category term="mac" scheme="http://blog.zhaochunqi.com/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Mac 下开机启动 Aria2]]></title>
     <link href="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/"/>
     <id>http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/</id>
     <published>2015-12-13T20:51:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>前几天看了少数派的文章 <a href="http://sspai.com/32167" target="_blank" rel="external">http://sspai.com/32167</a> 配置了 Aria2，效果不错，决定将其开机启动。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/54001369_p0.png" alt=""></p>
@@ -57,7 +90,7 @@
     <link href="http://blog.zhaochunqi.com/2015/12/01/vice-edc/"/>
     <id>http://blog.zhaochunqi.com/2015/12/01/vice-edc/</id>
     <published>2015-12-01T15:26:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p> 陈冠希是谁? 这世界上有几亿人看过他的照片；陈冠希在做什么？媒体上的他声名狼藉；VICE 拍陈冠希？听起来很刺激，也合情合理 —— 他身上具备一切精彩故事的必要元素，他就是 VICE 要讲的故事。</p>
 <p> 音乐《记得我吗》</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="417" height="86" src="http://music.163.com/outchain/player?type=2&id=65808&auto=0&height=66"></iframe>
@@ -91,7 +124,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/28/dota2-steam-settings/"/>
     <id>http://blog.zhaochunqi.com/2015/11/28/dota2-steam-settings/</id>
     <published>2015-11-28T04:09:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>Dota2 在完美代理后单独出了一个国服的客户端，但是需要同时注册 Steam 帐号和国服帐号，可见国服的 Dota2 也是绑定在 Steam 上的，既然如此，倒不如直接使用 steam 客户端省事。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/dota-2-official.jpg" alt="image"></p>
@@ -112,7 +145,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/"/>
     <id>http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/</id>
     <published>2015-11-27T18:51:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>本篇文章将指导你如何使用 Travis-CI 自动部署 hexo 生成的静态博客到 github 上。</p>
 <a id="more"></a>
 <h2 id="u80CC_u666F_u4ECB_u7ECD"><a href="#u80CC_u666F_u4ECB_u7ECD" class="headerlink" title="背景介绍"></a>背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
@@ -121,7 +154,7 @@
 <p>所以步骤就是： 获取改动 -&gt;deploy</p>
 <h2 id="travis-CI"><a href="#travis-CI" class="headerlink" title="travis-CI"></a>travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
 <p>在 travis-CI 中对 <code>zhaochunqi.github.io</code> 开启自动构建，配置如下：<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png" alt=""><br>（建议开启 Build only if .travis.yml is prezent.)</p>
-<h2 id="u914D_u7F6E-travis-yml"><a href="#u914D_u7F6E-travis-yml" class="headerlink" title="配置 <code>.travis.yml</code>"></a> 配置 <code>.travis.yml</code></h2><h2 id="u83B7_u53D6github_u6743_u9650"><a href="#u83B7_u53D6github_u6743_u9650" class="headerlink" title="获取 github 权限"></a> 获取 github 权限 </h2><p> 两种方法 </p>
+<h2 id="u914D_u7F6E-travis-yml"><a href="#u914D_u7F6E-travis-yml" class="headerlink" title="配置.travis.yml"></a>配置 <code>.travis.yml</code></h2><h2 id="u83B7_u53D6github_u6743_u9650"><a href="#u83B7_u53D6github_u6743_u9650" class="headerlink" title="获取 github 权限"></a> 获取 github 权限 </h2><p> 两种方法 </p>
 <pre><code>1. SSH
 2. github token
 </code></pre><p>这里采用的是 github token 的方法，（SSH 配置较为复杂）</p>
@@ -155,7 +188,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/</id>
     <published>2015-11-26T04:20:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p> 介绍一些常用的 Linux 命令，这些命令能够在终端下极大的方便我们的操作。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/S27YSIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIHAlIPhe3WkMAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIlAcG39LatBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAhcCQi+V3caQ4AAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIBASUDwLb1tKwECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECVwKC79WdxhAgQ.png" alt=""></p>
@@ -194,7 +227,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/yaml/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/yaml/</id>
     <published>2015-11-26T02:41:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p><code>YAML</code> <strong>[YAML Ain’t Markup Language]</strong></p>
 <p>和 GNU 一样，YAML 是一个递归着说“不”的名字。不同的是，GNU 对 UNIX 说不，YAML 说不的对象是 XML。</p>
 <a id="more"></a>
@@ -221,7 +254,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/random-git-commit/</id>
     <published>2015-11-26T02:30:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p><strong> 代码 </strong>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"<span class="variable">$(curl -s http://whatthecommit.com/ | awk'/&lt;p&gt;/ &#123;sub("&lt;p&gt;", "")</span>; print &#125;')"</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -247,7 +280,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/"/>
     <id>http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/</id>
     <published>2015-11-25T01:46:00.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>DictUnifer 是一款在 Mac 下能够转换字典格式的软件。把第三方的词库转换成「Mac 词典」支持的格式。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-25%20at%201.39.29%20AM.png" alt=""></p>
@@ -273,7 +306,7 @@
     <link href="http://blog.zhaochunqi.com/2015/08/24/faker-js/"/>
     <id>http://blog.zhaochunqi.com/2015/08/24/faker-js/</id>
     <published>2015-08-24T08:05:30.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>Faker.js 能够生成名字、地址、电话号码等信息的库。<br><a id="more"></a></p>
 <p> 项目地址： <a href="https://github.com/Marak/faker.js" target="_blank" rel="external">https://github.com/Marak/faker.js</a></p>
 <p> 使用方法比较简单：</p>
@@ -300,8 +333,8 @@
     <link href="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/"/>
     <id>http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/</id>
     <published>2015-03-04T05:45:39.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
-    <content type="html"><![CDATA[<h2 id="supervisor_u7B80_u4ECB"><a href="#supervisor_u7B80_u4ECB" class="headerlink" title="<code>supervisor</code>简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
+    <updated>2015-12-18T14:08:40.765Z</updated>
+    <content type="html"><![CDATA[<h2 id="supervisor_u7B80_u4ECB"><a href="#supervisor_u7B80_u4ECB" class="headerlink" title="supervisor 简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
 <a id="more"></a>
 <h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$: easy_install supervisor</span><br></pre></td></tr></table></figure>
@@ -318,7 +351,7 @@
 <p>另外，supervisor 还有交互式命令 supervisorcli , 输入 help 查看即可了解如何操作。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="supervisor_u7B80_u4ECB"><a href="#supervisor_u7B80_u4ECB" class="headerlink" title="<code>supervisor</code>简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。</p>]]>
+    <![CDATA[<h2 id="supervisor_u7B80_u4ECB"><a href="#supervisor_u7B80_u4ECB" class="headerlink" title="supervisor简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。</p>]]>
     
     </summary>
     
@@ -335,7 +368,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/"/>
     <id>http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/</id>
     <published>2015-02-15T07:29:41.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。</p>
 <a id="more"></a>
 <h1 id="Linux__u7BC7"><a href="#Linux__u7BC7" class="headerlink" title="Linux 篇"></a>Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
@@ -374,7 +407,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/"/>
     <id>http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/</id>
     <published>2015-02-11T03:00:55.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<h2 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p>
 <a id="more"></a>
 <h2 id="u6392_u67E5"><a href="#u6392_u67E5" class="headerlink" title="排查"></a>排查</h2><ul>
@@ -406,7 +439,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/"/>
     <id>http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/</id>
     <published>2015-02-10T02:36:17.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<h2 id="u5173_u4E8E"><a href="#u5173_u4E8E" class="headerlink" title="关于"></a>关于 </h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a> 中提到过，本文将重点讲解一下 shadowsocks 的使用方法。</p>
 <p>原文链接：<a href="http://blog.zhaochunqi.com/shadowsocks-user-manual/">http://blog.zhaochunqi.com/shadowsocks-user-manual/</a></p>
 <p>作者：<a href="http://blog.zhaochunqi.com" title="http://blog.zhaochunqi.com">zhaochunqi</a></p>
@@ -448,7 +481,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/"/>
     <id>http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/</id>
     <published>2015-02-05T01:59:07.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>环境：OSX yosemite/Parallels Desktop 10</p>
 <h2 id="Vagrant__u4ECB_u7ECD"><a href="#Vagrant__u4ECB_u7ECD" class="headerlink" title="Vagrant 介绍"></a>Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>
 <a id="more"></a>
@@ -486,7 +519,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="external">showrss</a>,</p>
 <a id="more"></a>
 <h2 id="u754C_u9762"><a href="#u754C_u9762" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png" alt="showrss"></p>
@@ -517,7 +550,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p><strong> 本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p>
 <a id="more"></a>
 <p> 程序员们最在意的，可能就是网络跟设备配置了。</p>
@@ -555,7 +588,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/"/>
     <id>http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/</id>
     <published>2015-01-27T01:11:15.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p> 因为一些国内的客观原因，google 的访问速度一直很慢，通过 firebug 看了下 google 相关的服务加载速度超过了 1s 种，而且经常加载不成功。</p>
 <a id="more"></a>
 <p> 更改方法：</p>
@@ -579,7 +612,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/</id>
     <published>2015-01-23T06:45:22.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<h2 id="u4EC0_u4E48_u662Fxpath_3F"><a href="#u4EC0_u4E48_u662Fxpath_3F" class="headerlink" title="什么是 xpath?"></a>什么是 xpath?</h2><blockquote>
 <p>XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。</p>
 </blockquote>
@@ -764,7 +797,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/</id>
     <published>2015-01-23T01:56:38.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
+    <updated>2015-12-18T14:08:40.765Z</updated>
     <content type="html"><![CDATA[<p>如何确定 python 脚本的位置？<br>python 脚本有个 <code>__file__</code> 属性，能够确定脚本所在的位置。但由于运行文件夹的不同，<code>__file__</code>的相对路径也不同。</p>
 <a id="more"></a>
 <h2 id="u5982_u4F55_u786E_u5B9A_u5F53_u524D_u811A_u672C_u7684_u7EDD_u5BF9_u8DEF_u5F84"><a href="#u5982_u4F55_u786E_u5B9A_u5F53_u524D_u811A_u672C_u7684_u7EDD_u5BF9_u8DEF_u5F84" class="headerlink" title="如何确定当前脚本的绝对路径"></a>如何确定当前脚本的绝对路径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.realpath(__file__)</span><br></pre></td></tr></table></figure>
@@ -780,35 +813,6 @@
     </summary>
     
       <category term="python" scheme="http://blog.zhaochunqi.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何在 Ubuntu 中安装 hexo]]></title>
-    <link href="http://blog.zhaochunqi.com/2014/12/22/install-hexo/"/>
-    <id>http://blog.zhaochunqi.com/2014/12/22/install-hexo/</id>
-    <published>2014-12-22T02:18:16.000Z</published>
-    <updated>2015-12-13T13:10:56.085Z</updated>
-    <content type="html"><![CDATA[<h2 id="u5B89_u88C5_nvm"><a href="#u5B89_u88C5_nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h2><p>cURL:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>Wget:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
-<p>安装后重启 Terminal 。</p>
-<blockquote>
-<p>因为使用的是 zsh，所以最好在.zshrc 文件中加入这句<code>source ~/.nvm/nvm.sh</code> </p>
-</blockquote>
-<h2 id="u5B89_u88C5_NodeJS"><a href="#u5B89_u88C5_NodeJS" class="headerlink" title="安装 NodeJS"></a>安装 NodeJS</h2><p>运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install <span class="number">0.10</span> &amp;&amp; nvm use <span class="number">0.10</span></span><br></pre></td></tr></table></figure>
-<h3 id="u5B89_u88C5_Hexo"><a href="#u5B89_u88C5_Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Hexo 的使用以及注意事项见 <a href="http://hexo.io/docs/" target="_blank" rel="external"> 链接</a></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u5B89_u88C5_nvm"><a href="#u5B89_u88C5_nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h2><p>cURL:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>]]>
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhaochunqi.com/tags/linux/"/>
     
   </entry>
   

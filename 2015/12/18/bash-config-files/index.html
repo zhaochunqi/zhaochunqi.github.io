@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About Me | Alex Coding</title>
+  <title>.bash_profile vs .bashrc | Alex Coding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我是  赵春奇, 从机械专业半路出家的程序员。
-联系方式： zcq.qiqi[at]gmail.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About Me">
-<meta property="og:url" content="http://blog.zhaochunqi.com/About-Me/index.html">
+  <meta name="description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
+<meta property="og:type" content="article">
+<meta property="og:title" content=".bash_profile vs .bashrc">
+<meta property="og:url" content="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description" content="我是  赵春奇, 从机械专业半路出家的程序员。
-联系方式： zcq.qiqi[at]gmail.com">
+<meta property="og:description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
+<meta property="og:image" content="http://harchiko.qiniudn.com/54002458_p0.jpg">
 <meta property="og:updated_time" content="2015-12-18T14:08:40.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About Me">
-<meta name="twitter:description" content="我是  赵春奇, 从机械专业半路出家的程序员。
-联系方式： zcq.qiqi[at]gmail.com">
+<meta name="twitter:title" content=".bash_profile vs .bashrc">
+<meta name="twitter:description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
   
     <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
   
@@ -67,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-bash-config-files" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/About-Me/index.html" class="article-date">
-  <time datetime="2014-12-22T02:00:49.000Z" itemprop="datePublished">2014-12-22</time>
+    <a href="/2015/12/18/bash-config-files/" class="article-date">
+  <time datetime="2015-12-18T17:32:00.000Z" itemprop="datePublished">2015-12-18</time>
 </a>
     
   </div>
@@ -81,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      About Me
+      .bash_profile vs .bashrc
     </h1>
   
 
@@ -89,19 +87,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我是 <strong> 赵春奇</strong>, 从机械专业半路出家的程序员。</p>
-<p>联系方式： zcq.qiqi[at]gmail.com</p>
+        <p>Bash 的配置文件位置包括 <code>.bash_profile</code> 和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p>
+<a id="more"></a>
+<p><img src="http://harchiko.qiniudn.com/54002458_p0.jpg" alt=""></p>
+<p>根据 <a href="http://linux.die.net/man/1/bash" target="_blank" rel="external">http://linux.die.net/man/1/bash</a> 的描述，<code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
+<h2 id="u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F"><a href="#u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F" class="headerlink" title="什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
+<p>但是，当你 <strong> 已经登录进机器 </strong>，不管是通过 Gnome 还是 KDE 的 xterm，那么<code>.bashrc</code> 在窗口弹出之前执行。而且，<code>.bashrc</code>在使用 <code>/bin/bash</code> 在 Terminal 调用时同样会执行。</p>
+<h2 id="u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F"><a href="#u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F" class="headerlink" title="为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
+<h2 id="Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916"><a href="#Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916" class="headerlink" title="Mac OS X – 一个例外"></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
+<h2 id="u5EFA_u8BAE"><a href="#u5EFA_u8BAE" class="headerlink" title="建议"></a>建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
+<p>添加如下命令到 <code>.bash_profile</code> 中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="operator">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>这样当你登录到 console 时，<code>.bashrc</code>会被调用。</p>
+<h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/About-Me/index.html" data-id="ciibr5dx70000nhcv3268l9lp" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="ciibr5e000027nhcv37huctvp" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/13/aria2-auto-start/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mac 下开机启动 Aria2</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
