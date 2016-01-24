@@ -1,7 +1,7 @@
-title: 学习Javascript
-date: 2015-12-13 6:19
-categories: ""
-tags: [,]
+title: Mac 下开机启2动 Aria2
+date: 2015-12-113 8:51 PM
+categories: 
+tags: [mac,]
 ---
 本文将从Javascript语言与其他语言不同之处快速的学习Javascript
 
