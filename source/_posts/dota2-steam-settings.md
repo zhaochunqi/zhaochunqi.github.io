@@ -1,7 +1,7 @@
 title: Dota2 国服设定
 date: 2016-01-24 03:02:11
 categories: 
-tags: [,]
+tags: [dota2,]
 
 ---
 ## Dota2 国服设定

@@ -1,7 +1,7 @@
 title: YAML简介
 date: 2016-01-24 03:02:25
 categories: 
-tags: [,]
+tags: [dev,]
 ---
 ## YAML简介
 
