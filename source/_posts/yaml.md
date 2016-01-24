@@ -1,9 +1,8 @@
 title: YAML简介
-date: 2015-11-26 2:41 AM
+date: 2015-11-26 2:41
 categories: ""
 tags: [,]
 ---
-
 
 `YAML` **[YAML Ain't Markup Language]**
 

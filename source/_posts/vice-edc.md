@@ -1,5 +1,5 @@
 title: 陈冠希纪录片
-date: 2015-12-01 3:26 PM
+date: 2015-12-01 3:26
 categories: ""
 tags: [,]
 ---

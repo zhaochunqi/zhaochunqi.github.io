@@ -1,5 +1,5 @@
 title: 学习Javascript
-date: 2015-12-13 6:19 PM
+date: 2015-12-13 6:19
 categories: ""
 tags: [,]
 ---

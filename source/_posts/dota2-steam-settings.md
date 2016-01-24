@@ -1,5 +1,5 @@
-title: "Steam 中 Dota2 进入国服的一些设定"
-date: 2015-11-28 4:09 AM
+title: Steam 中 Dota2 进入国服的一些设定
+date: 2015-11-28 4:09
 categories: ""
 tags: [,]
 ---
