@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png">
-<meta property="og:updated_time" content="2016-01-24T06:46:23.751Z">
+<meta property="og:updated_time" content="2016-01-24T06:59:55.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于 Shadowsocks 透明代理的实现">
 <meta name="twitter:description" content="本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。">
@@ -94,17 +94,17 @@
 <p> 程序员们最在意的，可能就是网络跟设备配置了。</p>
 <p> 做一个透明代理，能够做到：</p>
 <pre><code> 自动翻墙，本地无需配置。
-</code></pre><h2 id="u7F51_u7EDC_u62D3_u6251_u56FE"><a href="#u7F51_u7EDC_u62D3_u6251_u56FE" class="headerlink" title="网络拓扑图"></a> 网络拓扑图 </h2><p><img src="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png" alt="透明代理网络拓扑图"></p>
-<h2 id="u9700_u6C42"><a href="#u9700_u6C42" class="headerlink" title="需求"></a> 需求 </h2><ol>
+</code></pre><h2 id="网络拓扑图"> 网络拓扑图 </h2><p><img src="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png" alt="透明代理网络拓扑图"></p>
+<h2 id="需求"> 需求 </h2><ol>
 <li> 一台外网 VPS（能被中国大陆访问到，能够访问到 Facebook 等网站）</li>
 <li> 一台本地 Linux 服务器 (此处可以用智能路由器代替)。</li>
 </ol>
-<h2 id="u65B9_u6848_u8BBE_u60F3"><a href="#u65B9_u6848_u8BBE_u60F3" class="headerlink" title="方案设想"></a> 方案设想 </h2><ol>
+<h2 id="方案设想"> 方案设想 </h2><ol>
 <li> 本地的 Linux 服务器作为网关， 处理本地流量和需要代理的流量。</li>
 <li> 本地服务器将需要代理的流量转发给 Shadowsocks 并通过 Shadowsocks 来实现代理功能。</li>
 <li> 流量转发到 Cow 中，然后通过 Cow 来判断需要自动翻墙的网址。</li>
 </ol>
-<h2 id="u5177_u4F53_u65B9_u6848"><a href="#u5177_u4F53_u65B9_u6848" class="headerlink" title="具体方案"></a> 具体方案 </h2><ol>
+<h2 id="具体方案"> 具体方案 </h2><ol>
 <li> 在 VPS 中安装 Shadowsocks，并在本地客户端测试是否成功。</li>
 <li> 在本地 Linux 服务器中部署 Cow，通过 Cow 来进行 ShadowSocks 代理。</li>
 <li> 使用 iptables 将流量转发到 Cow 本地监控的端口。</li>
@@ -113,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/" data-id="cijs6mwlm002jndd1028c9rby" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/" data-id="cijs74c4f002jnjcubeefnv7v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proxy/">proxy</a></li></ul>

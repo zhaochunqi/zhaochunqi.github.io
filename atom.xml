@@ -4,7 +4,7 @@
   <subtitle><![CDATA[你有没有想过，这辈子可能都是个普通人？]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.zhaochunqi.com/"/>
-  <updated>2016-01-24T06:46:23.751Z</updated>
+  <updated>2016-01-24T06:59:55.747Z</updated>
   <id>http://blog.zhaochunqi.com/</id>
   
   <author>
@@ -19,25 +19,25 @@
     <link href="http://blog.zhaochunqi.com/2016/01/24/sublime_the_text/"/>
     <id>http://blog.zhaochunqi.com/2016/01/24/sublime_the_text/</id>
     <published>2016-01-24T13:44:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
-    <content type="html"><![CDATA[<h2 id="u8BA9_Sublime__u66F4_u6F02_u4EAE"><a href="#u8BA9_Sublime__u66F4_u6F02_u4EAE" class="headerlink" title="让 Sublime 更漂亮"></a>让 Sublime 更漂亮 </h2><h3 id="u5B89_u88C5_Material_Theme"><a href="#u5B89_u88C5_Material_Theme" class="headerlink" title="安装 Material Theme"></a> 安装 Material Theme</h3><ol>
+    <updated>2016-01-24T06:59:55.747Z</updated>
+    <content type="html"><![CDATA[<h2 id="让_Sublime_更漂亮">让 Sublime 更漂亮 </h2><h3 id="安装_Material_Theme"> 安装 Material Theme</h3><ol>
 <li>安装<code>PackageControl</code> <a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a>，重启 Sublime.</li>
 <li>安装 Material Theme, <a href="https://github.com/equinusocio/material-theme" target="_blank" rel="external">https://github.com/equinusocio/material-theme</a>。</li>
 <li>安装完毕后按照弹出的 <code>README</code> 文档配置用户配置文档。</li>
 </ol>
-<h3 id="u5B89_u88C5_Facebook_Color_Theme"><a href="#u5B89_u88C5_Facebook_Color_Theme" class="headerlink" title="安装 Facebook Color Theme"></a>安装 Facebook Color Theme</h3><ol>
+<h3 id="安装_Facebook_Color_Theme">安装 Facebook Color Theme</h3><ol>
 <li>安装 <code>Colorsublime</code>, 在 <code>PackageControl</code> 中搜索 <code>Colorsublime</code> 即可。</li>
 <li>安装 <code>Facebook Color Theme</code><ul>
 <li>打开｀PackageControl｀，使用 <code>Colorsublime: install</code>, 安装 Theme, Theme 名称为 Facebook 。</li>
 </ul>
 </li>
 </ol>
-<h3 id="u5B89_u88C5_FiraCode__u5B57_u4F53"><a href="#u5B89_u88C5_FiraCode__u5B57_u4F53" class="headerlink" title="安装 FiraCode 字体"></a>安装 FiraCode 字体</h3><ul>
+<h3 id="安装_FiraCode_字体">安装 FiraCode 字体</h3><ul>
 <li>打开字体 repo<a href="https://github.com/tonsky/FiraCode" target="_blank" rel="external">https://github.com/tonsky/FiraCode</a></li>
 <li>下载后双击安装即可，我把所有的都安装了。</li>
 <li>在配置文件中配置<code>font-face</code> 为 “Fire Code Retina”, 顺便配置下<code>font-size</code>: 15。</li>
 </ul>
-<h3 id="u4E2A_u6027_u5316_u914D_u7F6E"><a href="#u4E2A_u6027_u5316_u914D_u7F6E" class="headerlink" title="个性化配置"></a>个性化配置</h3><ul>
+<h3 id="个性化配置">个性化配置</h3><ul>
 <li><p>修改 Material Theme，使 Material Theme 与 Facebook Color Theme 协调统一。</p>
 <ul>
 <li>安装 PackageResourceViewer 以便查看并修改 Theme.</li>
@@ -55,10 +55,11 @@
 <li>去掉行号 <code>&quot;line_numbers&quot;: false,</code></li>
 <li>去掉行号那边缩进 <code>&quot;margin&quot;:0,&quot;</code></li>
 </ul>
-<h3 id="u914D_u7F6E_u5B8C_u6BD5_u7ED3_u679C_u5982_u56FE"><a href="#u914D_u7F6E_u5B8C_u6BD5_u7ED3_u679C_u5982_u56FE" class="headerlink" title="配置完毕结果如图"></a>配置完毕结果如图</h3><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-12-28%20at%207.59.11%20PM.png" alt=""></p>
-<h2 id="u8BA9Sublime_u66F4_u9AD8_u6548"><a href="#u8BA9Sublime_u66F4_u9AD8_u6548" class="headerlink" title="让 Sublime 更高效"></a>让 Sublime 更高效</h2>]]></content>
+<h3 id="配置完毕结果如图">配置完毕结果如图</h3><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-12-28%20at%207.59.11%20PM.png" alt=""></p>
+<h2 id="让 Sublime 更高效">让 Sublime 更高效</h2>]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u8BA9_Sublime__u66F4_u6F02_u4EAE"><a href="#u8BA9_Sublime__u66F4_u6F02_u4EAE" class="headerlink" title="让 Sublime 更漂亮"></a>让 Sublime]]>
+    <![CDATA[<h2 id="让_Sublime_更漂亮">让 Sublime 更漂亮 </h2><h3 id="安装_Material_Theme"> 安装 Material Theme</h3><ol>
+<li>安装<code>PackageControl</code> <a href="]]>
     </summary>
     
       <category term="editor" scheme="http://blog.zhaochunqi.com/tags/editor/"/>
@@ -72,20 +73,20 @@
     <link href="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/"/>
     <id>http://blog.zhaochunqi.com/2015/12/18/bash-config-files/</id>
     <published>2015-12-18T17:32:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>Bash 的配置文件位置包括 <code>.bash_profile</code> 和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/54002458_p0.jpg" alt=""></p>
 <p>根据 <a href="http://linux.die.net/man/1/bash" target="_blank" rel="external">http://linux.die.net/man/1/bash</a> 的描述，<code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
-<h2 id="u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F"><a href="#u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F" class="headerlink" title="什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
+<h2 id="什么是_login_和_non-login_shell_?">什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
 <p>但是，当你 <strong> 已经登录进机器 </strong>，不管是通过 Gnome 还是 KDE 的 xterm，那么<code>.bashrc</code> 在窗口弹出之前执行。而且，<code>.bashrc</code>在使用 <code>/bin/bash</code> 在 Terminal 调用时同样会执行。</p>
-<h2 id="u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F"><a href="#u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F" class="headerlink" title="为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
-<h2 id="Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916"><a href="#Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916" class="headerlink" title="Mac OS X – 一个例外"></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
-<h2 id="u5EFA_u8BAE"><a href="#u5EFA_u8BAE" class="headerlink" title="建议"></a>建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
+<h2 id="为什么是两个不同的文件？">为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
+<h2 id="Mac_OS_X_–_一个例外">Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
+<h2 id="建议">建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
 <p>添加如下命令到 <code>.bash_profile</code> 中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="operator">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <p>这样当你登录到 console 时，<code>.bashrc</code>会被调用。</p>
-<h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
+<h2 id="参考链接">参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Bash的配置文件位置包括<code>.bash_profile</code>和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p>]]>
@@ -105,7 +106,7 @@
     <link href="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/"/>
     <id>http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/</id>
     <published>2015-12-13T20:51:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>前几天看了少数派的文章 <a href="http://sspai.com/32167" target="_blank" rel="external">http://sspai.com/32167</a> 配置了 Aria2，效果不错，决定将其开机启动。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/54001369_p0.png" alt=""></p>
@@ -116,7 +117,7 @@
 </blockquote>
 <figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">## '#' 开头为注释内容, 选项都有相应的注释说明, 根据需要修改 ##</span></span><br><span class="line"><span class="preprocessor">## 被注释的选项填写的是默认值, 建议在需要修改时再取消注释  ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 文件保存相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 文件的保存路径 (可使用绝对路径或相对路径), 默认: 当前启动位置</span></span><br><span class="line">dir=/Users/alex/Downloads</span><br><span class="line"><span class="preprocessor"># 启用磁盘缓存, 0 为禁用缓存, 需 1.16 以上版本, 默认:16M</span></span><br><span class="line"><span class="preprocessor">#disk-cache=32M</span></span><br><span class="line"><span class="preprocessor"># 文件预分配方式, 能有效降低磁盘碎片, 默认:prealloc</span></span><br><span class="line"><span class="preprocessor"># 预分配所需时间: none &lt; falloc ? trunc &lt; prealloc</span></span><br><span class="line"><span class="preprocessor"># falloc 和 trunc 则需要文件系统和内核支持</span></span><br><span class="line"><span class="preprocessor"># NTFS 建议使用 falloc, EXT3/4 建议 trunc, MAC 下需要注释此项</span></span><br><span class="line"><span class="preprocessor"># file-allocation=none</span></span><br><span class="line"><span class="preprocessor"># 断点续传</span></span><br><span class="line">continue=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 下载连接相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 最大同时下载任务数, 运行时可修改, 默认:5</span></span><br><span class="line">max-concurrent-downloads=<span class="number">5</span></span><br><span class="line"><span class="preprocessor"># 同一服务器连接数, 添加时可指定, 默认:1</span></span><br><span class="line">max-connection-per-server=<span class="number">5</span></span><br><span class="line"><span class="preprocessor"># 最小文件分片大小, 添加时可指定, 取值范围 1M -1024M, 默认:20M</span></span><br><span class="line"><span class="preprocessor"># 假定 size=10M, 文件为 20MiB 则使用两个来源下载; 文件为 15MiB 则使用一个来源下载</span></span><br><span class="line">min-split-size=<span class="number">10</span>M</span><br><span class="line"><span class="preprocessor"># 单个任务最大线程数, 添加时可指定, 默认:5</span></span><br><span class="line">split=<span class="number">5</span></span><br><span class="line"><span class="preprocessor"># 整体下载速度限制, 运行时可修改, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-overall-download-limit=0</span></span><br><span class="line"><span class="preprocessor"># 单个任务下载速度限制, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-download-limit=0</span></span><br><span class="line"><span class="preprocessor"># 整体上传速度限制, 运行时可修改, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-overall-upload-limit=0</span></span><br><span class="line"><span class="preprocessor"># 单个任务上传速度限制, 默认:0</span></span><br><span class="line"><span class="preprocessor">#max-upload-limit=0</span></span><br><span class="line"><span class="preprocessor"># 禁用 IPv6, 默认:false</span></span><br><span class="line">disable-ipv6=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 进度保存相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 从会话文件中读取下载任务</span></span><br><span class="line">input-file=/usr/local/Cellar/aria2/aria2.session</span><br><span class="line"><span class="preprocessor"># 在 Aria2 退出时保存 ` 错误 / 未完成 ` 的下载任务到会话文件</span></span><br><span class="line">save-session=/usr/local/Cellar/aria2/aria2.session</span><br><span class="line"><span class="preprocessor"># 定时保存会话, 0 为退出时才保存, 需 1.16.1 以上版本, 默认:0</span></span><br><span class="line"><span class="preprocessor">#save-session-interval=60</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## RPC 相关设置 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 启用 RPC, 默认:false</span></span><br><span class="line">enable-rpc=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 允许所有来源, 默认:false</span></span><br><span class="line">rpc-allow-origin-all=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 允许非外部访问, 默认:false</span></span><br><span class="line">rpc-listen-all=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 事件轮询方式, 取值:[epoll, kqueue, port, poll, select], 不同系统默认值不同</span></span><br><span class="line"><span class="preprocessor">#event-poll=select</span></span><br><span class="line"><span class="preprocessor"># RPC 监听端口, 端口被占用时可以修改, 默认:6800</span></span><br><span class="line"><span class="preprocessor">#rpc-listen-port=6800</span></span><br><span class="line"><span class="preprocessor"># 设置的 RPC 授权令牌, v1.18.4 新增功能, 取代 --rpc-user 和 --rpc-passwd 选项</span></span><br><span class="line"><span class="preprocessor">#rpc-secret=&lt;TOKEN&gt;</span></span><br><span class="line"><span class="preprocessor"># 设置的 RPC 访问用户名, 此选项新版已废弃, 建议改用 --rpc-secret 选项</span></span><br><span class="line"><span class="preprocessor">#rpc-user=&lt;USER&gt;</span></span><br><span class="line"><span class="preprocessor"># 设置的 RPC 访问密码, 此选项新版已废弃, 建议改用 --rpc-secret 选项</span></span><br><span class="line"><span class="preprocessor">#rpc-passwd=&lt;PASSWD&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## BT/PT 下载相关 ##</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 当下载的是一个种子(以.torrent 结尾) 时, 自动开始 BT 任务, 默认:true</span></span><br><span class="line"><span class="preprocessor">#follow-torrent=true</span></span><br><span class="line"><span class="preprocessor"># BT 监听端口, 当端口被屏蔽时使用, 默认:6881-6999</span></span><br><span class="line">listen-port=<span class="number">51413</span></span><br><span class="line"><span class="preprocessor"># 单个种子最大连接数, 默认:55</span></span><br><span class="line"><span class="preprocessor">#bt-max-peers=55</span></span><br><span class="line"><span class="preprocessor"># 打开 DHT 功能, PT 需要禁用, 默认:true</span></span><br><span class="line">enable-dht=<span class="literal">false</span></span><br><span class="line"><span class="preprocessor"># 打开 IPv6 DHT 功能, PT 需要禁用</span></span><br><span class="line"><span class="preprocessor">#enable-dht6=false</span></span><br><span class="line"><span class="preprocessor"># DHT 网络监听端口, 默认:6881-6999</span></span><br><span class="line"><span class="preprocessor">#dht-listen-port=6881-6999</span></span><br><span class="line"><span class="preprocessor"># 本地节点查找, PT 需要禁用, 默认:false</span></span><br><span class="line"><span class="preprocessor">#bt-enable-lpd=false</span></span><br><span class="line"><span class="preprocessor"># 种子交换, PT 需要禁用, 默认:true</span></span><br><span class="line">enable-peer-exchange=<span class="literal">false</span></span><br><span class="line"><span class="preprocessor"># 每个种子限速, 对少种的 PT 很有用, 默认:50K</span></span><br><span class="line"><span class="preprocessor">#bt-request-peer-speed-limit=50K</span></span><br><span class="line"><span class="preprocessor"># 客户端伪装, PT 需要</span></span><br><span class="line">peer-id-prefix=-TR2770-</span><br><span class="line">user-agent=Transmission/<span class="number">2.77</span></span><br><span class="line"><span class="preprocessor"># 当种子的分享率达到这个数时, 自动停止做种, 0 为一直做种, 默认:1.0</span></span><br><span class="line">seed-ratio=<span class="number">0</span></span><br><span class="line"><span class="preprocessor"># 强制保存会话, 即使任务已经完成, 默认:false</span></span><br><span class="line"><span class="preprocessor"># 较新的版本开启后会在任务完成后依然保留.aria2 文件</span></span><br><span class="line"><span class="preprocessor">#force-save=false</span></span><br><span class="line"><span class="preprocessor"># BT 校验相关, 默认:true</span></span><br><span class="line"><span class="preprocessor">#bt-hash-check-seed=true</span></span><br><span class="line"><span class="preprocessor"># 继续之前的 BT 任务时, 无需再次校验, 默认:false</span></span><br><span class="line">bt-seed-unverified=<span class="literal">true</span></span><br><span class="line"><span class="preprocessor"># 保存磁力链接元数据为种子文件(.torrent 文件), 默认:false</span></span><br><span class="line">bt-save-metadata=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>主要是更改了下载文档路径 <code>dir=/Users/alex/Downloads</code> </p>
-<h2 id="u6DFB_u52A0_u5230_u542F_u52A8_u9879"><a href="#u6DFB_u52A0_u5230_u542F_u52A8_u9879" class="headerlink" title="添加到启动项"></a>添加到启动项 </h2><p> 创建文件 <code>aria2.plist</code></p>
+<h2 id="添加到启动项">添加到启动项 </h2><p> 创建文件 <code>aria2.plist</code></p>
 <p><strong>修改 array 中的 aria2 命令为你的 aria2 命令路径, 可使用 <code>which aria2c</code> 命令查看</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"</span><br><span class="line">"http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">plist</span> <span class="attribute">version</span>=<span class="value">"1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">dict</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>KeepAlive<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">true</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>RunAtLoad<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">true</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>Label<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">string</span>&gt;</span>aria2<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>ProgramArguments<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">string</span>&gt;</span>/usr/local/bin/aria2c<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">key</span>&gt;</span>WorkingDirectory<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">string</span>&gt;</span>/Users/alex/Downloads<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">plist</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -143,7 +144,7 @@
     <link href="http://blog.zhaochunqi.com/2015/12/01/vice-edc/"/>
     <id>http://blog.zhaochunqi.com/2015/12/01/vice-edc/</id>
     <published>2015-12-01T03:26:00.000Z</published>
-    <updated>2016-01-24T06:46:23.755Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p> 陈冠希是谁? 这世界上有几亿人看过他的照片；陈冠希在做什么？媒体上的他声名狼藉；VICE 拍陈冠希？听起来很刺激，也合情合理 —— 他身上具备一切精彩故事的必要元素，他就是 VICE 要讲的故事。</p>
 <p> 音乐《记得我吗》</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="417" height="86" src="http://music.163.com/outchain/player?type=2&id=65808&auto=0&height=66"></iframe>
@@ -177,7 +178,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/28/dota2-steam-settings/"/>
     <id>http://blog.zhaochunqi.com/2015/11/28/dota2-steam-settings/</id>
     <published>2015-11-28T04:09:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>Dota2 在完美代理后单独出了一个国服的客户端，但是需要同时注册 Steam 帐号和国服帐号，可见国服的 Dota2 也是绑定在 Steam 上的，既然如此，倒不如直接使用 steam 客户端省事。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/dota-2-official.jpg" alt="image"></p>
@@ -198,22 +199,22 @@
     <link href="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/"/>
     <id>http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/</id>
     <published>2015-11-27T18:51:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>本篇文章将指导你如何使用 Travis-CI 自动部署 hexo 生成的静态博客到 github 上。</p>
 <a id="more"></a>
-<h2 id="u80CC_u666F_u4ECB_u7ECD"><a href="#u80CC_u666F_u4ECB_u7ECD" class="headerlink" title="背景介绍"></a>背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
+<h2 id="背景介绍">背景介绍 </h2><p> 在最新的 github 中，如果想要你的 github repo 可以作为博客，需要命名为类似 <code>zhaochunqi.github.io</code>这样的。<br>在这里，我在此 repo 下建立了两个完全不同的分支，source 和 master 分支。</p>
 <p>source 分支放置 hexo 的一些源文件，master 分支放置静态博客资源。</p>
 <p><strong>我们需要做的就是获取到 source 分支的改动，自动 deploy 到 master 分支</strong></p>
 <p>所以步骤就是： 获取改动 -&gt;deploy</p>
-<h2 id="travis-CI"><a href="#travis-CI" class="headerlink" title="travis-CI"></a>travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
+<h2 id="travis-CI">travis-CI</h2><p>travis-CI(<a href="https://travis-ci.org/" target="_blank" rel="external">https://travis-ci.org/</a>)是集成测试工具，目前只支持 github。</p>
 <p>在 travis-CI 中对 <code>zhaochunqi.github.io</code> 开启自动构建，配置如下：<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png" alt=""><br>（建议开启 Build only if .travis.yml is prezent.)</p>
-<h2 id="u914D_u7F6E-travis-yml"><a href="#u914D_u7F6E-travis-yml" class="headerlink" title="配置.travis.yml"></a>配置 <code>.travis.yml</code></h2><h2 id="u83B7_u53D6github_u6743_u9650"><a href="#u83B7_u53D6github_u6743_u9650" class="headerlink" title="获取 github 权限"></a> 获取 github 权限 </h2><p> 两种方法 </p>
-<pre><code>1. SSH
-2. github token
+<h2 id="配置 -travis-yml">配置 <code>.travis.yml</code></h2><h2 id="获取 github 权限"> 获取 github 权限 </h2><p> 两种方法 </p>
+<pre><code><span class="number">1.</span> SSH
+<span class="number">2.</span> github token
 </code></pre><p>这里采用的是 github token 的方法，（SSH 配置较为复杂）</p>
 <p>点击头像 -&gt;settings-&gt; Personal access tokens 新建一个 token,<strong>会获取到一串字符</strong>，记录下下面需要用到。<br><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%206.48.06%20AM.png" alt=""></p>
-<h2 id="u5C06token_u914D_u7F6E_u5230travis-CI"><a href="#u5C06token_u914D_u7F6E_u5230travis-CI" class="headerlink" title="将 token 配置到 travis-CI"></a>将 token 配置到 travis-CI</h2><h3 id="u5B89_u88C5Travis-CI_u547D_u4EE4_u884C_u5DE5_u5177"><a href="#u5B89_u88C5Travis-CI_u547D_u4EE4_u884C_u5DE5_u5177" class="headerlink" title="安装 Travis-CI 命令行工具"></a>安装 Travis-CI 命令行工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install travis</span><br></pre></td></tr></table></figure>
-<h3 id="u767B_u9646Travis_CI"><a href="#u767B_u9646Travis_CI" class="headerlink" title="登陆 Travis CI"></a>登陆 Travis CI</h3><p>需要输入 Github 账号和密码</p>
+<h2 id="将 token 配置到 travis-CI">将 token 配置到 travis-CI</h2><h3 id="安装 Travis-CI 命令行工具">安装 Travis-CI 命令行工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install travis</span><br></pre></td></tr></table></figure>
+<h3 id="登陆 Travis_CI">登陆 Travis CI</h3><p>需要输入 Github 账号和密码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis login --auto</span><br></pre></td></tr></table></figure>
 <p>加密环境变量（token）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">travis encrypt GH_OWNER=super_secret</span><br></pre></td></tr></table></figure>
@@ -241,7 +242,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/</id>
     <published>2015-11-26T04:20:00.000Z</published>
-    <updated>2016-01-24T06:46:23.755Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p> 介绍一些常用的 Linux 命令，这些命令能够在终端下极大的方便我们的操作。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/S27YSIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIHAlIPhe3WkMAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIlAcG39LatBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAhcCQi+V3caQ4AAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIBASUDwLb1tKwECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECVwKC79WdxhAgQ.png" alt=""></p>
@@ -280,16 +281,16 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/yaml/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/yaml/</id>
     <published>2015-11-26T02:41:00.000Z</published>
-    <updated>2016-01-24T06:46:23.755Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p><code>YAML</code> <strong>[YAML Ain’t Markup Language]</strong></p>
 <p>和 GNU 一样，YAML 是一个递归着说“不”的名字。不同的是，GNU 对 UNIX 说不，YAML 说不的对象是 XML。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/3389850854144361888.jpeg" alt="image"></p>
-<h2 id="u8BED_u6CD5"><a href="#u8BED_u6CD5" class="headerlink" title="语法"></a>语法 </h2><p><code>Structure</code> 通过 <strong> 空格 </strong> 来展示。<code>Sequence</code>里的项用”-“来代表，<code>Map</code>里的键值对用”:”分隔.<br>这几乎就是所有的语法了.</p>
+<h2 id="语法">语法 </h2><p><code>Structure</code> 通过 <strong> 空格 </strong> 来展示。<code>Sequence</code>里的项用”-“来代表，<code>Map</code>里的键值对用”:”分隔.<br>这几乎就是所有的语法了.</p>
 <blockquote>
 <p>注意是空格不是 <code>TAB</code>, <code>Makefile</code> 刚好相反。</p>
 </blockquote>
-<h2 id="u4E3E_u4F8B"><a href="#u4E3E_u4F8B" class="headerlink" title="举例"></a>举例</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name: John Smith&#10;age: 37&#10;spouse:&#10;    name: Jane Smith&#10;    age: 25&#10;children:&#10;    -   name: Jimmy Smith&#10;        age: 15&#10;    -   name: Jenny Smith&#10;        age: 12</span><br></pre></td></tr></table></figure>
+<h2 id="举例">举例</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name: John Smith&#10;age: 37&#10;spouse:&#10;    name: Jane Smith&#10;    age: 25&#10;children:&#10;    -   name: Jimmy Smith&#10;        age: 15&#10;    -   name: Jenny Smith&#10;        age: 12</span><br></pre></td></tr></table></figure>
 <p>John 今年 37 岁，有一个幸福的四口之家。两个孩子 Jimmy 和 Jenny 活泼可爱。妻子 Jane 年轻美貌。<br>可见 YAML 的可读性是不错。</p>
 <p>顺便推荐下在线 yaml 解析器：<a href="http://yaml-online-parser.appspot.com/" target="_blank" rel="external">http://yaml-online-parser.appspot.com/</a></p>
 <p>参考链接： <a href="http://www.ibm.com/developerworks/cn/xml/x-cn-yamlintro/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/xml/x-cn-yamlintro/</a></p>
@@ -307,7 +308,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/random-git-commit/</id>
     <published>2015-11-26T02:30:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p><strong> 代码 </strong>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"<span class="variable">$(curl -s http://whatthecommit.com/ | awk'/&lt;p&gt;/ &#123;sub("&lt;p&gt;", "")</span>; print &#125;')"</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -333,7 +334,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/"/>
     <id>http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/</id>
     <published>2015-11-25T01:46:00.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>DictUnifer 是一款在 Mac 下能够转换字典格式的软件。把第三方的词库转换成「Mac 词典」支持的格式。</p>
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-11-25%20at%201.39.29%20AM.png" alt=""></p>
@@ -359,7 +360,7 @@
     <link href="http://blog.zhaochunqi.com/2015/08/24/faker-js/"/>
     <id>http://blog.zhaochunqi.com/2015/08/24/faker-js/</id>
     <published>2015-08-24T08:05:30.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>Faker.js 能够生成名字、地址、电话号码等信息的库。<br><a id="more"></a></p>
 <p> 项目地址： <a href="https://github.com/Marak/faker.js" target="_blank" rel="external">https://github.com/Marak/faker.js</a></p>
 <p> 使用方法比较简单：</p>
@@ -386,25 +387,25 @@
     <link href="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/"/>
     <id>http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/</id>
     <published>2015-03-04T05:45:39.000Z</published>
-    <updated>2016-01-24T06:46:23.755Z</updated>
-    <content type="html"><![CDATA[<h2 id="supervisor_u7B80_u4ECB"><a href="#supervisor_u7B80_u4ECB" class="headerlink" title="supervisor 简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
+    <updated>2016-01-24T06:59:55.747Z</updated>
+    <content type="html"><![CDATA[<h2 id="supervisor 简介"><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
 <a id="more"></a>
-<h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p>
+<h2 id="安装">安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$: easy_install supervisor</span><br></pre></td></tr></table></figure>
-<h2 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h2><p>supervisor 可以使用配置文件来启动，指定参数 -c , 默认位置使用<br>-help 查看。</p>
+<h2 id="使用">使用</h2><p>supervisor 可以使用配置文件来启动，指定参数 -c , 默认位置使用<br>-help 查看。</p>
 <p>建立 <code>supervisord.conf</code> 配置文件。</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[program:cow]</span></span><br><span class="line"><span class="setting">command = <span class="value">nohup  /home/harchiko/cow/cow &amp;</span></span></span><br><span class="line"><span class="setting">autostart = <span class="value"><span class="keyword">true</span></span></span></span><br><span class="line"><span class="setting">autorestart = <span class="value"><span class="keyword">true</span></span></span></span><br><span class="line"><span class="title">[supervisord]</span></span><br></pre></td></tr></table></figure>
 <p>这是用来监控 <code>cow</code> 的文件。</p>
 <p>如果提示</p>
 <p><code>Error: could not find config file supervisord.</code></p>
 <p>那是因为缺少 <code>[supervisord]</code> 模块，如上述配置文件中添加即可。</p>
-<h2 id="u542F_u52A8"><a href="#u542F_u52A8" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c supervisord.conf</span><br></pre></td></tr></table></figure>
+<h2 id="启动">启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c supervisord.conf</span><br></pre></td></tr></table></figure>
 <p>如是启动即可。</p>
 <p>注意，如果想要自动重启务必加上 <code>autorestart = true</code></p>
 <p>另外，supervisor 还有交互式命令 supervisorcli , 输入 help 查看即可了解如何操作。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="supervisor_u7B80_u4ECB"><a href="#supervisor_u7B80_u4ECB" class="headerlink" title="supervisor简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。</p>]]>
+    <![CDATA[<h2 id="supervisor简介"><code>supervisor</code>简介</h2><p>supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。</p>]]>
     
     </summary>
     
@@ -421,17 +422,17 @@
     <link href="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/"/>
     <id>http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/</id>
     <published>2015-02-15T07:29:41.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。</p>
 <a id="more"></a>
-<h1 id="Linux__u7BC7"><a href="#Linux__u7BC7" class="headerlink" title="Linux 篇"></a>Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
-<h1 id="HomeBrew__u7BC7"><a href="#HomeBrew__u7BC7" class="headerlink" title="HomeBrew 篇"></a>HomeBrew 篇</h1><p>github 时不时的网络中断，brew update 经常不成功，更改 git 地址为中科大 git 源的地址：</p>
+<h1 id="Linux_篇">Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
+<h1 id="HomeBrew_篇">HomeBrew 篇</h1><p>github 时不时的网络中断，brew update 经常不成功，更改 git 地址为中科大 git 源的地址：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">git remote <span class="built_in">set</span>-url origin http://mirrors.ustc.edu.cn/homebrew.git</span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
-<h1 id="Node__u7BC7"><a href="#Node__u7BC7" class="headerlink" title="Node 篇"></a>Node 篇</h1><h2 id="NVM"><a href="#NVM" class="headerlink" title="NVM"></a>NVM</h2><p>clone nvm 到本地，假设目录位于 <code>～</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/creationix/nvm.git</span><br></pre></td></tr></table></figure></p>
+<h1 id="Node_篇">Node 篇</h1><h2 id="NVM">NVM</h2><p>clone nvm 到本地，假设目录位于 <code>～</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/creationix/nvm.git</span><br></pre></td></tr></table></figure></p>
 <p>更改 nvm 镜像地址，在.bashrc 中添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nvm</span></span><br><span class="line"><span class="built_in">export</span> NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com</span><br><span class="line"><span class="built_in">source</span> ~/nvm/nvm.sh</span><br></pre></td></tr></table></figure></p>
 <p><code>source .bashrc</code> 后运行 nvm</p>
-<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>通过 <code>--registry</code> 更改参数：<br><code>$ npm --registry=https://registry.npm.taobao.org install koa</code></p>
-<h1 id="Pypi__u7BC7"><a href="#Pypi__u7BC7" class="headerlink" title="Pypi 篇"></a>Pypi 篇 </h1><p> 通过 <code>-i</code> 更改参数:</p>
+<h2 id="NPM">NPM</h2><p>通过 <code>--registry</code> 更改参数：<br><code>$ npm --registry=https://registry.npm.taobao.org install koa</code></p>
+<h1 id="Pypi_篇">Pypi 篇 </h1><p> 通过 <code>-i</code> 更改参数:</p>
 <p>如:<code>$ pip install web.py -i http://pypi.mirrors.ustc.edu.cn/simple</code></p>
 <p><strong>注意后面有<code>/simple</code></strong></p>
 <p>要配制成默认的话，需要创建或修改配置文件（linux 的文件在<code>~/.pip/pip.conf</code>，windows 在<code>%HOMEPATH%\pip\pip.ini</code>），修改内容为：</p>
@@ -460,10 +461,10 @@
     <link href="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/"/>
     <id>http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/</id>
     <published>2015-02-11T03:00:55.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
-    <content type="html"><![CDATA[<h2 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p>
+    <updated>2016-01-24T06:59:55.747Z</updated>
+    <content type="html"><![CDATA[<h2 id="问题">问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p>
 <a id="more"></a>
-<h2 id="u6392_u67E5"><a href="#u6392_u67E5" class="headerlink" title="排查"></a>排查</h2><ul>
+<h2 id="排查">排查</h2><ul>
 <li>换了 Chrome 浏览器之后发现问题依旧。排除浏览器的原因。</li>
 </ul>
 <ul>
@@ -476,10 +477,10 @@
 <li>打开 Firebug，查看 JS 代码之后发现 H2 如果标题没有的话会被设定<code>display:none</code><br><img src="http://harchiko.qiniudn.com/hexo-toc-problem/toc_not_show.png" alt=""></li>
 </ul>
 <p>至此！谜题就此揭开!</p>
-<h2 id="u89E3_u51B3_u529E_u6CD5"><a href="#u89E3_u51B3_u529E_u6CD5" class="headerlink" title="解决办法"></a>解决办法 </h2><p> 写的时候添加个二级标题。也就是 ##</p>
+<h2 id="解决办法">解决办法 </h2><p> 写的时候添加个二级标题。也就是 ##</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h2><p>使用Hexo渲染的时候发现有的问题有TOC，有的文章没有TOC。经过一番探索研究，找到了问题所在。</p>]]>
+    <![CDATA[<h2 id="问题">问题</h2><p>使用Hexo渲染的时候发现有的问题有TOC，有的文章没有TOC。经过一番探索研究，找到了问题所在。</p>]]>
     
     </summary>
     
@@ -492,28 +493,28 @@
     <link href="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/"/>
     <id>http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/</id>
     <published>2015-02-10T02:36:17.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
-    <content type="html"><![CDATA[<h2 id="u5173_u4E8E"><a href="#u5173_u4E8E" class="headerlink" title="关于"></a>关于 </h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a> 中提到过，本文将重点讲解一下 shadowsocks 的使用方法。</p>
+    <updated>2016-01-24T06:59:55.747Z</updated>
+    <content type="html"><![CDATA[<h2 id="关于">关于 </h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a> 中提到过，本文将重点讲解一下 shadowsocks 的使用方法。</p>
 <p>原文链接：<a href="http://blog.zhaochunqi.com/shadowsocks-user-manual/">http://blog.zhaochunqi.com/shadowsocks-user-manual/</a></p>
 <p>作者：<a href="http://blog.zhaochunqi.com" title="http://blog.zhaochunqi.com">zhaochunqi</a></p>
 <a id="more"></a>
-<h2 id="ShadowSocks__u4ECB_u7ECD"><a href="#ShadowSocks__u4ECB_u7ECD" class="headerlink" title="ShadowSocks 介绍"></a>ShadowSocks 介绍</h2><ul>
+<h2 id="ShadowSocks_介绍">ShadowSocks 介绍</h2><ul>
 <li>代理 / 翻强工具。</li>
 <li>使用稳定。</li>
 </ul>
-<h2 id="u4E0B_u8F7D"><a href="#u4E0B_u8F7D" class="headerlink" title="下载"></a>下载 </h2><p> 下载：<a href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#windows" target="_blank" rel="external">https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#windows</a>在这里选择对应版本的 shadowsocks 客户端下载。</p>
+<h2 id="下载">下载 </h2><p> 下载：<a href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#windows" target="_blank" rel="external">https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#windows</a>在这里选择对应版本的 shadowsocks 客户端下载。</p>
 <p>介于目前国内访问环境的恶劣，直接提供下地址：</p>
 <p>windows 客户端（2015-02-10）: <a href="http://harchiko.qiniudn.com/shadowsocks-user-manual/Shadowsocks-win-2.1.6.zip" target="_blank" rel="external">http://harchiko.qiniudn.com/shadowsocks-user-manual/Shadowsocks-win-2.1.6.zip</a></p>
 <p>Mac 客户端（2015-02-10）: <a href="http://harchiko.qiniudn.com/shadowsocks-user-manual/ShadowsocksX-2.6.2.dmg" target="_blank" rel="external">http://harchiko.qiniudn.com/shadowsocks-user-manual/ShadowsocksX-2.6.2.dmg</a></p>
 <p><strong>注意：</strong>最好先尝试下能否从官方下载。不行的话可以从我这里下载。</p>
-<h2 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h2><p>Shadowsocks 的配置很简单：</p>
+<h2 id="使用">使用</h2><p>Shadowsocks 的配置很简单：</p>
 <p><img src="http://harchiko.qiniudn.com/shadowsocks-user-manual/shadowsocks.png" alt=""></p>
 <p>填写好服务器 ip，服务器端口，密码，加密方式后即可。代理端口默认即可。</p>
 <p>打开 IE，开启 Google 试试吧!</p>
 <p>针对 Firefox 和 Chrome 有对应的插件配置，注意使用 SOCKS5 代理即可。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u5173_u4E8E"><a href="#u5173_u4E8E" class="headerlink" title="关于"></a>关于</h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a>中提到过，本文将重点讲解一下shadowsocks的使用方法。</p>
+    <![CDATA[<h2 id="关于">关于</h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a>中提到过，本文将重点讲解一下shadowsocks的使用方法。</p>
 <p>原文链接：<a href="http://blog.zhaochunqi.com/shadowsocks-user-manual/">http://blog.zhaochunqi.com/shadowsocks-user-manual/</a></p>
 <p>作者：<a href="http://blog.zhaochunqi.com" title="http://blog.zhaochunqi.com">zhaochunqi</a></p>]]>
     
@@ -534,26 +535,26 @@
     <link href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/"/>
     <id>http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/</id>
     <published>2015-02-05T01:59:07.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>环境：OSX yosemite/Parallels Desktop 10</p>
-<h2 id="Vagrant__u4ECB_u7ECD"><a href="#Vagrant__u4ECB_u7ECD" class="headerlink" title="Vagrant 介绍"></a>Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>
+<h2 id="Vagrant_介绍">Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>
 <a id="more"></a>
-<h2 id="u5B89_u88C5_Vagrant"><a href="#u5B89_u88C5_Vagrant" class="headerlink" title="安装 Vagrant"></a>安装 Vagrant</h2><p>从这里 <a href="http://www.vagrantup.com/downloads" title="vagrant 下载" target="_blank" rel="external">http://www.vagrantup.com/downloads</a> 下载对应版本的 vagrant 安装。</p>
-<h2 id="u5B89_u88C5_Vagrant__u63D2_u4EF6"><a href="#u5B89_u88C5_Vagrant__u63D2_u4EF6" class="headerlink" title="安装 Vagrant 插件"></a>安装 Vagrant 插件 </h2><p> 打开 Terminal，安装 vagrant 插件：</p>
+<h2 id="安装_Vagrant">安装 Vagrant</h2><p>从这里 <a href="http://www.vagrantup.com/downloads" title="vagrant 下载" target="_blank" rel="external">http://www.vagrantup.com/downloads</a> 下载对应版本的 vagrant 安装。</p>
+<h2 id="安装_Vagrant_插件">安装 Vagrant 插件 </h2><p> 打开 Terminal，安装 vagrant 插件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant plugin install vagrant-parallels</span><br></pre></td></tr></table></figure>
-<h2 id="u4F7F_u7528_Vagrant"><a href="#u4F7F_u7528_Vagrant" class="headerlink" title="使用 Vagrant"></a>使用 Vagrant</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir new_vagrant_project</span><br><span class="line">$ <span class="built_in">cd</span> new_vagrant_project</span><br><span class="line">$ vagrant init parallels/centos-<span class="number">6.5</span></span><br><span class="line">$ vagrant up --provider=parallels</span><br></pre></td></tr></table></figure>
+<h2 id="使用_Vagrant">使用 Vagrant</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir new_vagrant_project</span><br><span class="line">$ <span class="built_in">cd</span> new_vagrant_project</span><br><span class="line">$ vagrant init parallels/centos-<span class="number">6.5</span></span><br><span class="line">$ vagrant up --provider=parallels</span><br></pre></td></tr></table></figure>
 <p>这样就成功的安装了 centos-6.5</p>
-<h2 id="u4FEE_u6539_u9ED8_u8BA4_u7684_Provider__28_u53EF_u9009_29"><a href="#u4FEE_u6539_u9ED8_u8BA4_u7684_Provider__28_u53EF_u9009_29" class="headerlink" title="修改默认的 Provider (可选)"></a>修改默认的 Provider (可选)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> VAGRANT_DEFAULT_PROVIDER=parallels</span><br></pre></td></tr></table></figure>
+<h2 id="修改默认的_Provider_(可选)">修改默认的 Provider (可选)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> VAGRANT_DEFAULT_PROVIDER=parallels</span><br></pre></td></tr></table></figure>
 <p>可添加到.bashrc 或者 .zshrc(如果你使用 zsh)</p>
-<h2 id="u4F7F_u7528SSH_u8FDE_u63A5"><a href="#u4F7F_u7528SSH_u8FDE_u63A5" class="headerlink" title="使用 SSH 连接"></a>使用 SSH 连接 </h2><p> 进入 vagrant 所在目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant ssh</span><br></pre></td></tr></table></figure></p>
-<h2 id="box__u9009_u62E9"><a href="#box__u9009_u62E9" class="headerlink" title="box 选择"></a>box 选择 </h2><p> 如果你想要其他的发行版：如 ubuntu 等，在这个网页中查找是否有你所需要的：<br><a href="https://vagrantcloud.com/boxes/search?provider=parallels" title="box" target="_blank" rel="external">https://vagrantcloud.com/boxes/search?provider=parallels</a></p>
-<h2 id="vagrant_manager_uFF08_u53EF_u9009/_u63A8_u8350_uFF09"><a href="#vagrant_manager_uFF08_u53EF_u9009/_u63A8_u8350_uFF09" class="headerlink" title="vagrant manager（可选 / 推荐）"></a>vagrant manager（可选 / 推荐）</h2><p>Vagrant Manager 是在通知栏的可以管理 Vagrant 的工具。（Mac 版本 /Windows 版本都有）</p>
+<h2 id="使用 SSH 连接">使用 SSH 连接 </h2><p> 进入 vagrant 所在目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant ssh</span><br></pre></td></tr></table></figure></p>
+<h2 id="box_选择">box 选择 </h2><p> 如果你想要其他的发行版：如 ubuntu 等，在这个网页中查找是否有你所需要的：<br><a href="https://vagrantcloud.com/boxes/search?provider=parallels" title="box" target="_blank" rel="external">https://vagrantcloud.com/boxes/search?provider=parallels</a></p>
+<h2 id="vagrant_manager（可选 / 推荐）">vagrant manager（可选 / 推荐）</h2><p>Vagrant Manager 是在通知栏的可以管理 Vagrant 的工具。（Mac 版本 /Windows 版本都有）</p>
 <p>具体表现如图：<br><img src="http://harchiko.qiniudn.com/introduce-vagrant/vagrant_manager.gif" alt="vagrant manager"></p>
 <p>下载见：<a href="https://github.com/lanayotech/vagrant-manager" title="vagrant manager" target="_blank" rel="external">https://github.com/lanayotech/vagrant-manager</a></p>
-<h3 id="Happy_Coding__7E"><a href="#Happy_Coding__7E" class="headerlink" title="Happy Coding ~"></a>Happy Coding ~</h3>]]></content>
+<h3 id="Happy_Coding_~">Happy Coding ~</h3>]]></content>
     <summary type="html">
     <![CDATA[<p>环境：OSX yosemite/Parallels Desktop 10</p>
-<h2 id="Vagrant__u4ECB_u7ECD"><a href="#Vagrant__u4ECB_u7ECD" class="headerlink" title="Vagrant 介绍"></a>Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>]]>
+<h2 id="Vagrant_介绍">Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>]]>
     
     </summary>
     
@@ -572,15 +573,15 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="external">showrss</a>,</p>
 <a id="more"></a>
-<h2 id="u754C_u9762"><a href="#u754C_u9762" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png" alt="showrss"></p>
-<h3 id="u4F7F_u7528RSS_u8BA2_u9605"><a href="#u4F7F_u7528RSS_u8BA2_u9605" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="u4F60_u8FD8_u53EF_u4EE5_u4F7F_u7528RSS_u8BA2_u9605"><a href="#u4F60_u8FD8_u53EF_u4EE5_u4F7F_u7528RSS_u8BA2_u9605" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p>
-<h4 id="u5728_u754C_u9762_u4E2D_u70B9_u51FB_u4F60_u559C_u6B22_u7684_u7F8E_u5267_u540D_u79F0_u5373_u53EF_u8BA2_u9605_3A"><a href="#u5728_u754C_u9762_u4E2D_u70B9_u51FB_u4F60_u559C_u6B22_u7684_u7F8E_u5267_u540D_u79F0_u5373_u53EF_u8BA2_u9605_3A" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/pick_series.png" alt="pickseries"></p>
-<h4 id="u5982_u679C_u4F60_u60F3_u77E5_u9053_u4E0B_u4E00_u96C6_u662F_u4EC0_u4E48_u7684_u8BDD_uFF0C_u7F51_u7AD9_u8FD8_u63D0_u4F9B_u8BA1_u5212_u8868_3A"><a href="#u5982_u679C_u4F60_u60F3_u77E5_u9053_u4E0B_u4E00_u96C6_u662F_u4EC0_u4E48_u7684_u8BDD_uFF0C_u7F51_u7AD9_u8FD8_u63D0_u4F9B_u8BA1_u5212_u8868_3A" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/schedule.png" alt="schedule"></p>
-<h4 id="u4F60_u8FD8_u53EF_u4EE5_u4F7F_u7528RSS_u8BA2_u9605-1"><a href="#u4F60_u8FD8_u53EF_u4EE5_u4F7F_u7528RSS_u8BA2_u9605-1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/feeds.png" alt="rss"></p>
-<h4 id="u5728_u8FD9_u91CC_u9762_uFF0C_u4F60_u53EF_u4EE5_u8FDB_u884C_uFF1A"><a href="#u5728_u8FD9_u91CC_u9762_uFF0C_u4F60_u53EF_u4EE5_u8FDB_u884C_uFF1A" class="headerlink" title="在这里面，你可以进行："></a>在这里面，你可以进行：</h4><ul>
+<h2 id="界面">界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/website.png" alt="showrss"></p>
+<h3 id="使用 RSS 订阅">使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p>
+<h4 id="在界面中点击你喜欢的美剧名称即可订阅:">在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/pick_series.png" alt="pickseries"></p>
+<h4 id="如果你想知道下一集是什么的话，网站还提供计划表:">如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/schedule.png" alt="schedule"></p>
+<h4 id="你还可以使用 RSS 订阅 -1">你还可以使用 RSS 订阅</h4><p><img src="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/feeds.png" alt="rss"></p>
+<h4 id="在这里面，你可以进行：">在这里面，你可以进行：</h4><ul>
 <li>单集 RSS 订阅</li>
 <li>个人剧集订阅</li>
 <li>剧集时间表订阅(提供 rss 和 iCalendar 格式)</li>
@@ -603,23 +604,23 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p><strong> 本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p>
 <a id="more"></a>
 <p> 程序员们最在意的，可能就是网络跟设备配置了。</p>
 <p> 做一个透明代理，能够做到：</p>
 <pre><code> 自动翻墙，本地无需配置。
-</code></pre><h2 id="u7F51_u7EDC_u62D3_u6251_u56FE"><a href="#u7F51_u7EDC_u62D3_u6251_u56FE" class="headerlink" title="网络拓扑图"></a> 网络拓扑图 </h2><p><img src="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png" alt="透明代理网络拓扑图"></p>
-<h2 id="u9700_u6C42"><a href="#u9700_u6C42" class="headerlink" title="需求"></a> 需求 </h2><ol>
+</code></pre><h2 id="网络拓扑图"> 网络拓扑图 </h2><p><img src="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png" alt="透明代理网络拓扑图"></p>
+<h2 id="需求"> 需求 </h2><ol>
 <li> 一台外网 VPS（能被中国大陆访问到，能够访问到 Facebook 等网站）</li>
 <li> 一台本地 Linux 服务器 (此处可以用智能路由器代替)。</li>
 </ol>
-<h2 id="u65B9_u6848_u8BBE_u60F3"><a href="#u65B9_u6848_u8BBE_u60F3" class="headerlink" title="方案设想"></a> 方案设想 </h2><ol>
+<h2 id="方案设想"> 方案设想 </h2><ol>
 <li> 本地的 Linux 服务器作为网关， 处理本地流量和需要代理的流量。</li>
 <li> 本地服务器将需要代理的流量转发给 Shadowsocks 并通过 Shadowsocks 来实现代理功能。</li>
 <li> 流量转发到 Cow 中，然后通过 Cow 来判断需要自动翻墙的网址。</li>
 </ol>
-<h2 id="u5177_u4F53_u65B9_u6848"><a href="#u5177_u4F53_u65B9_u6848" class="headerlink" title="具体方案"></a> 具体方案 </h2><ol>
+<h2 id="具体方案"> 具体方案 </h2><ol>
 <li> 在 VPS 中安装 Shadowsocks，并在本地客户端测试是否成功。</li>
 <li> 在本地 Linux 服务器中部署 Cow，通过 Cow 来进行 ShadowSocks 代理。</li>
 <li> 使用 iptables 将流量转发到 Cow 本地监控的端口。</li>
@@ -641,7 +642,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/"/>
     <id>http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/</id>
     <published>2015-01-27T01:11:15.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
+    <updated>2016-01-24T06:59:55.747Z</updated>
     <content type="html"><![CDATA[<p> 因为一些国内的客观原因，google 的访问速度一直很慢，通过 firebug 看了下 google 相关的服务加载速度超过了 1s 种，而且经常加载不成功。</p>
 <a id="more"></a>
 <p> 更改方法：</p>
@@ -665,12 +666,12 @@
     <link href="http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/"/>
     <id>http://blog.zhaochunqi.com/2015/01/23/how-to-use-xpath/</id>
     <published>2015-01-23T06:45:22.000Z</published>
-    <updated>2016-01-24T06:46:23.751Z</updated>
-    <content type="html"><![CDATA[<h2 id="u4EC0_u4E48_u662Fxpath_3F"><a href="#u4EC0_u4E48_u662Fxpath_3F" class="headerlink" title="什么是 xpath?"></a>什么是 xpath?</h2><blockquote>
+    <updated>2016-01-24T06:59:55.747Z</updated>
+    <content type="html"><![CDATA[<h2 id="什么是 xpath?">什么是 xpath?</h2><blockquote>
 <p>XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="XPath__u672F_u8BED"><a href="#XPath__u672F_u8BED" class="headerlink" title="XPath 术语"></a>XPath 术语</h2><table>
+<h2 id="XPath_术语">XPath 术语</h2><table>
 <thead>
 <tr>
 <th>术语</th>
@@ -696,7 +697,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="XPath__u7528_u6CD5"><a href="#XPath__u7528_u6CD5" class="headerlink" title="XPath 用法"></a>XPath 用法 </h2><p> 选取节点</p>
+<h2 id="XPath_用法">XPath 用法 </h2><p> 选取节点</p>
 <blockquote>
 <p>下面列举了最有用的节点表达式</p>
 </blockquote>
@@ -771,7 +772,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="u8C13_u8BED"><a href="#u8C13_u8BED" class="headerlink" title="谓语"></a>谓语 </h2><p> 谓语用来查找某个特定的节点或者包含某个指定的值的节点。<br>谓语被嵌在方括号中。</p>
+<h2 id="谓语">谓语 </h2><p> 谓语用来查找某个特定的节点或者包含某个指定的值的节点。<br>谓语被嵌在方括号中。</p>
 <table>
 <thead>
 <tr>
@@ -814,7 +815,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="u5B9E_u6218"><a href="#u5B9E_u6218" class="headerlink" title="实战"></a>实战 </h2><p> 以 <a href="http://www.oschina.net/" title="开源中国" target="_blank" rel="external">开源中国 </a> 为例，我们来试试 XPath 能做什么？</p>
+<h2 id="实战">实战 </h2><p> 以 <a href="http://www.oschina.net/" title="开源中国" target="_blank" rel="external">开源中国 </a> 为例，我们来试试 XPath 能做什么？</p>
 <ol>
 <li><p>假设我们想要获取图示部分的内容：<br><img src="http://harchiko.qiniudn.com/how-to-use-xpath/oschina.png" alt="开源中国" title="开源中国"></p>
 </li>
@@ -824,7 +825,7 @@
 </li>
 </ol>
 <p>获取到了。</p>
-<h2 id="u7F8E_u5973"><a href="#u7F8E_u5973" class="headerlink" title="美女"></a>美女 </h2><p> 比如： 下载花瓣中这个画板的图片<a href="http://huaban.com/boards/293742/" target="_blank" rel="external">http://huaban.com/boards/293742/</a></p>
+<h2 id="美女">美女 </h2><p> 比如： 下载花瓣中这个画板的图片<a href="http://huaban.com/boards/293742/" target="_blank" rel="external">http://huaban.com/boards/293742/</a></p>
 <p>图片如图：<br><img src="http://harchiko.qiniudn.com/how-to-use-xpath/huaban.png" alt="花瓣美女"></p>
 <p>要下载这里面每一个美女的图片，重复我们之前的步骤：</p>
 <p>为了找到图片的 URL，打开 firebug，找到图片对应的 xpath 路径，经过一番尝试：<code>//div/div/div/div/a/img[1][@width=&quot;236&quot;]</code>可以顺利找到所有的图片。</p>
@@ -835,7 +836,7 @@
 <p>这样就获取到了这些地址，但这些地址并不是原图大小的，对比原图与这个地址，发现后面 236 更改为 658 即可获取到大图地址。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u4EC0_u4E48_u662Fxpath_3F"><a href="#u4EC0_u4E48_u662Fxpath_3F" class="headerlink" title="什么是xpath?"></a>什么是xpath?</h2><blockquote>
+    <![CDATA[<h2 id="什么是xpath?">什么是xpath?</h2><blockquote>
 <p>XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。</p>
 </blockquote>]]>
     
