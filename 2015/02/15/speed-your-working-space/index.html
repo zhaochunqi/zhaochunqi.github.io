@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/index.html">
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。">
-<meta property="og:updated_time" content="2016-01-24T06:59:55.747Z">
+<meta property="og:updated_time" content="2016-01-24T07:03:44.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="加速开发环境的搭建">
 <meta name="twitter:description" content="在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。">
@@ -90,14 +90,14 @@
       
         <p>在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。</p>
 <a id="more"></a>
-<h1 id="Linux_篇">Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
-<h1 id="HomeBrew_篇">HomeBrew 篇</h1><p>github 时不时的网络中断，brew update 经常不成功，更改 git 地址为中科大 git 源的地址：</p>
+<h1 id="Linux__u7BC7"><a href="#Linux__u7BC7" class="headerlink" title="Linux 篇"></a>Linux 篇</h1><p>linux 下更改源：<a href="http://mirrors.ustc.edu.cn/" title="中科大源" target="_blank" rel="external">http://mirrors.ustc.edu.cn/</a>，选择自己的 Linux 版本，然后选择对应的源配置，具体使用见<a href="https://lug.ustc.edu.cn/wiki/mirrors/help" title="配置帮助" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help</a></p>
+<h1 id="HomeBrew__u7BC7"><a href="#HomeBrew__u7BC7" class="headerlink" title="HomeBrew 篇"></a>HomeBrew 篇</h1><p>github 时不时的网络中断，brew update 经常不成功，更改 git 地址为中科大 git 源的地址：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">git remote <span class="built_in">set</span>-url origin http://mirrors.ustc.edu.cn/homebrew.git</span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
-<h1 id="Node_篇">Node 篇</h1><h2 id="NVM">NVM</h2><p>clone nvm 到本地，假设目录位于 <code>～</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/creationix/nvm.git</span><br></pre></td></tr></table></figure></p>
+<h1 id="Node__u7BC7"><a href="#Node__u7BC7" class="headerlink" title="Node 篇"></a>Node 篇</h1><h2 id="NVM"><a href="#NVM" class="headerlink" title="NVM"></a>NVM</h2><p>clone nvm 到本地，假设目录位于 <code>～</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/creationix/nvm.git</span><br></pre></td></tr></table></figure></p>
 <p>更改 nvm 镜像地址，在.bashrc 中添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nvm</span></span><br><span class="line"><span class="built_in">export</span> NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com</span><br><span class="line"><span class="built_in">source</span> ~/nvm/nvm.sh</span><br></pre></td></tr></table></figure></p>
 <p><code>source .bashrc</code> 后运行 nvm</p>
-<h2 id="NPM">NPM</h2><p>通过 <code>--registry</code> 更改参数：<br><code>$ npm --registry=https://registry.npm.taobao.org install koa</code></p>
-<h1 id="Pypi_篇">Pypi 篇 </h1><p> 通过 <code>-i</code> 更改参数:</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>通过 <code>--registry</code> 更改参数：<br><code>$ npm --registry=https://registry.npm.taobao.org install koa</code></p>
+<h1 id="Pypi__u7BC7"><a href="#Pypi__u7BC7" class="headerlink" title="Pypi 篇"></a>Pypi 篇 </h1><p> 通过 <code>-i</code> 更改参数:</p>
 <p>如:<code>$ pip install web.py -i http://pypi.mirrors.ustc.edu.cn/simple</code></p>
 <p><strong>注意后面有<code>/simple</code></strong></p>
 <p>要配制成默认的话，需要创建或修改配置文件（linux 的文件在<code>~/.pip/pip.conf</code>，windows 在<code>%HOMEPATH%\pip\pip.ini</code>），修改内容为：</p>
@@ -109,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cijs74c32000xnjcu2a6q0wv0" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cijs79bq7000xnjekawyxrj2h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
