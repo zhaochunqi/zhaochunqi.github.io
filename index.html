@@ -67,80 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-sublime_the_text" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/24/sublime_the_text/" class="article-date">
-  <time datetime="2016-01-24T13:44:00.000Z" itemprop="datePublished">2016-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/24/sublime_the_text/">让 Sublime 成为真正的神器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u8BA9_Sublime__u66F4_u6F02_u4EAE"><a href="#u8BA9_Sublime__u66F4_u6F02_u4EAE" class="headerlink" title="让 Sublime 更漂亮"></a>让 Sublime 更漂亮 </h2><h3 id="u5B89_u88C5_Material_Theme"><a href="#u5B89_u88C5_Material_Theme" class="headerlink" title="安装 Material Theme"></a> 安装 Material Theme</h3><ol>
-<li>安装<code>PackageControl</code> <a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a>，重启 Sublime.</li>
-<li>安装 Material Theme, <a href="https://github.com/equinusocio/material-theme" target="_blank" rel="external">https://github.com/equinusocio/material-theme</a>。</li>
-<li>安装完毕后按照弹出的 <code>README</code> 文档配置用户配置文档。</li>
-</ol>
-<h3 id="u5B89_u88C5_Facebook_Color_Theme"><a href="#u5B89_u88C5_Facebook_Color_Theme" class="headerlink" title="安装 Facebook Color Theme"></a>安装 Facebook Color Theme</h3><ol>
-<li>安装 <code>Colorsublime</code>, 在 <code>PackageControl</code> 中搜索 <code>Colorsublime</code> 即可。</li>
-<li>安装 <code>Facebook Color Theme</code><ul>
-<li>打开｀PackageControl｀，使用 <code>Colorsublime: install</code>, 安装 Theme, Theme 名称为 Facebook 。</li>
-</ul>
-</li>
-</ol>
-<h3 id="u5B89_u88C5_FiraCode__u5B57_u4F53"><a href="#u5B89_u88C5_FiraCode__u5B57_u4F53" class="headerlink" title="安装 FiraCode 字体"></a>安装 FiraCode 字体</h3><ul>
-<li>打开字体 repo<a href="https://github.com/tonsky/FiraCode" target="_blank" rel="external">https://github.com/tonsky/FiraCode</a></li>
-<li>下载后双击安装即可，我把所有的都安装了。</li>
-<li>在配置文件中配置<code>font-face</code> 为 “Fire Code Retina”, 顺便配置下<code>font-size</code>: 15。</li>
-</ul>
-<h3 id="u4E2A_u6027_u5316_u914D_u7F6E"><a href="#u4E2A_u6027_u5316_u914D_u7F6E" class="headerlink" title="个性化配置"></a>个性化配置</h3><ul>
-<li><p>修改 Material Theme，使 Material Theme 与 Facebook Color Theme 协调统一。</p>
-<ul>
-<li>安装 PackageResourceViewer 以便查看并修改 Theme.</li>
-<li>使用命令<code>PackageResourceViewer : Extract</code>, 并选中<code>Material Theme</code>.</li>
-<li><code>Preference</code>-&gt; <code>Browse Packages</code>打开文件夹，进入 Material Theme.</li>
-<li>修改｀Material-Theme.sublime-theme` 文件，取左右两边 RGB 色进行全部替换。<blockquote>
-<p>因为分屏问题，这里分屏的线色不能与背景色太过相近，需要修改 boder_color</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/* @ GRID LAYOUT</span><br><span class="line">   * Grid style</span><br><span class="line">  ========================================================================= */</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">      "class": "grid_layout_control",</span><br><span class="line">      "border_size": 1,</span><br><span class="line">      "border_color": [39, 53, 60]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>关闭 minimap <code>&quot;always_show_minimap_viewport&quot;: false,</code></p>
-</li>
-<li>去掉行号 <code>&quot;line_numbers&quot;: false,</code></li>
-<li>去掉行号那边缩进 <code>&quot;margin&quot;:0,&quot;</code></li>
-</ul>
-<h3 id="u914D_u7F6E_u5B8C_u6BD5_u7ED3_u679C_u5982_u56FE"><a href="#u914D_u7F6E_u5B8C_u6BD5_u7ED3_u679C_u5982_u56FE" class="headerlink" title="配置完毕结果如图"></a>配置完毕结果如图</h3><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202015-12-28%20at%207.59.11%20PM.png" alt=""></p>
-<h2 id="u8BA9Sublime_u66F4_u9AD8_u6548"><a href="#u8BA9Sublime_u66F4_u9AD8_u6548" class="headerlink" title="让 Sublime 更高效"></a>让 Sublime 更高效</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/01/24/sublime_the_text/" data-id="cijs8fft0000snjfm3cuj4zyq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/editor/">editor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-vice-edc" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/24/vice-edc/" class="article-date">
@@ -174,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/01/24/vice-edc/" data-id="cijs8ffs70004njfm139qkjzm" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/01/24/vice-edc/" data-id="cijs8leka0004n9gx3kakspzp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/01/24/yaml/" data-id="cijs8ffru0003njfmtghrdmxc" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/01/24/yaml/" data-id="cijs8lejw0003n9gxf0688ppa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/01/24/dota2-steam-settings/" data-id="cijs8ffuc0029njfm2s7ryzo2" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/01/24/dota2-steam-settings/" data-id="cijs8lemf0024n9gxpvcbjj54" class="article-share-link">Share</a>
       
       
     </footer>
@@ -298,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cijs8ffuj002cnjfmkalcyn5h" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cijs8lemm0027n9gxdm0cq1ab" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -341,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cijs8ffun002hnjfm67but15k" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cijs8lems002cn9gx1b0wxkza" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -384,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cijs8ffsq000gnjfmzqqrb16e" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cijs8leku000gn9gxy3ua3foj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -427,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/" data-id="cijs8ffsd0005njfmbgdb6zno" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/" data-id="cijs8lekg0005n9gxm0kgxak4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/terminal/">terminal</a></li></ul>
@@ -475,7 +401,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/" data-id="cijs8ffte001cnjfmi0dw0yis" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/" data-id="cijs8leli0017n9gxzyiauapt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/snippets/">snippets</a></li></ul>
@@ -522,7 +448,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/" data-id="cijs8ffu30024njfmixdoxs2v" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/" data-id="cijs8lemb001zn9gxamj7fni7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soft/">soft</a></li></ul>
@@ -565,7 +491,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/08/24/faker-js/" data-id="cijs8fftz001znjfm9ig08pyz" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/08/24/faker-js/" data-id="cijs8lem6001un9gxuat0rsnx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -608,7 +534,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/" data-id="cijs8ffsm000anjfmj4x5g0v8" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/" data-id="cijs8lekr000an9gxpf1kk0ci" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/supervisor/">supervisor</a></li></ul>
@@ -651,7 +577,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cijs8fft4000xnjfmb1wa7cj6" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cijs8lel7000sn9gxp2iz8g46" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -694,7 +620,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/" data-id="cijs8fftx001xnjfmmfvcqonq" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/" data-id="cijs8lem4001sn9gxmse01pfk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -739,10 +665,58 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/" data-id="cijs8fft90014njfm9ycpob5e" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/" data-id="cijs8leld000zn9gx1bgs7qlo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vpn/">vpn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-introduce-vagrant" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/05/introduce-vagrant/" class="article-date">
+  <time datetime="2015-02-05T01:59:07.000Z" itemprop="datePublished">2015-02-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/soft/">soft</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/05/introduce-vagrant/">Parallels 下 Vagrant 使用指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：OSX yosemite/Parallels Desktop 10</p>
+<h2 id="Vagrant__u4ECB_u7ECD"><a href="#Vagrant__u4ECB_u7ECD" class="headerlink" title="Vagrant 介绍"></a>Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/02/05/introduce-vagrant/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/" data-id="cijs8lelq001fn9gxm5tdurzi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parallels/">parallels</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vagrant/">vagrant</a></li></ul>
 
     </footer>
   </div>
@@ -773,7 +747,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/editor/">editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -782,7 +756,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
+      <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
     </div>
   </div>
 
@@ -791,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -801,10 +775,6 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2016/01/24/sublime_the_text/">让 Sublime 成为真正的神器</a>
-          </li>
         
           <li>
             <a href="/2016/01/24/vice-edc/">纪录片 - 陈冠希</a>
@@ -820,6 +790,10 @@
         
           <li>
             <a href="/2015/12/18/bash-config-files/">.bash_profile vs .bashrc</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/13/aria2-auto-start/">Mac 下开机启动 Aria2</a>
           </li>
         
       </ul>
