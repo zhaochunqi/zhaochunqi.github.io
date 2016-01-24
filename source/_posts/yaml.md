@@ -1,6 +1,6 @@
 title: YAML简介
 date: 2015-11-26 2:41 AM
-categories: 
+categories: ""
 tags: [,]
 ---
 
