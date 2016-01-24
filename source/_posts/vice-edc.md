@@ -1,6 +1,6 @@
-title: 陈冠希纪录片
-date: 2015-12-01 3:26
-categories: 
+title: 纪录片-陈冠希
+date: 2016-01-24 03:02:45
+categories: ""
 tags: [,]
 ---
 
