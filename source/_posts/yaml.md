@@ -1,8 +1,9 @@
 title: YAML简介
 date: 2016-01-24 03:02:25
-categories: ""
+categories: 
 tags: [,]
 ---
+## YAML简介
 
 `YAML` **[YAML Ain't Markup Language]**
 

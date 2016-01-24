@@ -4,7 +4,7 @@ categories:
 tags: [,]
 
 ---
-# Dota2 国服设定
+## Dota2 国服设定
 
 Dota2 在完美代理后单独出了一个国服的客户端，但是需要同时注册Steam帐号和国服帐号，可见国服的Dota2也是绑定在Steam上的，既然如此，倒不如直接使用steam客户端省事。
 
