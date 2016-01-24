@@ -14,7 +14,7 @@ node_js:
   - '0.12'
 
 install:
-  - npm install hexo-cli@0.1.8 -g
+  - npm install hexo-cli@0.1.9 -g
   - npm install
 
 script:
