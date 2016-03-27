@@ -7,7 +7,7 @@ tags: [github,readme]
 ---
 这是一个教你怎么写`README`的教程
 
-![https://img.shields.io/badge/zhaochunqi-blog-green.svg](https://img.shields.io/badge/zhaochunqi-blog-green.svg) ![https://img.shields.io/badge/lauguage-Chinese-green.svg](https://img.shields.io/badge/lauguage-Chinese-green.svg)
+![](https://img.shields.io/badge/zhaochunqi-blog-green.svg) ![](https://img.shields.io/badge/lauguage-Chinese-green.svg)
 
 ## 引言
 
