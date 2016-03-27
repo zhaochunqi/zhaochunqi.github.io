@@ -12,10 +12,11 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
 <meta property="og:image" content="http://harchiko.qiniudn.com/54002458_p0.jpg">
-<meta property="og:updated_time" content="2016-01-24T07:59:55.329Z">
+<meta property="og:updated_time" content="2016-03-27T17:36:53.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=".bash_profile vs .bashrc">
 <meta name="twitter:description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
+<meta name="twitter:image" content="http://harchiko.qiniudn.com/54002458_p0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
   
@@ -23,7 +24,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   
 
 </head>
@@ -92,20 +93,20 @@
 <a id="more"></a>
 <p><img src="http://harchiko.qiniudn.com/54002458_p0.jpg" alt=""></p>
 <p>根据 <a href="http://linux.die.net/man/1/bash" target="_blank" rel="external">http://linux.die.net/man/1/bash</a> 的描述，<code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
-<h2 id="u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F"><a href="#u4EC0_u4E48_u662F_login__u548C_non-login_shell__3F" class="headerlink" title="什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
+<h2 id="什么是 -login- 和 -non-login-shell"><a href="# 什么是 -login- 和 -non-login-shell" class="headerlink" title="什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
 <p>但是，当你 <strong> 已经登录进机器 </strong>，不管是通过 Gnome 还是 KDE 的 xterm，那么<code>.bashrc</code> 在窗口弹出之前执行。而且，<code>.bashrc</code>在使用 <code>/bin/bash</code> 在 Terminal 调用时同样会执行。</p>
-<h2 id="u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F"><a href="#u4E3A_u4EC0_u4E48_u662F_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F" class="headerlink" title="为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
-<h2 id="Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916"><a href="#Mac_OS_X__u2013__u4E00_u4E2A_u4F8B_u5916" class="headerlink" title="Mac OS X – 一个例外"></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
-<h2 id="u5EFA_u8BAE"><a href="#u5EFA_u8BAE" class="headerlink" title="建议"></a>建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
+<h2 id="为什么是两个不同的文件？"><a href="# 为什么是两个不同的文件？" class="headerlink" title="为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
+<h2 id="Mac-OS-X-–- 一个例外"><a href="#Mac-OS-X-–- 一个例外" class="headerlink" title="Mac OS X – 一个例外"></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
+<h2 id="建议"><a href="# 建议" class="headerlink" title="建议"></a>建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
 <p>添加如下命令到 <code>.bash_profile</code> 中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="operator">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="_">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <p>这样当你登录到 console 时，<code>.bashrc</code>会被调用。</p>
-<h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
+<h2 id="参考链接"><a href="# 参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cijs99dpy002dnhctjjd0z2lt" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cimauml9i000d3vecp80sk872" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -115,6 +116,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/03/17/how-to-write-a-readme/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          如何写好 README 文档
+        
+      </div>
+    </a>
   
   
     <a href="/2015/12/13/aria2-auto-start/" id="article-nav-older" class="article-nav-link-wrap">
@@ -144,7 +154,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dota2/">dota2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dota2/">dota2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readme/">readme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -153,7 +163,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/dev/" style="font-size: 10px;">dev</a> <a href="/tags/dota2/" style="font-size: 10px;">dota2</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
+      <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/dev/" style="font-size: 10px;">dev</a> <a href="/tags/dota2/" style="font-size: 10px;">dota2</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/readme/" style="font-size: 10px;">readme</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
     </div>
   </div>
 
@@ -162,7 +172,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -172,6 +182,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/03/17/how-to-write-a-readme/">如何写好 README 文档</a>
+          </li>
         
           <li>
             <a href="/2015/12/18/bash-config-files/">.bash_profile vs .bashrc</a>
@@ -187,10 +201,6 @@
         
           <li>
             <a href="/2015/11/26/useful-terminal-commands/">常用的终端命令</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/26/random-git-commit/">添加一个随机的 Git 提交说明</a>
           </li>
         
       </ul>
@@ -223,11 +233,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>
