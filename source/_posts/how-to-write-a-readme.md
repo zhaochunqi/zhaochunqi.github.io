@@ -7,8 +7,9 @@ tags: [github,readme]
 ---
 这是一个教你怎么写`README`的教程
 
-![](https://img.shields.io/badge/zhaochunqi-blog-green.svg) ![](https://img.shields.io/badge/lauguage-Chinese-green.svg)
+![](https://img.shields.io/badge/zhaochunqi-blog-green.svg " display="inline") ![](https://img.shields.io/badge/lauguage-Chinese-green.svg " display="inline")
 
+<!--more-->
 ## 引言
 
 作为一个懒人，在有限的环境中，尽量的将一些重复性的活动能够自动化那是坠吼滴。
