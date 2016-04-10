@@ -66,6 +66,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-android_content_provider" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/10/android_content_provider/" class="article-date">
+  <time datetime="2016-04-10T23:58:05.000Z" itemprop="datePublished">2016-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/10/android_content_provider/">Content Provider 指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="What-amp-Why"><a href="#What-amp-Why" class="headerlink" title="What &amp; Why ?"></a>What &amp; Why ?</h2><p>以下摘自开发文档<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content providers are one <span class="keyword">of</span> the primary building blocks <span class="keyword">of</span> Android applications, providing content <span class="keyword">to</span> applications. They encapsulate data <span class="keyword">and</span> provide it <span class="keyword">to</span> applications through the <span class="built_in">single</span> ContentResolver <span class="keyword">interface</span>. A content provider <span class="keyword">is</span> only required <span class="keyword">if</span> you need <span class="keyword">to</span> share data between multiple applications. <span class="keyword">For</span> example, the contacts data <span class="keyword">is</span> used <span class="keyword">by</span> multiple applications <span class="keyword">and</span> must be stored <span class="keyword">in</span> a content provider. **<span class="keyword">If</span> you don<span class="comment">'t need to share data amongst multiple applications you can use a database directly via SQLiteDatabase. **</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="使用场景"><a href="# 使用场景" class="headerlink" title="使用场景"></a>使用场景 </h2><p> 假设现在你需要开发一个应用，拍摄个人名片，然后将名片上的联系人信息储存，或许你之后会丢失名片，但是你的联系人已经保存下来了。</p>
+<p>但是保存联系人本身需要操作联系人的数据库，如何确保我们使用的数据库跟手机上默认的联系人数据存储一致呢？</p>
+<p>这个时候，你就需要使用 ContentProvider，它能够作为一个中间人来处理数据与数据库之间的联系。</p>
+<h3 id="你可能在想，为什么我需要一个中间人来做这件事情呢？我不能直接访问数据库来做这件事情吗？"><a href="# 你可能在想，为什么我需要一个中间人来做这件事情呢？我不能直接访问数据库来做这件事情吗？" class="headerlink" title="你可能在想，为什么我需要一个中间人来做这件事情呢？我不能直接访问数据库来做这件事情吗？"></a>你可能在想，为什么我需要一个中间人来做这件事情呢？我不能直接访问数据库来做这件事情吗？</h3><p>这样做有几个好处:</p>
+<ol>
+<li>修改相关的数据方便。</li>
+<li>能够利用 Android 的各种相关 Class 类，如 Cursor Adapter。</li>
+<li>能够让更多的应用能够 Access，而且相应的安全性也会提高（ContentProvider 用到的什么方法呢？要研究一下）。</li>
+</ol>
+<p>所以上面那个问题怎么解决呢？</p>
+<p>使用自己的数据库？不，这行不通，因为系统的数据库无法访问你自己创建的数据库，答案就是使用 contentprovider,ContentProvider 的处理对你来说完全是 BlackBox.</p>
+<h3 id="怎么用？"><a href="# 怎么用？" class="headerlink" title="怎么用？"></a>怎么用？</h3><p><img src="http://harchiko.qiniudn.com/content_provider_explicit.png" alt="detail"><br>如上图。</p>
+<script src="https://gist.github.com/zhaochunqi/44bcc45c9d476510675e489b60cb9205.js"></script>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhaochunqi.com/2016/04/10/android_content_provider/" data-id="cimurh0eo000b85c1cq0mte2z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-how-to-write-a-readme" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/28/how-to-write-a-readme/" class="article-date">
@@ -99,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/03/28/how-to-write-a-readme/" data-id="cimaw3ump000t3xcqqmldyccm" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/03/28/how-to-write-a-readme/" data-id="cimurh0fj000v85c19txf5ga7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/readme/">readme</a></li></ul>
@@ -142,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cimaw3ulv000d3xcquaol0g9c" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cimurh0f0000f85c1oedqmh2z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -185,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cimaw3ulp000b3xcqimfxrl4h" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cimurh0ew000d85c10154x89u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -228,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cimaw3unx00193xcq95njsdb2" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cimurh0gu001b85c1qvrq7s90" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -271,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/" data-id="cimaw3uo7001e3xcqht0lxpto" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/" data-id="cimurh0h5001h85c1fc8zkrhz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/terminal/">terminal</a></li></ul>
@@ -319,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/" data-id="cimaw3unf00103xcqger0843s" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/" data-id="cimurh0g2001285c1p82ufb07" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/snippets/">snippets</a></li></ul>
@@ -366,7 +418,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/" data-id="cimaw3um6000i3xcqc4ncke64" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/" data-id="cimurh0f7000k85c1kjmpcvgm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soft/">soft</a></li></ul>
@@ -411,7 +463,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/24/vice-edc/" data-id="cimaw3uoe001h3xcq4mwtcgpc" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/24/vice-edc/" data-id="cimurh0h9001j85c1lnhvh2gc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li></ul>
@@ -455,7 +507,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/24/yaml/" data-id="cimaw3uom001j3xcqxlui78b4" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/24/yaml/" data-id="cimurh0hc001l85c1ttopnsvf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -498,7 +550,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/24/dota2-steam-settings/" data-id="cimaw3um2000g3xcq5rinrka8" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/24/dota2-steam-settings/" data-id="cimurh0f5000i85c1y2kevyal" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dota2/">dota2</a></li></ul>
@@ -541,7 +593,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/08/24/faker-js/" data-id="cimaw3uma000k3xcqxixd2xal" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/08/24/faker-js/" data-id="cimurh0fa000n85c1wj0yyydl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -584,7 +636,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/" data-id="cimaw3uo2001b3xcqkswd8uxz" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/" data-id="cimurh0gx001d85c12ikr465q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/supervisor/">supervisor</a></li></ul>
@@ -627,7 +679,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cimaw3unp00163xcquvbs41vq" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cimurh0gk001885c1n5ia05d5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -670,55 +722,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/" data-id="cimaw3umg000o3xcq274pn6c5" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/" data-id="cimurh0fd000q85c1s7yidccx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-shadowsocks-user-manual" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/02/10/shadowsocks-user-manual/" class="article-date">
-  <time datetime="2015-02-10T02:36:17.000Z" itemprop="datePublished">2015-02-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/10/shadowsocks-user-manual/">shadowsocks 使用指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p><strong>ShadowSocks</strong> 在上一篇的<a href="http://blog.zhaochunqi.com/Auto-Proxy/" title="Shadowsocks 透明代理的实现">Shadowsocks 透明代理的实现</a>中提到过，本文将重点讲解一下shadowsocks的使用方法。</p>
-<p>原文链接：<a href="http://blog.zhaochunqi.com/shadowsocks-user-manual/">http://blog.zhaochunqi.com/shadowsocks-user-manual/</a></p>
-<p>作者：<a href="http://blog.zhaochunqi.com" title="http://blog.zhaochunqi.com">zhaochunqi</a></p>
-        
-          <p class="article-more-link">
-            <a href="/2015/02/10/shadowsocks-user-manual/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/" data-id="cimaw3unl00143xcqbev4016d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vpn/">vpn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
 
     </footer>
   </div>
@@ -749,7 +756,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dota2/">dota2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readme/">readme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dota2/">dota2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readme/">readme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -758,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/dev/" style="font-size: 10px;">dev</a> <a href="/tags/dota2/" style="font-size: 10px;">dota2</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/readme/" style="font-size: 10px;">readme</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/dev/" style="font-size: 13.33px;">dev</a> <a href="/tags/dota2/" style="font-size: 10px;">dota2</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/readme/" style="font-size: 10px;">readme</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
     </div>
   </div>
 
@@ -767,7 +774,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -777,6 +784,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/04/10/android_content_provider/">Content Provider 指南</a>
+          </li>
         
           <li>
             <a href="/2016/03/28/how-to-write-a-readme/">如何写好 README 文档</a>
@@ -792,10 +803,6 @@
         
           <li>
             <a href="/2015/11/27/travis-ci-deploy-hexo/">使用 Travis-CI 生成发布 Hexo 博客</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/26/useful-terminal-commands/">常用的终端命令</a>
           </li>
         
       </ul>
