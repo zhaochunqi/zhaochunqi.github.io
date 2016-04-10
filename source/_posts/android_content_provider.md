@@ -4,13 +4,12 @@ categories: ""
 tags: [android,dev]
 ---
 
-## What & Why ?
+## 介绍
 
 以下摘自开发文档
-```
-Content providers are one of the primary building blocks of Android applications, providing content to applications. They encapsulate data and provide it to applications through the single ContentResolver interface. A content provider is only required if you need to share data between multiple applications. For example, the contacts data is used by multiple applications and must be stored in a content provider. **If you don't need to share data amongst multiple applications you can use a database directly via SQLiteDatabase. ** 
-```
 
+> Content providers are one of the primary building blocks of Android applications, providing content to applications. They encapsulate data and provide it to applications through the single ContentResolver interface. A content provider is only required if you need to share data between multiple applications. For example, the contacts data is used by multiple applications and must be stored in a content provider. **If you don't need to share data amongst multiple applications you can use a database directly via SQLiteDatabase. *
+<!--more-->
 ## 使用场景
 
 假设现在你需要开发一个应用，拍摄个人名片，然后将名片上的联系人信息储存，或许你之后会丢失名片，但是你的联系人已经保存下来了。
@@ -34,6 +33,9 @@ Content providers are one of the primary building blocks of Android applications
 
 ### 怎么用？
 ![detail](http://harchiko.qiniudn.com/content_provider_explicit.png)
-如上图。
+如上
 
-<script src="https://gist.github.com/zhaochunqi/44bcc45c9d476510675e489b60cb9205.js"></script>
+```java
+ContentResolver contentResolver = getContentResolver();
+Cursor cursor = contentResolver.query(UserDictionary.Words.CONTENT_URI, null,null,null,null);
+```
