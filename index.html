@@ -66,6 +66,213 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vim-plugin-gist-vim" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/12/vim-plugin-gist-vim/" class="article-date">
+  <time datetime="2016-04-12T18:27:00.000Z" itemprop="datePublished">2016-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/12/vim-plugin-gist-vim/">Gist-Vim 介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Gist-Vim- 介绍"><a href="#Gist-Vim- 介绍" class="headerlink" title="Gist-Vim 介绍"></a>Gist-Vim 介绍 </h2><blockquote>
+<p>Gist-Vim 是一款能够访问、保存 gist 的 Vim 插件。</p>
+</blockquote>
+<h3 id="说一下重点："><a href="# 说一下重点：" class="headerlink" title="说一下重点："></a> 说一下重点：</h3><ul>
+<li> 使用之前要先设置 <code>git config --global github.user Username</code> 注意是 github.user.</li>
+<li> 在 .vimrc 中设置 <code>let g:gist_clip_command = &#39;pbcopy&#39;</code> 以便可以直接粘贴上传的 Gist 地址。</li>
+<li> 使用 Vundle 安装时要安装两个包 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bundle &apos;mattn/webapi-vim&apos;</span><br><span class="line">Bundle &apos;mattn/gist-vim&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="常用的几个命令"><a href="# 常用的几个命令" class="headerlink" title="常用的几个命令"></a> 常用的几个命令 </h3><ul>
+<li><code>:Gist -l zhaochunqi</code>  zhaochunqi 的全部 gist</li>
+<li><code>:Gist -a</code> 匿名 gist</li>
+<li> 可以进入 V 模式选择后提交 Gist，可以使用 -s 选项添加描述说明。</li>
+</ul>
+<hr>
+<h3 id="Gist-vim"><a href="#Gist-vim" class="headerlink" title="Gist.vim"></a>Gist.vim</h3><p>This is a vimscript for creating gists (<a href="http://gist.github.com" target="_blank" rel="external">http://gist.github.com</a>).</p>
+<p>For the latest version please see <a href="https://github.com/mattn/gist-vim" target="_blank" rel="external">https://github.com/mattn/gist-vim</a>.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h2><ul>
+<li><p>Post current buffer to gist, using default privacy option.</p>
+<pre><code>:Gist
+</code></pre></li>
+<li><p>Post selected text to gist, using default privacy option.<br>This applies to all permutations listed below (except multi).</p>
+<pre><code>:&apos;&lt;,&apos;&gt;Gist
+</code></pre></li>
+<li><p>Create a private gist.</p>
+<pre><code>:Gist -p
+</code></pre></li>
+<li><p>Create a public gist.<br>(Only relevant if you’ve set gists to be private by default.)</p>
+<pre><code>:Gist -P
+</code></pre></li>
+</ul>
+<blockquote>
+<p> This is only relevant if you’ve set gists to be private by default;<br>if you get an empty gist list, try “:Gist –abandon”.</p>
+</blockquote>
+<ul>
+<li><p>Create a gist anonymously.</p>
+<pre><code>:Gist -a
+</code></pre></li>
+<li><p>Create a gist with all open buffers.</p>
+<pre><code>:Gist -m
+</code></pre></li>
+<li><p>Edit the gist (you need to have opened the gist buffer first).<br>You can update the gist with the “:w” command within the gist buffer.</p>
+<pre><code>:Gist -e
+</code></pre></li>
+<li><p>Edit the gist with name ‘foo.js’ (you need to have opened the gist buffer<br>first).</p>
+<pre><code>:Gist -e foo.js
+</code></pre></li>
+<li><p>Post/Edit with the description “ (you need to have opened the gist buffer<br>first). &gt;</p>
+<pre><code>:Gist -s something
+:Gist -e -s something
+</code></pre></li>
+<li><p>Delete the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist -d
+</code></pre></li>
+<li><p>Fork the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist -f
+</code></pre></li>
+<li><p>Star the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist +1
+</code></pre></li>
+<li><p>Unstar the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist -1
+</code></pre></li>
+<li><p>Get gist XXXXX.</p>
+<pre><code>:Gist XXXXX
+</code></pre></li>
+<li><p>Get gist XXXXX and add to clipboard.</p>
+<pre><code>:Gist -c XXXXX
+</code></pre></li>
+<li><p>List your public gists.</p>
+<pre><code>:Gist -l
+</code></pre></li>
+<li><p>List gists from user “mattn”.</p>
+<pre><code>:Gist -l mattn
+</code></pre></li>
+<li><p>List everyone’s gists.</p>
+<pre><code>:Gist -la
+</code></pre></li>
+<li><p>List gists from your starred gists.</p>
+<pre><code>:Gist -ls
+</code></pre></li>
+<li><p>Open the gist on browser after you post or update it.</p>
+<pre><code>:Gist -b
+</code></pre></li>
+</ul>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><p>If you set g:gist_clip_command, gist.vim will copy the gist code with option<br>‘-c’.</p>
+<ul>
+<li><p>Mac:</p>
+<pre><code>let g:gist_clip_command = &apos;pbcopy&apos;
+</code></pre></li>
+<li><p>Linux:</p>
+<pre><code>let g:gist_clip_command = &apos;xclip -selection clipboard&apos;
+</code></pre></li>
+<li><p>Others (cygwin?):</p>
+<pre><code>let g:gist_clip_command = &apos;putclip&apos;
+</code></pre></li>
+</ul>
+<p>If you want to detect filetype from the filename:</p>
+<pre><code>let g:gist_detect_filetype = 1
+</code></pre><p>If you want to open browser after the post:</p>
+<pre><code>let g:gist_open_browser_after_post = 1
+</code></pre><p>If you want to change the browser:</p>
+<pre><code>let g:gist_browser_command = &apos;w3m %URL%&apos;
+</code></pre><p>or:</p>
+<pre><code>let g:gist_browser_command = &apos;opera %URL% &amp;&apos;
+</code></pre><p>On windows, this should work with your user settings.</p>
+<p>If you want to show your private gists with “:Gist -l”:</p>
+<pre><code>let g:gist_show_privates = 1
+</code></pre><p>If you want your gist to be private by default:</p>
+<pre><code>let g:gist_post_private = 1
+</code></pre><p>If you want your gist to be anonymous by default:</p>
+<pre><code>let g:gist_post_anonymous = 1
+</code></pre><p>If you want to manipulate multiple files in a gist:</p>
+<pre><code>let g:gist_get_multiplefile = 1
+</code></pre><p>If you want to use on GitHub Enterprise:</p>
+<pre><code>let g:gist_api_url = &apos;http://your-github-enterprise-domain/api/v3&apos;
+</code></pre><p>You need to either set global git config:</p>
+<pre><code>$ git config --global github.user Username
+</code></pre><h2 id="License"><a href="#License" class="headerlink" title="License:"></a>License:</h2><pre><code>Copyright 2010 by Yasuhiro Matsumoto
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGE.
+</code></pre><h2 id="Install"><a href="#Install" class="headerlink" title="Install:"></a>Install:</h2><p>Copy it to your plugin directory.<br>gist.vim will create a curl cookie-jar file in your runtimepath.</p>
+<ul>
+<li>rtp:<ul>
+<li>autoload/gist.vim</li>
+<li>plugin/gist.vim</li>
+</ul>
+</li>
+</ul>
+<p>If you want to uninstall gist.vim, remember to also remove <code>~/.gist-vim</code>.</p>
+<p>You need to install webapi-vim also:</p>
+<p>  <a href="http://www.vim.org/scripts/script.php?script_id=4019" target="_blank" rel="external">http://www.vim.org/scripts/script.php?script_id=4019</a></p>
+<p>If you want to use latest one:</p>
+<p>  <a href="https://github.com/mattn/webapi-vim" target="_blank" rel="external">https://github.com/mattn/webapi-vim</a></p>
+<h3 id="Install-with-Vundle"><a href="#Install-with-Vundle" class="headerlink" title="Install with Vundle"></a>Install with <a href="https://github.com/gmarik/vundle" target="_blank" rel="external">Vundle</a></h3><p>Add the following lines to your <code>.vimrc</code>.</p>
+<pre><code>Bundle &apos;mattn/webapi-vim&apos;
+Bundle &apos;mattn/gist-vim&apos;
+</code></pre><p>Now restart Vim and run <code>:BundleInstall</code>.</p>
+<h3 id="Install-with-NeoBundle"><a href="#Install-with-NeoBundle" class="headerlink" title="Install with NeoBundle"></a>Install with <a href="https://github.com/Shougo/neobundle.vim" target="_blank" rel="external">NeoBundle</a></h3><p>Add the following line to your <code>.vimrc</code>.</p>
+<pre><code>NeoBundle &apos;mattn/gist-vim&apos;, {&apos;depends&apos;: &apos;mattn/webapi-vim&apos;}
+</code></pre><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements:"></a>Requirements:</h2><ul>
+<li>curl command (<a href="http://curl.haxx.se/" target="_blank" rel="external">http://curl.haxx.se/</a>)</li>
+<li>webapi-vim (<a href="https://github.com/mattn/webapi-vim" target="_blank" rel="external">https://github.com/mattn/webapi-vim</a>)</li>
+<li>and if you want to use your git profile, the git command-line client.</li>
+</ul>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup:"></a>Setup:</h2><p>This plugin supports both basic and two-factor authentication using GitHub<br>API v3. The plugin stores its credentials in <code>~/.gist-vim</code>.</p>
+<p>First, you need to set your GitHub username in git’s global configuration:</p>
+<pre><code>$ git config --global github.user &lt;username&gt;
+</code></pre><p>Then gist-vim will ask for your password in order to create an access<br>token. If you have two-factor authentication enabled, gist-vim will also<br>prompt you to enter the two-factor key you receive.</p>
+<p>Whichever type of authentication you use, your GitHub password will not be<br>stored, only a OAuth access token produced specifically for gist-vim. The<br>token is stored in <code>~/.gist-vim</code>. If you stop using the plugin, you can<br>easily remove this file. To revoke the associated  GitHub token, go to the<br>list of <a href="https://github.com/settings/applications" target="_blank" rel="external">“Authorized applications” on GitHub’s “Account Settings”<br>page</a>.</p>
+<p><strong>Note:</strong> the username is optional if you only send anonymous gists.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhaochunqi.com/2016/04/12/vim-plugin-gist-vim/" data-id="cimxaejrq001n87cxnhc2peu5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-android_content_provider" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/04/10/android_content_provider/" class="article-date">
@@ -104,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/04/10/android_content_provider/" data-id="cimxacdlb000b89fsedm90odw" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/04/10/android_content_provider/" data-id="cimxaejov000b87cxqx58cb2g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -149,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/03/28/how-to-write-a-readme/" data-id="cimxacdm3000x89fsa8rwil3n" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/03/28/how-to-write-a-readme/" data-id="cimxaejpx000x87cx0806wwxd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/readme/">readme</a></li></ul>
@@ -192,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cimxacdlj000g89fss9cjb8jo" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/" data-id="cimxaejp4000g87cx62actt57" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -235,7 +442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cimxacdlf000d89fs0vl6arwd" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/" data-id="cimxaejp0000d87cxp0jl9g8s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -278,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cimxacdmy001d89fsap9x9r26" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/" data-id="cimxaejr9001d87cxsryxm56l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -321,7 +528,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/" data-id="cimxacdn5001j89fsyl2nsw9x" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/" data-id="cimxaejrk001j87cxg6goddos" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/terminal/">terminal</a></li></ul>
@@ -369,7 +576,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/" data-id="cimxacdmk001489fsfrxyoqhs" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/" data-id="cimxaejqr001487cx9pe07g6b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/snippets/">snippets</a></li></ul>
@@ -416,7 +623,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/" data-id="cimxacdlp000l89fs05qat6qc" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/" data-id="cimxaejpd000l87cxgyn0qbmf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soft/">soft</a></li></ul>
@@ -461,7 +668,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/24/vice-edc/" data-id="cimxacdn7001l89fstlbdh11m" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/24/vice-edc/" data-id="cimxaejrn001l87cxrbezrv5f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li></ul>
@@ -505,7 +712,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/24/yaml/" data-id="cimxacdna001n89fspnzus1ao" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/24/yaml/" data-id="cimxaejrw001q87cxjjydk66j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -548,7 +755,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/11/24/dota2-steam-settings/" data-id="cimxacdln000j89fs8vby8ydr" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/11/24/dota2-steam-settings/" data-id="cimxaejpa000j87cxkabd5pdl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dota2/">dota2</a></li></ul>
@@ -591,7 +798,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/08/24/faker-js/" data-id="cimxacdlr000p89fst0gwirhp" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/08/24/faker-js/" data-id="cimxaejph000p87cxle1j874x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -634,7 +841,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/" data-id="cimxacdn0001f89fso89ge6kc" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/" data-id="cimxaejrc001f87cxxbz59y4w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/supervisor/">supervisor</a></li></ul>
@@ -677,53 +884,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cimxacdmp001a89fsk378sblz" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/" data-id="cimxaejqz001a87cxp0ei6s9c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hexo-toc-problem" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/02/11/hexo-toc-problem/" class="article-date">
-  <time datetime="2015-02-11T03:00:55.000Z" itemprop="datePublished">2015-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/11/hexo-toc-problem/">Hexo toc 无法显示</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用Hexo渲染的时候发现有的问题有TOC，有的文章没有TOC。经过一番探索研究，找到了问题所在。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/02/11/hexo-toc-problem/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/" data-id="cimxacdlu000s89fsd133pfo6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
     </footer>
   </div>
@@ -754,7 +918,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dota2/">dota2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readme/">readme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dota2/">dota2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallels/">parallels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/">plugin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readme/">readme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/series/">series</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snippets/">snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/supervisor/">supervisor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv/">tv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xpath/">xpath</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -763,7 +927,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/dev/" style="font-size: 13.33px;">dev</a> <a href="/tags/dota2/" style="font-size: 10px;">dota2</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/readme/" style="font-size: 10px;">readme</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/dev/" style="font-size: 13.33px;">dev</a> <a href="/tags/dota2/" style="font-size: 10px;">dota2</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/parallels/" style="font-size: 10px;">parallels</a> <a href="/tags/plugin/" style="font-size: 10px;">plugin</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/readme/" style="font-size: 10px;">readme</a> <a href="/tags/series/" style="font-size: 10px;">series</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/snippets/" style="font-size: 10px;">snippets</a> <a href="/tags/soft/" style="font-size: 10px;">soft</a> <a href="/tags/supervisor/" style="font-size: 10px;">supervisor</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tv/" style="font-size: 10px;">tv</a> <a href="/tags/vagrant/" style="font-size: 10px;">vagrant</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xpath/" style="font-size: 10px;">xpath</a>
     </div>
   </div>
 
@@ -772,7 +936,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -782,6 +946,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/04/12/vim-plugin-gist-vim/">Gist-Vim 介绍</a>
+          </li>
         
           <li>
             <a href="/2016/04/10/android_content_provider/">Content Provider 指南</a>
@@ -797,10 +965,6 @@
         
           <li>
             <a href="/2015/12/13/aria2-auto-start/">Mac 下开机启动 Aria2</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/27/travis-ci-deploy-hexo/">使用 Travis-CI 生成发布 Hexo 博客</a>
           </li>
         
       </ul>
