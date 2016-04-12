@@ -1,3 +1,8 @@
+title: Gist-Vim 介绍
+date: 2016-04-12 6:27 PM
+categories: ""
+tags: [vim,plugin]
+---
 ## Gist-Vim 介绍
 
 > Gist-Vim 是一款能够访问、保存gist的Vim插件。
