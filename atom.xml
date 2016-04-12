@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhaochunqi.com/"/>
-  <updated>2016-04-10T23:38:18.821Z</updated>
+  <updated>2016-04-12T10:27:56.685Z</updated>
   <id>http://blog.zhaochunqi.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.zhaochunqi.com/2016/04/10/android_content_provider/"/>
     <id>http://blog.zhaochunqi.com/2016/04/10/android_content_provider/</id>
     <published>2016-04-10T23:58:05.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.685Z</updated>
     
     <content type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;# 介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍 &lt;/h2&gt;&lt;p&gt; 以下摘自开发文档&lt;/p&gt;
 &lt;blockquote&gt;
@@ -65,7 +65,7 @@
     <link href="http://blog.zhaochunqi.com/2016/03/28/how-to-write-a-readme/"/>
     <id>http://blog.zhaochunqi.com/2016/03/28/how-to-write-a-readme/</id>
     <published>2016-03-28T01:53:00.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;hr&gt;
 &lt;p&gt;这是一个教你怎么写 &lt;code&gt;README&lt;/code&gt; 的教程&lt;/p&gt;
@@ -112,7 +112,7 @@
     <link href="http://blog.zhaochunqi.com/2015/12/18/bash-config-files/"/>
     <id>http://blog.zhaochunqi.com/2015/12/18/bash-config-files/</id>
     <published>2015-12-18T17:32:00.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;Bash 的配置文件位置包括 &lt;code&gt;.bash_profile&lt;/code&gt; 和 &lt;code&gt;.bashrc&lt;/code&gt;，那这两个配置文件有什么区别呢？&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -149,7 +149,7 @@
     <link href="http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/"/>
     <id>http://blog.zhaochunqi.com/2015/12/13/aria2-auto-start/</id>
     <published>2015-12-13T20:51:00.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;前几天看了少数派的文章 &lt;a href=&quot;http://sspai.com/32167&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://sspai.com/32167&lt;/a&gt; 配置了 Aria2，效果不错，决定将其开机启动。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -191,7 +191,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/"/>
     <id>http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/</id>
     <published>2015-11-27T18:51:00.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;本篇文章将指导你如何使用 Travis-CI 自动部署 hexo 生成的静态博客到 github 上。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -238,7 +238,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/useful-terminal-commands/</id>
     <published>2015-11-26T04:20:00.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt; 介绍一些常用的 Linux 命令，这些命令能够在终端下极大的方便我们的操作。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -281,7 +281,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/26/random-git-commit/"/>
     <id>http://blog.zhaochunqi.com/2015/11/26/random-git-commit/</id>
     <published>2015-11-26T02:30:00.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt; 代码 &lt;/strong&gt;:&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git commit -m &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(curl -s http://whatthecommit.com/ | awk&#39;/&amp;lt;p&amp;gt;/ &amp;#123;sub(&quot;&amp;lt;p&amp;gt;&quot;, &quot;&quot;)&lt;/span&gt;; print &amp;#125;&#39;)&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -311,7 +311,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/"/>
     <id>http://blog.zhaochunqi.com/2015/11/25/extends-mac-dict-apps/</id>
     <published>2015-11-25T01:46:00.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;DictUnifer 是一款在 Mac 下能够转换字典格式的软件。把第三方的词库转换成「Mac 词典」支持的格式。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -341,7 +341,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/24/vice-edc/"/>
     <id>http://blog.zhaochunqi.com/2015/11/24/vice-edc/</id>
     <published>2015-11-24T03:02:45.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;h2 id=&quot;《还记得我吗》–陈冠希&quot;&gt;&lt;a href=&quot;#《还记得我吗》–陈冠希&quot; class=&quot;headerlink&quot; title=&quot;《还记得我吗》–陈冠希&quot;&gt;&lt;/a&gt;《还记得我吗》–陈冠希 &lt;/h2&gt;&lt;p&gt; 陈冠希是谁? 这世界上有几亿人看过他的照片；陈冠希在做什么？媒体上的他声名狼藉；VICE 拍陈冠希？听起来很刺激，也合情合理 —— 他身上具备一切精彩故事的必要元素，他就是 VICE 要讲的故事。&lt;/p&gt;
 &lt;p&gt;音乐《记得我吗》&lt;/p&gt;
@@ -381,7 +381,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/24/yaml/"/>
     <id>http://blog.zhaochunqi.com/2015/11/24/yaml/</id>
     <published>2015-11-24T03:02:25.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;h2 id=&quot;YAML 简介&quot;&gt;&lt;a href=&quot;#YAML 简介&quot; class=&quot;headerlink&quot; title=&quot;YAML 简介&quot;&gt;&lt;/a&gt;YAML 简介&lt;/h2&gt;&lt;p&gt;&lt;code&gt;YAML&lt;/code&gt; &lt;strong&gt;[YAML Ain’t Markup Language]&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;和 GNU 一样，YAML 是一个递归着说“不”的名字。不同的是，GNU 对 UNIX 说不，YAML 说不的对象是 XML。&lt;/p&gt;
@@ -414,7 +414,7 @@
     <link href="http://blog.zhaochunqi.com/2015/11/24/dota2-steam-settings/"/>
     <id>http://blog.zhaochunqi.com/2015/11/24/dota2-steam-settings/</id>
     <published>2015-11-24T03:02:11.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Dota2- 国服设定&quot;&gt;&lt;a href=&quot;#Dota2- 国服设定&quot; class=&quot;headerlink&quot; title=&quot;Dota2 国服设定&quot;&gt;&lt;/a&gt;Dota2 国服设定 &lt;/h2&gt;&lt;p&gt;Dota2 在完美代理后单独出了一个国服的客户端，但是需要同时注册 Steam 帐号和国服帐号，可见国服的 Dota2 也是绑定在 Steam 上的，既然如此，倒不如直接使用 steam 客户端省事。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -441,7 +441,7 @@
     <link href="http://blog.zhaochunqi.com/2015/08/24/faker-js/"/>
     <id>http://blog.zhaochunqi.com/2015/08/24/faker-js/</id>
     <published>2015-08-24T08:05:30.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;Faker.js 能够生成名字、地址、电话号码等信息的库。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt; 项目地址： &lt;a href=&quot;https://github.com/Marak/faker.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Marak/faker.js&lt;/a&gt;&lt;/p&gt;
@@ -472,7 +472,7 @@
     <link href="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/"/>
     <id>http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/</id>
     <published>2015-03-04T05:45:39.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;h2 id=&quot;supervisor 简介&quot;&gt;&lt;a href=&quot;#supervisor 简介&quot; class=&quot;headerlink&quot; title=&quot;supervisor 简介&quot;&gt;&lt;/a&gt;&lt;code&gt;supervisor&lt;/code&gt;简介&lt;/h2&gt;&lt;p&gt;supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -511,7 +511,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/"/>
     <id>http://blog.zhaochunqi.com/2015/02/15/speed-your-working-space/</id>
     <published>2015-02-15T07:29:41.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;在国内，一些服务或者被墙，或者访问速度过慢，对开发者而言，这是最痛苦的，下面，介绍几种减轻痛苦的良方以飨读者。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -554,7 +554,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/"/>
     <id>http://blog.zhaochunqi.com/2015/02/11/hexo-toc-problem/</id>
     <published>2015-02-11T03:00:55.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;# 问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题 &lt;/h2&gt;&lt;p&gt; 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -590,7 +590,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/"/>
     <id>http://blog.zhaochunqi.com/2015/02/10/shadowsocks-user-manual/</id>
     <published>2015-02-10T02:36:17.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;h2 id=&quot;关于&quot;&gt;&lt;a href=&quot;# 关于&quot; class=&quot;headerlink&quot; title=&quot;关于&quot;&gt;&lt;/a&gt;关于 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ShadowSocks&lt;/strong&gt; 在上一篇的&lt;a href=&quot;http://blog.zhaochunqi.com/Auto-Proxy/&quot; title=&quot;Shadowsocks 透明代理的实现&quot;&gt;Shadowsocks 透明代理的实现&lt;/a&gt; 中提到过，本文将重点讲解一下 shadowsocks 的使用方法。&lt;/p&gt;
 &lt;p&gt;原文链接：&lt;a href=&quot;http://blog.zhaochunqi.com/shadowsocks-user-manual/&quot;&gt;http://blog.zhaochunqi.com/shadowsocks-user-manual/&lt;/a&gt;&lt;/p&gt;
@@ -636,7 +636,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/"/>
     <id>http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/</id>
     <published>2015-02-05T01:59:07.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;环境：OSX yosemite/Parallels Desktop 10&lt;/p&gt;
 &lt;h2 id=&quot;Vagrant- 介绍&quot;&gt;&lt;a href=&quot;#Vagrant- 介绍&quot; class=&quot;headerlink&quot; title=&quot;Vagrant 介绍&quot;&gt;&lt;/a&gt;Vagrant 介绍&lt;/h2&gt;&lt;p&gt;Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。&lt;/p&gt;
@@ -678,7 +678,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/tools-for-us-TV-series/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2016-04-10T23:38:18.825Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt;今日同事推荐了个看美剧的神器的网站 &lt;a href=&quot;http://showrss.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;showrss&lt;/a&gt;,&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -713,7 +713,7 @@
     <link href="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/"/>
     <id>http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/</id>
     <published>2015-02-04T01:21:44.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.685Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt; 本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。&lt;/strong&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -755,7 +755,7 @@
     <link href="http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/"/>
     <id>http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/</id>
     <published>2015-01-27T01:11:15.000Z</published>
-    <updated>2016-04-10T23:38:18.821Z</updated>
+    <updated>2016-04-12T10:27:56.689Z</updated>
     
     <content type="html">&lt;p&gt; 因为一些国内的客观原因，google 的访问速度一直很慢，通过 firebug 看了下 google 相关的服务加载速度超过了 1s 种，而且经常加载不成功。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
