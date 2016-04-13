@@ -7,6 +7,7 @@ tags: [vim,plugin]
 
 > Gist-Vim 是一款能够访问、保存gist的Vim插件。
 
+<!--more-->
 
 ### 说一下重点：
 
