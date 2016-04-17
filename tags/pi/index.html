@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>如何确定 python 运行所在的文件位置 | Alex Coding</title>
+  <title>Tag: pi | Alex Coding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何确定python脚本的位置？python脚本有个__file__属性，能够确定脚本所在的位置。但由于运行文件夹的不同，__file__的相对路径也不同。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="如何确定 python 运行所在的文件位置">
-<meta property="og:url" content="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alex Coding">
+<meta property="og:url" content="http://blog.zhaochunqi.com/tags/pi/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description" content="如何确定python脚本的位置？python脚本有个__file__属性，能够确定脚本所在的位置。但由于运行文件夹的不同，__file__的相对路径也不同。">
-<meta property="og:updated_time" content="2016-04-17T16:19:26.148Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何确定 python 运行所在的文件位置">
-<meta name="twitter:description" content="如何确定python脚本的位置？python脚本有个__file__属性，能够确定脚本所在的位置。但由于运行文件夹的不同，__file__的相对路径也不同。">
+<meta name="twitter:title" content="Alex Coding">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
   
@@ -65,71 +64,39 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-python-runs-directory" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/23/python-runs-directory/" class="article-date">
-  <time datetime="2015-01-23T01:56:38.000Z" itemprop="datePublished">2015-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      如何确定 python 运行所在的文件位置
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2016/04/17/raspberry-pi-as-nas-server/" class="archive-article-date">
+  <time datetime="2016-04-17T13:28:00.000Z" itemprop="datePublished">Apr 17</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/04/17/raspberry-pi-as-nas-server/">从零开始将树莓派打造成家用下载机【一】 网络配置篇</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如何确定 python 脚本的位置？<br>python 脚本有个 <code>__file__</code> 属性，能够确定脚本所在的位置。但由于运行文件夹的不同，<code>__file__</code>的相对路径也不同。</p>
-<a id="more"></a>
-<h2 id="如何确定当前脚本的绝对路径"><a href="# 如何确定当前脚本的绝对路径" class="headerlink" title="如何确定当前脚本的绝对路径"></a>如何确定当前脚本的绝对路径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.realpath(__file__)</span><br></pre></td></tr></table></figure>
-<h2 id="如何确定当前脚本所在的文件夹"><a href="# 如何确定当前脚本所在的文件夹" class="headerlink" title="如何确定当前脚本所在的文件夹"></a>如何确定当前脚本所在的文件夹</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.dirname(os.path.realpath(__file__))</span><br></pre></td></tr></table></figure>
-<h2 id="如何确定当前脚本所在的文件夹的父文件夹"><a href="# 如何确定当前脚本所在的文件夹的父文件夹" class="headerlink" title="如何确定当前脚本所在的文件夹的父文件夹"></a>如何确定当前脚本所在的文件夹的父文件夹</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.dirname(os.path.dirname(os.path.realpath(__file__)))</span><br></pre></td></tr></table></figure>
-<h2 id="一种编程方式"><a href="# 一种编程方式" class="headerlink" title="一种编程方式"></a>一种编程方式 </h2><p> 在编写程序的时候，想要使用一些绝对路径相关的变量，会单独定义一个脚本如 <code>pathinfo.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">src_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> os.path.dirname(os.path.realpath(__file__))</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">code_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> os.path.dirname(src_dir())</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> code_dir()+<span class="string">'/log'</span></span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">conf_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> code_dir()+<span class="string">'/conf'</span></span><br></pre></td></tr></table></figure>
-<p>这样，使用的时候 <code>import pathinfo</code> 即可</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/" data-id="cin4s3r3y001281cq23qiue9z" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/01/23/how-to-use-xpath/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          xpath 简明教程
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/12/22/install-hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">如何在 Ubuntu 中安装 hexo</div>
-    </a>
-  
-</nav>
-
-  
 </article>
-
+  
+  
+    </div></section>
+  
 </section>
         
           <aside id="sidebar">

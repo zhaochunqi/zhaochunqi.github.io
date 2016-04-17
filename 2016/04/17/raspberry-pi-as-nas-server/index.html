@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>如何确定 python 运行所在的文件位置 | Alex Coding</title>
+  <title>从零开始将树莓派打造成家用下载机【一】 网络配置篇 | Alex Coding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何确定python脚本的位置？python脚本有个__file__属性，能够确定脚本所在的位置。但由于运行文件夹的不同，__file__的相对路径也不同。">
+  <meta name="description" content="本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何确定 python 运行所在的文件位置">
-<meta property="og:url" content="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/index.html">
+<meta property="og:title" content="从零开始将树莓派打造成家用下载机【一】 网络配置篇">
+<meta property="og:url" content="http://blog.zhaochunqi.com/2016/04/17/raspberry-pi-as-nas-server/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description" content="如何确定python脚本的位置？python脚本有个__file__属性，能够确定脚本所在的位置。但由于运行文件夹的不同，__file__的相对路径也不同。">
-<meta property="og:updated_time" content="2016-04-17T16:19:26.148Z">
+<meta property="og:description" content="本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Pi_3_Model_B.png">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png">
+<meta property="og:updated_time" content="2016-04-17T16:19:26.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何确定 python 运行所在的文件位置">
-<meta name="twitter:description" content="如何确定python脚本的位置？python脚本有个__file__属性，能够确定脚本所在的位置。但由于运行文件夹的不同，__file__的相对路径也不同。">
+<meta name="twitter:title" content="从零开始将树莓派打造成家用下载机【一】 网络配置篇">
+<meta name="twitter:description" content="本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。">
+<meta name="twitter:image" content="http://harchiko.qiniudn.com/Pi_3_Model_B.png">
   
     <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
   
@@ -65,12 +68,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-python-runs-directory" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-raspberry-pi-as-nas-server" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/23/python-runs-directory/" class="article-date">
-  <time datetime="2015-01-23T01:56:38.000Z" itemprop="datePublished">2015-01-23</time>
+    <a href="/2016/04/17/raspberry-pi-as-nas-server/" class="article-date">
+  <time datetime="2016-04-17T13:28:00.000Z" itemprop="datePublished">2016-04-17</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/raspberry/">raspberry</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -79,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      如何确定 python 运行所在的文件位置
+      从零开始将树莓派打造成家用下载机【一】 网络配置篇
     </h1>
   
 
@@ -87,22 +94,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>如何确定 python 脚本的位置？<br>python 脚本有个 <code>__file__</code> 属性，能够确定脚本所在的位置。但由于运行文件夹的不同，<code>__file__</code>的相对路径也不同。</p>
-<a id="more"></a>
-<h2 id="如何确定当前脚本的绝对路径"><a href="# 如何确定当前脚本的绝对路径" class="headerlink" title="如何确定当前脚本的绝对路径"></a>如何确定当前脚本的绝对路径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.realpath(__file__)</span><br></pre></td></tr></table></figure>
-<h2 id="如何确定当前脚本所在的文件夹"><a href="# 如何确定当前脚本所在的文件夹" class="headerlink" title="如何确定当前脚本所在的文件夹"></a>如何确定当前脚本所在的文件夹</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.dirname(os.path.realpath(__file__))</span><br></pre></td></tr></table></figure>
-<h2 id="如何确定当前脚本所在的文件夹的父文件夹"><a href="# 如何确定当前脚本所在的文件夹的父文件夹" class="headerlink" title="如何确定当前脚本所在的文件夹的父文件夹"></a>如何确定当前脚本所在的文件夹的父文件夹</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.dirname(os.path.dirname(os.path.realpath(__file__)))</span><br></pre></td></tr></table></figure>
-<h2 id="一种编程方式"><a href="# 一种编程方式" class="headerlink" title="一种编程方式"></a>一种编程方式 </h2><p> 在编写程序的时候，想要使用一些绝对路径相关的变量，会单独定义一个脚本如 <code>pathinfo.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">src_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> os.path.dirname(os.path.realpath(__file__))</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">code_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> os.path.dirname(src_dir())</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> code_dir()+<span class="string">'/log'</span></span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">conf_dir</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> code_dir()+<span class="string">'/conf'</span></span><br></pre></td></tr></table></figure>
-<p>这样，使用的时候 <code>import pathinfo</code> 即可</p>
-
+        <p>本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。<br><a id="more"></a></p>
+<p><img src="http://harchiko.qiniudn.com/Pi_3_Model_B.png" alt="http://harchiko.qiniudn.com/Pi_3_Model_B.png"></p>
+<h3 id="烧录 micro-sd 卡"><a href="# 烧录 micro-sd 卡" class="headerlink" title="烧录 micro sd 卡"></a>烧录 micro sd 卡 </h3><p> 具体操作可查看官方<a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank" rel="external">https://www.raspberrypi.org/documentation/installation/installing-images/README.md</a>，比较简单，不详述。</p>
+<h3 id="配置 IP 地址"><a href="# 配置 IP 地址" class="headerlink" title="配置 IP 地址"></a>配置 IP 地址 </h3><p> 烧录好之后插上 SD 卡，接好网线启动树莓派，看到树莓派灯正常亮系统应该就算启动完成了。</p>
+<ol>
+<li>进入路由器后台, 打开 DHCP 服务，查看树莓派的 ip 地址，将其修改为固定 ip 地址后重启路由器(我的为 192.168.0.169)。</li>
+<li>使用 <code>ssh pi@192.168.0.169</code>登录树莓派（Mac/Linux 下直接使用 Terminal, Windows 下可使用 Xshell）</li>
+</ol>
+<h3 id="配置公网访问"><a href="# 配置公网访问" class="headerlink" title="配置公网访问"></a>配置公网访问 </h3><h3 id="路由器"><a href="# 路由器" class="headerlink" title="路由器"></a> 路由器</h3><ul>
+<li>DMZ 主机配置 <br> 在路由器中，配置中找到 DMZ 主机选项，将其设置为树莓派的 ip。</li>
+</ul>
+<h3 id="SSH 配置"><a href="#SSH 配置" class="headerlink" title="SSH 配置"></a>SSH 配置 </h3><h4 id="密码修改"><a href="# 密码修改" class="headerlink" title="密码修改"></a> 密码修改 </h4><pre><code> 使用命令 `passwd pi` 修改 pi 的密码。建议密码修改强度足够强，因为这台主机会暴露在公网。
+</code></pre><h4 id="SSH 端口修改"><a href="#SSH 端口修改" class="headerlink" title="SSH 端口修改"></a>SSH 端口修改 </h4><pre><code> 出于同样的安全考虑，修改 ssh 端口
+</code></pre><ul>
+<li>修改配置文件 <code>vi /etc/ssh/sshd_config</code> 将 ssh 端口修改为 xxxx(你希望的端口), 这里我设定的是 1213。</li>
+<li>重启 SSH 服务，<code>sudo service ssh restart</code></li>
+</ul>
+<h4 id="查看本地 IP 是否能从公网访问"><a href="# 查看本地 IP 是否能从公网访问" class="headerlink" title="查看本地 IP 是否能从公网访问"></a>查看本地 IP 是否能从公网访问</h4><blockquote>
+<p>在国内，因为 ipv4 地址不够用或者一些其他原因，你所使用的 ip 可能是电信分配的局域网的 ip，这时候你就需要找电信客服说一下你需要公网 ip 让他们帮你改回来。</p>
+</blockquote>
+<p>这里通过 telnet 服务看一下是否当前分配的是公网 ip</p>
+<ol>
+<li><strong>查看本机的公网 ip</strong><br>使用命令 <code>curl ifconfig.me</code>, 或者直接在百度中搜索 ip。</li>
+<li><strong>本地查看 SSH 服务端口号是否更改过来 </strong> <code>telnet 192.168.0.169 1213</code><br>(<code>#xxxx</code> 指的是端口号)</li>
+<li><strong>通过公网查看</strong> 通过第一步查看到的 ip 来从公网访问<code>telnet xxx.xxx.xxx 1213</code><br>(这里使用公网 ip）如果能够正常运行的话则证明此树莓派已经运行在公网。</li>
+</ol>
+<p>这样 ssh 登录命令变为 <code>ssh pi@xxx.xxx.xxx -p 1213</code> （指定端口）</p>
+<h4 id="将本地 ip 与域名绑定"><a href="# 将本地 ip 与域名绑定" class="headerlink" title="将本地 ip 与域名绑定"></a>将本地 ip 与域名绑定 </h4><p> 因为家庭宽带的 ip 是不固定的，如果使用 ip 进行连接的话每次都要先获取到机器的当前 ip 才能进行 ssh 登录，这里我们将 ip 地址绑定到二级域名上。</p>
+<p>按照此 repo: <a href="https://github.com/zhaochunqi/change_my_ip_on_dnspod" target="_blank" rel="external">https://github.com/zhaochunqi/change_my_ip_on_dnspod</a> 中 README 进行响应配置。</p>
+<ol>
+<li>clone 这个 repo， 在 Dnspod 中获取到 APIKEY，以及响应的二级域名需要的参数。</li>
+<li>修改库中的 change_my_ip_on_dnspod.sh <code>Shell</code>脚本。</li>
+<li>使用命令 <code>chmod +x change_my_ip_on_dnspod.sh</code> 添加脚本的可执行权限。</li>
+<li>运行 ./change_my_ip_on_dnspod.sh 查看返回值, 得到如下图的结果即为成功。<img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png"></li>
+<li>登录树莓派系统 <code>crontab -e</code>在末尾添加 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># every 20 mins</span></span><br><span class="line">*/20 * * * * ./path/to/change_ip_4_pi.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><code>path/to/change_ip_4_pi.sh</code> 替换为你的真实地址。</p>
+<p>至此，你能从你刚刚绑定的二级域名直接访问到你的树莓派:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh pi@haha.mydomain.com -p 1213</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2015/01/23/python-runs-directory/" data-id="cin4s3r3y001281cq23qiue9z" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/04/17/raspberry-pi-as-nas-server/" data-id="cin4s3r43001781cqe30dpxak" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pi/">pi</a></li></ul>
 
     </footer>
   </div>
@@ -110,19 +148,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/01/23/how-to-use-xpath/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          xpath 简明教程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2014/12/22/install-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/04/12/vim-plugin-gist-vim/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">如何在 Ubuntu 中安装 hexo</div>
+      <div class="article-nav-title">Gist-Vim 介绍</div>
     </a>
   
 </nav>
