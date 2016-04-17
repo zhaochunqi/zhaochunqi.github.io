@@ -55,7 +55,7 @@ tags: [linux,pi]
 
 因为家庭宽带的ip是不固定的，如果使用 ip 进行连接的话每次都要先获取到机器的当前ip才能进行ssh登录，这里我们将ip地址绑定到二级域名上。
 
-按照此repo: [https://github.com/zhaochunqi/change_my_ip_on_dnspod](https://github.com/zhaochunqi/change_my_ip_on_dnspod) 中README进行响应配置。
+按照此repo: [https://github.com/zhaochunqi/change_my_ip_on_dnspod](https://github.com/zhaochunqi/change_my_ip_on_dnspod) 中README进行相应配置。
 
 1. clone 这个 repo， 在Dnspod中获取到 APIKEY，以及响应的二级域名需要的参数。
 2. 修改库中的 change_my_ip_on_dnspod.sh `Shell`脚本。
