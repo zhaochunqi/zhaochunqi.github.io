@@ -118,9 +118,9 @@ sudo mkdir /home/pi/Downloads/torrents/watch
 sudo mkdir /home/pi/Downloads/torrents/torrent-backup
 ```
 
-按照图中修改（第一行中的 `Download to`应该为 `/home/pi/Downloads/downloading`,此文撰写时才发现错误。）：
+按照图中修改即可
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%2012.05.49%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%2012.05.49%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%201.06.13%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%201.06.13%20AM.png)
 
 #### 网络配置
 按图示修改即可。
