@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://harchiko.qiniudn.com/wechat128.png">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png">
-<meta property="og:updated_time" content="2016-04-24T14:32:01.804Z">
+<meta property="og:updated_time" content="2016-04-24T14:34:40.171Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="15 分钟开发一个 Chrome App">
 <meta name="twitter:description" content="本文介绍了如何在很短的时间内开发一个 Chrome APP.">
@@ -104,7 +104,10 @@
 <h2 id="准备图标"><a href="# 准备图标" class="headerlink" title="准备图标"></a>准备图标 </h2><p> 网上搜索一个图标，这里使用微信的图标</p>
 <p><img src="http://harchiko.qiniudn.com/wechat128.png" alt="http://harchiko.qiniudn.com/wechat128.png"></p>
 <h2 id="创建 manifest-json- 文件"><a href="# 创建 manifest-json- 文件" class="headerlink" title="创建 manifest.json 文件"></a>创建 manifest.json 文件 </h2><p> 创建一个文件夹，在文件夹中添加 <code>manifiest.json</code>。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"name": "WeChat",</span><br><span class="line">	"description": "Just A Wechat Web App",</span><br><span class="line">	"version": "0.1",</span><br><span class="line">	"manifest_version": 2, #这里必须是 2</span><br><span class="line">	"app": &#123;</span><br><span class="line">		"urls": ["http://blog.zhaochunqi.com"],</span><br><span class="line">		"launch": &#123;</span><br><span class="line">			"web_url": "http://web.wechat.com"</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	"icons": &#123;</span><br><span class="line">		"128": "wechat128.png"</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"name"</span>: <span class="string">"WeChat"</span>,</span><br><span class="line">	<span class="attr">"description"</span>: <span class="string">"Just A Wechat Web App"</span>,</span><br><span class="line">	<span class="attr">"version"</span>: <span class="string">"0.1"</span>,</span><br><span class="line">	<span class="attr">"manifest_version"</span>: <span class="number">2</span>,</span><br><span class="line">	<span class="attr">"app"</span>: &#123;</span><br><span class="line">		<span class="attr">"urls"</span>: [<span class="string">"http://blog.zhaochunqi.com"</span>],</span><br><span class="line">		<span class="attr">"launch"</span>: &#123;</span><br><span class="line">			<span class="attr">"web_url"</span>: <span class="string">"http://web.wechat.com"</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">"icons"</span>: &#123;</span><br><span class="line">		<span class="attr">"128"</span>: <span class="string">"wechat128.png"</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：</strong> manifest_version 需要是 2。</p>
+</blockquote>
 <h3 id="测试"><a href="# 测试" class="headerlink" title="测试"></a>测试 </h3><p> 打开 Chrome 的扩展界面，勾选 <code>Developer Mode</code>, 点击 <code>Load unpacked extention</code>, 找到文件夹：</p>
 <p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png"></p>
 <p>打开 Chrome App Launcher，你的应用已在其中:</p>
@@ -116,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhaochunqi.com/2016/04/24/create-chrome-web-app-in-15-minutes/" data-id="cineocofw000l8ddl4peyn2sz" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhaochunqi.com/2016/04/24/create-chrome-web-app-in-15-minutes/" data-id="cineog33v000l89fy9rzhsztv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/developer/">developer</a></li></ul>
