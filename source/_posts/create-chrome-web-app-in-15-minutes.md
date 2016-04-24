@@ -51,3 +51,5 @@ tags: [chrome,developer]
 点击后跳转到 微信界面。
 
 Easy, hah?
+
+源码在这里: [https://github.com/zhaochunqi/wechat_chrome_app](https://github.com/zhaochunqi/wechat_chrome_app)
