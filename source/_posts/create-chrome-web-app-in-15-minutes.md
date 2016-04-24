@@ -25,7 +25,7 @@ tags: [chrome,developer]
 	"name": "WeChat",
 	"description": "Just A Wechat Web App",
 	"version": "0.1",
-	"manifest_version": 2, #这里必须是2
+	"manifest_version": 2,
 	"app": {
 		"urls": ["http://blog.zhaochunqi.com"],
 		"launch": {
@@ -37,6 +37,8 @@ tags: [chrome,developer]
 	}
 }
 ```
+
+> **注意：** manifest_version 需要是 2。
 
 ### 测试
 
