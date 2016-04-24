@@ -88,7 +88,7 @@ tags: [chrome,developer]
 
 来看下效果:
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%209.23.27%20PM.jpg](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%209.23.27%20PM.jpg)
+[http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%209.23.27%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%209.23.27%20PM.png)
 
 只能说： 完美 ~
 
