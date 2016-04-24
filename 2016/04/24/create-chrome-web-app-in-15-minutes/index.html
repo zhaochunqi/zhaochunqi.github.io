@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/8 | Alex Coding</title>
+  <title>15 分钟开发一个 Chrome App | Alex Coding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alex Coding">
-<meta property="og:url" content="http://blog.zhaochunqi.com/archives/2015/08/index.html">
+  <meta name="description" content="本文介绍了如何在很短的时间内开发一个 Chrome APP.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="15 分钟开发一个 Chrome App">
+<meta property="og:url" content="http://blog.zhaochunqi.com/2016/04/24/create-chrome-web-app-in-15-minutes/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description">
+<meta property="og:description" content="本文介绍了如何在很短的时间内开发一个 Chrome APP.">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png">
+<meta property="og:image" content="http://harchiko.qiniudn.com/wechat128.png">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png">
+<meta property="og:updated_time" content="2016-04-24T05:06:29.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alex Coding">
-<meta name="twitter:description">
+<meta name="twitter:title" content="15 分钟开发一个 Chrome App">
+<meta name="twitter:description" content="本文介绍了如何在很短的时间内开发一个 Chrome APP.">
+<meta name="twitter:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png">
   
     <link rel="alternative" href="/atom.xml" title="Alex Coding" type="application/atom+xml">
   
@@ -64,39 +70,73 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/08/24/faker-js/" class="archive-article-date">
-  <time datetime="2015-08-24T08:05:30.000Z" itemprop="datePublished">Aug 24</time>
+        <section id="main"><article id="post-create-chrome-web-app-in-15-minutes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/24/create-chrome-web-app-in-15-minutes/" class="article-date">
+  <time datetime="2016-04-24T12:51:00.000Z" itemprop="datePublished">2016-04-24</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/develper/">develper</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/24/faker-js/">Faker.js</a>
+    <h1 class="article-title" itemprop="name">
+      15 分钟开发一个 Chrome App
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文介绍了如何在很短的时间内开发一个 Chrome APP.</p>
+</blockquote>
+<a id="more"></a>
+<p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png"></p>
+<h2 id="准备图标"><a href="# 准备图标" class="headerlink" title="准备图标"></a>准备图标 </h2><p> 网上搜索一个图标，这里使用微信的图标</p>
+<p><img src="http://harchiko.qiniudn.com/wechat128.png" alt="http://harchiko.qiniudn.com/wechat128.png"></p>
+<h2 id="创建 manifest-json- 文件"><a href="# 创建 manifest-json- 文件" class="headerlink" title="创建 manifest.json 文件"></a>创建 manifest.json 文件 </h2><p> 创建一个文件夹，在文件夹中添加 <code>manifiest.json</code>。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"name": "WeChat",</span><br><span class="line">	"description": "Just A Wechat Web App",</span><br><span class="line">	"version": "0.1",</span><br><span class="line">	"manifest_version": 2, #这里必须是 2</span><br><span class="line">	"app": &#123;</span><br><span class="line">		"urls": ["http://blog.zhaochunqi.com"],</span><br><span class="line">		"launch": &#123;</span><br><span class="line">			"web_url": "http://web.wechat.com"</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	"icons": &#123;</span><br><span class="line">		"128": "wechat128.png"</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="测试"><a href="# 测试" class="headerlink" title="测试"></a>测试 </h3><p> 打开 Chrome 的扩展界面，勾选 <code>Developer Mode</code>, 点击 <code>Load unpacked extention</code>, 找到文件夹：</p>
+<p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png"></p>
+<p>打开 Chrome App Launcher，你的应用已在其中:</p>
+<p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png"></p>
+<p>点击后跳转到 微信界面。</p>
+<p>Easy, hah?</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhaochunqi.com/2016/04/24/create-chrome-web-app-in-15-minutes/" data-id="cine45d4e000j8bffehkku77y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/developer/">developer</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/22/raspberry-pi-as-nas-server2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">从零开始将树莓派打造成家用下载机【二】 BT 下载篇</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
