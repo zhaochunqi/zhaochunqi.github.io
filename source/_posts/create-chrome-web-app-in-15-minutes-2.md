@@ -13,6 +13,10 @@ tags: [chrome,developer]
 
 > 因为 Mac 下微信实在是难用，还不如直接使用网页版的，找了一圈Chrome App Store，竟然找不到一个简单的跳转微信的APP，心想着也不会太难，就自己动起了手。
 
+### TL;DR
+
+你可以在这里直接下载 [https://github.com/zhaochunqi/wechat_chrome_app/releases/tag/v0.2](https://github.com/zhaochunqi/wechat_chrome_app/releases/tag/v0.2)
+
 ### 优化
 
 之前的版本实在是太简单了，虽然能满足自己的要求，但还是希望有一点改变。
