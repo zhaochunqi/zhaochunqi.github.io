@@ -84,11 +84,6 @@ google_analytics: UA-42448552-1
 # MathJax Support
 mathjax: true      
 
-leancloud_visitors:
-  enable: true
-  app_id: 7fcUMbgX6k2yGbBlLEPt5vsV-gzGzoHsz
-  app_key: jp7xCLvlPpy4dBr1KBaTstaB
-
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
