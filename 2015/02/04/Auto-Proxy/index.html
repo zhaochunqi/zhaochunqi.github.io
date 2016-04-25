@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png">
-<meta property="og:updated_time" content="2016-04-25T11:17:05.141Z">
+<meta property="og:updated_time" content="2016-04-25T15:38:59.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于 Shadowsocks 透明代理的实现">
 <meta name="twitter:description" content="本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。">
@@ -255,7 +255,7 @@
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="/2015/02/04/Auto-Proxy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/04/Auto-Proxy/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/02/04/Auto-Proxy/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -361,15 +361,15 @@
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/02/04/Auto-Proxy/"
-           data-title="基于 Shadowsocks 透明代理的实现" data-url="http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -608,28 +608,30 @@
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"blog-zhaochunqi"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-  
 
 
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'harchikoint';
+      var disqus_identifier = '2015/02/04/Auto-Proxy/';
+      var disqus_title = '基于 Shadowsocks 透明代理的实现';
+      var disqus_url = 'http://blog.zhaochunqi.com/2015/02/04/Auto-Proxy/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
 
 
 
