@@ -65,6 +65,17 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
+# Duoshuo
+duoshuo_shortname: blog-zhaochunqi
+# 多说热评文章 true 或者 false
+duoshuo_hotartical: true
+
+# Swiftype Search Key
+# swiftype_key: xxxxxxxxx
+
+# MathJax Support
+mathjax: true      
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
