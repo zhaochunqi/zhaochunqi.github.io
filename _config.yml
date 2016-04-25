@@ -48,6 +48,11 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# Social links
+social:
+  github: https://github.com/zhaochunqi
+  weibo: http://weibo.com/121189047
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
