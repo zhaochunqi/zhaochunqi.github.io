@@ -312,6 +312,12 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
 
+# Wechat Subscriber
+wechat_subscriber:
+  enabled: true
+  qcode: http://harchiko.qiniudn.com/2016-04-25%2019.20.45.jpg  
+  description: 欢迎您扫一扫二维码，加我为好友！
+
 
 
 #! ---------------------------------------------------------------
