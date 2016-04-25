@@ -70,7 +70,8 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: next
-
+sitemap:
+    path: sitemap.xml
 # 百度统计
 baidu_analytics: cfffa20d202ba9f4f0d6257e1cc94ea6
 
