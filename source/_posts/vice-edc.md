@@ -7,9 +7,6 @@ tags: [life,]
 ## 《还记得我吗》--陈冠希
 陈冠希是谁? 这世界上有几亿人看过他的照片；陈冠希在做什么？媒体上的他声名狼藉；VICE拍陈冠希？听起来很刺激，也合情合理 —— 他身上具备一切精彩故事的必要元素，他就是VICE要讲的故事。
 
-音乐《记得我吗》
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=417 height=86 src="http://music.163.com/outchain/player?type=2&id=65808&auto=0&height=66"></iframe>
 
 <!--more-->
 分享一下 Vice 拍摄的陈冠希的记录片：

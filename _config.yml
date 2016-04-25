@@ -71,11 +71,8 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
-# Duoshuo
-duoshuo_shortname: blog-zhaochunqi
-# 多说热评文章 true 或者 false
-duoshuo_hotartical: true
-
+disqus_shortname: harchikoint
+        
 # Swiftype Search Key
 # swiftype_key: xxxxxxxxx
 
