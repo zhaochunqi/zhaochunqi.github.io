@@ -1,8 +1,8 @@
 menu:
     Blog: /
     Archive: /archives/
-    Weibo: http://weibo.com/sunchongsheng
-    GitHub: https://github.com/pinggod
+    Weibo: http://weibo.com/121189047
+    GitHub: https://github.com/zhaochunqi
     Rss: /atom.xml
 
 favicon: /favicon.png
@@ -10,14 +10,14 @@ logo: /favicon.png
 
 # Comment
 # e.g disqus: seansun
-disqus:
+disqus: blog-zhaochunqi
 duoshuo: 
 
 # Analytics
 # google-analytics:
-ga: UA-65933410-1
+ga: UA-42448552-1
 # baidu-analytics:
-ba: 
+ba: cfffa20d202ba9f4f0d6257e1cc94ea6
 
 # Copyright Infomation
 startyear: 2015
