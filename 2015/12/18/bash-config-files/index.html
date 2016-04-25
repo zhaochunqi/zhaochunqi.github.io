@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
 <meta property="og:image" content="http://harchiko.qiniudn.com/54002458_p0.jpg">
-<meta property="og:updated_time" content="2016-04-25T18:10:44.999Z">
+<meta property="og:updated_time" content="2016-04-25T18:26:22.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=".bash_profile vs .bashrc">
 <meta name="twitter:description" content="Bash的配置文件位置包括.bash_profile和 .bashrc，那这两个配置文件有什么区别呢？">
@@ -299,20 +299,7 @@
       
 
       
-        <p>Bash 的配置文件位置包括 <code>.bash_profile</code> 和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p>
-<a id="more"></a>
-<p><img src="http://harchiko.qiniudn.com/54002458_p0.jpg" alt=""></p>
-<p>根据 <a href="http://linux.die.net/man/1/bash" target="_blank" rel="external">http://linux.die.net/man/1/bash</a> 的描述，<code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
-<h2 id="什么是 -login- 和 -non-login-shell"><a href="# 什么是 -login- 和 -non-login-shell" class="headerlink" title="什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p>
-<p>但是，当你 <strong> 已经登录进机器 </strong>，不管是通过 Gnome 还是 KDE 的 xterm，那么<code>.bashrc</code> 在窗口弹出之前执行。而且，<code>.bashrc</code>在使用 <code>/bin/bash</code> 在 Terminal 调用时同样会执行。</p>
-<h2 id="为什么是两个不同的文件？"><a href="# 为什么是两个不同的文件？" class="headerlink" title="为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p>
-<h2 id="Mac-OS-X-–- 一个例外"><a href="#Mac-OS-X-–- 一个例外" class="headerlink" title="Mac OS X – 一个例外"></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是<code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p>
-<h2 id="建议"><a href="# 建议" class="headerlink" title="建议"></a>建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p>
-<p>添加如下命令到 <code>.bash_profile</code> 中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="_">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<p>这样当你登录到 console 时，<code>.bashrc</code>会被调用。</p>
-<h2 id="参考链接"><a href="# 参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
-
+        <p>Bash 的配置文件位置包括 <code>.bash_profile</code> 和 <code>.bashrc</code>，那这两个配置文件有什么区别呢？</p><a id="more"></a><p><img src="http://harchiko.qiniudn.com/54002458_p0.jpg" alt=""></p><p>根据 <a href="http://linux.die.net/man/1/bash"target="_blank"rel="external">http://linux.die.net/man/1/bash</a> 的描述，<code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p><h2 id=" 什么是 -login- 和 -non-login-shell"><a href="# 什么是 -login- 和 -non-login-shell"class="headerlink"title=" 什么是 login 和 non-login shell ?"></a>什么是 login 和 non-login shell ?</h2><p>当通过 console<strong>登录 </strong> 时（不管是通过物理机器还是远程 ssh），<code>.bash_profile</code>在初始化命令弹出之前就已经执行。</p><p>但是，当你 <strong> 已经登录进机器 </strong>，不管是通过 Gnome 还是 KDE 的 xterm，那么<code>.bashrc</code> 在窗口弹出之前执行。而且，<code>.bashrc</code>在使用 <code>/bin/bash</code> 在 Terminal 调用时同样会执行。</p><h2 id=" 为什么是两个不同的文件？"><a href="# 为什么是两个不同的文件？"class="headerlink"title=" 为什么是两个不同的文件？"></a>为什么是两个不同的文件？</h2><p><code>.bash_profile</code>会在每次登录之前打印一长串的诊断信息，如果你只想在启动时看到，使用 <code>.bash_profile</code>, 如果放在<code>.bashrc</code> 中，你会在每一次新启动一个 Terminal 时候看到一次。</p><h2 id="Mac-OS-X-–- 一个例外 "><a href="#Mac-OS-X-–- 一个例外 "class="headerlink"title="Mac OS X – 一个例外 "></a>Mac OS X – 一个例外 </h2><p> 每一次新启动一个 terminal 窗口时，调用 <code>.bash_profile</code> 而不是 <code>.bashrc</code>, 其它 GUI 终端模拟器也可能这样做，但是多数不是这样做的。</p><h2 id=" 建议 "><a href="# 建议 "class="headerlink"title=" 建议 "></a> 建议 </h2><p> 多数情况下，分开管理不是很方便，<strong>当你想要设定一个环境变量的时候，你想要两个都生效 </strong>, 你可以通过在<code>.bash_profile</code> 中执行命令 <code>source .bashrc</code>，然后在<code>.bashrc</code> 中写入 PATH 或者其他的设定。</p><p>添加如下命令到 <code>.bash_profile</code> 中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [<span class="_">-f</span> ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure><p>这样当你登录到 console 时，<code>.bashrc</code>会被调用。</p><h2 id=" 参考链接 "><a href="# 参考链接 "class="headerlink"title=" 参考链接 "></a>参考链接</h2><p><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html"target="_blank"rel="external">http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html</a></p>
       
     </div>
     
@@ -501,7 +488,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是 -login- 和 -non-login-shell"><span class="nav-number">1.</span> <span class="nav-text">什么是 login 和 non-login shell ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么是两个不同的文件？"><span class="nav-number">2.</span> <span class="nav-text">为什么是两个不同的文件？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-OS-X-–- 一个例外"><span class="nav-number">3.</span> <span class="nav-text">Mac OS X – 一个例外 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建议"><span class="nav-number">4.</span> <span class="nav-text">建议 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="# 什么是 -login- 和 -non-login-shell"><span class="nav-number">1.</span> <span class="nav-text">什么是 login 和 non-login shell ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="# 为什么是两个不同的文件？"><span class="nav-number">2.</span> <span class="nav-text">为什么是两个不同的文件？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-OS-X-–- 一个例外 "><span class="nav-number">3.</span> <span class="nav-text">Mac OS X – 一个例外 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="# 建议 "><span class="nav-number">4.</span> <span class="nav-text"> 建议 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="# 参考链接 "><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
           </div>
         </section>

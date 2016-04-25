@@ -88,7 +88,7 @@
 <meta property="og:url" content="http://blog.zhaochunqi.com/2015/03/04/use-supervisor-to-manager-your-task/index.html">
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="supervisor简介supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。">
-<meta property="og:updated_time" content="2016-04-25T18:10:44.999Z">
+<meta property="og:updated_time" content="2016-04-25T18:26:22.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 supervisor 来管理 linux 程序">
 <meta name="twitter:description" content="supervisor简介supervisor 是使用python语言编写的可以监控和控制系统类unix进程的程序，类似于ruby 的 god 。">
@@ -297,22 +297,7 @@
       
 
       
-        <h2 id="supervisor 简介"><a href="#supervisor 简介" class="headerlink" title="supervisor 简介"></a><code>supervisor</code>简介</h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p>
-<a id="more"></a>
-<h2 id="安装"><a href="# 安装" class="headerlink" title="安装"></a>安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$: easy_install supervisor</span><br></pre></td></tr></table></figure>
-<h2 id="使用"><a href="# 使用" class="headerlink" title="使用"></a>使用</h2><p>supervisor 可以使用配置文件来启动，指定参数 -c , 默认位置使用<br>-help 查看。</p>
-<p>建立 <code>supervisord.conf</code> 配置文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[program:cow]</span><br><span class="line">command = nohup  /home/harchiko/cow/cow &amp;</span><br><span class="line">autostart = true</span><br><span class="line">autorestart = true</span><br><span class="line">[supervisord]</span><br></pre></td></tr></table></figure>
-<p>这是用来监控 <code>cow</code> 的文件。</p>
-<p>如果提示</p>
-<p><code>Error: could not find config file supervisord.</code></p>
-<p>那是因为缺少 <code>[supervisord]</code> 模块，如上述配置文件中添加即可。</p>
-<h2 id="启动"><a href="# 启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c supervisord.conf</span><br></pre></td></tr></table></figure>
-<p>如是启动即可。</p>
-<p>注意，如果想要自动重启务必加上 <code>autorestart = true</code></p>
-<p>另外，supervisor 还有交互式命令 supervisorcli , 输入 help 查看即可了解如何操作。</p>
-
+        <h2 id="supervisor 简介"><a href="#supervisor 简介" class="headerlink" title="supervisor 简介"></a><code>supervisor</code>简介 </h2><p>supervisor 是使用 python 语言编写的可以监控和控制系统类 unix 进程的程序，类似于 ruby 的 god 。</p><a id="more"></a><h2 id="安装"><a href="# 安装" class="headerlink" title="安装"></a> 安装 </h2><p><code>supervisor</code> 是 python 编写，安装十分简便，只需：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$: easy_install supervisor</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="# 使用" class="headerlink" title="使用"></a>使用 </h2><p>supervisor 可以使用配置文件来启动，指定参数 -c , 默认位置使用<br>-help 查看。</p><p> 建立 <code>supervisord.conf</code> 配置文件。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[program:cow]</span><br><span class="line">command = nohup  /home/harchiko/cow/cow &amp;</span><br><span class="line">autostart = true</span><br><span class="line">autorestart = true</span><br><span class="line">[supervisord]</span><br></pre></td></tr></table></figure><p>这是用来监控 <code>cow</code> 的文件。</p><p>如果提示 </p><p><code>Error: could not find config file supervisord.</code></p><p> 那是因为缺少 <code>[supervisord]</code> 模块，如上述配置文件中添加即可。</p><h2 id="启动"><a href="# 启动" class="headerlink" title="启动"></a>启动 </h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supervisord -c supervisord.conf</span><br></pre></td></tr></table></figure><p> 如是启动即可。</p><p>注意，如果想要自动重启务必加上 <code>autorestart = true</code></p><p>另外，supervisor 还有交互式命令 supervisorcli , 输入 help 查看即可了解如何操作。</p>
       
     </div>
     
@@ -501,7 +486,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#supervisor 简介"><span class="nav-number">1.</span> <span class="nav-text">supervisor简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">4.</span> <span class="nav-text">启动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#supervisor 简介"><span class="nav-number">1.</span> <span class="nav-text">supervisor简介 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text"> 安装 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">4.</span> <span class="nav-text">启动 </span></a></li></ol></div>
             
           </div>
         </section>

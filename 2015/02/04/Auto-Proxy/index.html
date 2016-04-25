@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png">
-<meta property="og:updated_time" content="2016-04-25T18:10:44.999Z">
+<meta property="og:updated_time" content="2016-04-25T18:26:22.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于 Shadowsocks 透明代理的实现">
 <meta name="twitter:description" content="本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。">
@@ -299,27 +299,8 @@
       
 
       
-        <p><strong> 本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p>
-<a id="more"></a>
-<p> 程序员们最在意的，可能就是网络跟设备配置了。</p>
-<p> 做一个透明代理，能够做到：</p>
-<pre><code> 自动翻墙，本地无需配置。
-</code></pre><h2 id="网络拓扑图"><a href="# 网络拓扑图" class="headerlink" title="网络拓扑图"></a> 网络拓扑图 </h2><p><img src="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png" alt="透明代理网络拓扑图"></p>
-<h2 id="需求"><a href="# 需求" class="headerlink" title="需求"></a> 需求 </h2><ol>
-<li> 一台外网 VPS（能被中国大陆访问到，能够访问到 Facebook 等网站）</li>
-<li> 一台本地 Linux 服务器 (此处可以用智能路由器代替)。</li>
-</ol>
-<h2 id="方案设想"><a href="# 方案设想" class="headerlink" title="方案设想"></a> 方案设想 </h2><ol>
-<li> 本地的 Linux 服务器作为网关， 处理本地流量和需要代理的流量。</li>
-<li> 本地服务器将需要代理的流量转发给 Shadowsocks 并通过 Shadowsocks 来实现代理功能。</li>
-<li> 流量转发到 Cow 中，然后通过 Cow 来判断需要自动翻墙的网址。</li>
-</ol>
-<h2 id="具体方案"><a href="# 具体方案" class="headerlink" title="具体方案"></a> 具体方案 </h2><ol>
-<li> 在 VPS 中安装 Shadowsocks，并在本地客户端测试是否成功。</li>
-<li> 在本地 Linux 服务器中部署 Cow，通过 Cow 来进行 ShadowSocks 代理。</li>
-<li> 使用 iptables 将流量转发到 Cow 本地监控的端口。</li>
-</ol>
-
+        <p><strong>本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p><a id="more"></a><p>程序员们最在意的，可能就是网络跟设备配置了。</p><p>做一个透明代理，能够做到：</p><pre><code>自动翻墙，本地无需配置。
+</code></pre><h2 id="网络拓扑图"><a href="# 网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图 </h2><p><img src="http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png" alt="透明代理网络拓扑图"></p><h2 id="需求"><a href="# 需求" class="headerlink" title="需求"></a> 需求 </h2><ol><li> 一台外网 VPS（能被中国大陆访问到，能够访问到 Facebook 等网站）</li><li>一台本地 Linux 服务器 (此处可以用智能路由器代替)。</li></ol><h2 id="方案设想"><a href="# 方案设想" class="headerlink" title="方案设想"></a> 方案设想 </h2><ol><li> 本地的 Linux 服务器作为网关， 处理本地流量和需要代理的流量。</li><li>本地服务器将需要代理的流量转发给 Shadowsocks 并通过 Shadowsocks 来实现代理功能。</li><li>流量转发到 Cow 中，然后通过 Cow 来判断需要自动翻墙的网址。</li></ol><h2 id="具体方案"><a href="# 具体方案" class="headerlink" title="具体方案"></a>具体方案 </h2><ol><li> 在 VPS 中安装 Shadowsocks，并在本地客户端测试是否成功。</li><li>在本地 Linux 服务器中部署 Cow，通过 Cow 来进行 ShadowSocks 代理。</li><li>使用 iptables 将流量转发到 Cow 本地监控的端口。</li></ol>
       
     </div>
     
@@ -506,7 +487,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络拓扑图"><span class="nav-number">1.</span> <span class="nav-text"> 网络拓扑图 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">2.</span> <span class="nav-text"> 需求 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案设想"><span class="nav-number">3.</span> <span class="nav-text"> 方案设想 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体方案"><span class="nav-number">4.</span> <span class="nav-text"> 具体方案 </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络拓扑图"><span class="nav-number">1.</span> <span class="nav-text">网络拓扑图 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">2.</span> <span class="nav-text"> 需求 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案设想"><span class="nav-number">3.</span> <span class="nav-text"> 方案设想 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体方案"><span class="nav-number">4.</span> <span class="nav-text">具体方案 </span></a></li></ol></div>
             
           </div>
         </section>

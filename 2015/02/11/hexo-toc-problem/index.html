@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="问题使用Hexo渲染的时候发现有的问题有TOC，有的文章没有TOC。经过一番探索研究，找到了问题所在。">
 <meta property="og:image" content="http://harchiko.qiniudn.com/hexo-toc-problem/toc_not_show.png">
-<meta property="og:updated_time" content="2016-04-25T18:10:44.999Z">
+<meta property="og:updated_time" content="2016-04-25T18:26:22.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo toc 无法显示">
 <meta name="twitter:description" content="问题使用Hexo渲染的时候发现有的问题有TOC，有的文章没有TOC。经过一番探索研究，找到了问题所在。">
@@ -299,23 +299,7 @@
       
 
       
-        <h2 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p>
-<a id="more"></a>
-<h2 id="排查"><a href="# 排查" class="headerlink" title="排查"></a>排查</h2><ul>
-<li>换了 Chrome 浏览器之后发现问题依旧。排除浏览器的原因。</li>
-</ul>
-<ul>
-<li><code>hexo clean</code>  <code>hexo g</code>之后发现问题依旧，排除旧模板的原因。</li>
-</ul>
-<ul>
-<li>更改_config 模板配置文件 TOC 模块之后问题依旧，排除模板配置原因。</li>
-</ul>
-<ul>
-<li>打开 Firebug，查看 JS 代码之后发现 H2 如果标题没有的话会被设定<code>display:none</code><br><img src="http://harchiko.qiniudn.com/hexo-toc-problem/toc_not_show.png" alt=""></li>
-</ul>
-<p>至此！谜题就此揭开!</p>
-<h2 id="解决办法"><a href="# 解决办法" class="headerlink" title="解决办法"></a>解决办法 </h2><p> 写的时候添加个二级标题。也就是 ##</p>
-
+        <h2 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h2><p> 使用 Hexo 渲染的时候发现有的问题有 TOC，有的文章没有 TOC。经过一番探索研究，找到了问题所在。</p><a id="more"></a><h2 id="排查"><a href="# 排查" class="headerlink" title="排查"></a>排查 </h2><ul><li> 换了 Chrome 浏览器之后发现问题依旧。排除浏览器的原因。</li></ul><ul><li><code>hexo clean</code> <code>hexo g</code>之后发现问题依旧，排除旧模板的原因。</li></ul><ul><li>更改_config 模板配置文件 TOC 模块之后问题依旧，排除模板配置原因。</li></ul><ul><li>打开 Firebug，查看 JS 代码之后发现 H2 如果标题没有的话会被设定 <code>display:none</code><br><img src="http://harchiko.qiniudn.com/hexo-toc-problem/toc_not_show.png" alt=""></li></ul><p> 至此！谜题就此揭开!</p><h2 id=" 解决办法 "><a href="# 解决办法 "class="headerlink"title=" 解决办法 "></a>解决办法 </h2><p> 写的时候添加个二级标题。也就是 ##</p>
       
     </div>
     
@@ -500,7 +484,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排查"><span class="nav-number">2.</span> <span class="nav-text">排查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">3.</span> <span class="nav-text">解决办法 </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排查"><span class="nav-number">2.</span> <span class="nav-text">排查 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="# 解决办法 "><span class="nav-number">3.</span> <span class="nav-text">解决办法 </span></a></li></ol></div>
             
           </div>
         </section>
