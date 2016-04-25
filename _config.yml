@@ -71,7 +71,7 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
-disqus_shortname: harchikoint
+disqus_shortname: blog-zhaochunqi
         
 # Swiftype Search Key
 # swiftype_key: xxxxxxxxx

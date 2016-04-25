@@ -73,7 +73,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: //fonts.useso.com
 
   # Global font settings used on <body> element.
   global:
@@ -342,16 +342,16 @@ vendors:
   _internal: vendors
 
   # Internal version: 2.1.3
-  jquery:
+  jquery: http://apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js
 
   # Internal version: 2.1.5
-  fancybox:
+  fancybox: http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.pack.js
 
   # Internal version: 1.0.6
-  fastclick:
+  fastclick: 
 
   # Internal version: 1.9.7
-  lazyload:
+  lazyload: 
 
   # Internal version: 1.2.1
   velocity:
