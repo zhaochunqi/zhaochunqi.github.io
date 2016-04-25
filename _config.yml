@@ -4,10 +4,10 @@
 
 # Site
 title: Alex Coding
-subtitle: 你有没有想过，这辈子可能都是个普通人？
+subtitle: A Place Where I Write Things.
 description:
 author: Alex Zhao
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
