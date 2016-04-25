@@ -71,7 +71,11 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
-disqus_shortname: blog-zhaochunqi
+# 百度统计
+baidu_analytics: cfffa20d202ba9f4f0d6257e1cc94ea6
+
+# Google 分析
+google_analytics: UA-42448552-1
         
 # Swiftype Search Key
 # swiftype_key: xxxxxxxxx
