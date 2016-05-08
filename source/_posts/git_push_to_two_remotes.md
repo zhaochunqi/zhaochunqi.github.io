@@ -19,3 +19,7 @@ git remote set-url --add --push origin git://another/repo.git
 ### 效果图
 
 ![http://harchiko.qiniudn.com/Screen%20Shot%202016-05-08%20at%208.48.19%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-05-08%20at%208.48.19%20PM.png)
+
+### 参考链接
+
+[http://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes](http://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes)
