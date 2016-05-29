@@ -78,18 +78,19 @@ baidu_analytics: cfffa20d202ba9f4f0d6257e1cc94ea6
 # Google 分析
 google_analytics: UA-42448552-1
         
-# Swiftype Search Key
-# swiftype_key: xxxxxxxxx
-
 # MathJax Support
 mathjax: true      
 
 # Swiftype Search Key
-swiftype_key: yYh2s9ACHHVQrHaeXaVM
+#swiftype_key: yYh2s9ACHHVQrHaeXaVM
 
+search:
+  path: search.xml
+  field: post
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: git@github.com:zhaochunqi/zhaochunqi.github.io.git
+
