@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="近期遇到需要将git推送到不同的git在线服务商的问题，所以查找了下资料.">
 <meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-05-08%20at%208.48.19%20PM.png">
-<meta property="og:updated_time" content="2016-05-29T20:18:10.414Z">
+<meta property="og:updated_time" content="2016-05-29T20:39:05.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 同时推送到两个不同的 remote">
 <meta name="twitter:description" content="近期遇到需要将git推送到不同的git在线服务商的问题，所以查找了下资料.">
@@ -251,13 +251,29 @@
   
     <div class="site-search">
       
-  <div class="popup">
- <span class="search-icon fa fa-search"></span>
- <input type="text" id="local-search-input" placeholder="请输入搜索关键字..." class="form-control"/>
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
-</div>
+  <div class="site-search">
+  <div class="algolia-popup popup" style="display: block;">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input">
+        <div class="ais-search-box"><input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索" role="textbox" spellcheck="false"
+            type="text" value="" class="ais-search-box--input"></div>
+      </div>
+    </div>
 
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+</div>
 
 
     </div>
