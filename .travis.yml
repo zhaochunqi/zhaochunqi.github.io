@@ -1,3 +1,14 @@
+language: node_js
+sudo: false
+node_js:
+  - '4.4.4'
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
 env:
   global:
     - GH_OWNER: zhaochunqi
@@ -7,10 +18,6 @@ branches:
   only:
     - source
     
-language: node_js
-sudo: false
-node_js:
-  - '4.4.4'
 
 install:
   #- npm install hexo-cli@0.1.9 -g
