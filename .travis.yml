@@ -1,7 +1,6 @@
 language: node_js
 sudo: false
-node_js:
-  - '4.4.4'
+node_js: stable
 
 # Travis-CI Caching
 cache:
