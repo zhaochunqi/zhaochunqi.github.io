@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Well, Take It Easy" />
 
 
 
@@ -82,16 +82,15 @@
 
 
 
-<meta name="description" content="因为一些国内的客观原因，google的访问速度一直很慢，通过firebug看了下google 相关的服务加载速度超过了1s种，而且经常加载不成功。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 更改默认 Google 字体">
-<meta property="og:url" content="http://blog.zhaochunqi.com/2015/01/27/change-google-font-to-360/index.html">
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alex Coding">
+<meta property="og:url" content="http://blog.zhaochunqi.com/page/3/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description" content="因为一些国内的客观原因，google的访问速度一直很慢，通过firebug看了下google 相关的服务加载速度超过了1s种，而且经常加载不成功。">
-<meta property="og:updated_time" content="2016-05-29T14:27:38.725Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 更改默认 Google 字体">
-<meta name="twitter:description" content="因为一些国内的客观原因，google的访问速度一直很慢，通过firebug看了下google 相关的服务加载速度超过了1s种，而且经常加载不成功。">
+<meta name="twitter:title" content="Alex Coding">
+<meta name="twitter:description">
 
 
 
@@ -109,7 +108,7 @@
   };
 </script>
 
-  <title> Hexo 更改默认 Google 字体 | Alex Coding </title>
+  <title> Alex Coding </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +148,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -226,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
   
@@ -248,7 +249,10 @@
             
             
               
-                Hexo 更改默认 Google 字体
+                
+                <a class="post-title-link" href="/2014/12/22/install-hexo/" itemprop="url">
+                  如何在 Ubuntu 中安装 hexo
+                </a>
               
             
           </h1>
@@ -260,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-01-27T01:11:15+00:00" content="2015-01-27">
-              2015-01-27
+            <time itemprop="dateCreated" datetime="2014-12-22T02:18:16+00:00" content="2014-12-22">
+              2014-12-22
             </time>
           </span>
 
@@ -288,67 +292,46 @@
       
 
       
-        <p> 因为一些国内的客观原因，google 的访问速度一直很慢，通过 firebug 看了下 google 相关的服务加载速度超过了 1s 种，而且经常加载不成功。</p><a id="more"></a><p> 更改方法：</p><p>terminal 中查找 themes 里对应 googlefont 的数据。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -ir googlefont themes/</span><br></pre></td></tr></table></figure><p> 找到对应的地方替换为 360 的字体源：</p><p>360 前端 CDN 网站：<a href="http://libs.useso.com/" title="360 前端 CDN" target="_blank" rel="external">http://libs.useso.com/</a></p><p><strong> 本人对 360 不黑不粉，请纠结 360 的让道 </strong></p>
+        
+          <h2 id="安装-nvm"><a href="#安装-nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h2><p>cURL:<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure><p></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/12/22/install-hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
       
     </div>
     
     <div>
       
-        
-<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="http://harchiko.qiniudn.com/2016-04-25%2019.20.45.jpg" alt="Alex Zhao wechat" style="width: 200px; max-width: 100%;"/>
-    <div>欢迎您扫一扫二维码，加我为好友！</div>
-</div>
-
-      
     </div>
 
     <div>
-      
-        
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/01/23/how-to-use-xpath/" rel="next" title="xpath 简明教程">
-                <i class="fa fa-chevron-left"></i> xpath 简明教程
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/02/04/Auto-Proxy/" rel="prev" title="基于 Shadowsocks 透明代理的实现">
-                基于 Shadowsocks 透明代理的实现 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
@@ -356,10 +339,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -379,17 +358,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://harchiko.qiniudn.com/for_the_blog_girls.png"
@@ -466,17 +436,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -580,10 +539,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
