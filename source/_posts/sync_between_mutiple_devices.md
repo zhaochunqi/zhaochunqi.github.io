@@ -1,7 +1,7 @@
 title: 如何在多设备中同步
 date: 2016-05-08 9:47 AM
-categories: ""
-tags: [sync,]
+categories: "raspberry"
+tags: [sync,linux]
 ---
 我有一个很奇怪的需求，在不同的device中同步PDF的阅读标注。第一时间，我就想到了神器Bittorrent Sync。
 

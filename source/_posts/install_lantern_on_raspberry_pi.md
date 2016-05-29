@@ -1,6 +1,6 @@
 title: 使用 lantern 畅游互联网
 date: 2016-05-30 2:51 AM
-categories: ""
+categories: "raspberry"
 tags: [raspberry,]
 ---
 

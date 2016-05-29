@@ -1,6 +1,6 @@
 title: 在树莓派中安装 docker 
 date: 2016-05-29 7:45 PM
-categories: ""
+categories: "raspberry"
 tags: [docker,]
 ---
 
