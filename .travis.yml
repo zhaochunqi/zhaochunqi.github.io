@@ -18,10 +18,9 @@ branches:
   only:
     - source
     
+# Build Lifecycle
 
 install:
-  #- npm install hexo-cli@0.1.9 -g
-  - npm install hexo-cli -g
   - npm install
 
 script:
