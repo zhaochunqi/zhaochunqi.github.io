@@ -14,7 +14,7 @@ wget https://github.com/vimagick/rpi-bin/raw/master/deb/docker_1.10.3-1_armhf.de
 dpkg -i docker_1.10.3-1_armhf.deb
 
 # 安装docker-compose
-wget https://github.com/vimagick/rpi-bin/blob/master/deb/docker-compose_1.7.1-1_armhf.deb  
+wget https://github.com/vimagick/rpi-bin/raw/master/deb/docker-compose_1.7.1-1_armhf.deb
 dpkg -i docker-compose_1.7.1-1_armhf.deb
 
 ```
