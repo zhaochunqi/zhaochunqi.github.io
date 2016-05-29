@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/pick_series.png">
 <meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/schedule.png">
 <meta property="og:image" content="http://7jpt8j.com1.z0.glb.clouddn.com/tools-for-us-TV-series/feeds.png">
-<meta property="og:updated_time" content="2016-05-29T20:48:57.979Z">
+<meta property="og:updated_time" content="2016-05-29T20:58:47.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="美剧订阅神器 showrss">
 <meta name="twitter:description" content="今日同事推荐了个看美剧的神器的网站 showrss,">
@@ -254,28 +254,14 @@
   
     <div class="site-search">
       
-  <div class="algolia-popup popup" style="display: block;">
-  <div class="algolia-search">
-    <div class="algolia-search-input-icon">
-      <i class="fa fa-search"></i>
-    </div>
+  <div class="popup">
+	<span class="search-icon fa fa-search"></span>
     <div class="algolia-search-input" id="algolia-search-input">
-      <div class="ais-search-box"><input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索" role="textbox" spellcheck="false"
-          type="text" value="" class="ais-search-box--input"></div>
+	    <input type="text" autocapitalize="off" autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" id="local-search-input" placeholder="请输入搜索关键字..." class="form-control ais-search-box--input/>
     </div>
-  </div>
-
-  <div class="algolia-results">
-    <div id="algolia-stats"></div>
-    <div id="algolia-hits"></div>
-    <div id="algolia-pagination" class="algolia-pagination"></div>
-  </div>
-
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
 </div>
-
 
 
     </div>

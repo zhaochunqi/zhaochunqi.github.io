@@ -88,7 +88,7 @@
 <meta property="og:url" content="http://blog.zhaochunqi.com/2016/05/29/run_docker_on_raspberry_pi/index.html">
 <meta property="og:site_name" content="Alex Coding">
 <meta property="og:description" content="一直以为树莓派中没有办法安装 docker , 今天在一位博主的博客中看到有在树莓派中使用。">
-<meta property="og:updated_time" content="2016-05-29T20:48:57.979Z">
+<meta property="og:updated_time" content="2016-05-29T20:58:47.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在树莓派中安装 docker">
 <meta name="twitter:description" content="一直以为树莓派中没有办法安装 docker , 今天在一位博主的博客中看到有在树莓派中使用。">
@@ -249,28 +249,14 @@
   
     <div class="site-search">
       
-  <div class="algolia-popup popup" style="display: block;">
-  <div class="algolia-search">
-    <div class="algolia-search-input-icon">
-      <i class="fa fa-search"></i>
-    </div>
+  <div class="popup">
+	<span class="search-icon fa fa-search"></span>
     <div class="algolia-search-input" id="algolia-search-input">
-      <div class="ais-search-box"><input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索" role="textbox" spellcheck="false"
-          type="text" value="" class="ais-search-box--input"></div>
+	    <input type="text" autocapitalize="off" autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" id="local-search-input" placeholder="请输入搜索关键字..." class="form-control ais-search-box--input/>
     </div>
-  </div>
-
-  <div class="algolia-results">
-    <div id="algolia-stats"></div>
-    <div id="algolia-hits"></div>
-    <div id="algolia-pagination" class="algolia-pagination"></div>
-  </div>
-
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
 </div>
-
 
 
     </div>
