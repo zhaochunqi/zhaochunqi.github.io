@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux,pi," />
+  <meta name="keywords" content="raspberry," />
 
 
 
@@ -82,19 +82,18 @@
 
 
 
-<meta name="description" content="本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。">
+<meta name="description" content="就在昨天，一直使用的 shadowsocks 的 VPS 到期了，临时试用 lantern 来应急，结果发现 lantern 竟然比我一直在用的 shadowsocks 速度还快。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始将树莓派打造成家用下载机【一】 网络配置篇">
-<meta property="og:url" content="http://blog.zhaochunqi.com/2016/04/17/raspberry-pi-as-nas-server/index.html">
+<meta property="og:title" content="使用 lantern 畅游互联网">
+<meta property="og:url" content="http://blog.zhaochunqi.com/2016/05/30/install_lantern_on_raspberry_pi/index.html">
 <meta property="og:site_name" content="Alex Coding">
-<meta property="og:description" content="本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。">
-<meta property="og:image" content="http://harchiko.qiniudn.com/Pi_3_Model_B.png">
-<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png">
+<meta property="og:description" content="就在昨天，一直使用的 shadowsocks 的 VPS 到期了，临时试用 lantern 来应急，结果发现 lantern 竟然比我一直在用的 shadowsocks 速度还快。">
+<meta property="og:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png">
 <meta property="og:updated_time" content="2016-05-29T19:18:59.805Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始将树莓派打造成家用下载机【一】 网络配置篇">
-<meta name="twitter:description" content="本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。">
-<meta name="twitter:image" content="http://harchiko.qiniudn.com/Pi_3_Model_B.png">
+<meta name="twitter:title" content="使用 lantern 畅游互联网">
+<meta name="twitter:description" content="就在昨天，一直使用的 shadowsocks 的 VPS 到期了，临时试用 lantern 来应急，结果发现 lantern 竟然比我一直在用的 shadowsocks 速度还快。">
+<meta name="twitter:image" content="http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> 从零开始将树莓派打造成家用下载机【一】 网络配置篇 | Alex Coding </title>
+  <title> 使用 lantern 畅游互联网 | Alex Coding </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +250,7 @@
             
             
               
-                从零开始将树莓派打造成家用下载机【一】 网络配置篇
+                使用 lantern 畅游互联网
               
             
           </h1>
@@ -263,30 +262,11 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T13:28:00+00:00" content="2016-04-17">
-              2016-04-17
+            <time itemprop="dateCreated" datetime="2016-05-30T02:51:00+00:00" content="2016-05-30">
+              2016-05-30
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/raspberry/" itemprop="url" rel="index">
-                    <span itemprop="name">raspberry</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -310,9 +290,7 @@
       
 
       
-        <p>本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。<br><a id="more"></a></p><p><img src="http://harchiko.qiniudn.com/Pi_3_Model_B.png" alt="http://harchiko.qiniudn.com/Pi_3_Model_B.png"></p><h3 id="烧录 micro-sd 卡"><a href="# 烧录 micro-sd 卡" class="headerlink" title="烧录 micro sd 卡"></a>烧录 micro sd 卡 </h3><p> 具体操作可查看官方 <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank" rel="external">https://www.raspberrypi.org/documentation/installation/installing-images/README.md</a>，比较简单，不详述。</p><h3 id="配置 IP 地址"><a href="# 配置 IP 地址" class="headerlink" title="配置 IP 地址"></a> 配置 IP 地址 </h3><p> 烧录好之后插上 SD 卡，接好网线启动树莓派，看到树莓派灯正常亮系统应该就算启动完成了。</p><ol><li>进入路由器后台, 打开 DHCP 服务，查看树莓派的 ip 地址，将其修改为固定 ip 地址后重启路由器 (我的为 192.168.0.169)。</li><li> 使用 <code>ssh pi@192.168.0.169</code>登录树莓派（Mac/Linux 下直接使用 Terminal, Windows 下可使用 Xshell）</li></ol><h3 id="配置公网访问"><a href="# 配置公网访问" class="headerlink" title="配置公网访问"></a>配置公网访问 </h3><h3 id="路由器"><a href="# 路由器" class="headerlink" title="路由器"></a> 路由器 </h3><ul><li>DMZ 主机配置<br> 在路由器中，配置中找到 DMZ 主机选项，将其设置为树莓派的 ip。</li></ul><h3 id="SSH 配置"><a href="#SSH 配置" class="headerlink" title="SSH 配置"></a>SSH 配置 </h3><h4 id="密码修改"><a href="# 密码修改" class="headerlink" title="密码修改"></a> 密码修改 </h4><pre><code> 使用命令 `passwd pi` 修改 pi 的密码。建议密码修改强度足够强，因为这台主机会暴露在公网。
-</code></pre><h4 id="SSH 端口修改"><a href="#SSH 端口修改" class="headerlink" title="SSH 端口修改"></a>SSH 端口修改 </h4><pre><code> 出于同样的安全考虑，修改 ssh 端口
-</code></pre><ul><li>修改配置文件 <code>vi /etc/ssh/sshd_config</code> 将 ssh 端口修改为 xxxx(你希望的端口), 这里我设定的是 1213。</li><li>重启 SSH 服务，<code>sudo service ssh restart</code></li></ul><h4 id="查看本地 IP 是否能从公网访问"><a href="# 查看本地 IP 是否能从公网访问" class="headerlink" title="查看本地 IP 是否能从公网访问"></a>查看本地 IP 是否能从公网访问 </h4><blockquote><p> 在国内，因为 ipv4 地址不够用或者一些其他原因，你所使用的 ip 可能是电信分配的局域网的 ip，这时候你就需要找电信客服说一下你需要公网 ip 让他们帮你改回来。</p></blockquote><p>这里通过 telnet 服务看一下是否当前分配的是公网 ip</p><ol><li><strong>查看本机的公网 ip</strong><br>使用命令 <code>curl ifconfig.me</code>, 或者直接在百度中搜索 ip。</li><li><strong>本地查看 SSH 服务端口号是否更改过来 </strong><code>telnet 192.168.0.169 1213</code><br>(<code>#xxxx</code> 指的是端口号)</li><li><strong>通过公网查看 </strong> 通过第一步查看到的 ip 来从公网访问<code>telnet xxx.xxx.xxx 1213</code><br>(这里使用公网 ip）如果能够正常运行的话则证明此树莓派已经运行在公网。</li></ol><p> 这样 ssh 登录命令变为 <code>ssh pi@xxx.xxx.xxx -p 1213</code> （指定端口）</p><h4 id="将本地 ip 与域名绑定"><a href="# 将本地 ip 与域名绑定" class="headerlink" title="将本地 ip 与域名绑定"></a>将本地 ip 与域名绑定 </h4><p> 因为家庭宽带的 ip 是不固定的，如果使用 ip 进行连接的话每次都要先获取到机器的当前 ip 才能进行 ssh 登录，这里我们将 ip 地址绑定到二级域名上。</p><p>按照此 repo: <a href="https://github.com/zhaochunqi/change_my_ip_on_dnspod" target="_blank" rel="external">https://github.com/zhaochunqi/change_my_ip_on_dnspod</a> 中 README 进行相应配置。</p><ol><li>clone 这个 repo， 在 Dnspod 中获取到 APIKEY，以及响应的二级域名需要的参数。</li><li>修改库中的 change_my_ip_on_dnspod.sh <code>Shell</code>脚本。</li><li>使用命令 <code>chmod +x change_my_ip_on_dnspod.sh</code> 添加脚本的可执行权限。</li><li>运行 ./change_my_ip_on_dnspod.sh 查看返回值, 得到如下图的结果即为成功。<img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png"></li><li>登录树莓派系统 <code>crontab -e</code>在末尾添加 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># every 20 mins</span></span><br><span class="line">*/20 * * * * ./path/to/change_ip_4_pi.sh</span><br></pre></td></tr></table></figure></li></ol><p><code>path/to/change_ip_4_pi.sh</code> 替换为你的真实地址。</p><p> 至此，你能从你刚刚绑定的二级域名直接访问到你的树莓派:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh pi@haha.mydomain.com -p 1213</span><br></pre></td></tr></table></figure>
+        <p>就在昨天，一直使用的 shadowsocks 的 VPS 到期了，临时试用 lantern 来应急，结果发现 lantern 竟然比我一直在用的 shadowsocks 速度还快。</p><a id="more"></a><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png"></p><h2 id="lantern"><a href="#lantern" class="headerlink" title="lantern"></a>lantern</h2><blockquote><p>Lantern, a new software programme which allows internet users to circumvent government-imposed censorship, is seeing rapid growth in China as more people are using it to bypass the Great Firewall of China to access websites like Facebook, YouTube and Twitter.</p></blockquote><p>简言之，专为中国不能上网的宝宝设计！就是为我设计的！</p><h2 id="下载"><a href="# 下载" class="headerlink" title="下载"></a>下载 </h2><p> 下载地址: <a href="www.getlantern.com">www.getlantern.com</a></p><p>除了 ios ， 各种客户端都有。</p><h2 id="For-Raspberry-Pi"><a href="#For-Raspberry-Pi" class="headerlink" title="For Raspberry Pi"></a>For Raspberry Pi</h2><p>如果只是简简单单的下载使用，也就没有这篇文章了。下面介绍下如何在 pi 上安装，并用 pi 作为翻墙代理。</p><p>直接使用网上别人打包好的树莓派版本的包: 下载地址: <a href="https://mega.nz/#!IZdE2Yxa!HU7PBAuRQdUomS5MIt0VvFgB2K3Upv-bdrd4o0UHY98" target="_blank" rel="external">https://mega.nz/#!IZdE2Yxa!HU7PBAuRQdUomS5MIt0VvFgB2K3Upv-bdrd4o0UHY98</a> 下载 lantern*.deb 放到你的树莓派中。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i lantern_2.2.4-1_armhf.deb</span><br><span class="line">sudo systemctl start lantern</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> lantern</span><br></pre></td></tr></table></figure><p>设定完毕后运行 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -x https://127.0.0.1:8787 https://www.google.com/</span><br></pre></td></tr></table></figure><p> 查看是否正常设置 </p><h2 id="Chrome- 设定"><a href="#Chrome- 设定" class="headerlink" title="Chrome 设定"></a>Chrome 设定</h2><p>lantern 就是有一点不好，如果上的是国内网站的话，他跑的比谁都慢！</p><p> 设定下 </p><ol><li>chrome 安装 SwitchySharp</li><li> 设定代理地址，刚刚你树莓派的 ip，端口 8787</li><li>在 AutoProxy 那里设定 online rules: <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="external">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li><li>设定，当符合 online rules 时，使用代理。</li><li>保存，并切换到 Autoproxy</li></ol><p>好了，保存 </p><h2 id="题外"><a href="# 题外" class="headerlink" title="题外"></a> 题外 </h2><p>lantern 在本地运行在 8787 端口，这意味着你可以用它来代理你的 Dropbox ， 使用 Proxifier 来代理你的一切流量。</p><p> 好了，暂且就到这里，去睡觉了！</p>
       
     </div>
     
@@ -337,9 +315,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag">#linux</a>
-          
-            <a href="/tags/pi/" rel="tag">#pi</a>
+            <a href="/tags/raspberry/" rel="tag">#raspberry</a>
           
         </div>
       
@@ -348,17 +324,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/12/vim-plugin-gist-vim/" rel="next" title="Gist-Vim 介绍">
-                <i class="fa fa-chevron-left"></i> Gist-Vim 介绍
+              <a href="/2016/05/29/run_docker_on_raspberry_pi/" rel="next" title="在树莓派中安装 docker">
+                <i class="fa fa-chevron-left"></i> 在树莓派中安装 docker
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/22/raspberry-pi-as-nas-server2/" rel="prev" title="从零开始将树莓派打造成家用下载机【二】 BT 下载篇">
-                从零开始将树莓派打造成家用下载机【二】 BT 下载篇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,7 +471,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#烧录 micro-sd 卡"><span class="nav-number">1.</span> <span class="nav-text">烧录 micro sd 卡 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置 IP 地址"><span class="nav-number">2.</span> <span class="nav-text"> 配置 IP 地址 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置公网访问"><span class="nav-number">3.</span> <span class="nav-text">配置公网访问 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器"><span class="nav-number">4.</span> <span class="nav-text"> 路由器 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH 配置"><span class="nav-number">5.</span> <span class="nav-text">SSH 配置 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#密码修改"><span class="nav-number">5.1.</span> <span class="nav-text"> 密码修改 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH 端口修改"><span class="nav-number">5.2.</span> <span class="nav-text">SSH 端口修改 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看本地 IP 是否能从公网访问"><span class="nav-number">5.3.</span> <span class="nav-text">查看本地 IP 是否能从公网访问 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将本地 ip 与域名绑定"><span class="nav-number">5.4.</span> <span class="nav-text">将本地 ip 与域名绑定 </span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#lantern"><span class="nav-number">1.</span> <span class="nav-text">lantern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">2.</span> <span class="nav-text">下载 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#For-Raspberry-Pi"><span class="nav-number">3.</span> <span class="nav-text">For Raspberry Pi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome- 设定"><span class="nav-number">4.</span> <span class="nav-text">Chrome 设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题外"><span class="nav-number">5.</span> <span class="nav-text"> 题外 </span></a></li></ol></div>
             
           </div>
         </section>
