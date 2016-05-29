@@ -84,6 +84,9 @@ google_analytics: UA-42448552-1
 # MathJax Support
 mathjax: true      
 
+# Swiftype Search Key
+swiftype_key: yYh2s9ACHHVQrHaeXaVM
+
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
