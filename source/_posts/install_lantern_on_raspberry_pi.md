@@ -18,7 +18,7 @@ tags: [raspberry,]
 
 ## 下载
 
-下载地址: [www.getlantern.com](www.getlantern.com)
+下载地址: [https://getlantern.org/](https://getlantern.org/)
 
 除了 ios ， 各种客户端都有。
 
