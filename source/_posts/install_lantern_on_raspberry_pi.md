@@ -20,6 +20,16 @@ tags: [raspberry,]
 
 下载地址: [https://getlantern.org/](https://getlantern.org/)
 
+呃...网站好像访问不了？
+
+哦，那就对了，贴心的我给你准备了下载链接！不用谢！
+
+Mac客户端: [https://mega.nz/#!gBthnBCI!7mhorsXKWbZgsJvp4BYoEn6ulEj8ZSke1pFczKW4Tf0](https://mega.nz/#!gBthnBCI!7mhorsXKWbZgsJvp4BYoEn6ulEj8ZSke1pFczKW4Tf0)
+
+Android客户端: [https://mega.nz/#!FM0XCR4Q!nvNyQaZU3o76eAg_OzJMgzimZf8XokjCkglbAdOcZ9g](https://mega.nz/#!FM0XCR4Q!nvNyQaZU3o76eAg_OzJMgzimZf8XokjCkglbAdOcZ9g)
+
+Windows客户端: 呃，我手头没有windows设备，暂时没下下来。
+
 除了 ios ， 各种客户端都有。
 
 ## For Raspberry Pi
