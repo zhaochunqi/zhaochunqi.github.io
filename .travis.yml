@@ -33,5 +33,4 @@ script:
   - git commit -m "$(curl -s http://whatthecommit.com/ | awk '/<p>/ {sub("<p>", ""); print }')"
   - git remote set-url --add --push origin https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}
   - git remote set-url --add --push origin https://${coding_account}:${coding_passwd}@git.coding.net/harchiko/harchiko.git
-  - git remote -v
-  - git push -f origin master
+  - git push -f origin master > /dev/null
