@@ -112,10 +112,10 @@ deluged
 在Downloads目录下:
 
 ```bash
-sudo mkdir /home/pi/Downloads/downloading
-sudo mkdir /home/pi/Downloads/completed
-sudo mkdir /home/pi/Downloads/torrents/watch
-sudo mkdir /home/pi/Downloads/torrents/torrent-backup
+mkdir /home/pi/Downloads/downloading
+mkdir /home/pi/Downloads/completed
+mkdir -p /home/pi/Downloads/torrents/watch
+mkdir -p /home/pi/Downloads/torrents/torrent-backup
 ```
 
 按照图中修改即可
