@@ -53,7 +53,7 @@ user:password:level
 上面的用户名、密码、level级别（具体这个选项我也不知道什么等级对应什么功能,10全功能），方便起见使用:
 
 ```
-pi:rapberry:10
+pi:raspberry:10
 ```
 
 保存之后重新启动
