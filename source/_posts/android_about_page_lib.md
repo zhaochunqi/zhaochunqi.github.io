@@ -83,8 +83,17 @@ addItem(versionElement)
 
 ```xml
 
-<style name="about_image">
-    <item name="android:layout_width">wrap_content</item>
-</style>
+    <style name="about_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">100dp</item>
+    </style>
+```
 
-## 同理，配置 Description 等在 ｀String.xml｀ 中定义好即可。
+## 配置Description
+
+同理，配置 Description 等在 ｀String.xml｀ 中定义好即可。
