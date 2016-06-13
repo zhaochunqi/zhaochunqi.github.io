@@ -3,7 +3,7 @@ date: 2016-06-13 10:32 AM
 categories: "android"
 tags: [android,]
 ---
-在写Android程序时经常需要写 About Page 来介绍公司状况，以及联系方式等，这个库能让你在2分钟之内完成About Page的编写。
+在写Android程序时经常需要写 About Page 来介绍公司状况，以及联系方式等，这个库能让你在**2分钟**之内完成About Page的编写。
 
 <!--more-->
 
@@ -93,6 +93,8 @@ addItem(versionElement)
         <item name="android:padding">100dp</item>
     </style>
 ```
+
+顺便，关于android图片缩小且不失比例的方法见链接: [http://stackoverflow.com/questions/8232608/fit-image-into-imageview-keep-aspect-ratio-and-then-resize-imageview-to-image-d](http://stackoverflow.com/questions/8232608/fit-image-into-imageview-keep-aspect-ratio-and-then-resize-imageview-to-image-d)
 
 ## 配置Description
 
