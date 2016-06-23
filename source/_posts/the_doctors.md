@@ -8,8 +8,7 @@ tags: []
 
 
 <!--more-->
-![http://harchiko.qiniudn.com/house_md_by_kalivod-d8suebz.jpg](http://harchiko.qiniudn.com/house_md_by_kalivod-d8suebz.jpg)
-
+![http://harchiko.qiniudn.com/Cast-house-md-1988644-330-218.jpg](http://harchiko.qiniudn.com/Cast-house-md-1988644-330-218.jpg)
 
 ### 洗牙
 
