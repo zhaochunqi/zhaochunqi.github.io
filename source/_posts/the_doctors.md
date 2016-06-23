@@ -8,7 +8,7 @@ tags: []
 
 
 <!--more-->
-![http://harchiko.qiniudn.com/Cast-house-md-1988644-330-218.jpg](http://harchiko.qiniudn.com/Cast-house-md-1988644-330-218.jpg)
+![http://harchiko.qiniudn.com/192851_f496.jpg](http://harchiko.qiniudn.com/192851_f496.jpg)
 
 ### 洗牙
 
