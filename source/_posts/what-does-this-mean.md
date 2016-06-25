@@ -1,4 +1,4 @@
-title: `> /dev/null 2>&1` 什么意思？
+title: "> /dev/null 2>&1" 什么意思？
 date: 2016-06-26 12:19 AM
 categories: ""
 tags: [linux,]
