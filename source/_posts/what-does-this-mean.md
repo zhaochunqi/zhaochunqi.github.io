@@ -1,4 +1,4 @@
-title: ｀> /dev/null 2>&1` 什么意思？
+title: > /dev/null 2>&1 什么意思？
 date: 2016-06-26 12:19 AM
 categories: ""
 tags: [linux,]
@@ -18,7 +18,7 @@ git push -f origin master > /dev/null 2>&1
 
 这是一个简单的 `git push`脚本,用于 Travis 自动构建过程中隐藏信息。
 
->
+```
 
     `> ` is for redirect 
 
@@ -33,6 +33,8 @@ git push -f origin master > /dev/null 2>&1
     `1 ` is the file descriptor for Standard Out
 
     Therefore >/dev/null 2>&1 is redirect the output of your program to /dev/null. Include both the Standard Error and Standard Out.
+
+```
 
 所以， `/dev/null 2>&1` 将所有的输出重定向到 /dev/null 中，标准错误和输出都不会显示。
 
