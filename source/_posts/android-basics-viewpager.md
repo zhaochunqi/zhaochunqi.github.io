@@ -12,7 +12,7 @@ tags: [android,]
 
 ![http://harchiko.qiniudn.com/75zqnxN.png](http://harchiko.qiniudn.com/75zqnxN.png)
 
-
+<!--more-->
 
 ## 用法
 
@@ -58,7 +58,7 @@ tags: [android,]
 
 ### Define Fragments
 
-Next, let's suppose we have defined two fragments `FirstFragment` and `SecondFragment` both of which contain a label in the layout and have implementations such as:
+定义两个 Fragment : FirstFragment 和 SecondFragment，两个 Fragment 都在 layout中包含一个label(标签），实现如下：
 
 ```java
 public class FirstFragment extends Fragment {
@@ -98,7 +98,7 @@ public class FirstFragment extends Fragment {
 
 ### Setup FragmentPagerAdapter
 
-Now we need to define the adapter that will properly determine how many pages exist and which fragment to display for each page of the adapter by creating a [FragmentPagerAdapter](http://developer.android.com/reference/android/support/v4/app/FragmentPagerAdapter.html):
+定义一个adapter，它可以确定pages数量，确定哪个fragment来显示，定义[FragmentPagerAdapter](http://developer.android.com/reference/android/support/v4/app/FragmentPagerAdapter.html):
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -143,11 +143,9 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-For more complex cases with many pages, check out the [[more dynamic approach|ViewPager-with-FragmentPagerAdapter#dynamic-viewpager-fragments]] with `SmartFragmentStatePagerAdapter` explained later.
-
 ### Apply the Adapter
 
-Finally, let's associate the `ViewPager` with a new instance of our adapter:
+最后，为 ViewPager 添加 adapter。
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -166,27 +164,27 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-And now we have a basic functioning `ViewPager` with any number of fragments as pages which can be swiped between. 
+现在我们有了一个具备基本功能的`ViewPager`
 
 ### Selecting or Getting the Page
 
-We can access the selected page within the `ViewPager` at any time with the [getCurrentItem](http://developer.android.com/reference/android/support/v4/view/ViewPager.html#getCurrentItem\(\)) method which returns the current page:
+可以使用 [getCurrentItem](http://developer.android.com/reference/android/support/v4/view/ViewPager.html#getCurrentItem\(\))方法获取当前page的索引。
 
 ```java
 vpPager.getCurrentItem(); // --> 2
 ```
 
-The current page can also be changed programmatically with the 
+也可以在代码中改变当前页面
 
 ```java
 vpPager.setCurrentItem(2)
 ```
 
-With this getter and setter, we can easily access or modify the selected page at runtime.
+有了这两个，我们就可以在运行时很容易的获取和修改选定的page
 
 ### Setup OnPageChangeListener
 
-If the Activity needs to be able listen for changes to the page selected or other events surrounding the `ViewPager`, then we just need to hook into the [ViewPager.OnPageChangeListener](http://developer.android.com/reference/android/support/v4/view/ViewPager.OnPageChangeListener.html) on the `ViewPager` to handle the events:
+如果 Activity 需要能够 listen page 的切换，我们只需要实现[ViewPager.OnPageChangeListener](http://developer.android.com/reference/android/support/v4/view/ViewPager.OnPageChangeListener.html) 来处理事件
 
 ```java
 // Attach the page change listener inside the activity
@@ -216,14 +214,13 @@ vpPager.addOnPageChangeListener(new OnPageChangeListener() {
 
 ## Tabbed Interface with Pager
 
-We can use the ViewPager to display a tabbed indicator in order to create tabs to display our fragments. 
-At Google I/O 2015, Google announced a new `TabLayout` class that makes creating this tabbed interface fairly easy to do.  See [[Google Play Style Tabs using TabLayout]] for a walkthrough.
+在 2015 年的 Google I/O，谷歌推出了新的 `TabLayout` 类，使得Tab洁面实现更为容易。
 
-An alternative approach to achieve this is to use the third-party [[PagerSlidingTabStrip|Sliding-Tabs-with-PagerSlidingTabStrip]] library. 
+另一个可选的实现是一个叫 PagerSlidingTabStrip([https://github.com/astuetz/PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip)) 的第三方库。
 
 ![Tabs](https://i.imgur.com/a2wpJ80.png)
 
-In this way, we can use the same pager system described above and augment the pager with a tabbed navigation indicator.
+这样，可以使用 tab 当导航指示，同时又能使用上述的 pager 系统。
 
 ## Dynamic ViewPager Fragments
 
