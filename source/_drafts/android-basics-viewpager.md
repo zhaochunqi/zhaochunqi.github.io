@@ -1,4 +1,4 @@
-title:  Android 中 ViewPager 的使用☄
+title:  Android 中 ViewPager 的使用(译文)
 date: 2016-08-06 1:15 AM
 categories: "android"
 
@@ -98,7 +98,7 @@ public class FirstFragment extends Fragment {
 
 ### Setup FragmentPagerAdapter
 
-定义一个adapter，它可以确定pages数量，确定哪个fragment来显示，定义[FragmentPagerAdapter](http://developer.android.com/reference/android/support/v4/app/FragmentPagerAdapter.html):
+定义一个 adapter，它可以确定 pages 数量，确定哪个fragment来显示，定义[FragmentPagerAdapter](http://developer.android.com/reference/android/support/v4/app/FragmentPagerAdapter.html):
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -224,7 +224,7 @@ vpPager.addOnPageChangeListener(new OnPageChangeListener() {
 
 ## Dynamic ViewPager Fragments
 
-In certain cases, we may require a dynamic `ViewPager` where we want to get access to fragment instances or with pages being added or removed at runtime. If your ViewPager is more dynamic with many pages and fragments, we will want to use an implementation of the alternate [FragmentStatePagerAdapter](http://developer.android.com/reference/android/support/v4/app/FragmentStatePagerAdapter.html) instead. Below shows us how to use this and also intelligently cache the fragments for easy lookup.
+某些情况下，我们需要一个动态的`ViewPager`，可以在运行时进入fragment实例，或者动态添加或者删除。使用 [FragmentStatePagerAdapter](http://developer.android.com/reference/android/support/v4/app/FragmentStatePagerAdapter.html) 来代替他。下面展示了如何使用,以及如何为了更好的查找而聪明的缓存fragments.
 
 ### Setup SmartFragmentStatePagerAdapter
 
