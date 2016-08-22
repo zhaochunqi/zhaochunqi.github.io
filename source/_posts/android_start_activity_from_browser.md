@@ -1,7 +1,7 @@
 title: Android 如何根据浏览器URL启动应用
 date: Aug 22, 2016 11:09 AM
 categories: "android"
-tags: [android,]
+tags: [androiD,]
 ---
 因为正在完成的应用需要用到`OAuth2`来进行身份认证，需要跳转到浏览器，然后再跳转回来，接收浏览器返回的信息。这里面用到了 `Implicit Intent`
 <!--more-->
