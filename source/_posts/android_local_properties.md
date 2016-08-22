@@ -10,7 +10,9 @@ tags: [android,]
 
 如: `ApiKey="xxxxxxxxxxxxxxxxxxx"`
 
-## build.gradle(app)中将变量保存到 BuildConfig 中 添加（放到buildTypes之外）:
+## 配置
+
+在 build.gradle(app) 中将变量保存到 BuildConfig 中 添加（放到buildTypes之外）:
 
 ```gradle
     buildTypes.each {
@@ -18,4 +20,5 @@ tags: [android,]
     }
 ```
 
+## 使用
 这样，就可以在源码中使用 `BuildConfig.API_KEY` 来调用此变量了。
