@@ -10,7 +10,7 @@ tags: [tools,linux]
 图片镇楼:
 ![http://harchiko.qiniudn.com/54686763_p0.jpg](http://harchiko.qiniudn.com/54686763_p0.jpg)
 
-## 翻墙
+## 翻墙&域名解析
 
 搬瓦工 最低价格的vps，足够用，还可以迁移服务器。
 
@@ -19,7 +19,7 @@ tags: [tools,linux]
 * 登录 vps 可以使用域名地址 如: `ssh root@linux.zhaochunqi.com`
 * 作为翻墙服务时，由于每个地区节点的网速有所不同，有时候需要迁移，迁移过后，只需要修改相应的 A 记录，其他地方可以不用动。
 
-## SSH
+## SSH 无密码登录
 
 作为一个懒人，甚至我连 `ssh root@linux.zhaochunqi.com` 都觉得很累，很麻烦,更不要说每次还要输入密码了。
 
@@ -33,7 +33,7 @@ tags: [tools,linux]
 我们来登录下vps，terminal中输入 `vps`即可:
 ![http://harchiko.qiniudn.com/vps-my-work-flow.gif](http://harchiko.qiniudn.com/vps-my-work-flow.gif)
 
-## 下载
+## 下载国外资源
 
 国内有些资源即便翻着墙也很难下载，反观国外，基本分分钟就能下载好，如何利用下这个呢？
 
