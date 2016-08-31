@@ -7,6 +7,9 @@ tags: [tools,linux]
 
 <!--more-->
 
+图片镇楼:
+![http://harchiko.qiniudn.com/54686763_p0.jpg](http://harchiko.qiniudn.com/54686763_p0.jpg)
+
 ## 翻墙
 
 搬瓦工 最低价格的vps，足够用，还可以迁移服务器。
@@ -53,4 +56,3 @@ tags: [tools,linux]
 顺便说一下下载 `youtube`视频：
 
 VPS 上安装 `youtube-dl`,使用 `youtube-dl 链接地址`就可以下载了，需要提醒的是，youtube-dl 支持的网站不知道多到哪里去了！ 自己去`google`一下吧。
- 
