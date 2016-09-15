@@ -9,7 +9,7 @@ favicon: https://hexo.io/icon/favicon-96x96.png
 logo: https://hexo.io/logo.svg
 
 # disqus
-disqus_shortname: blog-zhaochunqi
+#disqus_shortname: drakeleung
 
 highlight:
   enable: true
@@ -21,8 +21,8 @@ highlight:
 nav:
   home: .
   archive: archives
-  about: about
-  rss: atom.xml
+  # about: about
+  # rss: atom.xml
 
 # hexo-renderer-sass
 node_sass:
@@ -35,9 +35,9 @@ default_post_title: Untitled
 
 # social
 social:
-  github: https://github.com/zhaochunqi
-  weibo: http://weibo.com/zhao_cq
-  mail: mailto:zcq.qiqi[at]gmail.com
+  github: https://github.com/GallenHu
+  # weibo: http://weibo.com/10010800
+  # mail: mailto:gallenhu@foxmail.com
   # twitter: https://twitter.com/GallenHu
 
 # widget
