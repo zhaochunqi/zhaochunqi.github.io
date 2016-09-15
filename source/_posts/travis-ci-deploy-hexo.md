@@ -27,9 +27,9 @@ travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具
 ![](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png)
 （建议开启Build only if .travis.yml is prezent.)
 
-## 配置`.travis.yml`
+## 配置[`.travis.yml`]
 
-## 获取github权限
+### 获取`github`权限
 
 两种方法 
 
@@ -41,9 +41,9 @@ travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具
 点击头像->settings-> Personal access tokens 新建一个token,**会获取到一串字符**，记录下下面需要用到。
 ![](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%206.48.06%20AM.png)
 
-## 将token配置到travis-CI
+### 将token配置到travis-CI
 
-### 安装Travis-CI命令行工具
+#### 安装Travis-CI命令行工具
 
 ```bash
 gem install travis
