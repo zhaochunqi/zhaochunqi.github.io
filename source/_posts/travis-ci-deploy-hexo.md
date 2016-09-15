@@ -27,7 +27,7 @@ travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具
 ![](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png)
 （建议开启Build only if .travis.yml is prezent.)
 
-## 配置[`.travis.yml`]
+## 配置 `.travis.yml`
 
 ### 获取`github`权限
 
@@ -49,7 +49,7 @@ travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具
 gem install travis
 ```
 
-### 登陆Travis CI
+### 登陆 Travis CI
 
 需要输入Github账号和密码
 
