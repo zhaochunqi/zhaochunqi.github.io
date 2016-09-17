@@ -6,6 +6,7 @@ tags: [android,]
 
 本文是一篇简单的 RxJava 的介绍。RxJava 介绍是 : Reactive Extensions for the JVM.
 
+
 <!--more-->
 
 ![http://harchiko.qiniudn.com/rxjava-series-cover.jpg](http://harchiko.qiniudn.com/rxjava-series-cover.jpg)
@@ -91,12 +92,14 @@ Rx 涉及到一个 『流』 的概念。
 
 ## 怎么用
 
+以下是我学习 RxJava 时所看的一些资料，按照我认为重要程度及学习路线简单划分了一下:
+
 1. 看一下 RxJava 解决了 Android 开发中的什么痛点：[http://www.andreamaglie.com/rxjava-android-where-to-start/](http://www.andreamaglie.com/rxjava-android-where-to-start/)
 2. 学习下基本的 操作[https://gist.github.com/staltz/868e7e9bc2a7b8c1f754](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 3. 重点看一下这个 [http://yarikx.github.io/NotRxJava/](http://yarikx.github.io/NotRxJava/)
 4. 看 wiki [https://github.com/ReactiveX/RxJava/wiki](https://github.com/ReactiveX/RxJava/wiki)
 
-
+借用『Yaroslav Heriatovych』的那句话，『Once you start using it in your project – you will use it everywhere.』
 
 
 
