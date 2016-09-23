@@ -6,7 +6,6 @@ date: 2014-12-22 02:00:49
 
 # 联系方式
 
-- 手机：18551622180
 - Email：zcq.qiqi@gmail.com
 - 微信号：zhao_cq
 
