@@ -7,6 +7,8 @@ tags: [activity,]
 
 第一次登录需要跳转到登录界面，而后来登录过后则只需直接跳转到需要显示的界面即可。
 
+解决的办法其实也很简单。
+<!--more-->
 
 ## 方法1
 
@@ -27,7 +29,7 @@ public void onCreate(Bundle savedInstanceState) {
     // note we never called setContentView()
 }
 ```
-**注意: 没有 `setContentView()`。否则你会看到一个跳转界面。
+**注意: 没有 `setContentView()`。否则你会看到一个跳转界面。**
 
 ## 方法2
 
