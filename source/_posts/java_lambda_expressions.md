@@ -316,7 +316,7 @@ Button[] buttons = stream.toArray(Button[]::new);
 
 即便你用内部类，现在也无需定义为 final 了。
 
-参考 StackOverFlow 链接: ![http://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class](http://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class)
+参考 StackOverFlow 链接: [http://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class](http://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class)
 
 
 ## Default Methods
