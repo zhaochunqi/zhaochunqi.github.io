@@ -16,41 +16,32 @@ tags: [java,]
 
 JSR 335 的提案内容摘要如下：
 
-```
-We propose extending the Java Language to support compact lambda expressions (otherwise known as closures or anonymous methods.) Additionally, we will extend the language to support a conversion known as "SAM conversion" to allow lambda expressions to be used where a single-abstract-method interface or class is expected, enabling forward compatibility of existing libraries.
-
-We propose extending the semantics of interfaces in the Java Language to support virtual extension methods, whereby an interface can nominate a static default method to stand in for the implementation of an interface method in the event that an implementation class does not provide an implementation of the extension method. This enables interfaces to be augmented with new methods "after the fact" without breaking existing implementation classes.
-
-Time permitting, we will use these features to augment the core Java SE libraries to support a more lambda-friendly style of programming, such as: 
-      Collection collection = ... ;
-      collection.sortBy(#{ Foo f -> f.getLastName() });
-or
-
-      collection.remove(#{ Foo f -> f.isBlue() });
-This will likely be accompanied by a set of standardized "SAM" types such as Predicate, Filter, Mapper, Reducer, etc.
-
-```
+> This JSR will extend the Java Programming Language Specification and the Java Virtual Machine Specification to support the following features:
+  - Lambda Expressions
+  - SAM Conversion
+  - Method References
+  - Virtual Extension Methods
 
 也就是如下几点：
 
 1. 支持 lambda 表达式。
 2. 支持 SAM conversion 用来向前兼容。
-3. 接口中可以定义其方法的默认静态方法。(这样可以在不改动已有实现类的基础上增加新功能,实际的Java 8实现中还增加了 default 关键字，有兴趣请阅读文后参考链接2)
-4. 给出了一个基本的使用实例(Java 8 中并不是此形式！)
+3. 方法引用 Method References
+4. Virtual Extension Methods
 
-在 Java 8 中，以上均已经实现。
+在 Java 8 中，以上均已经实现,以上内容下文均有介绍。
 
-## Why Lambdas?
+## 为什么需要 Lambda 表达式?
 
-所以这个 Lambda 表达式到底有什么卵用呢？
+Lambda 表达式，其实就是代码块。
 
-我们还是先了解下什么到底是 Lambda 表达式吧：  Lambda 表达式呢其实就是一堆代码，然后可以在之后被执行。
+![http://harchiko.qiniudn.com/56cabf5a499ed708%202.jpg](http://harchiko.qiniudn.com/56cabf5a499ed708%202.jpg)
 
-多简单的定义呀，想必你看了如上的描述一定困惑不已？ Excuse me ？
-
+### 原来怎么处理
 在具体了解 lambda 之前，我们先往后退一步，看看之前我们是如何处理这些代码块的！
 
-当决定在单独的线程运行某程序时，你这样做的！
+#### 例子一
+当决定在单独的线程运行某程序时，你这样做的
 
 ```java
 class Worker implements Runnable {
@@ -62,27 +53,16 @@ class Worker implements Runnable {
   }
 ```
 
-然后这样开始执行：
+这样执行：
 
 ```java
-
 Worker w = new Worker();
 new Thread(w).start();
 ```
 
-重点是 Worker 中包含了你要执行的代码块。
+Worker 中包含了你要执行的代码块。
 
-如果使用 lambda 表达式呢？
-
-```java
-new Thread(()->for (int i=0;i<1000;i++) doWork()).start();
-```
-
-wow! 多简洁！
-
-
-再举一个例子:
-
+#### 例子二
 如果你想实现根据字符串长度大小来排序，而不是默认的字母顺序，你可以自己来实现一个  Comparator 用来 Sort。
 
 ```java
@@ -95,20 +75,41 @@ class LengthComparator implements Comparator<String> {
 Arrays.sort(strings, new LengthComparator());
 ```
 
+#### 例子三
 另外一个例子，我选的是 Android 中的点击事件，同样是 Java:
 
 ```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(MainActivity.this, "Hello World!", Toast.LENGTH_SHORT).show();
+    }
+});
 ```
 
-在上面的3个例子中，都是将一堆代码pass到另外的方法中，然后在后来执行。
+### 上面代码有什么问题呢？
 
-因为 Java 是纯面向对象的语言，你不能简简单单的就把代码块传给其他方法，所传递的应该是属于某个 Class 的某个 对象。 wow，这看起来可真麻烦啊。
+![http://harchiko.qiniudn.com/c718cee7.jpg](http://harchiko.qiniudn.com/c718cee7.jpg)
 
-在其他的一些语言中，比如 Python， 你可以很方便的传入一些代码块，然而为了 Java 的简洁和连贯性， Java 的设计者一直拒绝添加这种功能。
+它们都太复杂了啊！
 
-然而，在很长一段时间以来，问题已经不再是是否为Java 增加函数式编程，而是怎样做的问题。 经过几年的实验，终于，适合 Java 的设计出现了。下面就来一一解释一下。
+>上述例子都是在某个类中实现某个接口，然后传递到另外一个方法中作为参数，然后用来执行。
 
-## 语法 Syntax
+但是本质上，他们要传递的就是接口中那一个方法的实现而已啊！有必要先创建类，再实例化，再传递给调用的位置吗？
+
+> 因为 Java 是纯面向对象的语言，像其他语言那样随随便便传个方法过来，那可不行，必须要这样。
+
+在其他语言中你可能可以，但是，在Java 中，不可以。
+
+![http://harchiko.qiniudn.com/56cabf7011ab6750.jpg](http://harchiko.qiniudn.com/56cabf7011ab6750.jpg)
+
+Java 设计人员为了 Java 的简洁跟连贯性，一直拒绝为Java添加这种功能。
+
+（这也是我喜欢Java而不喜欢Python的原因啊！！！)
+
+但是呢，开发人员也是有需求的，在很长一段时间以来，问题已经不再是是否为Java 增加函数式编程，而是怎样做的问题。终于经过几年的积累找到了适合 Java 的设计！ 
+
+## Lambda 表达式语法(Syntax)
 
 考虑下前面的例子：
 
@@ -116,23 +117,24 @@ Arrays.sort(strings, new LengthComparator());
 Integer.compare(first.length(), second.length())
 ```
 
-first和second都是 String 类型，Java 是强类型的语言，必须制定类型:
+first和second都是 String 类型，Java 是强类型的语言，必须指定类型:
 
 ```java
 (String first, String second)
      -> Integer.compare(first.length(), second.length())
 ```
 
-看到没有！第一个 Lambda 表达式诞生了！！
+![http://harchiko.qiniudn.com/14365393725281065.jpg](http://harchiko.qiniudn.com/14365393725281065.jpg)
 
-一个代码块，包含了需要传入的参数，简洁明了。
+看到没有！第一个 Lambda 表达式诞生了！！输入、输出简洁明了！
 
 > 为什么叫 Lambda 呢，这个很多年以前，有位逻辑学家想要标准化的表示一些可以被计算的数学方程（实际上存在，但是很难被表示出来），他就用 ℷ 来表示。
 
-Java 8 最重要的一点就是为函数式编程打开了一扇门！
+重新介绍一下 Java 中 Lambda 表达式的格式:
 
-刚刚看过了一个Lambda 表达式的格式： 参数, "->" 箭头, 还有一个表达式。
+>(参数) -> 表达式
 
+### 多返回值
 如果计算的结果并不由一个单一的表达式返回（换言之，返回值存在多种情况），使用“{}"，然后明确指定返回值。
 
 ```java
@@ -143,12 +145,14 @@ Java 8 最重要的一点就是为函数式编程打开了一扇门！
 }
 ```
 
+### 无参数
 如果没有参数，则 "()"中就空着。
 
 ```java
 () -> { for (int i = 0; i < 1000; i++) doWork(); }
 ```
 
+### 省略
 如果参数的类型可以被推断出，则可以直接省略
 
 ```java
@@ -166,6 +170,7 @@ EventHandler<ActionEvent> listener = event ->
         // Instead of (event) -> or (ActionEvent event) ->
 ```
 
+### 修饰符
 你可以像对待其他方法一样，annotation，或者 使用 final 修饰符
 
 ```java
@@ -173,23 +178,25 @@ EventHandler<ActionEvent> listener = event ->
     (@NonNull String name) -> ...
 ```
 
-永远不要定义 result 的类型，lambda 表达式总是从上下文中推断出来的：
+**永远不要**定义 result 的类型，lambda 表达式总是从上下文中推断出来的：
 
 ```java
 (String first, String second) -> Integer.compare(first.length(), second.length())
 ```
 
+### 注意
 注意，在lambda 表达式中，某些分支存在返回值，某些不存在返回值这样的情况是不允许的。
 如 ` (int x) -> { if (x >= 0) return 1; }`这样是非法的。
 
-## 函数式接口
+## 函数式接口(Functional Interfaces/SAM)
 
-什么叫作函数式接口呢？
+什么叫作函数式接口呢(SAM)？
 
 函数式接口指的是只定义了唯一的抽象方法的接口（除了隐含的Object对象的公共方法）， 因此最开始也就做SAM类型的接口（Single Abstract Method）。
 
-Lambda 表达式向前兼容这些接口。
+Lambda 表达式**向前兼容**这些接口。
 
+### Comparable
 举个例子 Array.sort:
 
 ```java
@@ -201,28 +208,40 @@ Array.sort() 方法收到一个实现了 Comparable<String> 接口的实例。
 
 其实可以把 Lambda 表达式想象成一个方法，而非一个对象，一个可以传入一个接口的方法。
 
+
+### OnClickListener
 再举个例子
 
 ```java
-button.setOnAction(event ->
+button.setOnClickListener(event ->
      System.out.println("Thanks for clicking!"));
 ```
 
 你看，是不是更易读了呢？
 
-实际上，将函数式接口转变成 lambda 表达式是你在 Java 中**唯一**能做的事情。在其他的语言中，你可以定义一些方便的方法类型，但在Java 中，你甚至不能将一个Lambda表达式赋值给类型为 Object 的变量，因为 Object 变量不是一个功能性的接口。
+Lambda 表达式能够向前兼容这些 interfaces, 太棒了！ 那 Lambda 表达式还能干什么呢？
+
+实际上，将函数式接口转变成 lambda 表达式是你在 Java 中**唯一**能做的事情。
+
+![http://harchiko.qiniudn.com/20150930185659_eMZyN.jpeg](http://harchiko.qiniudn.com/20150930185659_eMZyN.jpeg)
+
+Why ？！！
+
+在其他的语言中，你可以定义一些方便的方法类型，但在 Java 中，你甚至不能将一个Lambda表达式赋值给类型为 Object 的变量，因为 Object 变量不是一个 Functional Interface。
 
 Java 的设计者们坚持使用熟悉的 interface 概念而不是为其引入新的 方法类型。
 
+(这里我还要为设计者点赞！谨慎的设计，一方面降低了初学者的门槛，一方面方便了高级用户的使用。对比 python2和 python3，毕竟 python 是个 toy project 啊)
+
 ## Method References
 
-有的时候，已经有了其他的方法能够处理，举个例子，你想简单的将点击事件打印出来：
+能不能再简洁一点？有的时候我们所要做的事情不过是调用其他类中方法来处理事件。
 
 ```java
-button.setOnAction(event -> System.out.println(event));
+button.setOnClickListener(event -> System.out.println(event));
 ```
 
-如果能够只是将 println() 方法 pass 到里面是不是更简洁呢?
+如果这样呢？
 
 ```java
 button.setOnAction(System.out::println);
@@ -230,11 +249,12 @@ button.setOnAction(System.out::println);
 
 表达式 `System.out::println` 属于一个方法引用（method reference）， 相当于 lambda 表达式 `x -> System.out.println(x)`
 
-再举个例子，如果你想对字符串不管大小写进行排序
+![http://harchiko.qiniudn.com/20151220232425_nWH23.jpeg](http://harchiko.qiniudn.com/20151220232425_nWH23.jpeg)
+
+再举个例子，如果你想对字符串不管大小写进行排序,就可以这样写！
 
 ```java
 Arrays.sort(strings, String::compareToIgnoreCase)
-
 ```
 
 如上所见 `::`操作符将方法名与实例或者类分隔开。总体来说，又如下的规则:
@@ -264,27 +284,31 @@ class ConcurrentGreeter extends Greeter {
 
 ## 构造方法引用 Constructor References
 
-构造方法引用跟方法引用是基本一致的，除了方法名字为 new 。
+跟上一个差不多，毕竟**构造方法** 也是方法啊！！不过方法名字为 new 。
 
-Array constructor references are useful to overcome a limitation of Java. It is not possible to construct an array of a generic type T. The expression new T[n] is an error since it would be erased to new Object[n]. That is a problem for library authors. For example, suppose we want to have an array of buttons. The Stream interface has a toArray method that returns an Object array:
+但是！这个构造方法引用有一个牛逼的地方！
+
+你知道 Array 是不能使用范型的对吧！（什么，你不知道？看看这里 [http://stackoverflow.com/questions/2927391/whats-the-reason-i-cant-create-generic-array-types-in-java](http://stackoverflow.com/questions/2927391/whats-the-reason-i-cant-create-generic-array-types-in-java)),你没有办法创建一个类型为 T 的 Array 。 new T[n] 将会被覆盖为 new Object[n]。
+
+假设我们想要一个包含 buttons 的 Array。Stream interface 可以返回一个 Object array。
 
 ```java
 Object[] buttons = stream.toArray();
 ```
 
-But that is unsatisfactory. The user wants an array of buttons, not objects. The stream library solves that problem with constructor references. Pass Button[]::new to the toArray method:
+不不不，我们可不想要 Object。Stream 库使用 构造方法引用解决了这个问题:
 
 ```java
 Button[] buttons = stream.toArray(Button[]::new);
 ```
 
-The toArray method invokes this constructor to obtain an array of the correct type. Then it fills and returns the array.
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png)
 
 ## 变量作用域
 
 在之前，如果需要在匿名类的内部引用外部变量，需要将外部变量定义为 final ，现在有了 lambda 表达式，你不必再这么做了。
 
-这里先暂时留空，待我稍后更新。
+待更新...
 
 ## Default Methods
 
@@ -303,7 +327,7 @@ default void remove() {
 
 ## Static Methods in Interfaces
 
-Java 8 中，你可以在接口中添加静态方法了。 What ？？ 这他妈还是接口？
+Java 8 中，你可以在接口中添加静态方法了。 可能与你想的不太一样，但是呢，为了方便起见，现在 interface 可以有静态方法了。
 
 
 我决定将美少女放到最后！
