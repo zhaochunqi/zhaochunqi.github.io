@@ -103,11 +103,9 @@ button.setOnClickListener(new View.OnClickListener() {
 
 ![http://harchiko.qiniudn.com/56cabf7011ab6750.jpg](http://harchiko.qiniudn.com/56cabf7011ab6750.jpg)
 
-Java 设计人员为了 Java 的简洁跟连贯性，一直拒绝为Java添加这种功能。
+Java 设计人员为了 Java 的简洁跟连贯性，一直拒绝为Java添加这种功能。（这也是我喜欢Java而不喜欢Python的原因啊！！！)
 
-（这也是我喜欢Java而不喜欢Python的原因啊！！！)
-
-但是呢，开发人员也是有需求的，在很长一段时间以来，问题已经不再是是否为Java 增加函数式编程，而是怎样做的问题。终于经过几年的积累找到了适合 Java 的设计！ 
+经过多年的努力，开发人员终于找到了符合 Java 编程习惯的 Lambda 表达式！
 
 ## Lambda 表达式语法(Syntax)
 
@@ -190,9 +188,11 @@ EventHandler<ActionEvent> listener = event ->
 
 ## 函数式接口(Functional Interfaces/SAM)
 
+> 要介绍 Java 中 lambda 表达式的实现，需要知道什么是 函数式接口。
+
 什么叫作函数式接口呢(SAM)？
 
-函数式接口指的是只定义了唯一的抽象方法的接口（除了隐含的Object对象的公共方法）， 因此最开始也就做SAM类型的接口（Single Abstract Method）。
+>函数式接口指的是只定义了唯一的抽象方法的接口（除了隐含的Object对象的公共方法）， 因此最开始也就做SAM类型的接口（Single Abstract Method）。
 
 Lambda 表达式**向前兼容**这些接口。
 
@@ -231,7 +231,7 @@ Why ？！！
 
 Java 的设计者们坚持使用熟悉的 interface 概念而不是为其引入新的 方法类型。
 
-(这里我还要为设计者点赞！谨慎的设计，一方面降低了初学者的门槛，一方面方便了高级用户的使用。对比 python2和 python3，毕竟 python 是个 toy project 啊)
+(这里我还要为设计者点赞！谨慎的设计，一方面降低了初学者的门槛，一方面方便了高级用户的使用。对比 python2和 python3，升级的不兼容让很多人一直停留在 python2)
 
 ## Method References
 
@@ -305,16 +305,27 @@ Button[] buttons = stream.toArray(Button[]::new);
 ![http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png)
 
 ## 变量作用域
+注意到我们在题目中写着 闭包（closure),实际上，闭包的定义是: 引用了自由变量的函数。
 
-在之前，如果需要在匿名类的内部引用外部变量，需要将外部变量定义为 final ，现在有了 lambda 表达式，你不必再这么做了。
+在之前，如果需要在匿名类的内部引用外部变量，需要将外部变量定义为 final ，现在有了 lambda 表达式，你不必再这么做了。但同样需要保证外部的自由变量不能在 lambda 表达式中被改变。
 
-待更新...
+![http://harchiko.qiniudn.com/56cabf5d7d6dc247.jpg!600x600.jpg](http://harchiko.qiniudn.com/56cabf5d7d6dc247.jpg!600x600.jpg)
+这是什么意思呢？ 不需要定义为 final，也不能改？
+
+其实理解起来很简单，Java 8 中，不需要定义为 final ，但你其实可以直接把他当作 final，不要试图修改它就行了。
+
+即便你用内部类，现在也无需定义为 final 了。
+
+参考 StackOverFlow 链接: ![http://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class](http://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class)
+
 
 ## Default Methods
 
-由于历史原因，像是类似 Collection 这种接口，如果进行添加接口的话，那将会造成之前的代码出错，都需要实现新添加的方法。
+由于历史原因，像是类似 Collection 这种接口，如果进行添加接口的话，那将会造成之前的代码出错。
 
-Java 想了一个一劳永逸的方法解决这个问题， default methods, 比如 Collection  接口的源代码:
+Java 想了一个一劳永逸的方法解决这个问题， 使用 default 修饰符来提供默认的实现
+
+比如 Collection  接口的源代码:
 
 ```java
 default void remove() {
@@ -329,11 +340,10 @@ default void remove() {
 
 Java 8 中，你可以在接口中添加静态方法了。 可能与你想的不太一样，但是呢，为了方便起见，现在 interface 可以有静态方法了。
 
-
-我决定将美少女放到最后！
-![http://harchiko.qiniudn.com/44577950_p0.jpg](http://harchiko.qiniudn.com/44577950_p0.jpg) 
-
 参考链接：
 1. [JSR 335: Lambda Expressions for the JavaTM Programming Language](https://jcp.org/en/jsr/detail?id=335)
 2. [Java 8 新特性概述](https://www.ibm.com/developerworks/cn/java/j-lo-jdk8newfeature/)
 3. [Lambda Expressions in Java 8](http://www.drdobbs.com/jvm/lambda-expressions-in-java-8/240166764?pgno=1)
+
+
+![http://harchiko.qiniudn.com/44577950_p0.jpg](http://harchiko.qiniudn.com/44577950_p0.jpg) 
