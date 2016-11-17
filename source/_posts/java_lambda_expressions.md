@@ -338,7 +338,11 @@ default void remove() {
 
 ## Static Methods in Interfaces
 
-Java 8 中，你可以在接口中添加静态方法了。 可能与你想的不太一样，但是呢，为了方便起见，现在 interface 可以有静态方法了。
+Java 8 中，你可以在接口中添加静态方法了。 看起来好像并不符合接口的定义了。
+
+一般用来生成一个简单实现该interface的实例。
+
+
 
 参考链接：
 1. [JSR 335: Lambda Expressions for the JavaTM Programming Language](https://jcp.org/en/jsr/detail?id=335)
