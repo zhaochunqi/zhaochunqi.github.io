@@ -68,12 +68,22 @@ travis encrypt GH_OWNER=super_secret
 
 
 
-最后贴一下我的配置 
+最后贴一下我的配置[29 Nov 2016 更新了 cache，加快构建速度]
 
 ```yaml
+language: node_js
+sudo: false
+node_js: 
+   - "4.4.4"
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
 env:
   global:
-    - secure: MP2VsXSOwwEQ/4JPcZr1N1JVyH8ijuFJiqmHZgxISfw/Tm0cNHm3nKJU6JKeYOqdkxCgGooGuC+QSS5c1YWDzWgWfYv5KL+tzbBvuQFLBkBLfa484xCkSByjwLP+lrbpNTqHkA/T+v55P+L4RZ6kzq5S5VigQ/qnz3woAm7eu10xlb9T6tgt4mkbzkSOywgGD5+OREgXxeuCD1a5dIWirKR05Epck3c4QxdQkqyQ+raLqZ+2SlBHtJii6M9IUZ5JxdhbChfo4QKODh7Er00+vzSKd77J0kdKEK/u8ooci6I7KFd1mA+3RuLYhCbMLXsD8O7ExAmyRPll2VwQbdV+3nsxGRoqFLGPzYkXWgVEoxqWN09XJ8h7Ue2NKDvJcydzFzy4MXfFkmm84eaKuK+VwWYtFJMeUa7AqclKqwaaxZyfzN/s0axypIIlyaktNocfC8nbp+JsXqsVVXTtPG8IgVn005vsY4BpFD4f6m5orLvNTrl17mVWj9X/1kLT/GIbsSqz1D7Cxwchqlv8uPiBR9ZvF824+fQ3WYba97CpeO+mfY0J+ymm4Mx/t7T3vlMROiGz5xeFDiPX0Cv8L8F1wnSRNRUc0v2rrW6UK9VGdq71aCY2+JMmT3Ev1UHV2GnKzYxXcerAInZJPpw4UK1aOCylQ2PNkRdyXkmAAYc5iKs=
     - GH_OWNER: zhaochunqi
     - GH_PROJECT_NAME: zhaochunqi.github.io
     
@@ -81,13 +91,8 @@ branches:
   only:
     - source
     
-language: node_js
-sudo: false
-node_js:
-  - '0.12'
-
+# Build Lifecycle
 install:
-  - npm install hexo-cli -g
   - npm install
 
 script:
@@ -97,10 +102,10 @@ script:
   - git config --global user.email git@zhaochunqi.com
   - cd public
   - git add --all
-  # - git commit -m `$(echo `date "+Site updated %Y-%m-%d %H:%M:%S"`)`
-  # - git commit -m '$(curl -s http://whatthecommit.com/index.txt)'
   - git commit -m "$(curl -s http://whatthecommit.com/ | awk '/<p>/ {sub("<p>", ""); print }')"
-  - git push -f origin master
+  - git remote set-url --add --push origin https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME}
+  - git remote set-url --add --push origin https://${coding_account}:${coding_passwd}@git.coding.net/harchiko/harchiko.git
+  - git push -f origin master > /dev/null 2>&1
 ```
 
 这里面除了global这里其他都不难懂，看一下travis的生命周期就全明白了。
