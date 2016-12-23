@@ -19,7 +19,7 @@ date: 2014-12-22 02:00:49
  - 技术博客：http://blog.zhaochunqi.com
  - GitHub：http://github.com/zhaochunqi
  - 期望职位：Android 中级程序员
- - 期望薪资：税前月薪12k~15k，特别喜欢的公司可例外
+ - 期望薪资：期待面议
  - 期望城市：南京
 
 ---
