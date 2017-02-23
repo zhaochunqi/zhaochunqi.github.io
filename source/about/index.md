@@ -68,7 +68,7 @@ date: 2014-12-22 02:00:49
 - 版本管理：Svn/Git
 - 后端技能: Linux/Bash/Python/Docker
 - 设计模式: 策略模式/观察者模式/单件模式/适配器模式
-- 前端技能: Flexbox/Firebug/xpath
+- 前端技能: Flexbox/Firebug/xpath/React
 
 ---
 
