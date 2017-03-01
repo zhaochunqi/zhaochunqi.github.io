@@ -14,7 +14,7 @@ tags: [workflowy,]
 
 效果如下：
 
-![http://i.imgur.com/oJ7qEAA.gif](http://i.imgur.com/oJ7qEAA.gif)
+![http://harchiko.qiniudn.com/markdown-script-preview.gif](http://harchiko.qiniudn.com/markdown-script-preview.gif)
 
 下载链接： [https://greasyfork.org/zh-CN/scripts/27784-workflowy-markdown-live-preview](https://greasyfork.org/zh-CN/scripts/27784-workflowy-markdown-live-preview) 欢迎试用并提出宝贵意见。
 
