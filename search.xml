@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[一个 workflowy 的 Markdown 实时预览插件]]></title>
       <url>http://blog.zhaochunqi.com/2017/03/02/workflowy-markdown-preivew-script/</url>
-      <content type="html"><![CDATA[<p>最近几个月已经成了 workflowy 的重度用户，然而在昨天（2017-03-01) 写文档的过程中发现没有 markdown 支持，写起来少了很多乐趣。</p><a id="more"></a><p>从网上找到了 <a href="https://greasyfork.org/zh-CN/scripts/27429-workflowy-commonmark-live-preview" target="_blank" rel="external">workflowy-commonmark-live-preview</a>这款插件，使用下来发现 <strong>markdown 预览渲染在下方，实际看起来很不方便</strong>。</p><p> 所以我就自己改了一个。</p><p>效果如下：</p><p><img src="http://i.imgur.com/oJ7qEAA.gif" alt="http://i.imgur.com/oJ7qEAA.gif"></p><p>下载链接： <a href="https://greasyfork.org/zh-CN/scripts/27784-workflowy-markdown-live-preview" target="_blank" rel="external">https://greasyfork.org/zh-CN/scripts/27784-workflowy-markdown-live-preview</a> 欢迎试用并提出宝贵意见。</p><p>困死了，去睡觉。</p>]]></content>
+      <content type="html"><![CDATA[<p>最近几个月已经成了 workflowy 的重度用户，然而在昨天（2017-03-01) 写文档的过程中发现没有 markdown 支持，写起来少了很多乐趣。</p><a id="more"></a><p>从网上找到了 <a href="https://greasyfork.org/zh-CN/scripts/27429-workflowy-commonmark-live-preview" target="_blank" rel="external">workflowy-commonmark-live-preview</a>这款插件，使用下来发现 <strong>markdown 预览渲染在下方，实际看起来很不方便</strong>。</p><p> 所以我就自己改了一个。</p><p>效果如下：</p><p><img src="http://harchiko.qiniudn.com/markdown-script-preview.gif" alt="http://harchiko.qiniudn.com/markdown-script-preview.gif"></p><p>下载链接： <a href="https://greasyfork.org/zh-CN/scripts/27784-workflowy-markdown-live-preview" target="_blank" rel="external">https://greasyfork.org/zh-CN/scripts/27784-workflowy-markdown-live-preview</a> 欢迎试用并提出宝贵意见。</p><p>困死了，去睡觉。</p>]]></content>
       
         
         <tags>
