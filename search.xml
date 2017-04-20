@@ -326,11 +326,11 @@
     <entry>
       <title><![CDATA[15 分钟开发一个 Chrome App【一】]]></title>
       <url>http://blog.zhaochunqi.com/2016/04/24/create-chrome-web-app-in-15-minutes/</url>
-      <content type="html"><![CDATA[<blockquote><p>本文介绍了如何在很短的时间内开发一个 Chrome APP.</p></blockquote><a id="more"></a><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png"></p><h2 id="准备图标"><a href="# 准备图标" class="headerlink" title="准备图标"></a>准备图标 </h2><p> 网上搜索一个图标，这里使用微信的图标 </p><p><img src="http://harchiko.qiniudn.com/wechat128.png" alt="http://harchiko.qiniudn.com/wechat128.png"></p><h2 id="创建 manifest-json- 文件"><a href="# 创建 manifest-json- 文件" class="headerlink" title="创建 manifest.json 文件"></a> 创建 manifest.json 文件 </h2><p> 创建一个文件夹，在文件夹中添加 <code>manifiest.json</code>。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"name"</span>: <span class="string">"WeChat"</span>,</div><div class="line">	<span class="attr">"description"</span>: <span class="string">"Just A Wechat Web App"</span>,</div><div class="line">	<span class="attr">"version"</span>: <span class="string">"0.1"</span>,</div><div class="line">	<span class="attr">"manifest_version"</span>: <span class="number">2</span>,</div><div class="line">	<span class="attr">"app"</span>: &#123;</div><div class="line">		<span class="attr">"urls"</span>: [<span class="string">"http://blog.zhaochunqi.com"</span>],</div><div class="line">		<span class="attr">"launch"</span>: &#123;</div><div class="line">			<span class="attr">"web_url"</span>: <span class="string">"http://web.wechat.com"</span></div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	<span class="attr">"icons"</span>: &#123;</div><div class="line">		<span class="attr">"128"</span>: <span class="string">"wechat128.png"</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><blockquote><p><strong>注意：</strong> manifest_version 需要是 2。</p></blockquote><h3 id="测试"><a href="# 测试" class="headerlink" title="测试"></a>测试 </h3><p> 打开 Chrome 的扩展界面，勾选 <code>Developer Mode</code>, 点击 <code>Load unpacked extention</code>, 找到文件夹：</p><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png"></p><p>打开 Chrome App Launcher，你的应用已在其中:</p><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png"></p><p>点击后跳转到 微信界面。</p><p>Easy, hah?</p><p>源码在这里: <a href="https://github.com/zhaochunqi/wechat_chrome_app" target="_blank" rel="external">https://github.com/zhaochunqi/wechat_chrome_app</a></p>]]></content>
+      <content type="html"><![CDATA[<blockquote><p>本文介绍了如何在很短的时间内开发一个 Chrome APP.</p></blockquote><a id="more"></a><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png"></p><h2 id="准备图标"><a href="# 准备图标" class="headerlink" title="准备图标"></a>准备图标 </h2><p> 网上搜索一个图标，这里使用微信的图标 </p><p><img src="http://harchiko.qiniudn.com/wechat128.png" alt="http://harchiko.qiniudn.com/wechat128.png"></p><h2 id="创建 -manifest-json- 文件"><a href="# 创建 -manifest-json- 文件" class="headerlink" title="创建 manifest.json 文件"></a> 创建 manifest.json 文件 </h2><p> 创建一个文件夹，在文件夹中添加 <code>manifiest.json</code>。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"name"</span>: <span class="string">"WeChat"</span>,</div><div class="line">	<span class="attr">"description"</span>: <span class="string">"Just A Wechat Web App"</span>,</div><div class="line">	<span class="attr">"version"</span>: <span class="string">"0.1"</span>,</div><div class="line">	<span class="attr">"manifest_version"</span>: <span class="number">2</span>,</div><div class="line">	<span class="attr">"app"</span>: &#123;</div><div class="line">		<span class="attr">"urls"</span>: [<span class="string">"http://blog.zhaochunqi.com"</span>],</div><div class="line">		<span class="attr">"launch"</span>: &#123;</div><div class="line">			<span class="attr">"web_url"</span>: <span class="string">"http://web.wechat.com"</span></div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	<span class="attr">"icons"</span>: &#123;</div><div class="line">		<span class="attr">"128"</span>: <span class="string">"wechat128.png"</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><blockquote><p><strong>注意：</strong> manifest_version 需要是 2。</p></blockquote><h3 id="测试"><a href="# 测试" class="headerlink" title="测试"></a>测试 </h3><p> 打开 Chrome 的扩展界面，勾选 <code>Developer Mode</code>, 点击 <code>Load unpacked extention</code>, 找到文件夹：</p><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png"></p><p>打开 Chrome App Launcher，你的应用已在其中:</p><p><img src="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png"></p><p>点击后跳转到 微信界面。</p><p>Easy, hah?</p><p>源码在这里: <a href="https://github.com/zhaochunqi/wechat_chrome_app" target="_blank" rel="external">https://github.com/zhaochunqi/wechat_chrome_app</a></p>]]></content>
       
         <categories>
             
-            <category> develper </category>
+            <category> developer </category>
             
         </categories>
         
@@ -682,9 +682,9 @@ Bundle &apos;mattn/gist-vim&apos;
         
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> python </tag>
+            
+            <tag> linux </tag>
             
             <tag> supervisor </tag>
             
@@ -702,9 +702,9 @@ Bundle &apos;mattn/gist-vim&apos;
             
             <tag> mac </tag>
             
-            <tag> linux </tag>
-            
             <tag> python </tag>
+            
+            <tag> linux </tag>
             
             <tag> nodejs </tag>
             
