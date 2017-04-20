@@ -1,7 +1,7 @@
 title: 15分钟开发一个Chrome App【一】
 date: 2016-04-24 12:51 PM
-categories: "develper"
-tags: [chrome,developer]
+categories: "developer"
+tags: [chrome, developer]
 ---
 
 > 本文介绍了如何在很短的时间内开发一个 Chrome APP.
@@ -16,7 +16,7 @@ tags: [chrome,developer]
 
 ![http://harchiko.qiniudn.com/wechat128.png](http://harchiko.qiniudn.com/wechat128.png)
 
-## 创建manifest.json 文件
+## 创建 manifest.json 文件
 
 创建一个文件夹，在文件夹中添加 `manifiest.json`。
 
