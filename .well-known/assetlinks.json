@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.zhaochunqi.wuhubus",
+    "sha256_cert_fingerprints":
+    ["A2:F8:26:84:16:4C:7F:B3:CF:9F:58:B7:33:80:63:3E:0B:01:6E:C4:C9:DD:66:7B:87:3A:12:E5:AE:FE:3F:85"]
+  }
+}]
