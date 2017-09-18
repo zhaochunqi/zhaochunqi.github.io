@@ -6,6 +6,8 @@ tags: [https,]
 
 ![https](http://harchiko.qiniudn.com/HTTPS_icon.png)
 
+> 今天，我们来趁着博客打算更新 https 来谈一波 https。
+
 ## 什么是 https
 
 ### http 请求为何不行
