@@ -70,7 +70,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: maupassant
+# theme: maupassant
+theme: even
 sitemap:
     path: sitemap.xml
 # 百度统计
