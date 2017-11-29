@@ -8,7 +8,6 @@
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-all-minifier": "^0.4.0",
-    "hexo-browsersync": "^0.2.0",
     "hexo-deployer-git": "^0.3.1",
     "hexo-filter-auto-spacing": "^0.2.1",
     "hexo-generator-archive": "^0.1.4",
@@ -25,5 +24,4 @@
     "hexo-renderer-scss": "^1.1.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.2"
-  }
-}
+  } }
