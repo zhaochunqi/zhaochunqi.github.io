@@ -48,14 +48,14 @@ reward:
 # Social links Settings
 # ===========================================
 social:
-  email: your@email.com
+  email: zcq.qiqi@gmail.com
   stack-overflow:
   twitter:
   facebook:
   linkedin:
   google:
-  github:
-  weibo:
+  github: zhaochunqi
+  weibo: zhaocq
   zhihu:
   douban:
   pocket:
@@ -72,12 +72,12 @@ leancloud:
   app_key:
 
 # Baidu Analytics
-baidu_analytics:
+baidu_analytics: cfffa20d202ba9f4f0d6257e1cc94ea6
 # Baidu Verification
 baidu_verification:
 
 # Google Analytics
-google_analytics:
+google_analytics: UA-42448552-1
 # Google Verification
 google_verification:
 
