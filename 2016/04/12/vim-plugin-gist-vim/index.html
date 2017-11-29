@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="theme-color" content="#f8f5ec"><meta name="msapplication-navbutton-color" content="#f8f5ec"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec"><meta name="description" content="Gist-Vim 介绍"><meta name="keywords" content="vim, plugin, Alex Coding"><link rel="alternate" href="/atom.xml" title="Alex Coding"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0"><link rel="canonical" href="http://blog.zhaochunqi.com/2016/04/12/vim-plugin-gist-vim/"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0"><script id="baidu_push">!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><title>Gist-Vim 介绍 - Alex Coding</title></head><body><div id="mobile-navbar" class="mobile-navbar"><div class="mobile-header-logo"><a href="/." class="logo">Alex Coding</a></div><div class="mobile-navbar-icon"><span></span> <span></span> <span></span></div></div><nav id="mobile-menu" class="mobile-menu slideout-menu"><ul class="mobile-menu-list"><a href="/"><li class="mobile-menu-item">首页</li></a><a href="/archives/"><li class="mobile-menu-item">归档</li></a></ul></nav><div class="container" id="mobile-panel"><header id="header" class="header"><div class="logo-wrapper"><a href="/." class="logo">Alex Coding</a></div><nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item"><a class="menu-item-link" href="/">首页</a></li><li class="menu-item"><a class="menu-item-link" href="/archives/">归档</a></li></ul></nav></header><main id="main" class="main"><div class="content-wrapper"><div id="content" class="content"><article class="post"><header class="post-header"><h1 class="post-title">Gist-Vim 介绍</h1><div class="post-meta"><span class="post-time">2016-04-12</span></div></header><div class="post-toc" id="post-toc"><h2 class="post-toc-title">文章目录</h2><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gist-Vim- 介绍"><span class="toc-text">Gist-Vim 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#说一下重点："><span class="toc-text">说一下重点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的几个命令"><span class="toc-text">常用的几个命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gist-vim"><span class="toc-text">Gist.vim</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tips"><span class="toc-text">Tips:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#License"><span class="toc-text">License:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-text">Install:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-with-Vundle"><span class="toc-text">Install with Vundle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-with-NeoBundle"><span class="toc-text">Install with NeoBundle</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Requirements"><span class="toc-text">Requirements:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup"><span class="toc-text">Setup:</span></a></li></ol></div></div><div class="post-content"><h2 id="Gist-Vim- 介绍"><a href="#Gist-Vim- 介绍" class="headerlink" title="Gist-Vim 介绍"></a>Gist-Vim 介绍</h2><blockquote><p>Gist-Vim 是一款能够访问、保存 gist 的 Vim 插件。</p></blockquote><a id="more"></a><h3 id="说一下重点："><a href="# 说一下重点：" class="headerlink" title="说一下重点："></a> 说一下重点：</h3><ul><li>使用之前要先设置 <code>git config --global github.user Username</code> 注意是 github.user.</li><li>在 .vimrc 中设置 <code>let g:gist_clip_command = &#39;pbcopy&#39;</code>以便可以直接粘贴上传的 Gist 地址。</li><li>使用 Vundle 安装时要安装两个包</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bundle &apos;mattn/webapi-vim&apos;</span><br><span class="line">Bundle &apos;mattn/gist-vim&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="常用的几个命令"><a href="# 常用的几个命令" class="headerlink" title="常用的几个命令"></a>常用的几个命令</h3><ul>
+<li><code>:Gist -l zhaochunqi</code>  zhaochunqi 的全部 gist</li>
+<li><code>:Gist -a</code> 匿名 gist</li>
+<li>可以进入 V 模式选择后提交 Gist，可以使用 -s 选项添加描述说明。</li>
+</ul>
+<hr>
+<h3 id="Gist-vim"><a href="#Gist-vim" class="headerlink" title="Gist.vim"></a>Gist.vim</h3><p>This is a vimscript for creating gists (<a href="http://gist.github.com" target="_blank" rel="noopener">http://gist.github.com</a>).</p>
+<p>For the latest version please see <a href="https://github.com/mattn/gist-vim" target="_blank" rel="noopener">https://github.com/mattn/gist-vim</a>.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h2><ul>
+<li><p>Post current buffer to gist, using default privacy option.</p>
+<pre><code>:Gist
+</code></pre></li>
+<li><p>Post selected text to gist, using default privacy option.<br>This applies to all permutations listed below (except multi).</p>
+<pre><code>:&apos;&lt;,&apos;&gt;Gist
+</code></pre></li>
+<li><p>Create a private gist.</p>
+<pre><code>:Gist -p
+</code></pre></li>
+<li><p>Create a public gist.<br>(Only relevant if you’ve set gists to be private by default.)</p>
+<pre><code>:Gist -P
+</code></pre></li>
+</ul>
+<blockquote>
+<p> This is only relevant if you’ve set gists to be private by default;<br>if you get an empty gist list, try “:Gist –abandon”.</p>
+</blockquote>
+<ul>
+<li><p>Create a gist anonymously.</p>
+<pre><code>:Gist -a
+</code></pre></li>
+<li><p>Create a gist with all open buffers.</p>
+<pre><code>:Gist -m
+</code></pre></li>
+<li><p>Edit the gist (you need to have opened the gist buffer first).<br>You can update the gist with the “:w” command within the gist buffer.</p>
+<pre><code>:Gist -e
+</code></pre></li>
+<li><p>Edit the gist with name ‘foo.js’ (you need to have opened the gist buffer<br>first).</p>
+<pre><code>:Gist -e foo.js
+</code></pre></li>
+<li><p>Post/Edit with the description “ (you need to have opened the gist buffer<br>first). &gt;</p>
+<pre><code>:Gist -s something
+:Gist -e -s something
+</code></pre></li>
+<li><p>Delete the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist -d
+</code></pre></li>
+<li><p>Fork the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist -f
+</code></pre></li>
+<li><p>Star the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist +1
+</code></pre></li>
+<li><p>Unstar the gist (you need to have opened the gist buffer first).<br>Password authentication is needed.</p>
+<pre><code>:Gist -1
+</code></pre></li>
+<li><p>Get gist XXXXX.</p>
+<pre><code>:Gist XXXXX
+</code></pre></li>
+<li><p>Get gist XXXXX and add to clipboard.</p>
+<pre><code>:Gist -c XXXXX
+</code></pre></li>
+<li><p>List your public gists.</p>
+<pre><code>:Gist -l
+</code></pre></li>
+<li><p>List gists from user “mattn”.</p>
+<pre><code>:Gist -l mattn
+</code></pre></li>
+<li><p>List everyone’s gists.</p>
+<pre><code>:Gist -la
+</code></pre></li>
+<li><p>List gists from your starred gists.</p>
+<pre><code>:Gist -ls
+</code></pre></li>
+<li><p>Open the gist on browser after you post or update it.</p>
+<pre><code>:Gist -b
+</code></pre></li>
+</ul>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><p>If you set g:gist_clip_command, gist.vim will copy the gist code with option<br>‘-c’.</p>
+<ul>
+<li><p>Mac:</p>
+<pre><code>let g:gist_clip_command = &apos;pbcopy&apos;
+</code></pre></li>
+<li><p>Linux:</p>
+<pre><code>let g:gist_clip_command = &apos;xclip -selection clipboard&apos;
+</code></pre></li>
+<li><p>Others (cygwin?):</p>
+<pre><code>let g:gist_clip_command = &apos;putclip&apos;
+</code></pre></li>
+</ul>
+<p>If you want to detect filetype from the filename:</p>
+<pre><code>let g:gist_detect_filetype = 1
+</code></pre><p>If you want to open browser after the post:</p>
+<pre><code>let g:gist_open_browser_after_post = 1
+</code></pre><p>If you want to change the browser:</p>
+<pre><code>let g:gist_browser_command = &apos;w3m %URL%&apos;
+</code></pre><p>or:</p>
+<pre><code>let g:gist_browser_command = &apos;opera %URL% &amp;&apos;
+</code></pre><p>On windows, this should work with your user settings.</p>
+<p>If you want to show your private gists with “:Gist -l”:</p>
+<pre><code>let g:gist_show_privates = 1
+</code></pre><p>If you want your gist to be private by default:</p>
+<pre><code>let g:gist_post_private = 1
+</code></pre><p>If you want your gist to be anonymous by default:</p>
+<pre><code>let g:gist_post_anonymous = 1
+</code></pre><p>If you want to manipulate multiple files in a gist:</p>
+<pre><code>let g:gist_get_multiplefile = 1
+</code></pre><p>If you want to use on GitHub Enterprise:</p>
+<pre><code>let g:gist_api_url = &apos;http://your-github-enterprise-domain/api/v3&apos;
+</code></pre><p>You need to either set global git config:</p>
+<pre><code>$ git config --global github.user Username
+</code></pre><h2 id="License"><a href="#License" class="headerlink" title="License:"></a>License:</h2><pre><code>Copyright 2010 by Yasuhiro Matsumoto
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS&apos;&apos; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGE.
+</code></pre><h2 id="Install"><a href="#Install" class="headerlink" title="Install:"></a>Install:</h2><p>Copy it to your plugin directory.<br>gist.vim will create a curl cookie-jar file in your runtimepath.</p>
+<ul>
+<li>rtp:<ul>
+<li>autoload/gist.vim</li>
+<li>plugin/gist.vim</li>
+</ul>
+</li>
+</ul>
+<p>If you want to uninstall gist.vim, remember to also remove <code>~/.gist-vim</code>.</p>
+<p>You need to install webapi-vim also:</p>
+<p>  <a href="http://www.vim.org/scripts/script.php?script_id=4019" target="_blank" rel="noopener">http://www.vim.org/scripts/script.php?script_id=4019</a></p>
+<p>If you want to use latest one:</p>
+<p>  <a href="https://github.com/mattn/webapi-vim" target="_blank" rel="noopener">https://github.com/mattn/webapi-vim</a></p>
+<h3 id="Install-with-Vundle"><a href="#Install-with-Vundle" class="headerlink" title="Install with Vundle"></a>Install with <a href="https://github.com/gmarik/vundle" target="_blank" rel="noopener">Vundle</a></h3><p>Add the following lines to your <code>.vimrc</code>.</p>
+<pre><code>Bundle &apos;mattn/webapi-vim&apos;
+Bundle &apos;mattn/gist-vim&apos;
+</code></pre><p>Now restart Vim and run <code>:BundleInstall</code>.</p>
+<h3 id="Install-with-NeoBundle"><a href="#Install-with-NeoBundle" class="headerlink" title="Install with NeoBundle"></a>Install with <a href="https://github.com/Shougo/neobundle.vim" target="_blank" rel="noopener">NeoBundle</a></h3><p>Add the following line to your <code>.vimrc</code>.</p>
+<pre><code>NeoBundle &apos;mattn/gist-vim&apos;, {&apos;depends&apos;: &apos;mattn/webapi-vim&apos;}
+</code></pre><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements:"></a>Requirements:</h2><ul>
+<li>curl command (<a href="http://curl.haxx.se/" target="_blank" rel="noopener">http://curl.haxx.se/</a>)</li>
+<li>webapi-vim (<a href="https://github.com/mattn/webapi-vim" target="_blank" rel="noopener">https://github.com/mattn/webapi-vim</a>)</li>
+<li>and if you want to use your git profile, the git command-line client.</li>
+</ul>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup:"></a>Setup:</h2><p>This plugin supports both basic and two-factor authentication using GitHub<br>API v3. The plugin stores its credentials in <code>~/.gist-vim</code>.</p>
+<p>First, you need to set your GitHub username in git’s global configuration:</p>
+<pre><code>$ git config --global github.user &lt;username&gt;
+</code></pre><p>Then gist-vim will ask for your password in order to create an access<br>token. If you have two-factor authentication enabled, gist-vim will also<br>prompt you to enter the two-factor key you receive.</p>
+<p>Whichever type of authentication you use, your GitHub password will not be<br>stored, only a OAuth access token produced specifically for gist-vim. The<br>token is stored in <code>~/.gist-vim</code>. If you stop using the plugin, you can<br>easily remove this file. To revoke the associated  GitHub token, go to the<br>list of <a href="https://github.com/settings/applications" target="_blank" rel="noopener">“Authorized applications” on GitHub’s “Account Settings”<br>page</a>.</p>
+<p><strong>Note:</strong> the username is optional if you only send anonymous gists.</p>
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://blog.zhaochunqi.com">Alex Zhao</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://blog.zhaochunqi.com/2016/04/12/vim-plugin-gist-vim/">http://blog.zhaochunqi.com/2016/04/12/vim-plugin-gist-vim/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/vim/">vim</a>
+            
+              <a href="/tags/plugin/">plugin</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/04/17/raspberry-pi-as-nas-server/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">从零开始将树莓派打造成家用下载机【一】 网络配置篇</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/04/10/android_content_provider/">
+        <span class="next-text nav-default">Content Provider 指南</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Alex Zhao</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script></body></html>

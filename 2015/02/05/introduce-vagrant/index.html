@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="theme-color" content="#f8f5ec"><meta name="msapplication-navbutton-color" content="#f8f5ec"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec"><meta name="description" content="Parallels 下 Vagrant 使用指南"><meta name="keywords" content="mac, vagrant, parallels, Alex Coding"><link rel="alternate" href="/atom.xml" title="Alex Coding"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0"><link rel="canonical" href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0"><script id="baidu_push">!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><title>Parallels 下 Vagrant 使用指南 - Alex Coding</title></head><body><div id="mobile-navbar" class="mobile-navbar"><div class="mobile-header-logo"><a href="/." class="logo">Alex Coding</a></div><div class="mobile-navbar-icon"><span></span> <span></span> <span></span></div></div><nav id="mobile-menu" class="mobile-menu slideout-menu"><ul class="mobile-menu-list"><a href="/"><li class="mobile-menu-item">首页</li></a><a href="/archives/"><li class="mobile-menu-item">归档</li></a></ul></nav><div class="container" id="mobile-panel"><header id="header" class="header"><div class="logo-wrapper"><a href="/." class="logo">Alex Coding</a></div><nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item"><a class="menu-item-link" href="/">首页</a></li><li class="menu-item"><a class="menu-item-link" href="/archives/">归档</a></li></ul></nav></header><main id="main" class="main"><div class="content-wrapper"><div id="content" class="content"><article class="post"><header class="post-header"><h1 class="post-title">Parallels 下 Vagrant 使用指南</h1><div class="post-meta"><span class="post-time">2015-02-05</span><div class="post-category"><a href="/categories/soft/">soft</a></div></div></header><div class="post-toc" id="post-toc"><h2 class="post-toc-title">文章目录</h2><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant- 介绍"><span class="toc-text">Vagrant 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装 -Vagrant"><span class="toc-text">安装 Vagrant</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装 -Vagrant- 插件"><span class="toc-text">安装 Vagrant 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用 -Vagrant"><span class="toc-text">使用 Vagrant</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改默认的 -Provider- 可选"><span class="toc-text">修改默认的 Provider (可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用 SSH 连接"><span class="toc-text">使用 SSH 连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#box- 选择"><span class="toc-text">box 选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vagrant-manager（可选 - 推荐）"><span class="toc-text">vagrant manager（可选 / 推荐）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Happy-Coding"><span class="toc-text">Happy Coding ~</span></a></li></ol></li></ol></div></div><div class="post-content"><p>环境：OSX yosemite/Parallels Desktop 10</p><h2 id="Vagrant- 介绍"><a href="#Vagrant- 介绍" class="headerlink" title="Vagrant 介绍"></a>Vagrant 介绍</h2><p>Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它 使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。</p><a id="more"></a><h2 id="安装 -Vagrant"><a href="# 安装 -Vagrant" class="headerlink" title="安装 Vagrant"></a> 安装 Vagrant</h2><p>从这里 <a href="http://www.vagrantup.com/downloads" title="vagrant 下载" target="_blank" rel="noopener">http://www.vagrantup.com/downloads</a> 下载对应版本的 vagrant 安装。</p><h2 id="安装 -Vagrant- 插件"><a href="# 安装 -Vagrant- 插件" class="headerlink" title="安装 Vagrant 插件"></a>安装 Vagrant 插件</h2><p>打开 Terminal，安装 vagrant 插件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant plugin install vagrant-parallels</span><br></pre></td></tr></table></figure>
+<h2 id="使用 -Vagrant"><a href="# 使用 -Vagrant" class="headerlink" title="使用 Vagrant"></a>使用 Vagrant</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir new_vagrant_project</span><br><span class="line">$ <span class="built_in">cd</span> new_vagrant_project</span><br><span class="line">$ vagrant init parallels/centos-6.5</span><br><span class="line">$ vagrant up --provider=parallels</span><br></pre></td></tr></table></figure>
+<p>这样就成功的安装了 centos-6.5</p>
+<h2 id="修改默认的 -Provider- 可选"><a href="# 修改默认的 -Provider- 可选" class="headerlink" title="修改默认的 Provider (可选)"></a>修改默认的 Provider (可选)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> VAGRANT_DEFAULT_PROVIDER=parallels</span><br></pre></td></tr></table></figure>
+<p>可添加到.bashrc 或者 .zshrc(如果你使用 zsh)</p>
+<h2 id="使用 SSH 连接"><a href="# 使用 SSH 连接" class="headerlink" title="使用 SSH 连接"></a>使用 SSH 连接 </h2><p> 进入 vagrant 所在目录：<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant ssh</span><br></pre></td></tr></table></figure><p></p>
+<h2 id="box- 选择"><a href="#box- 选择" class="headerlink" title="box 选择"></a>box 选择 </h2><p> 如果你想要其他的发行版：如 ubuntu 等，在这个网页中查找是否有你所需要的：<br><a href="https://vagrantcloud.com/boxes/search?provider=parallels" title="box" target="_blank" rel="noopener">https://vagrantcloud.com/boxes/search?provider=parallels</a></p>
+<h2 id="vagrant-manager（可选 - 推荐）"><a href="#vagrant-manager（可选 - 推荐）" class="headerlink" title="vagrant manager（可选 / 推荐）"></a>vagrant manager（可选 / 推荐）</h2><p>Vagrant Manager 是在通知栏的可以管理 Vagrant 的工具。（Mac 版本 /Windows 版本都有）</p>
+<p>具体表现如图：<br><img src="http://harchiko.qiniudn.com/introduce-vagrant/vagrant_manager.gif" alt="vagrant manager"></p>
+<p>下载见：<a href="https://github.com/lanayotech/vagrant-manager" title="vagrant manager" target="_blank" rel="noopener">https://github.com/lanayotech/vagrant-manager</a></p>
+<h3 id="Happy-Coding"><a href="#Happy-Coding" class="headerlink" title="Happy Coding ~"></a>Happy Coding ~</h3>
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://blog.zhaochunqi.com">Alex Zhao</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/">http://blog.zhaochunqi.com/2015/02/05/introduce-vagrant/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/mac/">mac</a>
+            
+              <a href="/tags/vagrant/">vagrant</a>
+            
+              <a href="/tags/parallels/">parallels</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2015/02/10/shadowsocks-user-manual/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">shadowsocks 使用指南</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2015/02/04/tools-for-us-TV-series/">
+        <span class="next-text nav-default">美剧订阅神器 showrss</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Alex Zhao</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script></body></html>
