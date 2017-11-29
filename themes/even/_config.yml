@@ -54,8 +54,8 @@ social:
   facebook:
   linkedin:
   google:
-  github: zhaochunqi
-  weibo: zhaocq
+  github: https://github.com/zhaochunqi
+  weibo: https://weibo.com/zhaocqq
   zhihu:
   douban:
   pocket:
@@ -68,8 +68,8 @@ social:
 
 # LeanCloud
 leancloud:
-  app_id:
-  app_key:
+  app_id: 7fcUMbgX6k2yGbBlLEPt5vsV-gzGzoHsz
+  app_key: jp7xCLvlPpy4dBr1KBaTstaB
 
 # Baidu Analytics
 baidu_analytics: cfffa20d202ba9f4f0d6257e1cc94ea6
@@ -82,7 +82,7 @@ google_analytics: UA-42448552-1
 google_verification:
 
 # Disqus
-disqus_shortname:
+disqus_shortname: blog-zhaochunqi
 
 #Changyan
 changyan:
