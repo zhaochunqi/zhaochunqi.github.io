@@ -24,7 +24,7 @@ source分支放置hexo的一些源文件，master分支放置静态博客资源�
 travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具，目前只支持github。
 
 在travis-CI中对`zhaochunqi.github.io`开启自动构建，配置如下：
-![](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%205.37.05%20AM.png)
+![](https://ws2.sinaimg.cn/large/006tKfTcly1flzgpgu6f8j31kw0l777q.jpg)
 （建议开启Build only if .travis.yml is prezent.)
 
 ## 配置 `.travis.yml`
@@ -39,7 +39,7 @@ travis-CI([https://travis-ci.org/](https://travis-ci.org/))是集成测试工具
 这里采用的是github token的方法，（SSH配置较为复杂）
 
 点击头像->settings-> Personal access tokens 新建一个token,**会获取到一串字符**，记录下下面需要用到。
-![](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-28%20at%206.48.06%20AM.png)
+![](https://ws3.sinaimg.cn/large/006tKfTcly1flzgpjrh31j31kw0lgtd6.jpg)
 
 ### 将token配置到travis-CI
 

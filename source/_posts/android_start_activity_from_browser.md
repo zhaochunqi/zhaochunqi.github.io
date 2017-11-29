@@ -8,7 +8,7 @@ tags: [android,]
 
 艾米莉亚镇楼:
 
-![http://harchiko.qiniudn.com/58541110_p0.jpg](http://harchiko.qiniudn.com/58541110_p0.jpg)
+![http://harchiko.qiniudn.com/58541110_p0.jpg](https://ws2.sinaimg.cn/large/006tKfTcly1flzgom73goj30np0xcawn.jpg)
 
 ## 假设
 
@@ -61,6 +61,6 @@ tags: [android,]
 
 看看成果:
 
-![http://harchiko.qiniudn.com/2016-08-22intent.png](http://harchiko.qiniudn.com/2016-08-22intent.png)
+![http://harchiko.qiniudn.com/2016-08-22intent.png](https://ws3.sinaimg.cn/large/006tKfTcgy1flzgosz8soj30np0xcawn.jpg)
 
 Looks Great!

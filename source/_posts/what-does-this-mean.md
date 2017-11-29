@@ -7,7 +7,7 @@ tags: [linux,]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-06-26%20at%2012.37.26%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-06-26%20at%2012.37.26%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-06-26%20at%2012.37.26%20AM.png](https://ws4.sinaimg.cn/large/006tKfTcly1flzgmyiqahj31f81akt9x.jpg)
 
 举例来说:
 

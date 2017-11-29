@@ -34,7 +34,7 @@ tags: [android,dev]
 使用自己的数据库？不，这行不通，因为系统的数据库无法访问你自己创建的数据库，答案就是使用contentprovider,ContentProvider的处理对你来说完全是BlackBox.
 
 ### 怎么用？
-![detail](http://harchiko.qiniudn.com/content_provider_explicit.png)
+![detail](https://ws2.sinaimg.cn/large/006tKfTcly1flzgnyfqqmj30kg0aamy3.jpg)
 如上
 
 ```java

@@ -6,7 +6,7 @@ tags: [mac,]
 前几天看了少数派的文章[http://sspai.com/32167](http://sspai.com/32167)配置了Aria2，效果不错，决定将其开机启动。
 
 <!--more-->
-![](http://harchiko.qiniudn.com/54001369_p0.png)
+![](https://ws1.sinaimg.cn/large/006tKfTcly1flzgp5o1cpj30m80r5e21.jpg)
 
 ##Aria2 配置
 

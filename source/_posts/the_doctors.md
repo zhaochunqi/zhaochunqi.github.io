@@ -8,7 +8,7 @@ tags: []
 
 
 <!--more-->
-![http://harchiko.qiniudn.com/192851_f496.jpg](http://harchiko.qiniudn.com/192851_f496.jpg)
+![http://harchiko.qiniudn.com/192851_f496.jpg](https://ws2.sinaimg.cn/large/006tKfTcly1flzgoxgrt9j30ds08adg8.jpg)
 
 ### 洗牙
 

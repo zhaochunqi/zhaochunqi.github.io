@@ -8,7 +8,7 @@ tags: [terminal, linux,]
 
 <!--more-->
 
-![](http://harchiko.qiniudn.com/S27YSIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIHAlIPhe3WkMAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIlAcG39LatBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAhcCQi+V3caQ4AAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIBASUDwLb1tKwECBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECVwKC79WdxhAgQ.png)
+![](https://ws4.sinaimg.cn/large/006tKfTcly1flzgro1a8uj31h80qgn4m.jpg)
 
 ```bash
 sudo !!
@@ -31,7 +31,7 @@ Serve current directory tree at http://$HOSTNAME:8000/
 ```bash
 ctrl-x e
 ```
-![](http://harchiko.qiniudn.com/show-ctrl-x-e.gif)
+![](https://ws3.sinaimg.cn/large/006tKfTcly1flzgru0ynig30w80jr103.gif)
 迅速的在终端激活文本编辑器用来写命令。 具体用法是按住Ctrl+x 然后再按 e，系统会自动调用默认的编辑器。
 
 ```bash

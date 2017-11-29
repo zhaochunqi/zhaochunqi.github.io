@@ -18,7 +18,7 @@ git remote set-url --add --push origin git://another/repo.git
 
 ### 效果图
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-05-08%20at%208.48.19%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-05-08%20at%208.48.19%20PM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-05-08%20at%208.48.19%20PM.png](https://ws1.sinaimg.cn/large/006tKfTcly1flzgmrcsl0j31be0i0why.jpg)
 
 ### 参考链接
 

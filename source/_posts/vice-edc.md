@@ -12,7 +12,7 @@ tags: [life,]
 分享一下 Vice 拍摄的陈冠希的记录片：
 
 
-![](http://harchiko.qiniudn.com/11886613_214644.jpg)
+![](https://ws4.sinaimg.cn/large/006tNc79ly1flzgu5wil8j30az0drq45.jpg)
 
 第一篇： 
 <iframe height=498 width=510 src="http://player.youku.com/embed/XMTM5OTgzMDM4NA==" frameborder=0 allowfullscreen></iframe>

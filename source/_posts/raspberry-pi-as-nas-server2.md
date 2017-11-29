@@ -6,7 +6,7 @@ tags: [linux,pi]
 本篇介绍一下如何使用树莓派进行下载。
 <!--more-->
 
-![http://harchiko.qiniudn.com/Pi_3_Model_B.png](http://harchiko.qiniudn.com/Pi_3_Model_B.png)
+![http://harchiko.qiniudn.com/Pi_3_Model_B.png](https://ws4.sinaimg.cn/large/006tNc79ly1flzguzeapoj30j40a176t.jpg)
 
 ## 准备工作 换源
 
@@ -65,7 +65,7 @@ deluge-console
 ```
 进入交互式界面
 
-![http://harchiko.qiniudn.com/376x233x2013-03-24_163942.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.68wn4b8TgH.jpg](http://harchiko.qiniudn.com/376x233x2013-03-24_163942.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.68wn4b8TgH.jpg)
+![http://harchiko.qiniudn.com/376x233x2013-03-24_163942.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.68wn4b8TgH.jpg](https://ws4.sinaimg.cn/large/006tNc79ly1flzgv256b9j30ag06haae.jpg)
 
 ```bash
 config -s allow_remote True
@@ -120,16 +120,16 @@ mkdir -p /home/pi/Downloads/torrents/torrent-backup
 
 按照图中修改即可
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%201.06.13%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%201.06.13%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%201.06.13%20AM.png](https://ws1.sinaimg.cn/large/006tNc79ly1flzgv9v9aij30rq0w6aey.jpg)
 
 #### 网络配置
 按图示修改即可。
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%2012.05.33%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%2012.05.33%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-23%20at%2012.05.33%20AM.png](https://ws4.sinaimg.cn/large/006tNc79ly1flzgvivknmj30ry0w6q8k.jpg)
 
 这下，你可以远程添加种子到树莓派下载了
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-0aa4-23%20at%2012.08.42%20AM.jpg](http://harchiko.qiniudn.com/Screen%20Shot%202016-0aa4-23%20at%2012.08.42%20AM.jpg)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-0aa4-23%20at%2012.08.42%20AM.jpg](https://ws4.sinaimg.cn/large/006tNc79ly1flzgvzk684j31kw0zk7wi.jpg)
 
 ## One More thing
 

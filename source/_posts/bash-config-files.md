@@ -6,7 +6,7 @@ tags: [bash,linux,mac]
 Bash的配置文件位置包括`.bash_profile`和 `.bashrc`，那这两个配置文件有什么区别呢？
 
 <!--more-->
-![](http://harchiko.qiniudn.com/54002458_p0.jpg)
+![](https://ws3.sinaimg.cn/large/006tKfTcly1flzgpe3ep2j30nm0j3do9.jpg)
 
 根据[http://linux.die.net/man/1/bash](http://linux.die.net/man/1/bash)的描述，`.bash_profile` is executed for login shells, while `.bashrc` is executed for interactive non-login shells.
 

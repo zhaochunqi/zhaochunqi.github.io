@@ -8,7 +8,7 @@ tags: [chrome,developer]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/wechat128.png](http://harchiko.qiniudn.com/wechat128.png)
+![http://harchiko.qiniudn.com/wechat128.png](https://ws1.sinaimg.cn/large/006tKfTcly1flzgryh0tpj303k03k3yd.jpg)
 
 
 > 因为 Mac 下微信实在是难用，还不如直接使用网页版的，找了一圈Chrome App Store，竟然找不到一个简单的跳转微信的APP，心想着也不会太难，就自己动起了手。
@@ -54,7 +54,7 @@ tags: [chrome,developer]
 
 简单，更改下窗口大小，chrome中审查下元素:
 
-![http://harchiko.qiniudn.com/%E6%88%AA%E5%9B%BE%202016-04-24%2021%E6%97%B651%E5%88%8611%E7%A7%92.jpg](http://harchiko.qiniudn.com/%E6%88%AA%E5%9B%BE%202016-04-24%2021%E6%97%B651%E5%88%8611%E7%A7%92.jpg)
+![http://harchiko.qiniudn.com/%E6%88%AA%E5%9B%BE%202016-04-24%2021%E6%97%B651%E5%88%8611%E7%A7%92.jpg](https://ws2.sinaimg.cn/large/006tKfTcly1flzgs18n92j30me0h8dkz.jpg)
 
 确定大小后:
 
@@ -88,7 +88,7 @@ tags: [chrome,developer]
 
 来看下效果:
 
-![http://harchiko.qiniudn.com/sfdasdfasdfasdfasdfasdf.jpg](http://harchiko.qiniudn.com/sfdasdfasdfasdfasdfasdf.jpg)
+![http://harchiko.qiniudn.com/sfdasdfasdfasdfasdfasdf.jpg](https://ws1.sinaimg.cn/large/006tKfTcly1flzgsksar1j31kw1ej4qp.jpg)
 
 只能说： 完美 ~
 
@@ -99,7 +99,7 @@ tags: [chrome,developer]
 
 打包其实很简单，打开插件页，点击打包即可
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2010.01.36%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2010.01.36%20PM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2010.01.36%20PM.png](https://ws2.sinaimg.cn/large/006tKfTcly1flzgsp6ggkj319c0f8tb2.jpg)
 
 第一次的话 private key 是不需要填写的，它会帮你生成一个，注意保存，如果不需要上传到 Chrome App Store 我估计也没啥问题。
 

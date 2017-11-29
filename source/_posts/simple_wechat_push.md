@@ -7,7 +7,7 @@ tags: [python,]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/WechatIMG27.jpeg](http://harchiko.qiniudn.com/WechatIMG27.jpeg)
+![http://harchiko.qiniudn.com/WechatIMG27.jpeg](https://ws2.sinaimg.cn/large/006tKfTcly1flzgswqwrej30jz0zk40d.jpg)
 
 ## 方法
 
@@ -56,4 +56,4 @@ requests.get('http://sc.ftqq.com/[Your Own Token].send', params=payload)
 
 设置下 crontab 任务，这样每天就可以推送价格了。
 
-![http://harchiko.qiniudn.com/WechatIMG26.jpeg](http://harchiko.qiniudn.com/WechatIMG26.jpeg)
+![http://harchiko.qiniudn.com/WechatIMG26.jpeg](https://ws1.sinaimg.cn/large/006tKfTcly1flzgt07evyj30jz0zk75i.jpg)

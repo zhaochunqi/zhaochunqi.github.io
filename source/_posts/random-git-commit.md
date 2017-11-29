@@ -12,4 +12,4 @@ git commit -m "$(curl -s http://whatthecommit.com/ | awk '/<p>/ {sub("<p>", "");
 <!--more-->
 适用于不是很重要的项目中的提交说明，工作中慎用。
 
-![](http://harchiko.qiniudn.com/Screen%20Shot%202015-11-26%20at%202.33.14%20AM.png)
+![](https://ws3.sinaimg.cn/large/006tKfTcly1flzgn1lz0oj31kw0bmjuh.jpg)

@@ -24,7 +24,7 @@ tags: [hexo,]
 
 
 - 打开Firebug，查看JS代码之后发现H2如果标题没有的话会被设定`display:none`
-![](http://harchiko.qiniudn.com/hexo-toc-problem/toc_not_show.png)
+![](https://ws3.sinaimg.cn/large/006tNc79gy1flzgtizw3oj31400o6gqx.jpg)
 
 至此！谜题就此揭开!
 

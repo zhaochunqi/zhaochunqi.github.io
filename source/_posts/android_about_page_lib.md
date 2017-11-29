@@ -7,7 +7,7 @@ tags: [android,]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/android_about_page_cover.png](http://harchiko.qiniudn.com/android_about_page_cover.png)
+![http://harchiko.qiniudn.com/android_about_page_cover.png](https://ws1.sinaimg.cn/large/006tNc79ly1flzgurhyulj30r30gogp1.jpg)
 
 ## 安装
 Available on Jcenter, Maven and JitPack
@@ -77,7 +77,7 @@ addItem(versionElement)
 以上说明来自github
 
 ## 配置 image 大小属性
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-06-13%20at%2010.40.04%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-06-13%20at%2010.40.04%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-06-13%20at%2010.40.04%20AM.png](https://ws1.sinaimg.cn/large/006tNc79ly1flzguwzojyj31ew0o2dqi.jpg)
 
 可以看到在库文件中 `style.xml` 中定义了各元素的属性，在自己的项目中添加 style 属性即可。
 

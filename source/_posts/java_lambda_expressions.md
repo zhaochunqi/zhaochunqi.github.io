@@ -8,7 +8,7 @@ tags: [java,]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/Lambda%20Expression%20Java%208.png](http://harchiko.qiniudn.com/Lambda%20Expression%20Java%208.png)
+![http://harchiko.qiniudn.com/Lambda%20Expression%20Java%208.png](https://ws4.sinaimg.cn/large/006tNc79ly1flzgw9sbtfj30jg08ct8r.jpg)
 
 ## JSR 335
 
@@ -35,7 +35,7 @@ JSR 335 的提案内容摘要如下：
 
 Lambda 表达式，其实就是代码块。
 
-![http://harchiko.qiniudn.com/56cabf5a499ed708%202.jpg](http://harchiko.qiniudn.com/56cabf5a499ed708%202.jpg)
+![http://harchiko.qiniudn.com/56cabf5a499ed708%202.jpg](https://ws1.sinaimg.cn/large/006tNc79ly1flzgwbdd9ij308l06v0st.jpg)
 
 ### 原来怎么处理
 在具体了解 lambda 之前，我们先往后退一步，看看之前我们是如何处理这些代码块的！
@@ -89,7 +89,7 @@ button.setOnClickListener(new View.OnClickListener() {
 
 ### 上面代码有什么问题呢？
 
-![http://harchiko.qiniudn.com/c718cee7.jpg](http://harchiko.qiniudn.com/c718cee7.jpg)
+![http://harchiko.qiniudn.com/c718cee7.jpg](https://ws3.sinaimg.cn/large/006tNc79ly1flzgwdq0rwj30hs0d4q30.jpg)
 
 它们都太复杂了啊！
 
@@ -101,7 +101,7 @@ button.setOnClickListener(new View.OnClickListener() {
 
 在其他语言中你可能可以，但是，在Java 中，不可以。
 
-![http://harchiko.qiniudn.com/56cabf7011ab6750.jpg](http://harchiko.qiniudn.com/56cabf7011ab6750.jpg)
+![http://harchiko.qiniudn.com/56cabf7011ab6750.jpg](https://ws2.sinaimg.cn/large/006tNc79ly1flzgwf5406j307t06vwej.jpg)
 
 Java 设计人员为了 Java 的简洁跟连贯性，一直拒绝为Java添加这种功能。（这也是我喜欢Java而不喜欢Python的原因啊！！！)
 
@@ -122,7 +122,7 @@ first和second都是 String 类型，Java 是强类型的语言，必须指定�
      -> Integer.compare(first.length(), second.length())
 ```
 
-![http://harchiko.qiniudn.com/14365393725281065.jpg](http://harchiko.qiniudn.com/14365393725281065.jpg)
+![http://harchiko.qiniudn.com/14365393725281065.jpg](https://ws1.sinaimg.cn/large/006tNc79ly1flzgwghv0jj30av0c6dg2.jpg)
 
 看到没有！第一个 Lambda 表达式诞生了！！输入、输出简洁明了！
 
@@ -223,7 +223,7 @@ Lambda 表达式能够向前兼容这些 interfaces, 太棒了！ 那 Lambda 表
 
 实际上，将函数式接口转变成 lambda 表达式是你在 Java 中**唯一**能做的事情。
 
-![http://harchiko.qiniudn.com/20150930185659_eMZyN.jpeg](http://harchiko.qiniudn.com/20150930185659_eMZyN.jpeg)
+![http://harchiko.qiniudn.com/20150930185659_eMZyN.jpeg](https://ws3.sinaimg.cn/large/006tNc79ly1flzgwi9bdnj30er0ermyd.jpg)
 
 Why ？！！
 
@@ -249,7 +249,7 @@ button.setOnAction(System.out::println);
 
 表达式 `System.out::println` 属于一个方法引用（method reference）， 相当于 lambda 表达式 `x -> System.out.println(x)`
 
-![http://harchiko.qiniudn.com/20151220232425_nWH23.jpeg](http://harchiko.qiniudn.com/20151220232425_nWH23.jpeg)
+![http://harchiko.qiniudn.com/20151220232425_nWH23.jpeg](https://ws2.sinaimg.cn/large/006tNc79ly1flzgwjw3krj30jg0jgmxy.jpg)
 
 再举个例子，如果你想对字符串不管大小写进行排序,就可以这样写！
 
@@ -302,14 +302,14 @@ Object[] buttons = stream.toArray();
 Button[] buttons = stream.toArray(Button[]::new);
 ```
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-11-16%20at%204.30.23%20AM.png](https://ws2.sinaimg.cn/large/006tNc79ly1flzgwugxczj31kw0ngk5w.jpg)
 
 ## 变量作用域
 注意到我们在题目中写着 闭包（closure),实际上，闭包的定义是: 引用了自由变量的函数。
 
 在之前，如果需要在匿名类的内部引用外部变量，需要将外部变量定义为 final ，现在有了 lambda 表达式，你不必再这么做了。但同样需要保证外部的自由变量不能在 lambda 表达式中被改变。
 
-![http://harchiko.qiniudn.com/56cabf5d7d6dc247.jpg!600x600.jpg](http://harchiko.qiniudn.com/56cabf5d7d6dc247.jpg!600x600.jpg)
+![http://harchiko.qiniudn.com/56cabf5d7d6dc247.jpg!600x600.jpg](https://ws1.sinaimg.cn/large/006tNc79gy1flzgwwa5lvj31kw0ngk5w.jpg)
 这是什么意思呢？ 不需要定义为 final，也不能改？
 
 其实理解起来很简单，Java 8 中，不需要定义为 final ，但你其实可以直接把他当作 final，不要试图修改它就行了。
@@ -350,4 +350,4 @@ Java 8 中，你可以在接口中添加静态方法了。 看起来好像并不
 3. [Lambda Expressions in Java 8](http://www.drdobbs.com/jvm/lambda-expressions-in-java-8/240166764?pgno=1)
 
 
-![http://harchiko.qiniudn.com/44577950_p0.jpg](http://harchiko.qiniudn.com/44577950_p0.jpg) 
+![http://harchiko.qiniudn.com/44577950_p0.jpg](https://ws4.sinaimg.cn/large/006tNc79ly1flzgx8edw8j31471kuhdt.jpg) 

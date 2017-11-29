@@ -7,7 +7,7 @@ tags: [linux,pi]
 本篇讲介绍一下树莓派基本的网络配置，使其能够在公网正常访问。
 <!--more-->
 
-![http://harchiko.qiniudn.com/Pi_3_Model_B.png](http://harchiko.qiniudn.com/Pi_3_Model_B.png)
+![http://harchiko.qiniudn.com/Pi_3_Model_B.png](https://ws2.sinaimg.cn/large/006tNc79ly1flzgubmuv0j30j40a176t.jpg)
 
 ### 烧录micro sd卡
 
@@ -60,7 +60,7 @@ tags: [linux,pi]
 1. clone 这个 repo， 在Dnspod中获取到 APIKEY，以及响应的二级域名需要的参数。
 2. 修改库中的 change_my_ip_on_dnspod.sh `Shell`脚本。
 3. 使用命令`chmod +x change_my_ip_on_dnspod.sh`添加脚本的可执行权限。
-4. 运行 ./change_my_ip_on_dnspod.sh 查看返回值,得到如下图的结果即为成功。![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png)
+4. 运行 ./change_my_ip_on_dnspod.sh 查看返回值,得到如下图的结果即为成功。![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-18%20at%2012.13.26%20AM.png](https://ws2.sinaimg.cn/large/006tNc79ly1flzgunyzkbj31kw07owgt.jpg)
 3. 登录树莓派系统 `crontab -e`在末尾添加 
 ```bash
 # every 20 mins

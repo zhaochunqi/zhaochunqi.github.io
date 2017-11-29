@@ -8,7 +8,7 @@ tags: [tools,linux]
 <!--more-->
 
 图片镇楼:
-![http://harchiko.qiniudn.com/54686763_p0.jpg](http://harchiko.qiniudn.com/54686763_p0.jpg)
+![http://harchiko.qiniudn.com/54686763_p0.jpg](https://ws1.sinaimg.cn/large/006tKfTcly1flzgne5xjuj30nr0vxn99.jpg)
 
 ## 翻墙&域名解析
 
@@ -31,7 +31,7 @@ tags: [tools,linux]
 4. alias, 把alias命令添加到 `.bashr`或`.zshrc`中  alias vps="ssh root@linux.zhaochunqi.com"。
 
 我们来登录下vps，terminal中输入 `vps`即可:
-![http://harchiko.qiniudn.com/vps-my-work-flow.gif](http://harchiko.qiniudn.com/vps-my-work-flow.gif)
+![http://harchiko.qiniudn.com/vps-my-work-flow.gif](https://ws4.sinaimg.cn/large/006tKfTcly1flzgnfo1k8g30ms0jiaag.gif)
 
 ## 下载国外资源
 

@@ -14,7 +14,7 @@ tags: [proxy,linux]
 	自动翻墙，本地无需配置。
 
 ## 网络拓扑图
-![透明代理网络拓扑图](http://harchiko.qiniudn.com/Auto-Proxy/autoproxy_map.png)
+![透明代理网络拓扑图](https://ws4.sinaimg.cn/large/006tNc79ly1flzgup0srqj30j906oq33.jpg)
 
 ## 需求
 

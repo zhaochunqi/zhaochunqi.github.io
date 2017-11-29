@@ -8,7 +8,7 @@ tags: [raspberry,]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-05-30%20at%202.54.45%20AM.png](https://ws1.sinaimg.cn/large/006tKfTcly1flzgmws3xlj31bu14oq6x.jpg)
 
 ## lantern
 

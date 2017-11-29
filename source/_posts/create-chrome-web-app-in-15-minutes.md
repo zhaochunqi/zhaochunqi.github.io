@@ -8,13 +8,13 @@ tags: [chrome, developer]
 
 <!--more-->
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%2012.53.40%20PM.png](https://ws2.sinaimg.cn/large/006tNc79gy1flzgtn2qw6j30oa0tkq6r.jpg)
 
 ## 准备图标
 
 网上搜索一个图标，这里使用微信的图标
 
-![http://harchiko.qiniudn.com/wechat128.png](http://harchiko.qiniudn.com/wechat128.png)
+![http://harchiko.qiniudn.com/wechat128.png](https://ws4.sinaimg.cn/large/006tNc79ly1flzgtpbujxj303k03k3yd.jpg)
 
 ## 创建 manifest.json 文件
 
@@ -44,11 +44,11 @@ tags: [chrome, developer]
 
 打开Chrome的扩展界面，勾选 `Developer Mode`, 点击 `Load unpacked extention`,找到文件夹：
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.21%20PM.png](https://ws3.sinaimg.cn/large/006tNc79ly1flzgtvkf2fj317s09m0u6.jpg)
 
 打开Chrome App Launcher，你的应用已在其中:
 
-![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png](http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png)
+![http://harchiko.qiniudn.com/Screen%20Shot%202016-04-24%20at%201.03.57%20PM.png](https://ws4.sinaimg.cn/large/006tNc79ly1flzgu1nzbqj30ly0rqadn.jpg)
 
 点击后跳转到 微信界面。
 
