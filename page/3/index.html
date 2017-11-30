@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="theme-color" content="#f8f5ec"><meta name="msapplication-navbutton-color" content="#f8f5ec"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec"><link rel="alternate" href="/atom.xml" title="Alex Coding"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0"><link rel="canonical" href="http://blog.zhaochunqi.com/page/3/"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0"><script id="baidu_analytics">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?cfffa20d202ba9f4f0d6257e1cc94ea6";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script id="google_analytics">!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject="ga",e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement("script"),o=a.getElementsByTagName("script")[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document),ga("create","UA-42448552-1","auto"),ga("send","pageview")</script><script id="baidu_push">!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script><script id="leancloud">AV.init({appId:"YECzMLE9UTvajIqEbA5NK8wN-gzGzoHsz",appKey:"vK6VPlmNULOlnr5q6CFvqozN"})</script><title>Alex Coding</title></head><body><div id="mobile-navbar" class="mobile-navbar"><div class="mobile-header-logo"><a href="/." class="logo">Alex Coding</a></div><div class="mobile-navbar-icon"><span></span> <span></span> <span></span></div></div><nav id="mobile-menu" class="mobile-menu slideout-menu"><ul class="mobile-menu-list"><a href="/"><li class="mobile-menu-item">首页</li></a><a href="/categories/weekly"><li class="mobile-menu-item">Weekly</li></a><a href="/archives/"><li class="mobile-menu-item">归档</li></a></ul></nav><div class="container" id="mobile-panel"><header id="header" class="header"><div class="logo-wrapper"><a href="/." class="logo">Alex Coding</a></div><nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item"><a class="menu-item-link" href="/">首页</a></li><li class="menu-item"><a class="menu-item-link" href="/categories/weekly">Weekly</a></li><li class="menu-item"><a class="menu-item-link" href="/archives/">归档</a></li></ul></nav></header><main id="main" class="main"><div class="content-wrapper"><div id="content" class="content"><section id="posts" class="posts"><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-link" href="/2015/11/26/random-git-commit/">添加一个随机的 Git 提交说明</a></h1><div class="post-meta"><span class="post-time">2015-11-26</span><div class="post-category"><a href="/categories/snippets/">snippets</a></div><div class="post-visits" data-url="/2015/11/26/random-git-commit/" data-title="添加一个随机的 Git 提交说明">阅读次数</div></div></header><div class="post-content"><p><strong>代码 </strong>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"<span class="variable">$(curl -s http://whatthecommit.com/ | awk '/&lt;p&gt;/ &#123;sub("&lt;p&gt;", "")</span>; print &#125;')"</span></span><br></pre></td></tr></table></figure>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="theme-color" content="#f8f5ec"><meta name="msapplication-navbutton-color" content="#f8f5ec"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec"><link rel="alternate" href="/atom.xml" title="Alex Coding"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0"><link rel="canonical" href="http://blog.zhaochunqi.com/page/3/"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0"><script id="baidu_analytics">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?cfffa20d202ba9f4f0d6257e1cc94ea6";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script id="google_analytics">!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject="ga",e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement("script"),o=a.getElementsByTagName("script")[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document),ga("create","UA-42448552-1","auto"),ga("send","pageview")</script><script id="baidu_push">!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script><script id="leancloud">AV.init({appId:"YECzMLE9UTvajIqEbA5NK8wN-gzGzoHsz",appKey:"vK6VPlmNULOlnr5q6CFvqozN"})</script><title>Alex Coding</title></head><body><div id="mobile-navbar" class="mobile-navbar"><div class="mobile-header-logo"><a href="/." class="logo">Alex Coding</a></div><div class="mobile-navbar-icon"><span></span> <span></span> <span></span></div></div><nav id="mobile-menu" class="mobile-menu slideout-menu"><ul class="mobile-menu-list"><a href="/"><li class="mobile-menu-item">首页</li></a><a href="/categories/weekly"><li class="mobile-menu-item">Weekly</li></a><a href="/archives/"><li class="mobile-menu-item">归档</li></a></ul></nav><div class="container" id="mobile-panel"><header id="header" class="header"><div class="logo-wrapper"><a href="/." class="logo">Alex Coding</a></div><nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item"><a class="menu-item-link" href="/">首页</a></li><li class="menu-item"><a class="menu-item-link" href="/categories/weekly">Weekly</a></li><li class="menu-item"><a class="menu-item-link" href="/archives/">归档</a></li></ul></nav></header><main id="main" class="main"><div class="content-wrapper"><div id="content" class="content"><section id="posts" class="posts"><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-link" href="/2015/11/26/useful-terminal-commands/">常用的终端命令</a></h1><div class="post-meta"><span class="post-time">2015-11-26</span><div class="post-visits" data-url="/2015/11/26/useful-terminal-commands/" data-title="常用的终端命令">阅读次数</div></div></header><div class="post-content"><p>介绍一些常用的Linux命令，这些命令能够在终端下极大的方便我们的操作。</p><div class="read-more"><a href="/2015/11/26/useful-terminal-commands/" class="read-more-link">阅读更多</a></div></div></article><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-link" href="/2015/11/26/random-git-commit/">添加一个随机的 Git 提交说明</a></h1><div class="post-meta"><span class="post-time">2015-11-26</span><div class="post-category"><a href="/categories/snippets/">snippets</a></div><div class="post-visits" data-url="/2015/11/26/random-git-commit/" data-title="添加一个随机的 Git 提交说明">阅读次数</div></div></header><div class="post-content"><p><strong>代码 </strong>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"<span class="variable">$(curl -s http://whatthecommit.com/ | awk '/&lt;p&gt;/ &#123;sub("&lt;p&gt;", "")</span>; print &#125;')"</span></span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2015/11/26/random-git-commit/" class="read-more-link">阅读更多</a>
           </div>
@@ -637,54 +637,6 @@
           <p>因为一些国内的客观原因，google的访问速度一直很慢，通过firebug看了下google 相关的服务加载速度超过了1s种，而且经常加载不成功。</p>
           <div class="read-more">
             <a href="/2015/01/27/change-google-font-to-360/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2015/01/23/how-to-use-xpath/">xpath 简明教程</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2015-01-23
-        </span>
-        
-        
-        <div class="post-visits" data-url="/2015/01/23/how-to-use-xpath/" data-title="xpath 简明教程">
-            阅读次数
-          </div>
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h2 id="什么是xpath"><a href="#什么是xpath" class="headerlink" title="什么是xpath?"></a>什么是xpath?</h2><blockquote><p>XPath 是一门在 XML 文档中查找信息的语言。XPath 可用来在 XML 文档中对元素和属性进行遍历。</p></blockquote>
-          <div class="read-more">
-            <a href="/2015/01/23/how-to-use-xpath/" class="read-more-link">阅读更多</a>
           </div>
         
       
