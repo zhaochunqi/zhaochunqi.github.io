@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[Thu Nov 30 2017 00:00:00 GMT+0000 (UTC)]]></title>
+      <url>/2017/11/30/2017-11-30/</url>
+      <content type="html"><![CDATA[<blockquote><p> 好看的皮囊千篇一律，有趣的思想万中无一。</p></blockquote>]]></content>
+      
+        <categories>
+            
+            <category> microblog </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用 docker 进行 Minecraft 开服与备份]]></title>
       <url>/2017/10/16/mincraft_in_docker/</url>
       <content type="html"><![CDATA[<blockquote><p>没有什么事情，是跟好友一起玩游戏更快乐的了。去年怂恿老夏入了一套正版的 Minecraft 之后，就一直考虑如何联机一起搞。如今我们两个虽然不在一个城市了，但并不妨碍一起继续玩游戏。</p></blockquote><a id="more"></a><h2 id="目标"><a href="# 目标" class="headerlink" title="目标"></a>目标 </h2><p> 从我决定开服起，我就给自己定下了以下目标:</p><ol><li>简单。</li><li>安全。</li></ol><p>所谓简单，我想要的是配置简单。 而安全，则是数据的安全。 我不希望那一天我的服务器发生灾难性事故，我的 Minecraft 存档毁于一旦。</p><h2 id="行动"><a href="# 行动" class="headerlink" title="行动"></a>行动 </h2><p> 毫无疑问，docker 是我的第一选择。</p><p>经过一番考虑，我选择了使用 dropbox 备份我的数据，在开启 Minecraft 的 docker 镜像之前，先将 dropbox 镜像建立起来。</p><h3 id="创建 -dropbox-container"><a href="# 创建 -dropbox-container" class="headerlink" title="创建 dropbox container"></a>创建 dropbox container</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always --name=dropbox -v /home/zcq_qiqi/Dbox/Dropbox:/dbox/Dropbox -v /home/zcq_qiqi</span><br><span class="line">/Dbox/.dropbox:/dbox/.dropbox janeczku/dropbox</span><br></pre></td></tr></table></figure>
@@ -27,9 +47,9 @@
         
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> docker </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -1354,22 +1374,6 @@ Bundle &apos;mattn/gist-vim&apos;
     </entry>
     
     <entry>
-      <title><![CDATA[美剧订阅神器 showrss]]></title>
-      <url>/2015/02/04/tools-for-us-TV-series/</url>
-      <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="noopener">showrss</a>,</p><a id="more"></a><h2 id="界面"><a href="# 界面" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpt2aj1j30rf0d1750.jpg" alt="showrss"></p><h3 id="使用 RSS 订阅"><a href="# 使用 RSS 订阅" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"><a href="# 你还可以使用 RSS 订阅" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p><h4 id="在界面中点击你喜欢的美剧名称即可订阅"><a href="# 在界面中点击你喜欢的美剧名称即可订阅" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpudq1tj30qr0anwff.jpg" alt="pickseries"></p><h4 id="如果你想知道下一集是什么的话，网站还提供计划表"><a href="# 如果你想知道下一集是什么的话，网站还提供计划表" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgpvnci6j30rs06wwet.jpg" alt="schedule"></p><h4 id="你还可以使用 RSS 订阅 -1"><a href="# 你还可以使用 RSS 订阅 -1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅 </h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpx61awj30tt07rt9b.jpg" alt="rss"></p><h4 id="在这里面，你可以进行："><a href="# 在这里面，你可以进行：" class="headerlink" title="在这里面，你可以进行："></a> 在这里面，你可以进行：</h4><ul><li>单集 RSS 订阅 </li><li> 个人剧集订阅 </li><li> 剧集时间表订阅 (提供 rss 和 iCalendar 格式)</li><li> 网站信息订阅（这个不重要)</li></ul>]]></content>
-      
-        
-        <tags>
-            
-            <tag> series </tag>
-            
-            <tag> tv </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[基于 Shadowsocks 透明代理的实现]]></title>
       <url>/2015/02/04/Auto-Proxy/</url>
       <content type="html"><![CDATA[<p><strong>本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p><a id="more"></a><p>程序员们最在意的，可能就是网络跟设备配置了。</p><p>做一个透明代理，能够做到：</p><pre><code>自动翻墙，本地无需配置。
@@ -1381,6 +1385,22 @@ Bundle &apos;mattn/gist-vim&apos;
             <tag> proxy </tag>
             
             <tag> linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[美剧订阅神器 showrss]]></title>
+      <url>/2015/02/04/tools-for-us-TV-series/</url>
+      <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="noopener">showrss</a>,</p><a id="more"></a><h2 id="界面"><a href="# 界面" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpt2aj1j30rf0d1750.jpg" alt="showrss"></p><h3 id="使用 RSS 订阅"><a href="# 使用 RSS 订阅" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"><a href="# 你还可以使用 RSS 订阅" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p><h4 id="在界面中点击你喜欢的美剧名称即可订阅"><a href="# 在界面中点击你喜欢的美剧名称即可订阅" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpudq1tj30qr0anwff.jpg" alt="pickseries"></p><h4 id="如果你想知道下一集是什么的话，网站还提供计划表"><a href="# 如果你想知道下一集是什么的话，网站还提供计划表" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgpvnci6j30rs06wwet.jpg" alt="schedule"></p><h4 id="你还可以使用 RSS 订阅 -1"><a href="# 你还可以使用 RSS 订阅 -1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅 </h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpx61awj30tt07rt9b.jpg" alt="rss"></p><h4 id="在这里面，你可以进行："><a href="# 在这里面，你可以进行：" class="headerlink" title="在这里面，你可以进行："></a> 在这里面，你可以进行：</h4><ul><li>单集 RSS 订阅 </li><li> 个人剧集订阅 </li><li> 剧集时间表订阅 (提供 rss 和 iCalendar 格式)</li><li> 网站信息订阅（这个不重要)</li></ul>]]></content>
+      
+        
+        <tags>
+            
+            <tag> series </tag>
+            
+            <tag> tv </tag>
             
         </tags>
         
