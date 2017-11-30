@@ -18,7 +18,7 @@ tags: []
 3. [招聘时的「N 年编程经验」，实际是在要求什么？](https://daily.zhihu.com/story/9456555) 我们经常在jd中看到关于编程经验的要求，可曾想过，他们想要的究竟是什么？知乎的这篇文章或许会给你一些答案。
 4. [dockcloud 加速](https://www.daocloud.io/mirror#accelerator-doc) 国内的docker镜像基本没有办法下载，使用dockcloud加速，效果明显。
 
-## 生活:
+## 生活
 
 1. [在家装里，最划算的投入是什么？](https://www.zhihu.com/question/36225746/answer/140211009?utm_source=com.ideashower.readitlater.pro&utm_medium=social) 最近在看一些家装，翻看了好多类似的文章，这篇的东西很对我的胃口。 
 2. [优秀的思想值得传播，他们推荐了这 9 个演讲](http://liqi.io/sharing86/) 这几个文章我还没来得及看，但肯定是要看的了。
