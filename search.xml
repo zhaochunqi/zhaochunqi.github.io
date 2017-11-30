@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[本周我学到了]]></title>
+      <title><![CDATA[本周我学到了 \#2]]></title>
       <url>/2017/10/16/this_week_i_learned_2/</url>
       <content type="html"><![CDATA[<p>本周我学到了以下内容:</p><h2 id="学习"><a href="# 学习" class="headerlink" title="学习"></a>学习 </h2><ol><li> 本周在公司电脑上安装了一台 centos 7，发现了 Centos 已经移除了 ipconfig 命令，取而代之的是 iproute。 原因是 ipconfig 已经十几年没有人维护了。原来的命令也有了一些改变， 比如 查看网址可以 ip a 了，可以看下这篇文章来熟悉下。 <a href="https://www.linux.com/learn/replacing-ifconfig-ip" target="_blank" rel="noopener">https://www.linux.com/learn/replacing-ifconfig-ip</a></li><li><a href="https://zhaochunqi.com/2017/10/16/mincraft_in_docker/" target="_blank" rel="noopener">使用 docker 进行 Minecraft 开服与备份 </a> 这是我自己的博客文章，分享了使用 dropbox 镜像和 Minecraft 镜像来进行 Minecraft 开服和备份的操作。</li><li><a href="https://daily.zhihu.com/story/9456555" target="_blank" rel="noopener"> 招聘时的「N 年编程经验」，实际是在要求什么？</a> 我们经常在 jd 中看到关于编程经验的要求，可曾想过，他们想要的究竟是什么？知乎的这篇文章或许会给你一些答案。</li><li><a href="https://www.daocloud.io/mirror#accelerator-doc" target="_blank" rel="noopener">dockcloud 加速 </a> 国内的 docker 镜像基本没有办法下载，使用 dockcloud 加速，效果明显。</li></ol><h2 id="生活"><a href="# 生活" class="headerlink" title="生活:"></a> 生活:</h2><ol><li><a href="https://www.zhihu.com/question/36225746/answer/140211009?utm_source=com.ideashower.readitlater.pro&amp;utm_medium=social" target="_blank" rel="noopener">在家装里，最划算的投入是什么？</a> 最近在看一些家装，翻看了好多类似的文章，这篇的东西很对我的胃口。</li><li><a href="http://liqi.io/sharing86/" target="_blank" rel="noopener">优秀的思想值得传播，他们推荐了这 9 个演讲</a> 这几个文章我还没来得及看，但肯定是要看的了。</li></ol><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1flzvpaggyfj31kw0tqkjl.jpg" alt="https://ws2.sinaimg.cn/large/006tNc79ly1flzvpaggyfj31kw0tqkjl.jpg"></p><p>​</p>]]></content>
       
@@ -17,7 +17,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[本周我学到了]]></title>
+      <title><![CDATA[本周我学到了 \#1]]></title>
       <url>/2017/10/08/this_week_i_learned_1/</url>
       <content type="html"><![CDATA[<h2 id="学习"><a href="# 学习" class="headerlink" title="学习"></a>学习 </h2><p>• <a href="https://android.jlelse.eu/7-reasons-this-android-code-style-improves-your-productivity-65d196fa55f" target="_blank" rel="noopener">7 reasons this Android Code Style improves your productivity</a></p><blockquote><p> 对于 Android 开发来说很有用的代码规范，是对默认的 Android Studio 提供的代码规范的一种改进。</p><p>支持 kotlin，我最喜欢的是 xml 中的 id 放在首行 </p><p> 安装使用非常简单，无需什么额外的学习成本 </p></blockquote><p>• <a href="https://sspai.com/post/41022" target="_blank" rel="noopener"> 给你 48 小时，能做出什么样的游戏？——Ludum Dare 限时游戏制作竞赛 </a></p><blockquote><p> 少数派的这篇文章简直给我打开了新世界的大门。</p><p>我对着文中提到的 B 站的文章看了一个小时。</p></blockquote><p>• <a href="https://youtu.be/7kVeCqQCxlk" target="_blank" rel="noopener">YOUTUBE:CSS Grid Changes EVERYTHING - Amazing Presentation</a></p><blockquote><p>厌烦了 HTML 中一层又一层的 div 来实现网页效果？</p><p>不使用 JavaScript 如何 Responsive Design？</p><p>试试 CSS Grid 吧，觉得兼容性不够为时尚早？— 世界上本没有路，走的人多了，也变成了路。</p><p>演讲者还提写了篇博客来介绍： <a href="https://www.smashingmagazine.com/2017/06/building-production-ready-css-grid-layout/" target="_blank" rel="noopener">Building Production-Ready CSS Grid Layouts Today</a></p></blockquote><h2 id="生活"><a href="# 生活" class="headerlink" title="生活"></a>生活 </h2><p>• <a href="https://daily.zhihu.com/story/9544475" target="_blank" rel="noopener"> 鲜辣开胃，香而不腻的蒜泥白肉，是最送饭的一道凉菜 </a></p><blockquote><p> 这道菜简直太对我的胃口了，简单易做。</p></blockquote>]]></content>
       
