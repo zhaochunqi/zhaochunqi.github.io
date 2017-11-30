@@ -18,9 +18,10 @@ rss: default
 # ===========================================
 menu:
   Home: /
+  Weekly: /categories/weekly
   Archives: /archives/
-  Tags: /tags
-  Categories: /categories
+  # Tags: /tags
+  # Categories: /categories
   # About: /about
 
 # ===========================================
