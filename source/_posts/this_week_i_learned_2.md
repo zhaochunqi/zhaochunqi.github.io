@@ -1,4 +1,4 @@
-title: 本周我学到了 #2
+title: 本周我学到了 \#2
 date: 2017-10-16 9:47 AM
 categories: "weekly"
 tags: []
