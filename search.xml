@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[【2017-12-05】]]></title>
+      <url>/2017/12/05/2017-12-05/</url>
+      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p> 使用的一个 Google 服务在重复的时候会报错 HTTP429。 我本来以为 429 错误会是重复导致的。</p><p>但是根据 <a href="https://httpstatuses.com/429" target="_blank" rel="noopener">https://httpstatuses.com/429</a> 链接来看，429 是由于请求过多的原因导致。</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><p> 先看日志。</p><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a> 记录此方法，思考是否有更好的解决方法</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[【2017-12-04】]]></title>
       <url>/2017/12/04/2017-12-04/</url>
       <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p>AKKA Stream 添加 fault tolerance。</p><p> 需要能够在出现简单问题的时候能够自动重启。出错原因要能够 Push 到 SQS</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><p> 参考 AKKA Stream 中的记录的 fault tolerance 的方法来操作。</p><p><a href="https://doc.akka.io/docs/akka/2.5.5/scala/stream/stream-error.html" target="_blank" rel="noopener">https://doc.akka.io/docs/akka/2.5.5/scala/stream/stream-error.html</a></p><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><ul><li><p> 使用 <code>recover</code> 方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.recover(<span class="keyword">new</span> PFBuilder()</span><br><span class="line">.match(RuntimeException.class, ex -&gt; <span class="string">"stream truncated"</span>)</span><br><span class="line">.build()</span><br></pre></td></tr></table></figure>
