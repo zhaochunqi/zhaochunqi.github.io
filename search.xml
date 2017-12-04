@@ -5,18 +5,35 @@
     <entry>
       <title><![CDATA[【2017-12-04】]]></title>
       <url>/2017/12/04/2017-12-04/</url>
-      <content type="html"><![CDATA[<blockquote><p>wow, great, 今天学习到了一招，可以在 .zshrc 中添加命令，然后一键写日记。</p></blockquote><hr><blockquote><p>Love Live 最棒！！</p></blockquote><hr><blockquote><p>今天的任务是重头温习 <akka in=""action=""> 虽然之前也只是看到一半，但是继续看下去的话比较混乱，早上带了 iPad Mini 在公交车上看。</akka></p></blockquote><hr>]]></content>
+      <content type="html"><![CDATA[<blockquote><p>wow, great, 今天学习到了一招，可以在 .zshrc 中添加命令，然后一键写日记。</p></blockquote><hr><blockquote><p>今天的任务是重头温习 <akka in=""action=""> 虽然之前也只是看到一半，但是继续看下去的话比较混乱，早上带了 iPad Mini 在公交车上看。</akka></p></blockquote><hr>]]></content>
       
         <categories>
             
-            <category> microblog </category>
+            <category> logbook </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> life </tag>
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[通过 logbook 来提升编程技能]]></title>
+      <url>/2017/12/04/write_logs_use_logbooks/</url>
+      <content type="html"><![CDATA[<blockquote><p>本文通过介绍了一种通过 logbook 的记录来提高自己编程技能的简便方法。</p></blockquote><a id="more"></a><p>这篇文章是我在看了 <a href="https://routley.io/tech/2017/11/23/logbook.html?utm_campaign=CodeTengu&amp;utm_medium=rss&amp;utm_source=CodeTengu_108" target="_blank" rel="noopener">Using a logbook to improve your programming</a> 的记录。</p><h2 id="记录原则"><a href="# 记录原则" class="headerlink" title="记录原则"></a>记录原则 </h2><p>logbook 记录有几个原则:</p><ol><li> 考虑你要解决的问题是什么？</li><li>描述你用来解决问题的办法。</li><li>描述你使用此方法的过程。</li><li>记录，并查看是否有更好的方案。</li></ol><h2 id="编程使用的优点"><a href="# 编程使用的优点" class="headerlink" title="编程使用的优点"></a>编程使用的优点 </h2><ol><li> 分解大问题为小问题。</li><li>很容易在分散精力之后重新回到工作状态。</li><li>可以从你的日志中快速学习。你可以查看你使用过的方法，然后了解哪些方法奏效，哪些无用。</li></ol><h2 id="快捷方法"><a href="# 快捷方法" class="headerlink" title="快捷方法"></a>快捷方法 </h2><p> 定义此方法到 <code>.zshrc</code> 中.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">lb</span></span>() &#123;</span><br><span class="line">    vim ~/logbook/$(date <span class="string">'+%Y-%m-%d'</span>).md</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考链接: </p>
+<ul>
+<li><a href="https://routley.io/tech/2017/11/23/logbook.html?utm_campaign=CodeTengu&amp;utm_medium=rss&amp;utm_source=CodeTengu_108" target="_blank" rel="noopener">https://routley.io/tech/2017/11/23/logbook.html?utm_campaign=CodeTengu&amp;utm_medium=rss&amp;utm_source=CodeTengu_108</a></li></ul>]]></content>
+      
+        
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -32,14 +49,14 @@
       
         <categories>
             
-            <category> microblog </category>
+            <category> logbook </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> life </tag>
+            <tag> dev </tag>
             
         </tags>
         
@@ -1397,6 +1414,22 @@ Bundle &apos;mattn/gist-vim&apos;
     </entry>
     
     <entry>
+      <title><![CDATA[美剧订阅神器 showrss]]></title>
+      <url>/2015/02/04/tools-for-us-TV-series/</url>
+      <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="noopener">showrss</a>,</p><a id="more"></a><h2 id="界面"><a href="# 界面" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpt2aj1j30rf0d1750.jpg" alt="showrss"></p><h3 id="使用 RSS 订阅"><a href="# 使用 RSS 订阅" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"><a href="# 你还可以使用 RSS 订阅" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p><h4 id="在界面中点击你喜欢的美剧名称即可订阅"><a href="# 在界面中点击你喜欢的美剧名称即可订阅" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpudq1tj30qr0anwff.jpg" alt="pickseries"></p><h4 id="如果你想知道下一集是什么的话，网站还提供计划表"><a href="# 如果你想知道下一集是什么的话，网站还提供计划表" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgpvnci6j30rs06wwet.jpg" alt="schedule"></p><h4 id="你还可以使用 RSS 订阅 -1"><a href="# 你还可以使用 RSS 订阅 -1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅 </h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpx61awj30tt07rt9b.jpg" alt="rss"></p><h4 id="在这里面，你可以进行："><a href="# 在这里面，你可以进行：" class="headerlink" title="在这里面，你可以进行："></a> 在这里面，你可以进行：</h4><ul><li>单集 RSS 订阅 </li><li> 个人剧集订阅 </li><li> 剧集时间表订阅 (提供 rss 和 iCalendar 格式)</li><li> 网站信息订阅（这个不重要)</li></ul>]]></content>
+      
+        
+        <tags>
+            
+            <tag> series </tag>
+            
+            <tag> tv </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[基于 Shadowsocks 透明代理的实现]]></title>
       <url>/2015/02/04/Auto-Proxy/</url>
       <content type="html"><![CDATA[<p><strong>本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p><a id="more"></a><p>程序员们最在意的，可能就是网络跟设备配置了。</p><p>做一个透明代理，能够做到：</p><pre><code>自动翻墙，本地无需配置。
@@ -1408,22 +1441,6 @@ Bundle &apos;mattn/gist-vim&apos;
             <tag> proxy </tag>
             
             <tag> linux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[美剧订阅神器 showrss]]></title>
-      <url>/2015/02/04/tools-for-us-TV-series/</url>
-      <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="noopener">showrss</a>,</p><a id="more"></a><h2 id="界面"><a href="# 界面" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpt2aj1j30rf0d1750.jpg" alt="showrss"></p><h3 id="使用 RSS 订阅"><a href="# 使用 RSS 订阅" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"><a href="# 你还可以使用 RSS 订阅" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p><h4 id="在界面中点击你喜欢的美剧名称即可订阅"><a href="# 在界面中点击你喜欢的美剧名称即可订阅" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpudq1tj30qr0anwff.jpg" alt="pickseries"></p><h4 id="如果你想知道下一集是什么的话，网站还提供计划表"><a href="# 如果你想知道下一集是什么的话，网站还提供计划表" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgpvnci6j30rs06wwet.jpg" alt="schedule"></p><h4 id="你还可以使用 RSS 订阅 -1"><a href="# 你还可以使用 RSS 订阅 -1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅 </h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpx61awj30tt07rt9b.jpg" alt="rss"></p><h4 id="在这里面，你可以进行："><a href="# 在这里面，你可以进行：" class="headerlink" title="在这里面，你可以进行："></a> 在这里面，你可以进行：</h4><ul><li>单集 RSS 订阅 </li><li> 个人剧集订阅 </li><li> 剧集时间表订阅 (提供 rss 和 iCalendar 格式)</li><li> 网站信息订阅（这个不重要)</li></ul>]]></content>
-      
-        
-        <tags>
-            
-            <tag> series </tag>
-            
-            <tag> tv </tag>
             
         </tags>
         
