@@ -19,7 +19,7 @@ rss: default
 menu:
   Home: /
   Weekly: /categories/weekly
-  随想: /categories/logbook
+  Logbook: /categories/logbook
   Archives: /archives/
   # Tags: /tags
   # Categories: /categories
