@@ -5,7 +5,34 @@
     <entry>
       <title><![CDATA[【2017-12-04】]]></title>
       <url>/2017/12/04/2017-12-04/</url>
-      <content type="html"><![CDATA[<blockquote><p>wow, great, 今天学习到了一招，可以在 .zshrc 中添加命令，然后一键写日记。</p></blockquote><hr><blockquote><p>今天的任务是重头温习 <akka in=""action=""> 虽然之前也只是看到一半，但是继续看下去的话比较混乱，早上带了 iPad Mini 在公交车上看。</akka></p></blockquote><hr>]]></content>
+      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p>AKKA Stream 添加 fault tolerance。</p><p> 需要能够在出现简单问题的时候能够自动重启。出错原因要能够 Push 到 SQS</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><p> 参考 AKKA Stream 中的记录的 fault tolerance 的方法来操作。</p><p><a href="https://doc.akka.io/docs/akka/2.5.5/scala/stream/stream-error.html" target="_blank" rel="noopener">https://doc.akka.io/docs/akka/2.5.5/scala/stream/stream-error.html</a></p><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><ul><li><p> 使用 <code>recover</code> 方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.recover(<span class="keyword">new</span> PFBuilder()</span><br><span class="line">.match(RuntimeException.class, ex -&gt; <span class="string">"stream truncated"</span>)</span><br><span class="line">.build()</span><br></pre></td></tr></table></figure>
+<p>  这个方法好像不能获取到出错地方的具体信息，比如传入源的信息，这样我就没有办法把日志记录到 SQS 中了。</p>
+</li>
+<li><p>使用 <code>recoverWithRetries</code> 方法</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.recoverWithRetries(</span><br><span class="line"><span class="number">1</span>, <span class="comment">// max attempts</span></span><br><span class="line"><span class="keyword">new</span> PFBuilder()</span><br><span class="line">    .match(RuntimeException.class, ex -&gt; planB)</span><br><span class="line">    .build()</span><br></pre></td></tr></table></figure>
+<p>  方法同上，问题也同上。</p>
+</li>
+<li><p>使用 <code>Delayed restarts with a backoff stage</code></p>
+<p>  目前看起来这个有可能靠谱。</p>
+<p>  但我还没理解这里面说的具体是什么意思。同时，我查看了这几个链接：</p>
+<ul>
+<li><p><a href="https://stackoverflow.com/questions/23773175/akka-java-fault-tolerance-and-actor-restarting" target="_blank" rel="noopener">https://stackoverflow.com/questions/23773175/akka-java-fault-tolerance-and-actor-restarting</a></p>
+<p>这个 so 问答链接里面还是讲解了很多的关于 actor 问题的探讨，值得一看。</p>
+</li>
+<li><p><a href="http://danielwestheide.com/blog/2013/03/20/the-neophytes-guide-to-scala-part-15-dealing-with-failure-in-actor-systems.html" target="_blank" rel="noopener">http://danielwestheide.com/blog/2013/03/20/the-neophytes-guide-to-scala-part-15-dealing-with-failure-in-actor-systems.html</a></p>
+<p>根据这个链接处理了 默认的 decider 方法。顺便看了 scala 关于 try catch 的一些特殊处理。 <a href="http://danielwestheide.com/blog/2012/12/26/the-neophytes-guide-to-scala-part-6-error-handling-with-try.html" target="_blank" rel="noopener">http://danielwestheide.com/blog/2012/12/26/the-neophytes-guide-to-scala-part-6-error-handling-with-try.html</a></p>
+</li>
+<li><p><a href="https://doc.akka.io/docs/akka/2.3.9/java/untyped-actors.html#Ask__Send-And-Receive-Future" target="_blank" rel="noopener">https://doc.akka.io/docs/akka/2.3.9/java/untyped-actors.html#Ask__Send-And-Receive-Future</a><br>这个链接主要是跟着上文的 SO 链接过来的，没看懂要表达什么。</p>
+</li>
+</ul>
+</li>
+<li><p>使用 <code>supervision strategy</code></p>
+<p>  上面的链接用到了此方法。</p>
+</li>
+</ul>
+<h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a>记录此方法，思考是否有更好的解决方法 </h3><p> 最终采用的代码:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Function&lt;Throwable, Supervision.Directive&gt; decider = exc -&gt; &#123;</span><br><span class="line">    log.error(ExceptionUtils.getStackTrace(exc));</span><br><span class="line">    <span class="keyword">if</span>(exc <span class="keyword">instanceof</span> ActorInitializationException)&#123;</span><br><span class="line">        <span class="keyword">return</span> Supervision.stop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(exc <span class="keyword">instanceof</span> ActorKilledException) &#123;</span><br><span class="line">        <span class="keyword">return</span> Supervision.stop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Supervision.restart();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>OneForOneStrategy 这种好像在 Akka Stream 上不适用，默认就是 OneForOneStrategy ？</p>]]></content>
       
         <categories>
             
