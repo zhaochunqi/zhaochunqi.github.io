@@ -3,9 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[【2017-12-06】]]></title>
+      <url>/2017/12/06/2017-12-06/</url>
+      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p> 使用的一个 Google 服务在重复的时候会报错 HTTP429。 我本来以为 429 错误会是重复导致的。但是根据 <a href="https://httpstatuses.com/429" target="_blank" rel="noopener">https://httpstatuses.com/429</a> 链接来看，429 是由于请求过多的原因导致。</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a> 记录解决过程 </h3><h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a> 记录此方法，思考是否有更好的解决方法</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[【2017-12-05】]]></title>
       <url>/2017/12/05/2017-12-05/</url>
-      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p> 使用的一个 Google 服务在重复的时候会报错 HTTP429。 我本来以为 429 错误会是重复导致的。</p><p>但是根据 <a href="https://httpstatuses.com/429" target="_blank" rel="noopener">https://httpstatuses.com/429</a> 链接来看，429 是由于请求过多的原因导致。</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><p> 先看日志。</p><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a> 记录此方法，思考是否有更好的解决方法</h3>]]></content>
+      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p> 如何在国内 vps 安装爬墙软件。</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><ol><li> 参看图拉鼎配置的文章。</li><li><a href="https://imtx.me/archives/2375.html" target="_blank" rel="noopener">https://imtx.me/archives/2375.html</a></li></ol><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><ol><li> 开启 byobu</li><li>安装 proxychains 与 shadowsocks。</li><li><code>proxychains curl ifconfig.me</code> 检查下 </li></ol><h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a> 记录此方法，思考是否有更好的解决方法 </h3><ol><li> 这种方法是在请求的时候套一个工具。</li></ol><p>目前感觉这种方法还不错。</p>]]></content>
       
         <categories>
             
