@@ -3,9 +3,96 @@
   
     
     <entry>
+      <title><![CDATA[【2017-12-11】]]></title>
+      <url>/2017/12/11/2017-12-11/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li><p> 一个非常古老的使用 Eclipse 的应用无法导入到 github 中，然后产生了一系列的问题。包括 </p><ul><li> 提示 <code>Gradle sync failed: Could not determine the class-path for interface org.jetbrains.kotlin.gradle.KotlinGradleModel.Consult IDE log for more details (Help | Show Log) (3m 25s 678ms)</code></li><li>编码无法解析为 UTF-8 ，经验证实际是 GB 2312</li><li>文件头中存在 BOM ，无法通过编译运行。</li></ul></li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 使用了下面的方法来解决 <ul><li>Eclipse 安装 ADT -&gt; 失败， 因为 ADT 已经好久都没有支持了。</li><li> 到 androiddevtools.cn 网站上找了个集成 Eclipse 的 adt。然后加载了项目之后通过 gradle 导出。</li><li>遇到的第一个 gradle 的报错， 修改了 gradle 依赖库，更新了 gradle-wrapper.properties 中的 gradle 版本。</li><li>utf-8 问题，通过 shell 脚本 <script src="https://gist.github.com/anonymous/14274ca40f45387a92d615107068ba85.js"></script></li><li> 文件头存在 Bom 的问题，通过脚本 <script src="https://gist.github.com/anonymous/01c97cfe381aab2edf812d04405f8d08.js"></script> 处理。</li></ul></li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><p> 无他，一步一步搜索。</p><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><p> 见解决方法。</p>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-10】]]></title>
+      <url>/2017/12/10/2017-12-10/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li> 无法获取到当前出现错误的地方，需要能够将错误信息 push 到 SQS 中。</li><li>Intellij 有个非常牛逼的功能 <a href="https://youtu.be/-7OyuTMgI1I?t=199" target="_blank" rel="noopener">https://youtu.be/-7OyuTMgI1I?t=199</a> 选中代码块，确定返回值类型。</li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 查看 Akka 的教程中关于 fault tolerance 方面。</li><li>使用系统自带的 CheetSheet 来查找快捷键。</li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><ol><li></li><li> 经过一番查找，发现是快捷键 Ctrl + Shift + P</li></ol><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><ol><li> 首先是想着从每日 tips 中查看，后来感觉可能在 CheetSheet 中有，查看了下 CheetSheet View 中的内容。</li></ol>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-08】]]></title>
+      <url>/2017/12/08/2017-12-08/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li> 首先是确保 fault tolerance 能够正常。</li><li>确保能够正常的测试 <ul><li> 抛出几个异常来看看。</li><li>如何把异常放到 sqs 中这是个问题。</li></ul></li><li>多个 xml 文件合并成一个。</li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-07】]]></title>
+      <url>/2017/12/07/2017-12-07/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li> 目前程序如何进行相关的调试工作。<br>Feed Stream 中的数据形式</li></ol><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;<span class="attr">"s3Bucket"</span>:<span class="string">"mac-job-feeds"</span>,<span class="attr">"s3Key"</span>:<span class="string">"jobs2careers-Gig-1512657035832.xml"</span>,<span class="attr">"jobFeedXML"</span>:&#123;<span class="attr">"id"</span>:<span class="string">"companies/3da9bfc9-9cfe-4373-b0fb-c181cd47c333"</span>,<span class="attr">"name"</span>:<span class="string">"Gig"</span>,<span class="attr">"url"</span>:<span class="string">"http://www2.jobs2careers.com/feed.php?id=1183-2055&amp;c=1&amp;pass=p8u01XbM3Pq5Fv2W"</span>,<span class="attr">"type"</span>:<span class="string">"jobs2careers"</span>,<span class="attr">"jobXmlTag"</span>:<span class="string">"job"</span>,<span class="attr">"gzipped"</span>:<span class="literal">true</span>,<span class="attr">"emptyCDATA"</span>:<span class="literal">false</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法</h3><ol>
+<li>可以在本地直接跑 FeedConsumer 来操作。</li>
+</ol>
+<h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程</h3><ol>
+<li>仔细询问了具体的步骤。</li>
+</ol>
+<h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[【2017-12-06】]]></title>
       <url>/2017/12/06/2017-12-06/</url>
-      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p> 使用的一个 Google 服务在重复的时候会报错 HTTP429。 我本来以为 429 错误会是重复导致的。但是根据 <a href="https://httpstatuses.com/429" target="_blank" rel="noopener">https://httpstatuses.com/429</a> 链接来看，429 是由于请求过多的原因导致。</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a> 记录解决过程 </h3><h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a> 记录此方法，思考是否有更好的解决方法</h3>]]></content>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p><del> 使用的一个 Google 服务在重复的时候会报错 HTTP429。 我本来以为 429 错误会是重复导致的。但是根据 <a href="https://httpstatuses.com/429" target="_blank" rel="noopener">https://httpstatuses.com/429</a> 链接来看，429 是由于请求过多的原因导致。</del></p><p><strong>搞错了 </strong> 结果是 409 问题。</p><p>409 是由于请求的资源 conflict</p><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><p><del>1. 查看代码中 429 问题之前的提交代码，查看如何进行查重的。</del></p><ol><li> 查看代码中产生 409 的地方是否采用的是 put 方法 </li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
       
         <categories>
             
