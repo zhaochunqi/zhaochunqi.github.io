@@ -3,6 +3,133 @@
   
     
     <entry>
+      <title><![CDATA[【2017-12-21】]]></title>
+      <url>/2017/12/21/2017-12-21/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a> 解决的方法 </h3><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-20】]]></title>
+      <url>/2017/12/20/2017-12-20/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p> 在 AWS Lambda 中添加 SFTP 下载方法。</p><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 使用 JSch 连接 -&gt; 未能解决，因为 ssh 禁用了弱的加密模式。需要手动开启，需要研究下如何开启。</li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><ol><li> 使用 JSCh ，直接报认证失败。报错信息有点简陋，可能我错过了什么。</li><li>使用系统自带的 yummy ftp 进行认证，发现也是无法进行正常的登录，终于发现了报错信息是 </li></ol><p><img src="https://ww1.sinaimg.cn/large/6277837dgy1fmo725tyudj21720a2my5.jpg" alt=""></p><ol><li> 换了另外一个库，也是同样的报错。</li></ol><h3 id=" 解决方法记录 "><a href="# 解决方法记录 "class="headerlink"title=" 解决方法记录 "></a>解决方法记录 </h3><p> 并没有解决，正在寻找解决办法。</p>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-17】]]></title>
+      <url>/2017/12/17/2017-12-17/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li>《芜湖公交》的使用的接口身边芜湖已经挂了至少一个星期了，看样子好像也没有修的打算。</li><li> 当前可用的版本还是《城市令》的查询公交接口，不过，城市令的接口是经过加密的，不能直接看到数据，形式如：<br>(中间有删减，不然特别长)<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"data"</span>: <span class="string">"2FDB121D73DAA81DE5AE2782C30AEx"</span>,</span><br><span class="line">	<span class="attr">"key"</span>: <span class="string">"y9+arDZ1N5OXRRYqaxgqtY8mKhxo9DyUx9iPgpAbR3Z+KmwHi6Ogzn4Ji46svefKt+jdCawWyUsid+XML54PlDedcjBi6x9os="</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这样的接口我是看不懂的，尝试使用普通的一些解密发现不能奏效，只能反编译下他的 apk 了。</p>
+<h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法</h3><ol>
+<li>城市令 APK</li>
+</ol>
+<h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-15】]]></title>
+      <url>/2017/12/15/2017-12-15/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p>Akka Stream 调试问题, 并行操作。</p><ol><li> 不了解现在存在什么问题。</li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><p><del> 先看书，然后开始着手解决，我给自己两个小时的看书时间。</del></p><ol><li>重点看一下最近的 commit 集中的几个文件。</li></ol><h3 id="解决的过程 - 未解决"><a href="# 解决的过程 - 未解决" class="headerlink" title="解决的过程 (未解决)"></a> 解决的过程 (未解决)</h3><ol><li> 修改了 UpsertJobRequest，FindCompanyRequest，DynamoDBClient，JobFeedStreamConvertSource，</li></ol><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><ol><li> 大体看了下，问题主要集中在 Parallel 这方面。</li><li>首先看 PDF 书中关于 Parallel 的部分，看如何来处理。</li></ol>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-14】]]></title>
+      <url>/2017/12/14/2017-12-14/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p>Akka Stream 不能正常工作。</p><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a> 解决的方法 </h3><p> 绘出 Akka Stream 的图。</p><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【2017-12-12】]]></title>
+      <url>/2017/12/12/2017-12-12/</url>
+      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a> 解决的方法 </h3><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
+      
+        <categories>
+            
+            <category> logbook </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> dev </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[【2017-12-11】]]></title>
       <url>/2017/12/11/2017-12-11/</url>
       <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li><p> 一个非常古老的使用 Eclipse 构建的 Android 应用无法导入到 Android Studio 中，然后产生了一系列的问题。包括 </p><ul><li> 提示 <code>Gradle sync failed: Could not determine the class-path for interface org.jetbrains.kotlin.gradle.KotlinGradleModel.Consult IDE log for more details (Help | Show Log) (3m 25s 678ms)</code></li><li>编码无法解析为 UTF-8 ，经验证实际是 GB 2312</li><li>文件头中存在 BOM ，无法通过编译运行。</li></ul></li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 使用了下面的方法来解决 <ul><li>Eclipse 安装 ADT -&gt; 失败， 因为 ADT 已经好久都没有支持了。</li><li> 到 androiddevtools.cn 网站上找了个集成 Eclipse 的 adt。然后加载了项目之后通过 gradle 导出。</li><li>遇到的第一个 gradle 的报错， 修改了 gradle 依赖库，更新了 gradle-wrapper.properties 中的 gradle 版本。</li><li>utf-8 问题，通过 shell 脚本 <strong> 如果您无法看到下面代码内容请使用科学上网工具 </strong><script src="https://gist.github.com/anonymous/14274ca40f45387a92d615107068ba85.js"></script></li><li> 文件头存在 Bom 的问题，通过脚本 <strong> 如果您无法看到下面代码内容请使用科学上网工具 </strong><script src="https://gist.github.com/anonymous/01c97cfe381aab2edf812d04405f8d08.js"></script> 处理。</li></ul></li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><p> 无他，一步一步搜索。</p><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><p> 见解决方法。</p>]]></content>
