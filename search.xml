@@ -3,307 +3,6 @@
   
     
     <entry>
-      <title><![CDATA[【2017-12-21】]]></title>
-      <url>/2017/12/21/2017-12-21/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a> 解决的方法 </h3><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-20】]]></title>
-      <url>/2017/12/20/2017-12-20/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p> 在 AWS Lambda 中添加 SFTP 下载方法。</p><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 使用 JSch 连接 -&gt; 未能解决，因为 ssh 禁用了弱的加密模式。需要手动开启，需要研究下如何开启。</li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><ol><li> 使用 JSCh ，直接报认证失败。报错信息有点简陋，可能我错过了什么。</li><li>使用系统自带的 yummy ftp 进行认证，发现也是无法进行正常的登录，终于发现了报错信息是 </li></ol><p><img src="https://ww1.sinaimg.cn/large/6277837dgy1fmo725tyudj21720a2my5.jpg" alt=""></p><ol><li> 换了另外一个库，也是同样的报错。</li></ol><h3 id=" 解决方法记录 "><a href="# 解决方法记录 "class="headerlink"title=" 解决方法记录 "></a>解决方法记录 </h3><p> 并没有解决，正在寻找解决办法。</p>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-17】]]></title>
-      <url>/2017/12/17/2017-12-17/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li>《芜湖公交》的使用的接口身边芜湖已经挂了至少一个星期了，看样子好像也没有修的打算。</li><li> 当前可用的版本还是《城市令》的查询公交接口，不过，城市令的接口是经过加密的，不能直接看到数据，形式如：<br>(中间有删减，不然特别长)<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"data"</span>: <span class="string">"2FDB121D73DAA81DE5AE2782C30AEx"</span>,</span><br><span class="line">	<span class="attr">"key"</span>: <span class="string">"y9+arDZ1N5OXRRYqaxgqtY8mKhxo9DyUx9iPgpAbR3Z+KmwHi6Ogzn4Ji46svefKt+jdCawWyUsid+XML54PlDedcjBi6x9os="</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>这样的接口我是看不懂的，尝试使用普通的一些解密发现不能奏效，只能反编译下他的 apk 了。</p>
-<h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法</h3><ol>
-<li>城市令 APK</li>
-</ol>
-<h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-15】]]></title>
-      <url>/2017/12/15/2017-12-15/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p>Akka Stream 调试问题, 并行操作。</p><ol><li> 不了解现在存在什么问题。</li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><p><del> 先看书，然后开始着手解决，我给自己两个小时的看书时间。</del></p><ol><li>重点看一下最近的 commit 集中的几个文件。</li></ol><h3 id="解决的过程 - 未解决"><a href="# 解决的过程 - 未解决" class="headerlink" title="解决的过程 (未解决)"></a> 解决的过程 (未解决)</h3><ol><li> 修改了 UpsertJobRequest，FindCompanyRequest，DynamoDBClient，JobFeedStreamConvertSource，</li></ol><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><ol><li> 大体看了下，问题主要集中在 Parallel 这方面。</li><li>首先看 PDF 书中关于 Parallel 的部分，看如何来处理。</li></ol>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-14】]]></title>
-      <url>/2017/12/14/2017-12-14/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p>Akka Stream 不能正常工作。</p><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a> 解决的方法 </h3><p> 绘出 Akka Stream 的图。</p><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-12】]]></title>
-      <url>/2017/12/12/2017-12-12/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a> 解决的方法 </h3><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-11】]]></title>
-      <url>/2017/12/11/2017-12-11/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li><p> 一个非常古老的使用 Eclipse 构建的 Android 应用无法导入到 Android Studio 中，然后产生了一系列的问题。包括 </p><ul><li> 提示 <code>Gradle sync failed: Could not determine the class-path for interface org.jetbrains.kotlin.gradle.KotlinGradleModel.Consult IDE log for more details (Help | Show Log) (3m 25s 678ms)</code></li><li>编码无法解析为 UTF-8 ，经验证实际是 GB 2312</li><li>文件头中存在 BOM ，无法通过编译运行。</li></ul></li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 使用了下面的方法来解决 <ul><li>Eclipse 安装 ADT -&gt; 失败， 因为 ADT 已经好久都没有支持了。</li><li> 到 androiddevtools.cn 网站上找了个集成 Eclipse 的 adt。然后加载了项目之后通过 gradle 导出。</li><li>遇到的第一个 gradle 的报错， 修改了 gradle 依赖库，更新了 gradle-wrapper.properties 中的 gradle 版本。</li><li>utf-8 问题，通过 shell 脚本 <strong> 如果您无法看到下面代码内容请使用科学上网工具 </strong><script src="https://gist.github.com/anonymous/14274ca40f45387a92d615107068ba85.js"></script></li><li> 文件头存在 Bom 的问题，通过脚本 <strong> 如果您无法看到下面代码内容请使用科学上网工具 </strong><script src="https://gist.github.com/anonymous/01c97cfe381aab2edf812d04405f8d08.js"></script> 处理。</li></ul></li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><p> 无他，一步一步搜索。</p><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><p> 见解决方法。</p>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-10】]]></title>
-      <url>/2017/12/10/2017-12-10/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li> 无法获取到当前出现错误的地方，需要能够将错误信息 push 到 SQS 中。</li><li>Intellij 有个非常牛逼的功能 <a href="https://youtu.be/-7OyuTMgI1I?t=199" target="_blank" rel="noopener">https://youtu.be/-7OyuTMgI1I?t=199</a> 选中代码块，确定返回值类型。</li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><ol><li> 查看 Akka 的教程中关于 fault tolerance 方面。</li><li>使用系统自带的 CheetSheet 来查找快捷键。</li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程 </h3><ol><li></li><li> 经过一番查找，发现是快捷键 Ctrl + Shift + P</li></ol><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录 </h3><ol><li> 首先是想着从每日 tips 中查看，后来感觉可能在 CheetSheet 中有，查看了下 CheetSheet View 中的内容。</li></ol>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-08】]]></title>
-      <url>/2017/12/08/2017-12-08/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li> 首先是确保 fault tolerance 能够正常。</li><li>确保能够正常的测试 <ul><li> 抛出几个异常来看看。</li><li>如何把异常放到 sqs 中这是个问题。</li></ul></li><li>多个 xml 文件合并成一个。</li></ol><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-07】]]></title>
-      <url>/2017/12/07/2017-12-07/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><ol><li> 目前程序如何进行相关的调试工作。<br>Feed Stream 中的数据形式</li></ol><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;<span class="attr">"s3Bucket"</span>:<span class="string">"mac-job-feeds"</span>,<span class="attr">"s3Key"</span>:<span class="string">"jobs2careers-Gig-1512657035832.xml"</span>,<span class="attr">"jobFeedXML"</span>:&#123;<span class="attr">"id"</span>:<span class="string">"companies/3da9bfc9-9cfe-4373-b0fb-c181cd47c333"</span>,<span class="attr">"name"</span>:<span class="string">"Gig"</span>,<span class="attr">"url"</span>:<span class="string">"http://www2.jobs2careers.com/feed.php?id=1183-2055&amp;c=1&amp;pass=p8u01XbM3Pq5Fv2W"</span>,<span class="attr">"type"</span>:<span class="string">"jobs2careers"</span>,<span class="attr">"jobXmlTag"</span>:<span class="string">"job"</span>,<span class="attr">"gzipped"</span>:<span class="literal">true</span>,<span class="attr">"emptyCDATA"</span>:<span class="literal">false</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法</h3><ol>
-<li>可以在本地直接跑 FeedConsumer 来操作。</li>
-</ol>
-<h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a>解决的过程</h3><ol>
-<li>仔细询问了具体的步骤。</li>
-</ol>
-<h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a>解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-06】]]></title>
-      <url>/2017/12/06/2017-12-06/</url>
-      <content type="html"><![CDATA[<h3 id="遇到的问题"><a href="# 遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题 </h3><p><del> 使用的一个 Google 服务在重复的时候会报错 HTTP429。 我本来以为 429 错误会是重复导致的。但是根据 <a href="https://httpstatuses.com/429" target="_blank" rel="noopener">https://httpstatuses.com/429</a> 链接来看，429 是由于请求过多的原因导致。</del></p><p><strong>搞错了 </strong> 结果是 409 问题。</p><p>409 是由于请求的资源 conflict</p><h3 id="解决的方法"><a href="# 解决的方法" class="headerlink" title="解决的方法"></a>解决的方法 </h3><p><del>1. 查看代码中 429 问题之前的提交代码，查看如何进行查重的。</del></p><ol><li> 查看代码中产生 409 的地方是否采用的是 put 方法 </li></ol><h3 id="解决的过程"><a href="# 解决的过程" class="headerlink" title="解决的过程"></a> 解决的过程 </h3><h3 id="解决方法记录"><a href="# 解决方法记录" class="headerlink" title="解决方法记录"></a> 解决方法记录</h3>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-05】]]></title>
-      <url>/2017/12/05/2017-12-05/</url>
-      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p> 如何在国内 vps 安装爬墙软件。</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><ol><li> 参看图拉鼎配置的文章。</li><li><a href="https://imtx.me/archives/2375.html" target="_blank" rel="noopener">https://imtx.me/archives/2375.html</a></li></ol><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><ol><li> 开启 byobu</li><li>安装 proxychains 与 shadowsocks。</li><li><code>proxychains curl ifconfig.me</code> 检查下 </li></ol><h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a> 记录此方法，思考是否有更好的解决方法 </h3><ol><li> 这种方法是在请求的时候套一个工具。</li></ol><p>目前感觉这种方法还不错。</p>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-12-04】]]></title>
-      <url>/2017/12/04/2017-12-04/</url>
-      <content type="html"><![CDATA[<h3 id="问题"><a href="# 问题" class="headerlink" title="问题"></a>问题 </h3><p>AKKA Stream 添加 fault tolerance。</p><p> 需要能够在出现简单问题的时候能够自动重启。出错原因要能够 Push 到 SQS</p><h3 id="解决方法"><a href="# 解决方法" class="headerlink" title="解决方法"></a>解决方法 </h3><p> 参考 AKKA Stream 中的记录的 fault tolerance 的方法来操作。</p><p><a href="https://doc.akka.io/docs/akka/2.5.5/scala/stream/stream-error.html" target="_blank" rel="noopener">https://doc.akka.io/docs/akka/2.5.5/scala/stream/stream-error.html</a></p><h3 id="记录解决过程"><a href="# 记录解决过程" class="headerlink" title="记录解决过程"></a>记录解决过程 </h3><ul><li><p> 使用 <code>recover</code> 方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.recover(<span class="keyword">new</span> PFBuilder()</span><br><span class="line">.match(RuntimeException.class, ex -&gt; <span class="string">"stream truncated"</span>)</span><br><span class="line">.build()</span><br></pre></td></tr></table></figure>
-<p>  这个方法好像不能获取到出错地方的具体信息，比如传入源的信息，这样我就没有办法把日志记录到 SQS 中了。</p>
-</li>
-<li><p>使用 <code>recoverWithRetries</code> 方法</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.recoverWithRetries(</span><br><span class="line"><span class="number">1</span>, <span class="comment">// max attempts</span></span><br><span class="line"><span class="keyword">new</span> PFBuilder()</span><br><span class="line">    .match(RuntimeException.class, ex -&gt; planB)</span><br><span class="line">    .build()</span><br></pre></td></tr></table></figure>
-<p>  方法同上，问题也同上。</p>
-</li>
-<li><p>使用 <code>Delayed restarts with a backoff stage</code></p>
-<p>  目前看起来这个有可能靠谱。</p>
-<p>  但我还没理解这里面说的具体是什么意思。同时，我查看了这几个链接：</p>
-<ul>
-<li><p><a href="https://stackoverflow.com/questions/23773175/akka-java-fault-tolerance-and-actor-restarting" target="_blank" rel="noopener">https://stackoverflow.com/questions/23773175/akka-java-fault-tolerance-and-actor-restarting</a></p>
-<p>这个 so 问答链接里面还是讲解了很多的关于 actor 问题的探讨，值得一看。</p>
-</li>
-<li><p><a href="http://danielwestheide.com/blog/2013/03/20/the-neophytes-guide-to-scala-part-15-dealing-with-failure-in-actor-systems.html" target="_blank" rel="noopener">http://danielwestheide.com/blog/2013/03/20/the-neophytes-guide-to-scala-part-15-dealing-with-failure-in-actor-systems.html</a></p>
-<p>根据这个链接处理了 默认的 decider 方法。顺便看了 scala 关于 try catch 的一些特殊处理。 <a href="http://danielwestheide.com/blog/2012/12/26/the-neophytes-guide-to-scala-part-6-error-handling-with-try.html" target="_blank" rel="noopener">http://danielwestheide.com/blog/2012/12/26/the-neophytes-guide-to-scala-part-6-error-handling-with-try.html</a></p>
-</li>
-<li><p><a href="https://doc.akka.io/docs/akka/2.3.9/java/untyped-actors.html#Ask__Send-And-Receive-Future" target="_blank" rel="noopener">https://doc.akka.io/docs/akka/2.3.9/java/untyped-actors.html#Ask__Send-And-Receive-Future</a><br>这个链接主要是跟着上文的 SO 链接过来的，没看懂要表达什么。</p>
-</li>
-</ul>
-</li>
-<li><p>使用 <code>supervision strategy</code></p>
-<p>  上面的链接用到了此方法。</p>
-</li>
-</ul>
-<h3 id="记录此方法，思考是否有更好的解决方法"><a href="# 记录此方法，思考是否有更好的解决方法" class="headerlink" title="记录此方法，思考是否有更好的解决方法"></a>记录此方法，思考是否有更好的解决方法 </h3><p> 最终采用的代码:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Function&lt;Throwable, Supervision.Directive&gt; decider = exc -&gt; &#123;</span><br><span class="line">    log.error(ExceptionUtils.getStackTrace(exc));</span><br><span class="line">    <span class="keyword">if</span>(exc <span class="keyword">instanceof</span> ActorInitializationException)&#123;</span><br><span class="line">        <span class="keyword">return</span> Supervision.stop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(exc <span class="keyword">instanceof</span> ActorKilledException) &#123;</span><br><span class="line">        <span class="keyword">return</span> Supervision.stop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Supervision.restart();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>OneForOneStrategy 这种好像在 Akka Stream 上不适用，默认就是 OneForOneStrategy ？</p>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[通过 logbook 来提升编程技能]]></title>
       <url>/2017/12/04/write_logs_use_logbooks/</url>
       <content type="html"><![CDATA[<blockquote><p>本文通过介绍了一种通过 logbook 的记录来提高自己编程技能的简便方法。</p></blockquote><a id="more"></a><p>这篇文章是我在看了 <a href="https://routley.io/tech/2017/11/23/logbook.html?utm_campaign=CodeTengu&amp;utm_medium=rss&amp;utm_source=CodeTengu_108" target="_blank" rel="noopener">Using a logbook to improve your programming</a> 的记录。</p><h2 id="记录原则"><a href="# 记录原则" class="headerlink" title="记录原则"></a>记录原则 </h2><p>logbook 记录有几个原则:</p><ol><li> 考虑你要解决的问题是什么？</li><li>描述你用来解决问题的办法。</li><li>描述你使用此方法的过程。</li><li>记录，并查看是否有更好的方案。</li></ol><h2 id="编程使用的优点"><a href="# 编程使用的优点" class="headerlink" title="编程使用的优点"></a>编程使用的优点 </h2><ol><li> 分解大问题为小问题。</li><li>很容易在分散精力之后重新回到工作状态。</li><li>可以从你的日志中快速学习。你可以查看你使用过的方法，然后了解哪些方法奏效，哪些无用。</li></ol><h2 id="快捷方法"><a href="# 快捷方法" class="headerlink" title="快捷方法"></a>快捷方法 </h2><p> 定义此方法到 <code>.zshrc</code> 中.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">lb</span></span>() &#123;</span><br><span class="line">    vim ~/logbook/$(date <span class="string">'+%Y-%m-%d'</span>).md</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -315,29 +14,6 @@
         <tags>
             
             <tag> linux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[【2017-11-30】]]></title>
-      <url>/2017/11/30/2017-11-30/</url>
-      <content type="html"><![CDATA[<blockquote><p> 好看的皮囊千篇一律，有趣的思想万中无一。</p></blockquote><hr><blockquote><p> 看了 <a href="https://www.youtube.com/watch?v=5BVMaItQCRw&amp;t=58s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=5BVMaItQCRw&amp;t=58s</a> 之后，分享给一堆人。都没有得到想要的反馈，难受。</p></blockquote><hr><blockquote><p> 测试一下 Latex 支持 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</p></blockquote><hr><p>Love Live!!!</p><hr><p>$$\frac{\partial u}{\partial t}<br>= h^2 \left(\frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p><hr><p> 谷歌出品的镜像对比工具，可以用来查看使用 pip, apt, rpm 之类安装的软件包 <a href="http://www.infoq.com/cn/news/2017/11/container-diff-images?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener">http://www.infoq.com/cn/news/2017/11/container-diff-images?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global</a></p><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start:&gt;http://www.google.com[blank]</span><br><span class="line">e=&gt;end:&gt;http://www.google.com</span><br><span class="line">op1=&gt;operation: My Operation</span><br><span class="line">sub1=&gt;subroutine: My Subroutine</span><br><span class="line">cond=&gt;condition: Yes</span><br><span class="line">or No?:&gt;http://www.google.com</span><br><span class="line">io=&gt;inputoutput: catch something...</span><br><span class="line"></span><br><span class="line">st-&gt;op1-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op1</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p> 加上 Latex 和 FlowChart 两个支持，这个主题就完美了。</p></blockquote>]]></content>
-      
-        <categories>
-            
-            <category> logbook </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> dev </tag>
             
         </tags>
         
@@ -1695,22 +1371,6 @@ Bundle &apos;mattn/gist-vim&apos;
     </entry>
     
     <entry>
-      <title><![CDATA[美剧订阅神器 showrss]]></title>
-      <url>/2015/02/04/tools-for-us-TV-series/</url>
-      <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="noopener">showrss</a>,</p><a id="more"></a><h2 id="界面"><a href="# 界面" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpt2aj1j30rf0d1750.jpg" alt="showrss"></p><h3 id="使用 RSS 订阅"><a href="# 使用 RSS 订阅" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"><a href="# 你还可以使用 RSS 订阅" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p><h4 id="在界面中点击你喜欢的美剧名称即可订阅"><a href="# 在界面中点击你喜欢的美剧名称即可订阅" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpudq1tj30qr0anwff.jpg" alt="pickseries"></p><h4 id="如果你想知道下一集是什么的话，网站还提供计划表"><a href="# 如果你想知道下一集是什么的话，网站还提供计划表" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgpvnci6j30rs06wwet.jpg" alt="schedule"></p><h4 id="你还可以使用 RSS 订阅 -1"><a href="# 你还可以使用 RSS 订阅 -1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅 </h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpx61awj30tt07rt9b.jpg" alt="rss"></p><h4 id="在这里面，你可以进行："><a href="# 在这里面，你可以进行：" class="headerlink" title="在这里面，你可以进行："></a> 在这里面，你可以进行：</h4><ul><li>单集 RSS 订阅 </li><li> 个人剧集订阅 </li><li> 剧集时间表订阅 (提供 rss 和 iCalendar 格式)</li><li> 网站信息订阅（这个不重要)</li></ul>]]></content>
-      
-        
-        <tags>
-            
-            <tag> series </tag>
-            
-            <tag> tv </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[基于 Shadowsocks 透明代理的实现]]></title>
       <url>/2015/02/04/Auto-Proxy/</url>
       <content type="html"><![CDATA[<p><strong>本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p><a id="more"></a><p>程序员们最在意的，可能就是网络跟设备配置了。</p><p>做一个透明代理，能够做到：</p><pre><code>自动翻墙，本地无需配置。
@@ -1722,6 +1382,22 @@ Bundle &apos;mattn/gist-vim&apos;
             <tag> proxy </tag>
             
             <tag> linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[美剧订阅神器 showrss]]></title>
+      <url>/2015/02/04/tools-for-us-TV-series/</url>
+      <content type="html"><![CDATA[<p>今日同事推荐了个看美剧的神器的网站 <a href="http://showrss.info/" target="_blank" rel="noopener">showrss</a>,</p><a id="more"></a><h2 id="界面"><a href="# 界面" class="headerlink" title="界面"></a>界面 </h2><p> 这个网站的样子大概是这个样子的:<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpt2aj1j30rf0d1750.jpg" alt="showrss"></p><h3 id="使用 RSS 订阅"><a href="# 使用 RSS 订阅" class="headerlink" title="使用 RSS 订阅"></a>使用 RSS 订阅 </h3><h4 id="你还可以使用 RSS 订阅"><a href="# 你还可以使用 RSS 订阅" class="headerlink" title="你还可以使用 RSS 订阅"></a> 你还可以使用 RSS 订阅 </h4><p> 注册进去后，可以订阅各种美剧如：Grey’s Anatomy, The Big Bang theory 等，</p><h4 id="在界面中点击你喜欢的美剧名称即可订阅"><a href="# 在界面中点击你喜欢的美剧名称即可订阅" class="headerlink" title="在界面中点击你喜欢的美剧名称即可订阅:"></a>在界面中点击你喜欢的美剧名称即可订阅:</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpudq1tj30qr0anwff.jpg" alt="pickseries"></p><h4 id="如果你想知道下一集是什么的话，网站还提供计划表"><a href="# 如果你想知道下一集是什么的话，网站还提供计划表" class="headerlink" title="如果你想知道下一集是什么的话，网站还提供计划表:"></a>如果你想知道下一集是什么的话，网站还提供计划表:</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgpvnci6j30rs06wwet.jpg" alt="schedule"></p><h4 id="你还可以使用 RSS 订阅 -1"><a href="# 你还可以使用 RSS 订阅 -1" class="headerlink" title="你还可以使用 RSS 订阅"></a>你还可以使用 RSS 订阅 </h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1flzgpx61awj30tt07rt9b.jpg" alt="rss"></p><h4 id="在这里面，你可以进行："><a href="# 在这里面，你可以进行：" class="headerlink" title="在这里面，你可以进行："></a> 在这里面，你可以进行：</h4><ul><li>单集 RSS 订阅 </li><li> 个人剧集订阅 </li><li> 剧集时间表订阅 (提供 rss 和 iCalendar 格式)</li><li> 网站信息订阅（这个不重要)</li></ul>]]></content>
+      
+        
+        <tags>
+            
+            <tag> series </tag>
+            
+            <tag> tv </tag>
             
         </tags>
         
