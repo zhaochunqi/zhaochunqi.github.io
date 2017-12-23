@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="theme-color" content="#f8f5ec"><meta name="msapplication-navbutton-color" content="#f8f5ec"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec"><meta name="description" content="\">/dev/null 2>&1\" 什么意思？"/><meta name="keywords" content="linux, Alex Coding"><link rel="alternate" href="/atom.xml" title="Alex Coding"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0"><link rel="canonical" href="http://blog.zhaochunqi.com/2016/06/26/what-does-this-mean/"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0"><script id="baidu_analytics">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?cfffa20d202ba9f4f0d6257e1cc94ea6";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script id="google_analytics">!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject="ga",e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement("script"),o=a.getElementsByTagName("script")[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document),ga("create","UA-42448552-1","auto"),ga("send","pageview")</script><script id="baidu_push">!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script><script id="leancloud">AV.init({appId:"YECzMLE9UTvajIqEbA5NK8wN-gzGzoHsz",appKey:"vK6VPlmNULOlnr5q6CFvqozN"})</script><title>\"> /dev/null 2>&1\" 什么意思？ - Alex Coding</title></head><body><div id="mobile-navbar" class="mobile-navbar"><div class="mobile-header-logo"><a href="/." class="logo">Alex Coding</a></div><div class="mobile-navbar-icon"><span></span> <span></span> <span></span></div></div><nav id="mobile-menu" class="mobile-menu slideout-menu"><ul class="mobile-menu-list"><a href="/"><li class="mobile-menu-item">首页</li></a><a href="/categories/weekly"><li class="mobile-menu-item">Weekly</li></a><a href="/categories/logbook"><li class="mobile-menu-item">Logbook</li></a><a href="/archives/"><li class="mobile-menu-item">归档</li></a></ul></nav><div class="container" id="mobile-panel"><header id="header" class="header"><div class="logo-wrapper"><a href="/." class="logo">Alex Coding</a></div><nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item"><a class="menu-item-link" href="/">首页</a></li><li class="menu-item"><a class="menu-item-link" href="/categories/weekly">Weekly</a></li><li class="menu-item"><a class="menu-item-link" href="/categories/logbook">Logbook</a></li><li class="menu-item"><a class="menu-item-link" href="/archives/">归档</a></li></ul></nav></header><main id="main" class="main"><div class="content-wrapper"><div id="content" class="content"><article class="post"><header class="post-header"><h1 class="post-title">\"> /dev/null 2>&1\" 什么意思？</h1><div class="post-meta"><span class="post-time">2016-06-26</span><div class="post-visits" data-url="/2016/06/26/what-does-this-mean/" data-title="\">/dev/null 2>&1\" 什么意思？"> 阅读次数</div></div></header><div class="post-content"><p>很长一段时间以来，我一直无法理解这个命令，我能大概猜测出 <code>&gt;/dev/null</code> 意思是将输出隐藏，但还是不能理解 <code>2&gt;&amp;1</code> 的意思。</p><a id="more"></a><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1flzgmyiqahj31f81akt9x.jpg" alt="http://harchiko.qiniudn.com/Screen%20Shot%202016-06-26%20at%2012.37.26%20AM.png"></p><p>举例来说:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin master &gt; /dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p> 这是一个简单的 <code>git push</code> 脚本, 用于 Travis 自动构建过程中隐藏信息。</p>
+<p><code>&gt;</code> is for redirect </p>
+<p><code>/dev/null</code> is a black hole where any data sent, will be discarded</p>
+<p><code>2</code> is the file descriptor for Standard Error</p>
+<p><code>&gt;</code> is for redirect</p>
+<p><code>&amp;</code> is the symbol for file descriptor (without it, the following 1 would be considered a filename)</p>
+<p><code>1</code> is the file descriptor for Standard Out</p>
+<p>Therefore &gt;/dev/null 2&gt;&amp;1 is redirect the output of your program to /dev/null. Include both the Standard Error and Standard Out.</p>
+<p> 所以， <code>/dev/null 2&gt;&amp;1</code> 将所有的输出重定向到 /dev/null 中，标准错误和输出都不会显示。</p>
+<p> 那么， <code>&gt; /dev/null</code> 是什么意思呢就不难猜出吧？</p>
+<blockquote>
+<p><code>&gt; /dev/null</code> 即标准输出不显示，标准错误正常显示。</p>
+</blockquote>
+<p> 参考文章: </p>
+<ol>
+<li><a href="http://www.xaprb.com/blog/2006/06/06/what-does-devnull-21-mean/" target="_blank" rel="noopener">http://www.xaprb.com/blog/2006/06/06/what-does-devnull-21-mean/</a></li>
+<li><a href="http://unix.stackexchange.com/questions/163352/what-does-dev-null-21-mean-in-this-article-of-crontab-basics" target="_blank" rel="noopener">http://unix.stackexchange.com/questions/163352/what-does-dev-null-21-mean-in-this-article-of-crontab-basics</a></li></ol>
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://blog.zhaochunqi.com">Alex Zhao</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://blog.zhaochunqi.com/2016/06/26/what-does-this-mean/">http://blog.zhaochunqi.com/2016/06/26/what-does-this-mean/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/linux/">linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/08/22/android_local_properties/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Android 本地变量存储 (API Key 等)</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/06/23/the_doctors/">
+        <span class="next-text nav-default">牙齿正畸二三事</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:zcq.qiqi@gmail.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/zhaochunqi" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+        
+          <a href="https://weibo.com/zhaocq" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Alex Zhao</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script type="text/javascript">var disqus_config=function(){this.page.url="http://blog.zhaochunqi.com/2016/06/26/what-does-this-mean/",this.page.identifier="2016/06/26/what-does-this-mean/",this.page.title='"> /dev/null 2>&1" 什么意思？'};!function(){var t=document,e=t.createElement("script");e.src="//blog-zhaochunqi.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script>
+
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script></body></html>
