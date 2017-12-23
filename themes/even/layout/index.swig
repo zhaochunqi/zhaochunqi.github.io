@@ -6,9 +6,7 @@
 {% block content %}
   <section id="posts" class="posts">
     {% for post in page.posts %}
-      {% if post.visible !== 'hide' %}
-        {{ post_template.render(post) }}
-      {% endif %}
+      { post_template.render(post) }
     {% endfor %}
   </section>
 
