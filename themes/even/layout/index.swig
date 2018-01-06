@@ -6,7 +6,7 @@
 {% block content %}
   <section id="posts" class="posts">
     {% for post in page.posts %}
-      {{ post_template.render(post) }}
+      { post_template.render(post) }
     {% endfor %}
   </section>
 
