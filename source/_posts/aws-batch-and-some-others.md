@@ -267,7 +267,7 @@ def lambda_handler(event, context):
 Q&A
 
 
-1. 为什么不适用 `Job depends on` 参数启用 job 呢?
+1. 为什么不使用 `Job depends on` 参数启用 job 呢?
 
 Batch 在启用 job 的时候有一个参数是 `Job depends on`,如下图
 ![http://harchiko.qiniudn.com/batch-job.png](http://harchiko.qiniudn.com/batch-job.png)
