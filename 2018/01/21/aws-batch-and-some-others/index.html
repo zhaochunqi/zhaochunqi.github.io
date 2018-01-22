@@ -34,7 +34,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+-----------+    +------+   +-----+    +---+    +------+    +-----+</span><br><span class="line">|cloud watch+--&gt; |lambda+--&gt;+batch| +-&gt;+SNS| +&gt; |lambda| +-&gt;+batch|</span><br><span class="line">+-----------+    +------+   +-----+    +---+    +------+    +-----+</span><br></pre></td></tr></table></figure>
 <p>Q&amp;A</p>
 <ol>
-<li>为什么不适用 <code>Job depends on</code> 参数启用 job 呢?</li>
+<li>为什么不使用 <code>Job depends on</code> 参数启用 job 呢?</li>
 </ol>
 <p>Batch 在启用 job 的时候有一个参数是 <code>Job depends on</code>, 如下图<br><img src="http://harchiko.qiniudn.com/batch-job.png" alt="http://harchiko.qiniudn.com/batch-job.png"></p>
 <p>根据这里的文档: <a href="https://docs.aws.amazon.com/batch/latest/userguide/submit_job.html" target="_blank" rel="noopener">https://docs.aws.amazon.com/batch/latest/userguide/submit_job.html</a></p>
