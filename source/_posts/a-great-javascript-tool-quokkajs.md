@@ -5,7 +5,7 @@ tags: [javascript,tools]
 
 ---
 
-今天像介绍一下 [Quokka JS](https://quokkajs.com/), 我这段时间写 JS 多亏了这个插件。
+今天介绍一下 [Quokka JS](https://quokkajs.com/), 我这段时间写 JS 多亏了这个插件。
 
 <!--more-->
 
