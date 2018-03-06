@@ -1,4 +1,4 @@
-title: 介绍一个非常好用的 Javascript 工具
+title: 介绍一个非常好用的 Javascript 工具 - QuokkaJS
 date: 6 Mar 2018 10:46 PM
 categories: ""
 tags: [javascript,tools]
@@ -26,11 +26,11 @@ tags: [javascript,tools]
 
 使用方法简单介绍下:
 
-1. 安装好 Visual Studio Code 之后，可以新建一个文件，然后 `CMD +SHIFT + P` -> `Start On Current File`
+> 1. 安装好 Visual Studio Code 之后，可以新建一个文件，然后 `CMD +SHIFT + P` -> `Start On Current File`
 
 ![https://i.imgur.com/cLLJvpA.png](https://i.imgur.com/cLLJvpA.png)
 
-2. 然后就可以进行编程了。
+> 2. 然后就可以进行编程了。
 
 简单做了一个演示的小视频
 
