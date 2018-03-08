@@ -11,7 +11,7 @@ tags: [java,]
 
 ## 安装
 
-正常安装 `JDK 1.8` 和 `JDK 9` 即可, JAVA 8 对应的就是 JDK 1.8，JAVA 9 对应的 JDK 9。
+正常安装 `JDK 1.8` 和 `JDK 9` 即可, `JAVA 8` 对应的就是 `JDK 1.8`，`JAVA 9` 对应的 `JDK 9`。
 
 安装地址: [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
