@@ -31,4 +31,4 @@ RDM 可以在这里下载 [Index of /software/RDM](http://avi.alkalay.net/softwa
 
 放张图吧:
 
-[https://i.imgur.com/tCDNw8f.jpg](https://i.imgur.com/tCDNw8f.jpg)
+![https://i.imgur.com/tCDNw8f.jpg](https://i.imgur.com/tCDNw8f.jpg)
