@@ -28,3 +28,7 @@ RDM 可以在这里下载 [Index of /software/RDM](http://avi.alkalay.net/softwa
 另外这是 github 介绍页 [GitHub - avibrazil/RDM: Easily set Mac Retina display to higher unsupported resolutions](https://github.com/avibrazil/RDM)
 
 设置 display 2 为 `1920 x 1080` 终于完美了！
+
+放张图吧:
+
+[https://i.imgur.com/tCDNw8f.jpg](https://i.imgur.com/tCDNw8f.jpg)
