@@ -66,6 +66,8 @@ tags: []
 
 请问您是对工作站有什么误解吗? 难道需要您的工作站仅仅是完成 PPT/EXCEL 和 王者荣耀?
 
+> 罗老师，这个演示视频右上角怎么是 MAC? [https://www.zhihu.com/question/277297661/answer/392588888](https://www.zhihu.com/question/277297661/answer/392588888)
+
 #### PPT & EXCEl
 
 我不否认，可能您的所谓的 什么胶囊 一键生成 PPT 可能很好用。
