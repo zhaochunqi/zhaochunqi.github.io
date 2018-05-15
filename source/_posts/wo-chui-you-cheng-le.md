@@ -127,3 +127,5 @@ tags: []
 好多人都在讲王自如跟罗老师的争论罗老师赢了，大概忘了辩论的目的是为了锤子的销量了吧。
 
 [https://www.zhihu.com/question/25015684/answer/29832927](https://www.zhihu.com/question/25015684/answer/29832927)
+
+我锤又成了。
