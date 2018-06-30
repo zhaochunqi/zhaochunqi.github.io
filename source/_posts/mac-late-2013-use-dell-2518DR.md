@@ -21,6 +21,10 @@ tags: [mac,]
 
 附注： 我的配置文件地址 -> [Dropbox - DisplayProductID-413c.plist](https://www.dropbox.com/s/4ucfat6cwcqmvnk/DisplayProductID-413c.plist?dl=0)
 
+我的命令是:
+
+`sudo cp DisplayProductID-413c.plist /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-10ac/DisplayProductID-413c`
+
 ## 安装 RDM
 
 RDM 可以在这里下载 [Index of /software/RDM](http://avi.alkalay.net/software/RDM/)
