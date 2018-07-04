@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAM预警机</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        body{ line-height:50px;}
+        input{height:30px}
+        #real-time-price{line-height:100px;}
+        .real-time{color:green;font-size:50px;}
+    </style>
+</head>
+<body>
+    <div>
+        低于价格 <input id="low" type="text" placeholder="输入数字"> 报警
+    </div>
+    <div>
+        高于价格 <input id="high" type="text"  placeholder="输入数字"> 报警
+    </div>
+    <div id="real-time-price">
+
+    </div>
+    <script>
+       
+      function realTimePrice() {
+            $.get('https://tbeospre.mytokenpocket.vip/v1/ram_price').then(function (res) {
+                if (res.result === 0 && res.data) {
+                    var realPrice = parseFloat(1 * 1024 / res.data).toFixed(5);
+                    $('#real-time-price').html('实时价格： <span class="real-time">' + realPrice + '</span> EOS/kb');
+                    var lowPrice=$("#low").val()
+                    var highPrice=$("#high").val()
+                    if(lowPrice &&!isNaN(lowPrice)){
+                        if(realPrice<=lowPrice){
+                            alert('过低报警')
+                        }
+                    }
+                    if( highPrice&&!isNaN(highPrice)){
+                        if(realPrice>=highPrice){
+                            alert('过高报警')
+                        }
+                    }
+                }
+            })
+        }
+        realTimePrice()
+        setInterval('realTimePrice()', 5000);
+    </script>
+</body>
+</html>
