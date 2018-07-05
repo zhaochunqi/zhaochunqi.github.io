@@ -167,6 +167,7 @@
         }
 
         .bigone,
+        .footer,
         .trade-history {
             width: 100%;
             display: inline-block;
@@ -241,16 +242,18 @@
         .empty-li {
             text-align: center;
         }
+
         .eos-real-time {
             color: #f79816;
             animation: realtime 0.5s ease 0s 1 alternate;
-         
+
         }
+
         .real-time {
             color: #f79816;
             animation: realtime 0.5s ease 0s 1 alternate;
-            font-size:20px;
-            line-height:25px;
+            font-size: 20px;
+            line-height: 25px;
         }
 
         .tips {
@@ -371,7 +374,7 @@
     </div>
 
     <div style="clear:both"></div>
-    
+
     <!-- <div id="real-time-price">
 
     </div> -->
@@ -459,7 +462,7 @@
                     var realPrice = parseFloat(1 * 1024 / res.data).toFixed(5);
 
                     $('#real-time-price').html('实时价格： <span class="real-time">' + realPrice + '</span> EOS/kb');
-                    document.title=realPrice
+                    document.title = realPrice
                     var lowPrice = $("#low").val()
                     var highPrice = $("#high").val()
 
@@ -987,6 +990,14 @@
 
         getBigList();
     </script>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Ram 预警机</strong> Powerd by
+                <strong>自由小分队</strong>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
