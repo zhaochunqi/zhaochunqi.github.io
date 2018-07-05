@@ -1,0 +1,992 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="description" content="EOS内存价格趋势是由TokenPocket提供的一个方便查看EOS内存的行情页面，同时提供部分交易记录，供用户参考。TokenPocket是一个集EOS钱包，以太坊钱包，墨客钱包，井通钱包等于一体的去中心化通用数字钱包。集成多底层的Dapp, 支持查看实时行情、币币兑换等功能。">
+    <meta name="keywords" content="EOS内存,EOS内存价格,EOS内存趋势,EOS RAM,买卖EOS内存,EOS钱包,TokenPocket">
+    <title>EOS内存价格趋势 | TokenPocket - 你的通用数字钱包</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #252731;
+            color: #EEE;
+        }
+
+        html {
+            position: relative;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            margin: 20px 0 0;
+        }
+
+        .period {
+            position: absolute;
+            z-index: 10;
+            color: #fff;
+            top: 100px;
+            right: 20px;
+        }
+
+        .logo {
+            margin: 5px auto 10px;
+            display: block;
+            width: 150px;
+            z-index: 10;
+        }
+
+        .sub-logo {
+            height: 25px;
+        }
+
+        .from {
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px 0;
+            color: #ddd;
+        }
+
+        .period label {
+            display: inline-block;
+            border: 1px solid #666;
+            font-size: 12px;
+            padding: 2px 5px;
+        }
+
+        input:checked+label {
+            border: 1px solid #eee;
+        }
+
+        .period input {
+            -webkit-appearance: none;
+            display: none;
+        }
+
+
+        .progress {
+            height: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+        }
+
+        .progress p {
+            padding: 0;
+            margin: 0 0 10px;
+            -webkit-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .progress-bar {
+            float: left;
+            width: 0;
+            height: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #337ab7;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease;
+        }
+
+        #eos-price {
+            position: relative;
+            /* text-align: right; */
+            float: right;
+            z-index: 10;
+            font-size: 12px;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        #real-time-price {
+            position: relative;
+            margin-left: 15px;
+            z-index: 10;
+            font-size: 12px;
+
+        }
+
+
+        .progress-bar-striped,
+        .progress-striped .progress-bar {
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-size: 40px 40px;
+        }
+
+        .statics {
+            padding: 0 15px;
+        }
+
+        .statics .statice-info {
+            display: inline-block;
+            float: left;
+            width: 50%;
+        }
+
+        #big-account,
+        #account {
+            height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+        }
+
+        .from-buy,
+        .buy {
+            color: #ef4b35;
+        }
+
+        .from-sell,
+        .sell {
+            color: #06a94b;
+        }
+
+        hr {
+            margin: 10px auto;
+            border: none;
+            border-top: 1px solid #666;
+        }
+
+        .bigone,
+        .trade-history {
+            width: 100%;
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: center;
+            float: left;
+            padding-bottom: 20px;
+        }
+
+        .query-bar {
+            text-align: center;
+        }
+
+        #big-query-btn,
+        #big-clear-btn,
+        #query-btn,
+        #clear-btn {
+            height: 28px;
+            color: #fff;
+            border: 1px solid #ddd;
+            background: transparent;
+            margin-left: 5px;
+        }
+
+        .big-list,
+        .trade-list {
+            font-family: Consolas, Monaco, monospace;
+            list-style: none;
+            font-size: 12px;
+            padding: 0;
+            padding: 0;
+            text-align: left;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .big-list li,
+        .trade-list li {
+            padding: 0 12px;
+            /* border-top: 1px solid #0f1118; */
+            color: #999eb1;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .trade-tip {
+            color: #ccc;
+            font-size: 12px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .refresh {
+            position: absolute;
+            right: 15px;
+            top: 3px;
+            cursor: pointer;
+            display: block;
+            color: #ddd;
+            padding: 2px 5px;
+            font-size: 12px;
+            border: 1px solid #666;
+        }
+
+        .empty-li {
+            text-align: center;
+        }
+        .eos-real-time {
+            color: #f79816;
+            animation: realtime 0.5s ease 0s 1 alternate;
+         
+        }
+        .real-time {
+            color: #f79816;
+            animation: realtime 0.5s ease 0s 1 alternate;
+            font-size:20px;
+            line-height:25px;
+        }
+
+        .tips {
+            font-size: 12px;
+
+        }
+
+        .time,
+        .from,
+        .buy,
+        .sell {
+            float: left;
+            padding: 4px 0;
+        }
+
+        .time {
+            display: inline-block;
+            width: 34%;
+        }
+
+        .from {
+            width: 29%;
+            text-decoration: underline;
+        }
+
+        .buy,
+        .sell {
+            display: inline-block;
+            /* margin-left: 5%; */
+            width: 37%;
+        }
+
+        @keyframes realtime {
+            /* 0% {text-shadow: 0 0 0 #fff;}
+                80% {text-shadow: 1px 1px 10px #fff;}
+                100% {text-shadow: 0 0 0 #fff;} */
+            0% {
+                color: #fff;
+                text-shadow: 1px 1px 10px #fff;
+            }
+            100% {
+                color: #f79816;
+                text-shadow: 0 0 0 #fff;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+
+            .bigone,
+            .trade-history {
+                width: 50%;
+            }
+            .big-list,
+            .trade-list {
+                font-size: 14px;
+            }
+
+
+            #eos-price {
+                font-size: 14px;
+            }
+
+            .statics .statice-info {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 321px) {
+            .bigone,
+            .trade-history {
+                padding-left: 0;
+            }
+
+            .big-list li,
+            .trade-list li {
+                padding: 4px;
+            }
+
+
+            .from,
+            .buy,
+            .sell {
+                margin-left: 0;
+            }
+        }
+
+        .cbox {
+            padding: 10px 0;
+        }
+
+        .cbox input {
+            height: 25px;
+        }
+
+        .cbox audio {
+            display: none
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cbox" style="text-align:center;line-height:30px;">
+        <audio id="audioAlarm" controls>
+            <source src="alarm.mp3" type="audio/mpeg"> 您的浏览器不支持 audio 元素。
+        </audio>
+        <div>
+            低于价格
+            <input id="low" type="text" placeholder="输入数字"> 报警
+        </div>
+        <div>
+            高于价格
+            <input id="high" type="text" placeholder="输入数字"> 报警
+        </div>
+        <div id="real-time-price">
+
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+    
+    <!-- <div id="real-time-price">
+
+    </div> -->
+    <!-- <div id="eos-price">
+    </div> -->
+    <div class="period">
+        <input id="h" type="radio" checked name="period" value="1">
+        <label for="h"> 1天内</label>
+        <input id="d" type="radio" name="period" value="3">
+        <label for="d"> 3天内</label>
+        <input id="m" type="radio" name="period" value="7">
+        <label for="m"> 7天内</label>
+    </div>
+
+
+    <div id="main" style="width: 100%; height: 400px; position: relative; z-index: 2;"></div>
+
+    <hr>
+
+    <h2>EOS 全网内存统计</h2>
+    <div class="statics">
+        <p class="statice-info">总内存:
+            <span id="maxRam" class="data-value">-</span>
+        </p>
+        <p class="statice-info">已分配:
+            <span id="allocatedRam" class="data-value">-</span>
+        </p>
+        <div class="clearfix"></div>
+        <div class="progress">
+            <div id="ramUtilBar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 41.47%;" aria-valuenow="10"
+                aria-valuemin="0" aria-valuemax="100">
+                <p id="ramUtilVal">-</p>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+
+    <h2 style="position: relative; text-align: left; padding-left: 15px;">
+        <!-- <img class="sub-logo" src="https://dapp.mytokenpocket.vip/ram/tp-logo.png" alt=""> -->
+        <span class="refresh">刷新</span>
+    </h2>
+
+    <div class="bigone">
+        <h4>1000EOS以上 成交记录</h4>
+        <p class="query-bar">
+            <input id="big-account" type="text" placeholder="account" />
+            <button id="big-query-btn">查询</button>
+            <button id="big-clear-btn">清空</button>
+        </p>
+        <ul class="big-list">
+
+        </ul>
+    </div>
+    <div class="trade-history">
+        <h4>EOS 内存交易记录</h4>
+        <p class="query-bar">
+            <input id="account" type="text" placeholder="account" />
+            <button id="query-btn">查询</button>
+            <button id="clear-btn">清空</button>
+        </p>
+
+        <ul class="trade-list">
+
+        </ul>
+    </div>
+
+
+
+
+
+    <script src="https://dapp.mytokenpocket.vip/ram/lodash.min.js"></script>
+    <script src="https://dapp.mytokenpocket.vip/ram/echarts.js"></script>
+    <script src="https://dapp.mytokenpocket.vip/ram/moment.js"></script>
+    <script src="https://dapp.mytokenpocket.vip/ram/jquery-3.3.1.min.js"></script>
+    <script>
+        var player
+
+        function getrealTimePrice() {
+            $.get('https://tbeospre.mytokenpocket.vip/v1/ram_price').then(function (res) {
+                if (res.result === 0 && res.data) {
+                    var realPrice = parseFloat(1 * 1024 / res.data).toFixed(5);
+
+                    $('#real-time-price').html('实时价格： <span class="real-time">' + realPrice + '</span> EOS/kb');
+                    document.title=realPrice
+                    var lowPrice = $("#low").val()
+                    var highPrice = $("#high").val()
+
+                    if (lowPrice && !isNaN(lowPrice)) {
+                        if (realPrice <= lowPrice) {
+                            player.play()
+                            showNotice('', '过低报警:' + realPrice)
+                        }
+                    }
+                    if (highPrice && !isNaN(highPrice)) {
+                        if (realPrice >= highPrice) {
+                            player.play()
+                            showNotice('', '过高报警:' + realPrice)
+                        }
+                    }
+                }
+            })
+        }
+
+        function showNotice(title, msg) {
+            var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+            if (Notification) {
+                Notification.requestPermission(function (status) {
+                    //status默认值'default'等同于拒绝 'denied' 意味着用户不想要通知 'granted' 意味着用户同意启用通知
+                    if ("granted" != status) {
+                        return;
+                    } else {
+                        var tag = "sds" + Math.random();
+                        var notify = new Notification(
+                            title, {
+                                dir: 'auto',
+                                lang: 'zh-CN',
+                                tag: tag, //实例化的notification的id
+                                icon: 'http://www.yinshuajun.com/static/img/favicon.ico', //通知的缩略图,//icon 支持ico、png、jpg、jpeg格式
+                                body: msg //通知的具体内容
+                            }
+                        );
+                        notify.onclick = function () {
+                                //如果通知消息被点击,通知窗口将被激活
+                                window.focus();
+                            },
+                            notify.onerror = function () {
+                                console.log("HTML5桌面消息出错！！！");
+                            };
+                        notify.onshow = function () {
+                            setTimeout(function () {
+                                notify.close();
+                            }, 2000)
+                        };
+                        notify.onclose = function () {
+                            console.log("HTML5桌面消息关闭！！！");
+                        };
+                    }
+                });
+            } else {
+                console.log("您的浏览器不支持桌面消息");
+            }
+        };
+        $(function () {
+
+            player = $("#audioAlarm")[0]
+            $(document).click(function () {
+                player.pause()
+            })
+
+            getrealTimePrice()
+            setInterval('getrealTimePrice()', 5000);
+        })
+
+
+        var DOMAIN = "https://tbeosapi.mytokenpocket.vip/v1/ram/";
+        var maxRam = '';
+        var allocatedRam = '';
+
+        function getChart(period) {
+
+            var time = period || '3';
+
+            var apiUrl = DOMAIN + time;
+            var FORMATTER = 'MM-DD HH:mm';
+
+            function calculateMA(dayCount, data) {
+                var result = [];
+                for (var i = 0, len = data.length; i < len; i++) {
+                    if (i < dayCount) {
+                        result.push('-');
+                        continue;
+                    }
+                    var sum = 0;
+                    for (var j = 0; j < dayCount; j++) {
+                        sum += +data[i - j][1];
+                    }
+                    result.push(parseFloat(sum / dayCount).toFixed(5));
+                }
+                return result;
+            }
+
+            $.get(apiUrl, function (res) {
+
+                if (res && res.length) {
+                    var dates = _.map(res, function (item) {
+                        return moment(item['dt']).format(FORMATTER);
+                    });
+
+                    var data = _.map(res, function (item) {
+                        return [(parseFloat(item['o']) * 1024).toFixed(5), (parseFloat(item['c']) *
+                            1024).toFixed(5), (parseFloat(item['l']) * 1024).toFixed(5), (
+                            parseFloat(item['h']) * 1024).toFixed(5)];
+                    })
+
+
+                    var option = {
+                        backgroundColor: '#252731',
+                        legend: {
+                            data: ['K线', 'MA5', 'MA10', 'MA20', 'MA30'],
+                            inactiveColor: '#777',
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                animation: false,
+                                type: 'cross',
+                                lineStyle: {
+                                    color: '#376df4',
+                                    width: 2,
+                                    opacity: 1
+                                }
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            data: dates,
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#8392A5'
+                                }
+                            }
+                        },
+                        yAxis: {
+                            name: 'EOS/kb',
+                            type: 'value',
+                            scale: true,
+                            axisLine: {
+                                lineStyle: {
+                                    color: '#8392A5'
+                                }
+                            },
+                            splitLine: {
+                                show: false
+                            }
+                        },
+
+                        grid: {
+                            top: 60,
+                            left: 50,
+                            right: 15
+                        },
+
+                        dataZoom: [{
+                            textStyle: {
+                                color: '#8392A5'
+                            },
+                            handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+                            handleSize: '80%',
+                            dataBackground: {
+                                areaStyle: {
+                                    color: '#8392A5'
+                                },
+                                lineStyle: {
+                                    opacity: 0.8,
+                                    color: '#8392A5'
+                                }
+                            },
+                            handleStyle: {
+                                color: '#fff',
+                                shadowBlur: 3,
+                                shadowColor: 'rgba(0, 0, 0, 0.6)',
+                                shadowOffsetX: 2,
+                                shadowOffsetY: 2
+                            }
+                        }, {
+                            type: 'inside'
+                        }],
+                        animation: false,
+                        series: [{
+                                type: 'candlestick',
+                                name: 'K线',
+                                data: data,
+                                itemStyle: {
+                                    normal: {
+                                        color: '#FD1050',
+                                        color0: '#0CF49B',
+                                        borderColor: '#FD1050',
+                                        borderColor0: '#0CF49B'
+                                    }
+                                }
+                            },
+                            {
+                                name: 'MA5',
+                                type: 'line',
+                                data: calculateMA(5, data),
+                                smooth: true,
+                                showSymbol: false,
+                                lineStyle: {
+                                    normal: {
+                                        width: 1
+                                    }
+                                }
+                            },
+                            {
+                                name: 'MA10',
+                                type: 'line',
+                                data: calculateMA(10, data),
+                                smooth: true,
+                                showSymbol: false,
+                                lineStyle: {
+                                    normal: {
+                                        width: 1
+                                    }
+                                }
+                            },
+                            {
+                                name: 'MA20',
+                                type: 'line',
+                                data: calculateMA(20, data),
+                                smooth: true,
+                                showSymbol: false,
+                                lineStyle: {
+                                    normal: {
+                                        width: 1
+                                    }
+                                }
+                            },
+                            {
+                                name: 'MA30',
+                                type: 'line',
+                                data: calculateMA(30, data),
+                                smooth: true,
+                                showSymbol: false,
+                                lineStyle: {
+                                    normal: {
+                                        width: 1
+                                    }
+                                }
+                            }
+                        ]
+                    };
+
+                    ramChart = echarts.init(document.getElementById('main'), 'dark');
+
+                    ramChart.setOption(option);
+                }
+
+            })
+        }
+
+        window.ramChart = null;
+
+        window.onresize = function () {
+            if (ramChart) {
+                ramChart.resize();
+            }
+        }
+
+        $('.period').on('click', 'input', function (e) {
+            var period = $(e.target).val();
+
+            getChart(period);
+        })
+
+        getChart(1);
+
+        // eos price
+
+        function realEosPrice() {
+            $.get('https://api.coinmarketcap.com/v2/ticker/1765/').then(function (res) {
+                if (res.data) {
+                    $('#eos-price').html('1 EOS = <span class="eos-real-time"> $' + res.data.quotes.USD.price.toFixed(
+                        2) + '</span> USD')
+                }
+            });
+        }
+
+
+        // 实时价格 
+
+        function realTimePrice() {
+            $.get('https://tbeospre.mytokenpocket.vip/v1/ram_price').then(function (res) {
+                if (res.result === 0 && res.data) {
+                    var realPrice = parseFloat(1 * 1024 / res.data).toFixed(5);
+                    $('#real-time-price').html('实时价格： <span class="real-time">' + realPrice + '</span> EOS/kb');
+                }
+            })
+        }
+
+        // setInterval('realEosPrice', 30000);
+        // setInterval('realTimePrice()', 10000);
+        // realTimePrice()
+        // realEosPrice()
+
+        // ram info 
+
+        var a = $.ajax({
+            url: 'https://api.eosnewyork.io/v1/chain/get_table_rows',
+            type: 'POST',
+            data: JSON.stringify({
+                json: "true",
+                code: "eosio",
+                scope: "eosio",
+                table: "rammarket",
+                limit: "10"
+            })
+        });
+
+        var b = $.ajax({
+            url: 'https://api.eosnewyork.io/v1/chain/get_table_rows',
+            type: 'POST',
+            data: JSON.stringify({
+                json: "true",
+                code: "eosio",
+                scope: "eosio",
+                table: "global"
+            })
+        });
+
+        $.when(a, b).then(function (ar, br) {
+
+            if (br == null || ar == null) {
+                return
+            }
+
+            maxRam = br[0].rows[0].max_ram_size;
+            allocatedRam = br[0].rows[0].total_ram_bytes_reserved;
+
+            var ramBaseBalance = ar[0].rows[0].base.balance; // Amount of RAM bytes in use
+            ramBaseBalance = ramBaseBalance.substr(0, ramBaseBalance.indexOf(' '));
+            var ramQuoteBalance = ar[0].rows[0].quote.balance; // Amount of EOS in the RAM collector
+            ramQuoteBalance = ramQuoteBalance.substr(0, ramQuoteBalance.indexOf(' '));
+            // ramPriceEos = ((ramQuoteBalance / ramBaseBalance) * 1024).toFixed(8); // Price in kb
+            // ramPriceUsd = ramPriceEos * eosPriceUsd;
+
+            // var target = document.getElementById("ram-price-eos");
+            // target.innerHTML = ramPriceEos + " EOS per KB";
+            // target = document.getElementById("ram-price-usd");
+            // target.innerHTML = "~ $" + (ramPriceEos * eosPriceUsd).toFixed(3) + " USD per KB";
+
+            var ramUsed = 1 - (ramBaseBalance - maxRam);
+            target = document.getElementById("maxRam");
+            target.innerHTML = (maxRam / 1024 / 1024 / 1024).toFixed(2) + " GB";
+
+            target = document.getElementById("allocatedRam");
+            target.innerHTML = (ramUsed / 1024 / 1024 / 1024).toFixed(2) + " GB";
+
+            var ramUtilization = (ramUsed / maxRam) * 100;
+
+            target = document.getElementById("ramUtilVal");
+            target.innerHTML = ramUtilization.toFixed(2) + "%";
+            target = document.getElementById("ramUtilBar");
+            target.style.width = ramUtilization.toFixed(2) + "%";
+        })
+
+
+        // 交易记录
+
+        function getTradList(account) {
+
+            var apiUrl = 'https://preserver.mytokenpocket.vip/v1/eos_transaction_action/last_ram_list?count=50';
+
+            if (account) {
+                apiUrl = 'https://preserver.mytokenpocket.vip/v1/eos_transaction_action/ram_list?count=50&account=' +
+                    account;
+            }
+
+            $.get(apiUrl).then(function (res) {
+                if (res.result === 0 && res.data) {
+
+
+                    if (!res.data.length) {
+                        $('.trade-list').html('<li class="empty-li">暂无数据</li>')
+                        return;
+                    }
+
+                    var ramInfo = _.filter(res.data, function (item) {
+                        return _.includes(['buyrambytes', 'buyram', 'sellram'], item.name) && ((item.bytes &&
+                            +item.bytes > 10240) || !item.bytes);
+                    });
+
+                    var tradeHtml = '';
+
+                    _.forEach(ramInfo, function (item) {
+                        switch (item.name) {
+                            case 'buyrambytes':
+                                tradeHtml += '<li> <span class="time">' + moment(item.timestamp * 1000)
+                                    .format('MM-DD HH:mm:ss') +
+                                    '</span><span class="from from-buy" data-from="' + item.from + '">' +
+                                    item.from + '</span> <span class="buy">买：' + (item.count ? (
+                                        parseFloat(item.count).toFixed(2) + ' EOS') : (parseFloat(
+                                        item.bytes / 1024).toFixed(1) + ' Kb')) + '</span></li>';
+                                break;
+                            case 'buyram':
+                                tradeHtml += '<li> <span class="time">' + moment(item.timestamp * 1000)
+                                    .format('MM-DD HH:mm:ss') +
+                                    '</span><span class="from from-buy" data-from="' + item.from + '">' +
+                                    item.from + '</span> <span class="buy">买：' + (parseFloat(item.quantity)
+                                        .toFixed(2) + ' EOS') + '</span></li>';
+                                break;
+                            case 'sellram':
+                                tradeHtml += '<li> <span class="time">' + moment(item.timestamp * 1000)
+                                    .format('MM-DD HH:mm:ss') +
+                                    '</span><span class="from from-sell" data-from="' + item.from +
+                                    '">' + item.from + '</span> <span class="sell">卖：' + (item.count ?
+                                        (parseFloat(item.count).toFixed(2) + ' EOS') : (parseFloat(item
+                                            .bytes / 1024).toFixed(1) + ' Kb')) + '</span></li>';
+                                break;
+                        }
+                    });
+
+                    $('.trade-list').html(tradeHtml)
+                } else {}
+            });
+        }
+
+        function getBigList(account) {
+            var apiUrl = 'https://preserver.mytokenpocket.vip/v1/eos_transaction_action/ram_large_list?count=20';
+
+            if (account) {
+                apiUrl = 'https://preserver.mytokenpocket.vip/v1/eos_transaction_action/ram_list?count=20&account=' +
+                    account;
+            }
+
+            $.get(apiUrl).then(function (res) {
+                if (res.result === 0 && res.data) {
+                    if (!res.data.length) {
+                        $('.big-list').html('<li class="empty-li">暂无数据</li>')
+                        return;
+                    }
+
+                    var ramInfo = _.filter(res.data, function (item) {
+                        return _.includes(['buyrambytes', 'buyram', 'sellram'], item.name) && ((item.bytes &&
+                            +item.bytes > 10240) || !item.bytes);
+                    });
+
+                    var tradeHtml = '';
+
+                    _.forEach(ramInfo, function (item) {
+                        switch (item.name) {
+                            case 'buyrambytes':
+                                tradeHtml += '<li> <span class="time">' + moment(item.timestamp * 1000)
+                                    .format('MM-DD HH:mm:ss') +
+                                    '</span><span class="from from-buy" data-from="' + item.from + '">' +
+                                    item.from + '</span> <span class="buy">买：' + (item.count ? (
+                                        parseFloat(item.count).toFixed(2) + ' EOS') : (parseFloat(
+                                        item.bytes / 1024).toFixed(1) + ' Kb')) + '</span></li>';
+                                break;
+                            case 'buyram':
+                                tradeHtml += '<li> <span class="time">' + moment(item.timestamp * 1000)
+                                    .format('MM-DD HH:mm:ss') +
+                                    '</span><span class="from from-buy" data-from="' + item.from + '">' +
+                                    item.from + '</span> <span class="buy">买：' + (parseFloat(item.quantity)
+                                        .toFixed(2) + ' EOS') + '</span></li>';
+                                break;
+                            case 'sellram':
+                                tradeHtml += '<li> <span class="time">' + moment(item.timestamp * 1000)
+                                    .format('MM-DD HH:mm:ss') +
+                                    '</span><span class="from from-sell" data-from="' + item.from +
+                                    '">' + item.from + '</span> <span class="sell">卖：' + (item.count ?
+                                        (parseFloat(item.count).toFixed(2) + ' EOS') : (parseFloat(item
+                                            .bytes / 1024).toFixed(1) + ' Kb')) + '</span></li>';
+                                break;
+                        }
+                    });
+
+                    $('.big-list').html(tradeHtml)
+                } else {}
+            });
+        }
+
+
+        $('.refresh').on('click', function () {
+            $('.trade-list').html('');
+            $('.big-list').html('');
+            $('#account').val('');
+            getTradList();
+            getBigList();
+        })
+
+        $('#clear-btn').on('click', function () {
+            $('#account').val('');
+            getTradList();
+        });
+
+        $('#query-btn').on('click', function () {
+            var account = _.trim($('#account').val());
+            getTradList(account);
+        });
+
+        $('.trade-list').on('click', '.from', function (e) {
+            var account = $(e.target).data('from');
+            $('#account').val(account);
+            getTradList(account);
+        });
+
+        // big
+        $('#big-clear-btn').on('click', function () {
+            $('#big-account').val('');
+            getBigList();
+        });
+
+        $('#big-query-btn').on('click', function () {
+            var account = _.trim($('#big-account').val());
+            getBigList(account);
+        });
+
+        $('.big-list').on('click', '.from', function (e) {
+            var account = $(e.target).data('from');
+            $('#big-account').val(account);
+            getBigList(account);
+        });
+
+
+        getTradList();
+
+        getBigList();
+    </script>
+</body>
+
+</html>
