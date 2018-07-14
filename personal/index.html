@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAM预警机</title>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        body {
+            line-height: 50px;
+        }
+
+        input {
+            height: 30px
+        }
+
+        #real-time-price {
+            line-height: 100px;
+        }
+
+        .real-time {
+            color: green;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio style="display:none;" id="audioAlarm" controls>
+        <source src="alarm.mp3" type="audio/mpeg"> 您的浏览器不支持 audio 元素。
+    </audio>
+    <div>
+        低于价格
+        <input id="low" type="text" placeholder="输入数字"> 报警
+    </div>
+    <div>
+        高于价格
+        <input id="high" type="text" placeholder="输入数字"> 报警
+    </div>
+    <div id="real-time-price">
+
+    </div>
+    <a href="detail.html">详细版</a>
+    <script>
+        function showNotice(title, msg) {
+            var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+            if (Notification) {
+                Notification.requestPermission(function (status) {
+                    //status默认值'default'等同于拒绝 'denied' 意味着用户不想要通知 'granted' 意味着用户同意启用通知
+                    if ("granted" != status) {
+                        return;
+                    } else {
+                        var tag = "sds" + Math.random();
+                        var notify = new Notification(
+                            title, {
+                                dir: 'auto',
+                                lang: 'zh-CN',
+                                tag: tag, //实例化的notification的id
+                                icon: '', //通知的缩略图,//icon 支持ico、png、jpg、jpeg格式
+                                body: msg //通知的具体内容
+                            }
+                        );
+                        notify.onclick = function () {
+                                //如果通知消息被点击,通知窗口将被激活
+                                window.focus();
+                            },
+                            notify.onerror = function () {
+                                console.log("HTML5桌面消息出错！！！");
+                            };
+                        notify.onshow = function () {
+                            setTimeout(function () {
+                                notify.close();
+                            }, 2000)
+                        };
+                        notify.onclose = function () {
+                            console.log("HTML5桌面消息关闭！！！");
+                        };
+                    }
+                });
+            } else {
+                console.log("您的浏览器不支持桌面消息");
+            }
+        };
+        var player = $("#audioAlarm")[0]
+        $(document).click(function () {
+            player.pause()
+        })
+
+        function realTimePrice() {
+            $.get('https://tbeospre.mytokenpocket.vip/v1/ram_price').then(function (res) {
+                if (res.result === 0 && res.data) {
+                    var realPrice = parseFloat(1 * 1024 / res.data).toFixed(5);
+                    $('#real-time-price').html('实时价格： <span class="real-time">' + realPrice + '</span> EOS/kb');
+                    document.title = realPrice
+                    var lowPrice = $("#low").val()
+                    var highPrice = $("#high").val()
+                    if (lowPrice && !isNaN(lowPrice)) {
+                        if (realPrice <= lowPrice) {
+                            player.play()
+                            showNotice('', '过低报警:' + realPrice)
+                        }
+                    }
+                    if (highPrice && !isNaN(highPrice)) {
+                        if (realPrice >= highPrice) {
+                            player.play()
+                            showNotice('', '过高报警:' + realPrice)
+                        }
+                    }
+                }
+            })
+        }
+        realTimePrice()
+        setInterval('realTimePrice()', 5000);
+    </script>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Ram 预警机</strong> Powered by
+                <strong>自由小分队</strong>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
