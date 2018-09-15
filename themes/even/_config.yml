@@ -19,7 +19,6 @@ rss: default
 menu:
   Home: /
   Weekly: /categories/weekly
-  Logbook: /categories/logbook
   Archives: /archives/
   # Tags: /tags
   # Categories: /categories
