@@ -7,7 +7,7 @@
       <link href="/2018/09/15/server-github-static-blog-with-ssl/"/>
       <url>/2018/09/15/server-github-static-blog-with-ssl/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>记录下备忘, 部署并同时使用 ssl</p></blockquote><a id="more"></a><h1 id="安装 -nginx-ubuntu-18-04"><a href="# 安装 -nginx-ubuntu-18-04" class="headerlink" title="安装 nginx [ubuntu 18.04]"></a>安装 nginx [ubuntu 18.04]</h1><p>运行 <code>sudo apt-get install nginx</code></p><p>启动 <code>service nginx start</code></p><h1 id="安装 -certbot"><a href="# 安装 -certbot" class="headerlink" title="安装 certbot"></a>安装 certbot</h1><p>参考 <a href="https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx" target="_blank" rel="noopener">https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx</a></p><h1 id="配置"><a href="# 配置" class="headerlink" title="配置"></a>配置 </h1><p> 安装完上述两个，讲 github 上的指定位置 <code>/var/www</code> 下，并使用 <code>master</code> 分支 </p><h2 id="配置 -cron"><a href="# 配置 -cron" class="headerlink" title="配置 cron"></a> 配置 cron</h2><h3 id="定时拉取最新的代码"><a href="# 定时拉取最新的代码" class="headerlink" title="定时拉取最新的代码"></a>定时拉取最新的代码 </h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">*/2 * * * * <span class="built_in">cd</span> /var/www/blog &amp;&amp; git pull &amp;&amp; service nginx reload</span><br><span class="line">3 3 * * * sudo certbot renew</span><br></pre></td></tr></table></figure><h3 id="renew-https 证书"><a href="#renew-https 证书" class="headerlink" title="renew https 证书"></a>renew https 证书</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 3 * * * sudo certbot renew</span><br></pre></td></tr></table></figure><p> 选的不是整点是担心整点可能流量过大</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>记录下备忘, 部署并同时使用 ssl</p></blockquote><a id="more"></a><h1 id="安装 -nginx-ubuntu-18-04"><a href="# 安装 -nginx-ubuntu-18-04" class="headerlink" title="安装 nginx [ubuntu 18.04]"></a>安装 nginx [ubuntu 18.04]</h1><p>运行 <code>sudo apt-get install nginx</code><br>启动 <code>service nginx start</code></p><h1 id="安装 -certbot"><a href="# 安装 -certbot" class="headerlink" title="安装 certbot"></a>安装 certbot</h1><p>参考 <a href="https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx" target="_blank" rel="noopener">https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx</a></p><h1 id="配置"><a href="# 配置" class="headerlink" title="配置"></a>配置 </h1><p> 安装完上述两个，讲 github 上的指定位置 <code>/var/www</code> 下，并使用 <code>master</code> 分支 </p><h2 id="配置 -cron"><a href="# 配置 -cron" class="headerlink" title="配置 cron"></a> 配置 cron</h2><h3 id="定时拉取最新的代码"><a href="# 定时拉取最新的代码" class="headerlink" title="定时拉取最新的代码"></a>定时拉取最新的代码 </h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">*/2 * * * * <span class="built_in">cd</span> /var/www/blog &amp;&amp; git pull &amp;&amp; service nginx reload</span><br><span class="line">3 3 * * * sudo certbot renew</span><br></pre></td></tr></table></figure><h3 id="renew-https 证书"><a href="#renew-https 证书" class="headerlink" title="renew https 证书"></a>renew https 证书</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 3 * * * sudo certbot renew</span><br></pre></td></tr></table></figure><p> 选的不是整点是担心整点可能流量过大</p>]]></content>
       
       
       
@@ -16,6 +16,17 @@
             <tag> vps </tag>
             
         </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>系统的黑一下锤子</title>
+      <link href="/2018/05/16/wo-chui-you-cheng-le/"/>
+      <url>/2018/05/16/wo-chui-you-cheng-le/</url>
+      
+        <content type="html"><![CDATA[<p>罗老师，你负责认真，我们帮你赢。所以我在百忙之中帮您写了个软文，以期有更多的锤友们帮你赢。</p><a id="more"></a><p>经历了罗老师长达 2 个月微博上的宣传，终于我锤又要成了。为了系统性的黑锤子，我可是做足了功课。在搜集资料的时候，我想发自内心的对罗老师说一声佩服:</p><blockquote><p>您跟您的团队明明几乎什么新鲜东西都没有，却还能时不时的开个发布会让锤粉 (不，现在叫锤友) 们 high 一下，真的很厉害。</p></blockquote><h3 id="首先发布会还是一贯的套路"><a href="# 首先发布会还是一贯的套路" class="headerlink" title="首先发布会还是一贯的套路:"></a>首先发布会还是一贯的套路:</h3><p>如下图:</p><p><img src="https://i.imgur.com/YgwLC8o.jpg" alt="https://i.imgur.com/YgwLC8o.jpg"></p><p>(看不到图需翻墙)</p><h3 id="罗老师嘲讽一下友商"><a href="# 罗老师嘲讽一下友商" class="headerlink" title="罗老师嘲讽一下友商:"></a>罗老师嘲讽一下友商:</h3><blockquote><p>注意，为避免误会，下面的意思纯属我从发布会理解过来的，并非罗老师原话:</p></blockquote><ol><li>来，看看跑分，你小米，黑鲨手机，跑分常温下根本没你们说的那么高，你看，不光我测试了，有个媒体也测试了。不管不管，我最高，我定标准我来测。</li><li>跑分算什么啊，我们锤子不在乎跑分，无聊。我们不喜欢堆砌硬件（是吧，说你呢一加、小米）</li></ol><h3 id="嘲讽一下中国的开源"><a href="# 嘲讽一下中国的开源" class="headerlink" title="嘲讽一下中国的开源"></a>嘲讽一下中国的开源 </h3><blockquote><p> 注意，为避免误会，下面的意思纯属我从发布会理解过来的，并非罗老师原话:</p></blockquote><ol><li>我们的 OneStep 开源了吧，你看，我们为开源世界做出了贡献，其他厂商们，你们直接用就行了哦。</li><li>为啥不用？ 是因为用了要遵守我们的开源协议，给我们 credit 是吧? 垃圾 </li></ol><h3 id="我锤的开源"><a href="# 我锤的开源" class="headerlink" title="我锤的开源"></a> 我锤的开源 </h3><p> 真实的情况呢:</p><p>如下图:</p><p><img src="https://i.imgur.com/oxWp0jg.png" alt="https://i.imgur.com/oxWp0jg.png"></p><p>而且，锤子引以为傲的开源事业, 这是 ROM 开发者对您的评价 </p><blockquote><p> 较真的系统不更新安卓版本，不过 GMS 认证，不遵守开源协议，不做安全启动…</p></blockquote><p>听说您最近开源代码了， Bootloader 因为一些 bug (果然是为了安全呢！) 第三方也能解开了，第三方 ROM 终于能够适配了，可喜可贺。</p><p>有位锤友因为相信了您可以解锁 Bootloader , 第三方预装应用全部可以删除 ，跟你法庭上对峙，听说您还揪着不放:</p><p><img src="https://i.imgur.com/2kSQCwX.jpg" alt="https://i.imgur.com/2kSQCwX.jpg"></p><p>问题是，您干吗吹着牛逼呢？换句话说，您做婊子为何还要里个牌坊呢？</p><h3 id="TNT- 真他妈的革命性"><a href="#TNT- 真他妈的革命性" class="headerlink" title="TNT 真他妈的革命性"></a>TNT 真他妈的革命性 </h3><p> 革命性的创新，老实讲，我本来是没有报什么期待的，但是一看到这个，真的是想送您一首 <a href="http://url.cn/5vYvwT4" target="_blank" rel="noopener">《How Low》</a> (视频版见这里: <a href="https://www.youtube.com/watch?v=ox-lfowevqA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ox-lfowevqA</a>)</p><p>有个问题我想问您一下，明明就是 Android，为什么还能比 Android 快 30% 呢, 我仔细一想，您的意思难道是跟您之前的锤子搭载的 Android 比？<br><img src="https://i.imgur.com/Lv1mqNF.jpg" alt="https://i.imgur.com/Lv1mqNF.jpg"></p><h4 id="工作站"><a href="# 工作站" class="headerlink" title="工作站"></a>工作站 </h4><p> 请问您是对工作站有什么误解吗? 难道需要您的工作站仅仅是完成 PPT/EXCEL 和 王者荣耀?</p><blockquote><p>罗老师，这个演示视频右上角怎么是 MAC? <a href="https://www.zhihu.com/question/277297661/answer/392588888" target="_blank" rel="noopener">https://www.zhihu.com/question/277297661/answer/392588888</a></p></blockquote><h4 id="PPT-amp-EXCEl"><a href="#PPT-amp-EXCEl" class="headerlink" title="PPT &amp; EXCEl"></a>PPT &amp; EXCEl</h4><p>我不否认，可能您的所谓的 什么胶囊 一键生成 PPT 可能很好用。</p><p>但是，就您演示的 PPT 和 EXCEL 操作，什么效率提升 300%， 玉龙哥哥，您这是降低工作效率好吗？另外您演示的这些别家不是没有，真的不是没有，不仅有，而且比您这个做得好。只不过人家是为残障人士用的。</p><h4 id="售价"><a href="# 售价" class="headerlink" title="售价"></a>售价 </h4><p> 您这个售价确实不是为了赚钱，您的智商鉴定机虽然涨价了，但是效果应该更强了。</p><p>这售价可能真的是革命性了 (这大概是我整场看到的唯一革命性的点了)。</p><h4 id="捐赠 -OpenSSL-、FreeBSD"><a href="# 捐赠 -OpenSSL-、FreeBSD" class="headerlink" title="捐赠 OpenSSL 、FreeBSD"></a> 捐赠 OpenSSL 、FreeBSD</h4><p>真的棒，这相声收入不错。</p><p>很感激您对开源事业做出的贡献。</p><h3 id="我为什么讨厌罗老师"><a href="# 我为什么讨厌罗老师" class="headerlink" title="我为什么讨厌罗老师?"></a>我为什么讨厌罗老师?</h3><p>来看一下罗老师是如何来给你下套的:</p><p><strong>英语培训时期 </strong></p><blockquote><p> 有思想的年轻人在哪里都不太合群……直到他们来到老罗英语培训 </p></blockquote><p> 这句话真的很有煽动性。 仔细一想，如果您去了老罗英语培训，您就属于有思想的那一群啦。 -&gt; （有思想哪有可能那么容易被煽动）</p><p><strong>在网上澄清精日 </strong></p><p><img src="https://i.imgur.com/VGLL1VE.png" alt="https://i.imgur.com/VGLL1VE.png"></p><blockquote><p> 常常被没有理解能力的人误会，被别有用心的人利用。</p></blockquote><p>如果您不能理解玉龙哥哥，那么要么您是没有理解能力，要么您是别有用心。</p><p><strong>说手机是为你们做的 </strong></p><blockquote><p> 如果有一天，傻逼都用我们的手机，你要知道，那是给你们做的。</p></blockquote><p>我有个问题了，罗老师，当一个人掏出他的锤子手机的时候，如何判断他是傻逼还是粉丝呢？ 所以它实际上处于一种介于傻逼和粉丝的中间态，对嘛？</p><p><strong>发布会举出小米、黑鲨手机跑分 </strong></p><blockquote><p> 我们是在室温，不光我们自己，还有其他媒体也测试过。</p></blockquote><p>暗示友商跑分作假，锤子天下第一。</p><p><strong>展示微软蓝屏、苹果五国 </strong></p><blockquote><p> 别人都不敢展示，但是我们敢。</p></blockquote><p>一口老血喷出来，别人做的系统，你做的什么？ ROM 开发就叫系统了？ 而且您这套路，碰瓷大公司，然后想让观众想到您跟微软苹果是一个阵线上的嘛？</p><p><strong>待补充..</strong></p><p>我会慢慢补充的，罗老师是打心眼里坏。</p><h2 id="最后"><a href="# 最后" class="headerlink" title="最后"></a>最后 </h2><p> 好多人都在讲王自如跟罗老师的争论罗老师赢了，大概忘了辩论的目的是为了锤子的销量了吧。</p><p><a href="https://www.zhihu.com/question/25015684/answer/29832927" target="_blank" rel="noopener">https://www.zhihu.com/question/25015684/answer/29832927</a></p><p><strong>我锤又成了。</strong></p>]]></content>
+      
+      
       
     </entry>
     
@@ -332,7 +343,7 @@
       <link href="/2016/08/31/workflow_for_network/"/>
       <url>/2016/08/31/workflow_for_network/</url>
       
-        <content type="html"><![CDATA[<p>分享一下个人用的很爽的一些工作流，包含 翻墙、下载、同步等。</p><a id="more"></a><h2 id="翻墙 -amp- 域名解析"><a href="# 翻墙 -amp- 域名解析" class="headerlink" title="翻墙 &amp; 域名解析"></a>翻墙 &amp; 域名解析 </h2><p> 搬瓦工 最低价格的 vps，足够用，还可以迁移服务器。</p><p>这里，我把搬瓦工的 ip 地址配置在我子域名的 A 记录上（需要自己域名，可使用 DNSPOD 解析），主要有几个好处:</p><ul><li>登录 vps 可以使用域名地址 如: <code>ssh root@linux.zhaochunqi.com</code></li><li>作为翻墙服务时，由于每个地区节点的网速有所不同，有时候需要迁移，迁移过后，只需要修改相应的 A 记录，其他地方可以不用动。</li></ul><h2 id="SSH- 无密码登录"><a href="#SSH- 无密码登录" class="headerlink" title="SSH 无密码登录"></a>SSH 无密码登录 </h2><p> 作为一个懒人，甚至我连 <code>ssh root@linux.zhaochunqi.com</code> 都觉得很累，很麻烦, 更不要说每次还要输入密码了。</p><p>分几步，有些步骤可能之前配置 <code>git</code>之类的你有做过，可跳过 </p><ol><li> 生成 ssh-key . 查看是否已经存在 <code>cat ~/.ssh/id_rsa.pub</code>, 不存在可以使用 <code>ssh-keygen -f ~/.ssh/id_rsa -t rsa -N &#39;&#39;</code>来生成。</li><li>安装 ssh-copy-id <code>brew install ssh-copy-id</code></li><li>使用 ssh-copy-id 命令 <code>ssh-copy-id -i ~/.ssh/id_rsa.pub [用你自己的地址替换，如 root@linux.zhaochunqi.com]</code>，输入密码，这样你的 vps 可信任的 key 中就有你了，下次登录 <code>ssh root@linux.zhaochunqi.com</code>，不用输密码了。</li><li>alias, 把 alias 命令添加到 <code>.bashr</code>或 <code>.zshrc</code> 中 alias vps=”ssh <a href="mailto:root@linux.zhaochunqi.com" target="_blank" rel="noopener">root@linux.zhaochunqi.com</a>“。</li></ol><p>我们来登录下 vps，terminal 中输入 <code>vps</code>即可:<br><img src="https://ws4.sinaimg.cn/large/006tKfTcly1flzgnfo1k8g30ms0jiaag.gif" alt="http://harchiko.qiniudn.com/vps-my-work-flow.gif"></p><h2 id="下载国外资源"><a href="# 下载国外资源" class="headerlink" title="下载国外资源"></a>下载国外资源 </h2><p> 国内有些资源即便翻着墙也很难下载，反观国外，基本分分钟就能下载好，如何利用下这个呢？</p><p>使用 <code>BitTorrent Sync</code> , 免费版就足够用，创建一个文件夹用来同步，如 <code>vps</code>, 本地也创建一个同步文件夹，因为 VPS 空间有限，注意把缓存已删除文件取消勾选。</p><p>举个例子：</p><p>你下载 <code>Android Studio</code>，翻墙下载速度很慢，</p><ol><li>打开 Terminal，</li><li>输入 vps，</li><li>进入你的 vps 同步文件夹，</li><li>wget 链接地址，2s 下完，</li><li>等待 BTsync 同步到你本机 </li></ol><p> 你可能会有疑问（并没有），意义在哪里呢？</p><ul><li>速度快 </li><li> 你同步可以断点续传啊！！</li><li>稳定 </li></ul><p> 顺便说一下下载 <code>youtube</code>视频：</p><p>VPS 上安装 <code>youtube-dl</code>, 使用 <code>youtube-dl 链接地址 </code> 就可以下载了，需要提醒的是，youtube-dl 支持的网站不知道多到哪里去了！ 自己去 <code>google</code> 一下吧。</p>]]></content>
+        <content type="html"><![CDATA[<p>分享一下个人用的很爽的一些工作流，包含 翻墙、下载、同步等。</p><a id="more"></a><p>图片镇楼:<br><img src="https://ws1.sinaimg.cn/large/006tKfTcly1flzgne5xjuj30nr0vxn99.jpg" alt="http://harchiko.qiniudn.com/54686763_p0.jpg"></p><h2 id="翻墙 -amp- 域名解析"><a href="# 翻墙 -amp- 域名解析" class="headerlink" title="翻墙 &amp; 域名解析"></a>翻墙 &amp; 域名解析 </h2><p> 搬瓦工 最低价格的 vps，足够用，还可以迁移服务器。</p><p>这里，我把搬瓦工的 ip 地址配置在我子域名的 A 记录上（需要自己域名，可使用 DNSPOD 解析），主要有几个好处:</p><ul><li>登录 vps 可以使用域名地址 如: <code>ssh root@linux.zhaochunqi.com</code></li><li>作为翻墙服务时，由于每个地区节点的网速有所不同，有时候需要迁移，迁移过后，只需要修改相应的 A 记录，其他地方可以不用动。</li></ul><h2 id="SSH- 无密码登录"><a href="#SSH- 无密码登录" class="headerlink" title="SSH 无密码登录"></a>SSH 无密码登录 </h2><p> 作为一个懒人，甚至我连 <code>ssh root@linux.zhaochunqi.com</code> 都觉得很累，很麻烦, 更不要说每次还要输入密码了。</p><p>分几步，有些步骤可能之前配置 <code>git</code>之类的你有做过，可跳过 </p><ol><li> 生成 ssh-key . 查看是否已经存在 <code>cat ~/.ssh/id_rsa.pub</code>, 不存在可以使用 <code>ssh-keygen -f ~/.ssh/id_rsa -t rsa -N &#39;&#39;</code>来生成。</li><li>安装 ssh-copy-id <code>brew install ssh-copy-id</code></li><li>使用 ssh-copy-id 命令 <code>ssh-copy-id -i ~/.ssh/id_rsa.pub [用你自己的地址替换，如 root@linux.zhaochunqi.com]</code>，输入密码，这样你的 vps 可信任的 key 中就有你了，下次登录 <code>ssh root@linux.zhaochunqi.com</code>，不用输密码了。</li><li>alias, 把 alias 命令添加到 <code>.bashr</code>或 <code>.zshrc</code> 中 alias vps=”ssh <a href="mailto:root@linux.zhaochunqi.com" target="_blank" rel="noopener">root@linux.zhaochunqi.com</a>“。</li></ol><p>我们来登录下 vps，terminal 中输入 <code>vps</code>即可:<br><img src="https://ws4.sinaimg.cn/large/006tKfTcly1flzgnfo1k8g30ms0jiaag.gif" alt="http://harchiko.qiniudn.com/vps-my-work-flow.gif"></p><h2 id="下载国外资源"><a href="# 下载国外资源" class="headerlink" title="下载国外资源"></a>下载国外资源 </h2><p> 国内有些资源即便翻着墙也很难下载，反观国外，基本分分钟就能下载好，如何利用下这个呢？</p><p>使用 <code>BitTorrent Sync</code> , 免费版就足够用，创建一个文件夹用来同步，如 <code>vps</code>, 本地也创建一个同步文件夹，因为 VPS 空间有限，注意把缓存已删除文件取消勾选。</p><p>举个例子：</p><p>你下载 <code>Android Studio</code>，翻墙下载速度很慢，</p><ol><li>打开 Terminal，</li><li>输入 vps，</li><li>进入你的 vps 同步文件夹，</li><li>wget 链接地址，2s 下完，</li><li>等待 BTsync 同步到你本机 </li></ol><p> 你可能会有疑问（并没有），意义在哪里呢？</p><ul><li>速度快 </li><li> 你同步可以断点续传啊！！</li><li>稳定 </li></ul><p> 顺便说一下下载 <code>youtube</code>视频：</p><p>VPS 上安装 <code>youtube-dl</code>, 使用 <code>youtube-dl 链接地址 </code> 就可以下载了，需要提醒的是，youtube-dl 支持的网站不知道多到哪里去了！ 自己去 <code>google</code> 一下吧。</p>]]></content>
       
       
       
@@ -823,6 +834,23 @@
     </entry>
     
     <entry>
+      <title>纪录片 - 陈冠希</title>
+      <link href="/2015/11/24/vice-edc/"/>
+      <url>/2015/11/24/vice-edc/</url>
+      
+        <content type="html"><![CDATA[<h2 id="《还记得我吗》–陈冠希"><a href="#《还记得我吗》–陈冠希" class="headerlink" title="《还记得我吗》–陈冠希"></a>《还记得我吗》–陈冠希 </h2><p> 陈冠希是谁? 这世界上有几亿人看过他的照片；陈冠希在做什么？媒体上的他声名狼藉；VICE 拍陈冠希？听起来很刺激，也合情合理 —— 他身上具备一切精彩故事的必要元素，他就是 VICE 要讲的故事。</p><a id="more"></a><p>分享一下 Vice 拍摄的陈冠希的记录片：</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1flzgu5wil8j30az0drq45.jpg" alt=""></p><p>第一篇：</p><iframe height="498"width="510"src="http://player.youku.com/embed/XMTM5OTgzMDM4NA=="frameborder="0"allowfullscreen></iframe><p>第二篇：</p><iframe height="498"width="510"src="http://player.youku.com/embed/XMTQwMDc2NzIxMg=="frameborder="0"allowfullscreen></iframe><p>第三篇：</p><iframe height="498"width="510"src="http://player.youku.com/embed/XMTQwMTY1NzkyMA=="frameborder="0" allowfullscreen></iframe><p>记忆很深的一句话，有人问我，如果能够再来，你觉得你有什么需要改变的？ 我什么都不改变。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>YAML 简介</title>
       <link href="/2015/11/24/yaml/"/>
       <url>/2015/11/24/yaml/</url>
@@ -987,25 +1015,6 @@
     </entry>
     
     <entry>
-      <title>基于 Shadowsocks 透明代理的实现</title>
-      <link href="/2015/02/04/Auto-Proxy/"/>
-      <url>/2015/02/04/Auto-Proxy/</url>
-      
-        <content type="html"><![CDATA[<p><strong>本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p><a id="more"></a><p>程序员们最在意的，可能就是网络跟设备配置了。</p><p>做一个透明代理，能够做到：</p><pre><code>自动翻墙，本地无需配置。</code></pre><h2 id="网络拓扑图"><a href="# 网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图 </h2><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1flzgup0srqj30j906oq33.jpg" alt="透明代理网络拓扑图"></p><h2 id="需求"><a href="# 需求" class="headerlink" title="需求"></a> 需求 </h2><ol><li> 一台外网 VPS（能被中国大陆访问到，能够访问到 Facebook 等网站）</li><li>一台本地 Linux 服务器 (此处可以用智能路由器代替)。</li></ol><h2 id="方案设想"><a href="# 方案设想" class="headerlink" title="方案设想"></a> 方案设想 </h2><ol><li> 本地的 Linux 服务器作为网关， 处理本地流量和需要代理的流量。</li><li>本地服务器将需要代理的流量转发给 Shadowsocks 并通过 Shadowsocks 来实现代理功能。</li><li>流量转发到 Cow 中，然后通过 Cow 来判断需要自动翻墙的网址。</li></ol><h2 id="具体方案"><a href="# 具体方案" class="headerlink" title="具体方案"></a>具体方案 </h2><ol><li> 在 VPS 中安装 Shadowsocks，并在本地客户端测试是否成功。</li><li>在本地 Linux 服务器中部署 Cow，通过 Cow 来进行 ShadowSocks 代理。</li><li>使用 iptables 将流量转发到 Cow 本地监控的端口。</li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> proxy </tag>
-            
-            <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>美剧订阅神器 showrss</title>
       <link href="/2015/02/04/tools-for-us-TV-series/"/>
       <url>/2015/02/04/tools-for-us-TV-series/</url>
@@ -1019,6 +1028,25 @@
             <tag> series </tag>
             
             <tag> tv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>基于 Shadowsocks 透明代理的实现</title>
+      <link href="/2015/02/04/Auto-Proxy/"/>
+      <url>/2015/02/04/Auto-Proxy/</url>
+      
+        <content type="html"><![CDATA[<p><strong>本文只是提供了一个透明代理实现的思路，具体代码等待后续补充。</strong></p><a id="more"></a><p>程序员们最在意的，可能就是网络跟设备配置了。</p><p>做一个透明代理，能够做到：</p><pre><code>自动翻墙，本地无需配置。</code></pre><h2 id="网络拓扑图"><a href="# 网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图 </h2><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1flzgup0srqj30j906oq33.jpg" alt="透明代理网络拓扑图"></p><h2 id="需求"><a href="# 需求" class="headerlink" title="需求"></a> 需求 </h2><ol><li> 一台外网 VPS（能被中国大陆访问到，能够访问到 Facebook 等网站）</li><li>一台本地 Linux 服务器 (此处可以用智能路由器代替)。</li></ol><h2 id="方案设想"><a href="# 方案设想" class="headerlink" title="方案设想"></a> 方案设想 </h2><ol><li> 本地的 Linux 服务器作为网关， 处理本地流量和需要代理的流量。</li><li>本地服务器将需要代理的流量转发给 Shadowsocks 并通过 Shadowsocks 来实现代理功能。</li><li>流量转发到 Cow 中，然后通过 Cow 来判断需要自动翻墙的网址。</li></ol><h2 id="具体方案"><a href="# 具体方案" class="headerlink" title="具体方案"></a>具体方案 </h2><ol><li> 在 VPS 中安装 Shadowsocks，并在本地客户端测试是否成功。</li><li>在本地 Linux 服务器中部署 Cow，通过 Cow 来进行 ShadowSocks 代理。</li><li>使用 iptables 将流量转发到 Cow 本地监控的端口。</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> proxy </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
