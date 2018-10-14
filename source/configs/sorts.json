@@ -1,0 +1,23 @@
+{
+    "": [
+        "_posts", 
+        "tags", 
+        "search", 
+        "categories", 
+        "_drafts"
+    ], 
+    "__positions": {
+        "_drafts": 5, 
+        "_posts": 1, 
+        "search": 3, 
+        "categories": 4, 
+        "tags": 2
+    }, 
+    "__raw_positions": {
+        "_drafts": 5, 
+        "_posts": 1, 
+        "search": 3, 
+        "categories": 4, 
+        "tags": 2
+    }
+}
